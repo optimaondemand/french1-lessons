@@ -1,0 +1,332 @@
+﻿<!--
+  French 1 (0701320) · S2 Module 3 · Lesson 3.03 (Day 3 of 10)
+  Official Optima template + French accents + integrated audio. Widget: commit-then-reveal (ow-reveal) + evaluative.
+  Deployment: GitHub-hosted, embedded in Canvas. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 3.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .vocab-list { list-style: none; margin: 14px 0 0 0; padding: 0; }
+    .vocab-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 6px; margin-bottom: 8px; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .v-fr { font-weight: 600; color: #0E1C42; min-width: 200px; font-size: 17px; }
+    .v-en { color: #6b7a99; font-size: 15px; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable th { background: #EEF1F8; color: #0e1c42; font-weight: 600; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .rule-box { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 12px 16px; margin: 10px 0; font-size: 17px; color: #1a2340; line-height: 1.6; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #666;">&Agrave; table&nbsp;!</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.03 &middot; Day 3 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Les expressions de quantit&eacute;</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Food &amp; Dining</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Les quantit&eacute;s &mdash; A Slice, a Glass, Enough</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Yesterday: &ldquo;some&rdquo; cheese. Today: <em>how much</em> cheese &mdash; a slice, a piece, a bottle, enough.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">There is one clean rule for every expression of quantity, and once you have it you never have to think again. Then you'll build the full <em>prendre</em> table and try a quantity sentence yourself before you see the answer.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use expressions of quantity (<em>une tranche de, un morceau de, une bouteille de, assez de, beaucoup de</em>) with the correct <em>de</em>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> conjugate <em>prendre</em> through all six persons without help.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 · The rule -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127925; PART 1 &middot; LA R&Egrave;GLE DES QUANTIT&Eacute;S <span class="pill-time">12 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">One rule for every quantity</h3>
+        <div class="rule-box"><strong>The rule.</strong> After <u>any</u> expression of quantity, use plain <strong>de</strong> (or <strong>d'</strong> before a vowel) &mdash; <em>never</em> <em>du / de la / des</em>. So it's <em>beaucoup <strong>de</strong> fromage</em>, not &ldquo;beaucoup du fromage.&rdquo;</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 6px 0;">Compare: <em>je prends <strong>du</strong> fromage</em> (some cheese) &rarr; but <em>un morceau <strong>de</strong> fromage</em> (a piece of cheese). The moment you name a quantity, the article collapses to <em>de</em>.</p>
+        <table class="gtable">
+            <thead><tr><th>Expression</th><th>Meaning</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>une tranche <span class="pron">de</span></td><td>a slice of</td><td>une tranche <strong>de</strong> g&acirc;teau</td></tr>
+                <tr><td>un morceau <span class="pron">de</span></td><td>a piece of</td><td>un morceau <strong>de</strong> pain</td></tr>
+                <tr><td>une bouteille <span class="pron">de</span></td><td>a bottle of</td><td>une bouteille <strong>d'</strong>eau</td></tr>
+                <tr><td>assez <span class="pron">de</span></td><td>enough of</td><td>assez <strong>de</strong> sel</td></tr>
+                <tr><td>beaucoup <span class="pron">de</span></td><td>a lot of</td><td>beaucoup <strong>de</strong> l&eacute;gumes</td></tr>
+            </tbody>
+        </table>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-quantite.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Une bouteille d'eau, s'il vous pla&icirc;t.</span><span class="v-en">A bottle of water, please.</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-assez.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Merci, j'ai assez mang&eacute;.</span><span class="v-en">Thank you, I've eaten enough.</span></li>
+        </ul>
+    </div>
+
+    <!-- PART 2 · Evaluative check -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 2 &middot; V&Eacute;RIFIE LA R&Egrave;GLE <span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Partitive (<em>du/de la/des</em>) or the quantity <em>de</em>? Read carefully &mdash; is there a quantity word? Instant feedback.</p>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Je voudrais une tranche ______ g&acirc;teau.</div>
+            <div class="widget-options">
+                <button data-no="&ldquo;une tranche&rdquo; is a quantity &mdash; it forces plain de.">du</button>
+                <button data-correct="1" data-ok="Oui &mdash; after a quantity, always plain de.">de</button>
+                <button data-no="des is plural partitive; a quantity word forces de.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Il y a beaucoup ______ sp&eacute;cialit&eacute;s ici.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact &mdash; beaucoup is a quantity, so plain de (even before plural).">de</button>
+                <button data-no="des is the plural partitive; a quantity word takes de.">des</button>
+                <button data-no="de la is feminine partitive; a quantity word takes plain de.">de la</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Elle prend ______ salade. &nbsp;(no quantity word &mdash; just &ldquo;some&rdquo;)</div>
+            <div class="widget-options">
+                <button data-no="de is only after a quantity word; here there is none.">de</button>
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; no quantity word, so the feminine partitive de la.">de la</button>
+                <button data-no="du is masculine; salade is feminine.">du</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3 · Full prendre table -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; PART 3 &middot; LE TABLEAU COMPLET &mdash; PRENDRE <span class="pill-time">12 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">All six persons, one verb</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 4px 0;">Read each row aloud; play the three you can hear. Watch the stem: singular keeps <em>prend-</em>, but <em>nous/vous</em> drop the <em>d</em> and <em>ils/elles</em> double the <em>n</em>.</p>
+        <table class="gtable">
+            <thead><tr><th>Person</th><th>Form</th><th>Meaning</th></tr></thead>
+            <tbody>
+                <tr><td>je</td><td>je <span class="pron">prends</span></td><td>I take / have</td></tr>
+                <tr><td>tu</td><td>tu <span class="pron">prends</span></td><td>you take / have</td></tr>
+                <tr><td>il / elle / on</td><td>il <span class="pron">prend</span></td><td>he / she / one takes</td></tr>
+                <tr><td>nous</td><td>nous <span class="pron">prenons</span></td><td>we take / have</td></tr>
+                <tr><td>vous</td><td>vous <span class="pron">prenez</span></td><td>you (formal/plural) take</td></tr>
+                <tr><td>ils / elles</td><td>ils <span class="pron">prennent</span></td><td>they take / have</td></tr>
+            </tbody>
+        </table>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-prends.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je prends une entr&eacute;e&hellip;</span><span class="v-en">je</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-prend.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Elle prend de la soupe.</span><span class="v-en">il / elle / on</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-prenons.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Nous prenons le menu&hellip;</span><span class="v-en">nous</span></li>
+        </ul>
+    </div>
+
+    <!-- PART 4 · commit-then-reveal -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; &Agrave; TON TOUR <span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">On paper or in your head, translate these four orders into French. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#129504; TRANSLATE &middot; quantities + prendre</div>
+            <div class="widget-question">Write these in French, then reveal: (1) a slice of cake &middot; (2) a glass of water &middot; (3) We'll have some soup &middot; (4) I've eaten enough.</div>
+            <button class="reveal-btn">Reveal the answer</button>
+            <div class="reveal-body">
+                <table class="gtable" style="margin-top:0;">
+                    <tbody>
+                        <tr><td>1. une tranche <span class="pron">de</span> g&acirc;teau</td><td>2. un verre <span class="pron">d'</span>eau</td></tr>
+                        <tr><td>3. Nous <span class="pron">prenons</span> <span class="pron">de la</span> soupe.</td><td>4. J'ai mang&eacute; <span class="pron">assez</span>. / J'ai assez mang&eacute;.</td></tr>
+                    </tbody>
+                </table>
+                <div style="font-size:15px;color:#1a6b3d;margin-top:8px;">Did you catch it? Items 1&ndash;2 have a quantity word &rarr; plain <em>de/d'</em>. Item 3 has <em>no</em> quantity word &rarr; the partitive <em>de la</em>. That's the whole distinction.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3.04</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you put it all to work: the full <em>restaurant ordering sequence</em> &mdash; from <em>Je voudrais&hellip;</em> to <em>l'addition</em> &mdash; plus your first audio dictation of the module.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Then test yourself: say <em>&ldquo;a piece of cheese&rdquo;</em> and <em>&ldquo;some cheese&rdquo;</em> in French out loud &mdash; and notice the article change.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; UNE SEULE R&Egrave;GLE&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Quantity word &rarr; plain <em>de</em>. No quantity word &rarr; partitive. That one distinction runs every food sentence in French. <em>&Agrave; demain&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.03 &middot; Les expressions de quantit&eacute;</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

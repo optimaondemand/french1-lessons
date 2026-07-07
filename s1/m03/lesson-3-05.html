@@ -1,0 +1,270 @@
+<!--
+  French 1 (0701320) · S1 Module 3 · Lesson 3.05 (Day 5 of 10)
+  Reading + culture + virtue. Passage "Voici ma famille" (narrator Hortense) with per-paragraph audio play-bars.
+  Official Optima template + French accents. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 3.05</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .play-bar { display: inline-flex; align-items: center; gap: 8px; background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; margin: 2px 0 8px; }
+    .play-bar:hover { background: #1B3A6B; }
+    .play-bar.playing { background: #C7922C; }
+    .play-bar.err { background: #C0392B; }
+    .passage { background: #FCFBF7; border: 1px solid #E4DEC9; border-radius: 8px; padding: 16px 20px; margin: 8px 0 16px; }
+    .passage p { font-size: 18px; color: #1a2340; line-height: 1.8; margin: 0; }
+    .gloss { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 10px 0 0; padding: 0; list-style: none; }
+    .gloss li { font-size: 15px; color: #1a2340; }
+    .gloss b { color: #0e1c42; }
+    .culture { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 6px 0; }
+    .virtue { background: #FCF6EA; border: 1px solid #E7D6AE; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin: 6px 0; }
+    .virtue .tag { font-size: 11px; letter-spacing: 0.5px; color: #9a7b1e; margin-bottom: 6px; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #666;">La famille</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.05 &middot; Day 5 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Lecture &amp; culture</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Family</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.05</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Voici ma famille &mdash; Reading &amp; Culture</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word from this week living inside one real French family &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Hortense introduces her family. Her few short sentences use your vocabulary, your verb <em>avoir</em>, and your ages &mdash; all at once. Read <em>and</em> listen, then step back to see how French families work, and meet a leader whose sense of responsibility carried a nation.</div>
+    </div>
+
+    <!-- PART 1 · Reading passage -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+
+        <button class="play-bar" data-audio="passage/m03-famille-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
+        <div class="passage"><p>Voici ma famille. Nous sommes cinq&nbsp;: mon p&egrave;re, ma m&egrave;re, mon fr&egrave;re, ma s&oelig;ur et moi.</p></div>
+
+        <button class="play-bar" data-audio="passage/m03-famille-02.mp3">&#9654; &Eacute;couter &middot; paragraphe 2</button>
+        <div class="passage"><p>Mon fr&egrave;re a dix-huit ans et ma s&oelig;ur a huit ans. Nous avons aussi un chien.</p></div>
+
+        <button class="play-bar" data-audio="passage/m03-famille-03.mp3">&#9654; &Eacute;couter &middot; paragraphe 3</button>
+        <div class="passage"><p>Mes grands-parents habitent &agrave; Nice. J'ai deux cousins et une cousine. J'aime beaucoup ma famille.</p></div>
+    </div>
+
+    <!-- PART 2 · Annotate + glossary -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every form of <em>avoir</em></strong> and <strong>underline each family word</strong>. You should find three uses of <em>avoir</em> (<em>a, a, avons&hellip;</em> and <em>j'ai</em>). Notice how Hortense states ages: <em>a dix-huit ans</em> &mdash; <em>have</em>, not <em>be</em>.</p>
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>voici</b> &mdash; here is / this is</li>
+            <li><b>nous sommes cinq</b> &mdash; there are five of us</li>
+            <li><b>et moi</b> &mdash; and me</li>
+            <li><b>aussi</b> &mdash; also / too</li>
+            <li><b>habitent</b> &mdash; (they) live</li>
+            <li><b>&agrave; Nice</b> &mdash; in Nice (a city on the Riviera)</li>
+            <li><b>beaucoup</b> &mdash; a lot / very much</li>
+        </ul>
+    </div>
+
+    <!-- PART 3 · Culture -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127467;&#127479; PART 3 &middot; LA FAMILLE FRAN&Ccedil;AISE <span class="pill-time">12 min</span></div>
+        <div class="culture">
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">Notice how Hortense says ages: <em>mon fr&egrave;re <strong>a</strong> dix-huit ans</em> &mdash; literally &ldquo;my brother <strong>has</strong> eighteen years.&rdquo; Where English says <em>I am fifteen</em>, French says <em>j'ai quinze ans</em>. It's one of the first habits that marks a real French speaker, so it's worth over-practicing: you don't <em>be</em> your age in French, you <em>have</em> it.</p>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0;">Watch the little possessive words, too: <strong>mon</strong> p&egrave;re, <strong>ma</strong> m&egrave;re, <strong>mes</strong> grands-parents. French picks the word to match the noun &mdash; <em>mon</em> before a masculine word, <em>ma</em> before a feminine one, <em>mes</em> before a plural. You'll study these fully soon; for now, just notice the pattern in the passage. And in France, family often reaches wide &mdash; grandparents, aunts, uncles, and cousins are counted as close, and Sunday meals (<em>le d&eacute;jeuner du dimanche</em>) frequently gather three generations at one table.</p>
+        </div>
+    </div>
+
+    <!-- PART 4 · Virtue -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9884; PART 4 &middot; UNE VERTU FRAN&Ccedil;AISE <span class="pill-time">5 min</span></div>
+        <div class="virtue">
+            <div class="tag">LA RESPONSABILIT&Eacute; &middot; RESPONSIBILITY</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">On <strong>18 June 1940</strong>, with France fallen and most of its leaders silent, <strong>Charles de Gaulle</strong> spoke from London over BBC radio &mdash; <em>l'Appel du 18 juin</em>. Almost alone, he took responsibility for a nation that had given up on itself, and called the French to keep resisting. Few heard the broadcast that night, but it became the seed of Free France.</p>
+            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">Responsibility means answering for the people who depend on you &mdash; whether that's a whole country or a family at one table. It's the heart of this module's question: <em>what do we owe the people closest to us?</em> <em>&laquo;&nbsp;Quoi qu'il arrive, la flamme de la r&eacute;sistance fran&ccedil;aise ne doit pas s'&eacute;teindre et ne s'&eacute;teindra pas.&nbsp;&raquo;</em></p>
+        </div>
+
+        <div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min &middot; comprehension check</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
+
+            <div class="optima-widget ow-eval" style="margin-top:10px;">
+                <div class="widget-question">Combien de personnes y a-t-il dans la famille d'Hortense&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-no="Relis le paragraphe 1.">Trois</button>
+                    <button data-correct="1" data-ok="Oui &mdash; &laquo; nous sommes cinq &raquo;.">Cinq</button>
+                    <button data-no="Presque &mdash; relis &laquo; nous sommes cinq &raquo;.">Six</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+
+            <div class="optima-widget ow-eval">
+                <div class="widget-question">Quel &acirc;ge a le fr&egrave;re d'Hortense&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-correct="1" data-ok="Voil&agrave; &mdash; mon fr&egrave;re a dix-huit ans.">Dix-huit ans</button>
+                    <button data-no="C'est l'&acirc;ge de la s&oelig;ur.">Huit ans</button>
+                    <button data-no="Personne n'a douze ans dans le texte.">Douze ans</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+
+            <div class="optima-widget ow-eval">
+                <div class="widget-question">O&ugrave; habitent les grands-parents&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-no="Relis le paragraphe 3.">&Agrave; Paris</button>
+                    <button data-no="Non &mdash; c'est une autre ville.">&Agrave; Lyon</button>
+                    <button data-correct="1" data-ok="Exact &mdash; mes grands-parents habitent &agrave; Nice.">&Agrave; Nice</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3.06</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty-two words and the verb <em>avoir</em> together before the graded work opens in Week 2.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you introduce your own family in three sentences of your own, out loud? Try it before Day 6.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full family portrait and understood it &mdash; every word was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.05 &middot; Voici ma famille</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

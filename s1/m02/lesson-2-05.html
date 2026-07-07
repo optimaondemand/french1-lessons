@@ -1,0 +1,270 @@
+<!--
+  French 1 (0701320) · S1 Module 2 · Lesson 2.05 (Day 5 of 10)
+  Reading + culture + virtue. Passage "Une journée à l'école" with per-paragraph audio play-bars (reuses passage clips).
+  Official Optima template + French accents. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 2.05</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .play-bar { display: inline-flex; align-items: center; gap: 8px; background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; margin: 2px 0 8px; }
+    .play-bar:hover { background: #1B3A6B; }
+    .play-bar.playing { background: #C7922C; }
+    .play-bar.err { background: #C0392B; }
+    .passage { background: #FCFBF7; border: 1px solid #E4DEC9; border-radius: 8px; padding: 16px 20px; margin: 8px 0 16px; }
+    .passage p { font-size: 18px; color: #1a2340; line-height: 1.8; margin: 0; }
+    .gloss { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 10px 0 0; padding: 0; list-style: none; }
+    .gloss li { font-size: 15px; color: #1a2340; }
+    .gloss b { color: #0e1c42; }
+    .culture { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 6px 0; }
+    .virtue { background: #FCF6EA; border: 1px solid #E7D6AE; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin: 6px 0; }
+    .virtue .tag { font-size: 11px; letter-spacing: 0.5px; color: #9a7b1e; margin-bottom: 6px; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #666;">L'&eacute;cole</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.05 &middot; Day 5 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Lecture &amp; culture</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">School</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.05</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Une journ&eacute;e &agrave; l'&eacute;cole &mdash; Reading &amp; Culture</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word and verb from this week living inside one real school day &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A French student tells you about school. The passage uses your vocabulary, your <em>-er</em> verbs, and your negation &mdash; all at once. Read <em>and</em> listen, then step back to see how the French school system is shaped, and meet the oldest idea in French literature: <em>la courtoisie</em>.</div>
+    </div>
+
+    <!-- PART 1 · Reading passage -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+
+        <button class="play-bar" data-audio="passage/m02-ecole-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
+        <div class="passage"><p>J&rsquo;aime beaucoup l&rsquo;&eacute;cole. J&rsquo;&eacute;tudie les maths, le fran&ccedil;ais et l&rsquo;histoire.</p></div>
+
+        <button class="play-bar" data-audio="passage/m02-ecole-02.mp3">&#9654; &Eacute;couter &middot; paragraphe 2</button>
+        <div class="passage"><p>Le matin, j&rsquo;&eacute;coute le professeur et je travaille avec mes amis. Nous parlons fran&ccedil;ais en classe.</p></div>
+
+        <button class="play-bar" data-audio="passage/m02-ecole-03.mp3">&#9654; &Eacute;couter &middot; paragraphe 3</button>
+        <div class="passage"><p>Je n&rsquo;aime pas les devoirs, mais j&rsquo;adore la musique et le sport. Et toi, tu aimes l&rsquo;&eacute;cole&nbsp;?</p></div>
+    </div>
+
+    <!-- PART 2 · Annotate + glossary -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every <em>-er</em> verb</strong> and <strong>underline its ending</strong>. You should find six or more. Find the one <strong>negative</strong> sentence and notice how <em>n'&hellip;pas</em> wraps the verb.</p>
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>beaucoup</b> &mdash; a lot / very much</li>
+            <li><b>le matin</b> &mdash; in the morning</li>
+            <li><b>avec</b> &mdash; with</li>
+            <li><b>mes amis</b> &mdash; my friends</li>
+            <li><b>mais</b> &mdash; but</li>
+            <li><b>j'adore</b> &mdash; I love / adore</li>
+            <li><b>Et toi&nbsp;?</b> &mdash; And you?</li>
+        </ul>
+    </div>
+
+    <!-- PART 3 · Culture -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127467;&#127479; PART 3 &middot; LE SYST&Egrave;ME SCOLAIRE FRAN&Ccedil;AIS <span class="pill-time">12 min</span></div>
+        <div class="culture">
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">In France, after primary school students go to the <strong>coll&egrave;ge</strong> (roughly ages 11&ndash;15), then the <strong>lyc&eacute;e</strong> (about 15&ndash;18). The school day runs long &mdash; often <strong>8h to 17h</strong> &mdash; but it's broken by a real sit-down lunch, frequently a hot meal in the <em>cantine</em>. Learning alongside others, all day, is the heart of French school life.</p>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0;">At the end of the <em>lyc&eacute;e</em> comes the famous <strong>baccalaur&eacute;at</strong> &mdash; <em>le bac</em> &mdash; the exit exam that opens the door to university. Along the way, students study a full range of <strong>mati&egrave;res</strong> (subjects): <em>les maths, le fran&ccedil;ais, l'histoire, les sciences, l'anglais, l'art, la musique, le sport</em> &mdash; the very words you learned this week.</p>
+        </div>
+    </div>
+
+    <!-- PART 4 · Virtue -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9884; PART 4 &middot; UNE VERTU FRAN&Ccedil;AISE <span class="pill-time">5 min</span></div>
+        <div class="virtue">
+            <div class="tag">LA COURTOISIE &middot; COURTESY</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">The oldest great work of French literature, <strong><em>La Chanson de Roland</em></strong> (around 1100), tells of Roland, a knight of Charlemagne. From these medieval tales of knights grew the code of <em>courtoisie</em> &mdash; <strong>courtesy</strong>: treating others with respect, patience, and honor, even in the middle of a struggle. The word became so central to French life that it still names good manners today.</p>
+            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">A classroom is a shared space &mdash; you learn <em>alongside others</em>. Courtesy is what makes that possible: listening when the professor or a classmate speaks, waiting your turn, and helping a neighbor who is stuck. The knight's honor and the student's courtesy are the same virtue, centuries apart.</p>
+        </div>
+
+        <div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min &middot; comprehension check</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
+
+            <div class="optima-widget ow-eval" style="margin-top:10px;">
+                <div class="widget-question">Quelles mati&egrave;res est-ce que l'&eacute;l&egrave;ve &eacute;tudie&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-correct="1" data-ok="Oui &mdash; les maths, le fran&ccedil;ais et l'histoire.">Les maths, le fran&ccedil;ais et l'histoire</button>
+                    <button data-no="Relis le paragraphe 1.">Le sport et l'art</button>
+                    <button data-no="Relis le paragraphe 1.">L'anglais et la musique</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+
+            <div class="optima-widget ow-eval">
+                <div class="widget-question">Que fait l'&eacute;l&egrave;ve le matin&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-no="Ce n'est pas dans le texte.">Il/elle regarde la t&eacute;l&eacute;</button>
+                    <button data-correct="1" data-ok="Voil&agrave; &mdash; il/elle &eacute;coute le professeur et travaille avec ses amis.">Il/elle &eacute;coute le professeur et travaille avec ses amis</button>
+                    <button data-no="Relis le paragraphe 2.">Il/elle parle avec ses parents</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+
+            <div class="optima-widget ow-eval">
+                <div class="widget-question">Qu'est-ce que l'&eacute;l&egrave;ve n'aime pas&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-no="Non &mdash; il/elle adore la musique.">La musique</button>
+                    <button data-no="Non &mdash; il/elle adore le sport.">Le sport</button>
+                    <button data-correct="1" data-ok="Exact &mdash; &laquo; je n'aime pas les devoirs &raquo;.">Les devoirs</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2.06</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty-two words and three rules together before the graded work opens in Week 2.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you answer the passage's last question &mdash; <em>Et toi, tu aimes l'&eacute;cole&nbsp;?</em> &mdash; in three sentences of your own, out loud? Try it before Day 6.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full school day and understood it &mdash; every verb was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.05 &middot; Une journ&eacute;e &agrave; l'&eacute;cole</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

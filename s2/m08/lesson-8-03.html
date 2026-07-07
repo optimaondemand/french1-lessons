@@ -1,0 +1,291 @@
+﻿<!--
+  French 1 (0701320) · S2 Module 8 · Lesson 8.03 (Day 3 of 10)
+  Official Optima template + French accents + integrated audio. Widget: commit-then-reveal (ow-reveal).
+  Deployment: GitHub-hosted, embedded in Canvas. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 8.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .vocab-list { list-style: none; margin: 14px 0 0 0; padding: 0; }
+    .vocab-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 6px; margin-bottom: 8px; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .v-fr { font-weight: 600; color: #0E1C42; min-width: 240px; font-size: 17px; }
+    .v-en { color: #6b7a99; font-size: 15px; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable th { background: #EEF1F8; color: #0e1c42; font-weight: 600; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .rule-box { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 12px 16px; margin: 10px 0; font-size: 17px; color: #1a2340; line-height: 1.6; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 8</div>
+        <div style="font-size: 12px; color: #666;">La musique et la f&ecirc;te &middot; Music &amp; Celebration</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.03 &middot; Day 3 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Les comparatifs</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Music &amp; Celebration</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Les comparatifs &mdash; More, Less, As&hellip; and the Two &ldquo;Betters&rdquo;</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">One pattern lets you compare almost anything &mdash; and two little words trip up nearly every learner. Today you master both.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Rule&nbsp;1 was <em>lui</em> and <em>leur</em>. Today: the <strong>comparative</strong>. <em>plus&hellip;que</em> (more than), <em>moins&hellip;que</em> (less than), <em>aussi&hellip;que</em> (as&hellip;as). Then the pair that everyone confuses: <strong>mieux</strong> (better, an adverb &mdash; for <em>how</em> you do something) and <strong>meilleur</strong> (better, an adjective &mdash; for <em>a noun</em>).</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> compare two things with <em>plus&hellip;que</em>, <em>moins&hellip;que</em>, and <em>aussi&hellip;que</em>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose between <em>mieux</em> (adverb) and <em>meilleur</em> (adjective) correctly.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 · Rule 2 comparative pattern -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 1 &middot; PLUS, MOINS, AUSSI&hellip; QUE <span class="pill-time">12 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">The comparison sandwich</h3>
+        <div class="rule-box"><strong>The pattern:</strong> <strong>plus / moins / aussi</strong> + adjective + <strong>que</strong>. Put the describing word in the middle and <em>que</em> (than / as) before the second thing. <em>Cette chanson est <strong>plus</strong> belle <strong>que</strong> l'autre.</em></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 6px 0;">Listen &mdash; the adjective agrees with its noun, but the frame never changes:</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-plus.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Cette chanson est plus belle que l'autre.</span><span class="v-en">more&hellip; than</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-moins.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Ce concert est moins cher que le concert de samedi.</span><span class="v-en">less&hellip; than</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-aussi.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Elle chante aussi bien que son fr&egrave;re.</span><span class="v-en">as&hellip; as</span></li>
+        </ul>
+    </div>
+
+    <!-- PART 2 · Rule 3 mieux vs meilleur -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#11088; PART 2 &middot; MIEUX vs MEILLEUR <span class="pill-time">10 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Two words that both mean &ldquo;better&rdquo;</h3>
+        <div class="rule-box"><strong>The rule.</strong> <strong>mieux</strong> is an <em>adverb</em> &mdash; it describes a <u>verb</u> (how well you <em>do</em> something): <em>il chante <strong>mieux</strong></em>. <strong>meilleur</strong> is an <em>adjective</em> &mdash; it describes a <u>noun</u>: <em>une <strong>meilleure</strong> chanson</em>. English uses &ldquo;better&rdquo; for both; French keeps them apart.</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 6px 0;">Listen to <em>mieux</em> describing <em>how</em> he plays &mdash; it attaches to the verb <em>jouer</em>:</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-mieux.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Il joue de la guitare mieux que moi.</span><span class="v-en">He plays guitar better than me.</span></li>
+        </ul>
+        <div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">A quick test you can use forever: if &ldquo;better&rdquo; sits next to a <em>verb</em> (sings better, plays better), use <strong>mieux</strong>. If it sits next to a <em>noun</em> (a better song, the best singer), use <strong>meilleur(e)</strong>. Write one sentence of each kind about your favorite artist.</div>
+        </div>
+    </div>
+
+    <!-- PART 3 · Full table -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; PART 3 &middot; LE TABLEAU COMPLET DES COMPARATIFS <span class="pill-time">10 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Everything in one place</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 4px 0;">This is your reference for the whole module. Read each row aloud.</p>
+        <table class="gtable">
+            <thead><tr><th>Meaning</th><th>Frame</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>more&hellip; than</td><td><span class="pron">plus</span> + adj + que</td><td>plus belle que l'autre</td></tr>
+                <tr><td>less&hellip; than</td><td><span class="pron">moins</span> + adj + que</td><td>moins cher que samedi</td></tr>
+                <tr><td>as&hellip; as</td><td><span class="pron">aussi</span> + adj + que</td><td>aussi bien que son fr&egrave;re</td></tr>
+                <tr><td>better (verb)</td><td><span class="pron">mieux</span> (adverb)</td><td>il joue mieux que moi</td></tr>
+                <tr><td>better / best (noun)</td><td><span class="pron">meilleur(e)</span> (adjective)</td><td>une meilleure chanson</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PART 4 · commit-then-reveal -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; &Agrave; TON TOUR <span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Compare two singers. In your notebook, write three sentences about <strong>Ana</strong> and <strong>Louis</strong>: use <em>plus&hellip;que</em>, then <em>moins&hellip;que</em>, then <em>mieux que</em>. <strong>Commit to an answer first</strong>, then reveal to check &mdash; trying before you see the answer is what makes it stick.</p>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#129504; COMPARE &middot; Ana &amp; Louis</div>
+            <div class="widget-question">Write your three comparison sentences, then reveal a model.</div>
+            <button class="reveal-btn">Reveal the model</button>
+            <div class="reveal-body">
+                <table class="gtable" style="margin-top:0;">
+                    <tbody>
+                        <tr><td>Ana est <span class="pron">plus</span> c&eacute;l&egrave;bre <span class="pron">que</span> Louis.</td><td>Ana is more famous than Louis.</td></tr>
+                        <tr><td>Louis est <span class="pron">moins</span> populaire <span class="pron">que</span> Ana.</td><td>Louis is less popular than Ana.</td></tr>
+                        <tr><td>Ana chante <span class="pron">mieux que</span> Louis.</td><td>Ana sings better than Louis.</td></tr>
+                    </tbody>
+                </table>
+                <div style="font-size:15px;color:#1a6b3d;margin-top:8px;">Notice the last one uses <em>mieux</em> (next to the verb <em>chante</em>), not <em>meilleur</em>. If you kept that straight, you've got today's hardest point.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 8.04</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you put it all to work: compare songs, concerts, and performers; use <em>lui</em> and <em>leur</em> in real sentences; and take your first <em>audio dictation</em> of the module.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Then test yourself: say <em>&ldquo;This song is better than the other one&rdquo;</em> &mdash; do you need <em>mieux</em> or <em>meilleure</em>? (It's a noun&hellip; so <em>meilleure</em>.)</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; DEUX R&Egrave;GLES, C'EST TOUT&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Point at people with <em>lui / leur</em>; compare with <em>plus / moins / aussi&hellip;que</em> and the two &ldquo;betters.&rdquo; Those two rules run this whole module &mdash; and you now have both. <em>&Agrave; demain&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.03 &middot; Les comparatifs</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

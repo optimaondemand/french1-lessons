@@ -1,0 +1,141 @@
+<!--
+  French 1 (0701320) · S1 Module 8 · Vocabulaire study page (all 22 words, flip cards + audio).
+  In-module study resource (GitHub-deployed). Delete .preview-banner before deploy.
+  Answers "do students get the words+audio?" — yes: this is the provided word bank they drill by ear.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Module 8 Vocabulaire</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* French accents (matches lesson template) */
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+
+    .section-hd { font-size: 11px; color: #c7922c; letter-spacing: 0.4px; margin: 24px 0 12px 0; }
+    .vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 16px 16px; cursor: pointer; text-align: center; min-height: 96px; display: flex; flex-direction: column; justify-content: center; }
+    .ow-flip .ow-flip-back { display: none; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+    .vc-fr { font-size: 19px; font-weight: 600; color: #0E1C42; margin-top: 8px; }
+    .vc-en { font-size: 19px; color: #1A6B3D; }
+    .vc-hint { font-size: 11px; color: #9aa7bd; margin-top: 8px; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 42px; height: 34px; font-size: 16px; cursor: pointer; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<!-- BODY -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Module 8 &middot; Paris &amp; l'identit&eacute; fran&ccedil;aise (Capstone &amp; Gate)</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Vocabulaire &mdash; your Module 8 word bank</div>
+        <div style="font-size: 16px; color: #666;">Study resource &middot; 22 words with audio</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-bottom: 8px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128266; HOW TO USE THIS PAGE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Every Module 8 word is here &mdash; you do <strong>not</strong> need to make your own list. Tap the <strong>&#128266;</strong> to hear a word, then tap the <strong>card</strong> to flip it and check the meaning. Your Vocabulary Check is <strong>listening-based</strong>, so drill by <em>ear</em>: hear the word first, recall the meaning, then flip to confirm. Come back to this page any day of the module.</div>
+    </div>
+
+    <div class="section-hd">&#128506;&#65039; LES LIEUX DE PARIS &middot; PARIS LANDMARKS &amp; CITY</div>
+    <div class="vgrid">
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/paris.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">Paris</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">Paris</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-tour-eiffel.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la tour Eiffel</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the Eiffel Tower</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-louvre.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le Louvre</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the Louvre</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-musee.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le mus&eacute;e</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the museum</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-seine.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la Seine</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the Seine (river)</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/notre-dame.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">Notre-Dame</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">Notre-Dame</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-quartier.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le quartier</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the neighborhood</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-rue.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la rue</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the street</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-metro.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le m&eacute;tro</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the subway / metro</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-gare.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la gare</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the train station</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-jardin.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le jardin</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the garden</div></div></div>
+    </div>
+
+    <div class="section-hd">&#127467;&#127479; L'IDENTIT&Eacute; FRAN&Ccedil;AISE &middot; FRENCH IDENTITY &amp; CULTURE</div>
+    <div class="vgrid">
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-monument.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le monument</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the monument</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-cathedrale.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la cath&eacute;drale</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the cathedral</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/visiter.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">visiter</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">to visit</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-france.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la France</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">France</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/le-drapeau.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">le drapeau</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the flag</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-langue-francaise.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la langue fran&ccedil;aise</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the French language</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-culture.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la culture</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">culture</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/francais-francaise.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">fran&ccedil;ais, fran&ccedil;aise</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">French (m., f.)</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/la-capitale.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">la capitale</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">the capital</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/celebre.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">c&eacute;l&egrave;bre</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">famous</div></div></div>
+        <div class="ow-flip"><div class="ow-flip-front"><button class="say" data-audio="vocab/decouvrir.mp3" aria-label="&Eacute;couter">&#128266;</button><div class="vc-fr">d&eacute;couvrir</div><div class="vc-hint">tap to flip</div></div><div class="ow-flip-back"><div class="vc-en">to discover</div></div></div>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Module 8 Vocabulaire</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  // Flip on card click — but NOT when the click is on the audio button.
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-audio]')) return;
+    var flip = e.target.closest('.ow-flip');
+    if (flip) flip.classList.toggle('flipped');
+  });
+  // One shared audio player.
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio(); var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

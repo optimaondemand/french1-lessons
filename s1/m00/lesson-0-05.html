@@ -1,0 +1,266 @@
+<!--
+  French 1 (0701320) · S1 Module 0 · Lesson 0.05 (Day 5 of 10) — Orientation / Phonics.
+  Les nombres 1–30 (all 30 number clips) + virtue sidebar Louis Braille / Service. Widget: evaluative (by ear).
+  AUDIO_BASE = ../../audio/. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 0.05</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 38px; height: 32px; font-size: 15px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .num-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; margin: 14px 0; }
+    .num-cell { display: flex; align-items: center; gap: 10px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; }
+    .num-cell .nn { font-size: 20px; font-weight: 700; color: #7A1C28; min-width: 26px; text-align: right; }
+    .num-cell .nf { font-size: 15px; color: #0E1C42; flex: 1; }
+    .rule-box { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 12px 16px; margin: 10px 0; font-size: 16px; color: #1a2340; line-height: 1.6; }
+    .virtue { background: #FCF6EA; border: 1px solid #E7D6AE; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin: 6px 0; }
+    .virtue .tag { font-size: 11px; letter-spacing: 0.5px; color: #9a7b1e; margin-bottom: 6px; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 0</div>
+        <div style="font-size: 12px; color: #666;">Le fran&ccedil;ais</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 0.05 &middot; Day 5 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Les nombres 1&ndash;30</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Orientation &amp; Phonics</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 0.05</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Les nombres 1&ndash;30 &mdash; Numbers</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Your first words you can actually <em>use</em> today &mdash; the numbers, the backbone of prices, ages, times, and dates.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Numbers show up in every conversation you'll ever have in French. Learn 1&ndash;30 by ear now and you're set for telling time, giving your age, and counting money later. Then meet <strong>Louis Braille</strong>, who reinvented reading itself &mdash; freely, for everyone.</div>
+    </div>
+
+    <!-- PART 1 · numbers -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; DE UN &Agrave; TRENTE <span class="pill-time">22 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Click the <strong>&#128266;</strong> and say each number back. Go 1&ndash;10 first, then 11&ndash;20, then 21&ndash;30.</p>
+        <div class="num-grid">
+            <div class="num-cell"><span class="nn">1</span><span class="nf">un</span><button class="say" data-audio="nombres/01-un.mp3" aria-label="&Eacute;couter 1">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">2</span><span class="nf">deux</span><button class="say" data-audio="nombres/02-deux.mp3" aria-label="&Eacute;couter 2">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">3</span><span class="nf">trois</span><button class="say" data-audio="nombres/03-trois.mp3" aria-label="&Eacute;couter 3">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">4</span><span class="nf">quatre</span><button class="say" data-audio="nombres/04-quatre.mp3" aria-label="&Eacute;couter 4">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">5</span><span class="nf">cinq</span><button class="say" data-audio="nombres/05-cinq.mp3" aria-label="&Eacute;couter 5">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">6</span><span class="nf">six</span><button class="say" data-audio="nombres/06-six.mp3" aria-label="&Eacute;couter 6">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">7</span><span class="nf">sept</span><button class="say" data-audio="nombres/07-sept.mp3" aria-label="&Eacute;couter 7">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">8</span><span class="nf">huit</span><button class="say" data-audio="nombres/08-huit.mp3" aria-label="&Eacute;couter 8">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">9</span><span class="nf">neuf</span><button class="say" data-audio="nombres/09-neuf.mp3" aria-label="&Eacute;couter 9">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">10</span><span class="nf">dix</span><button class="say" data-audio="nombres/10-dix.mp3" aria-label="&Eacute;couter 10">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">11</span><span class="nf">onze</span><button class="say" data-audio="nombres/11-onze.mp3" aria-label="&Eacute;couter 11">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">12</span><span class="nf">douze</span><button class="say" data-audio="nombres/12-douze.mp3" aria-label="&Eacute;couter 12">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">13</span><span class="nf">treize</span><button class="say" data-audio="nombres/13-treize.mp3" aria-label="&Eacute;couter 13">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">14</span><span class="nf">quatorze</span><button class="say" data-audio="nombres/14-quatorze.mp3" aria-label="&Eacute;couter 14">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">15</span><span class="nf">quinze</span><button class="say" data-audio="nombres/15-quinze.mp3" aria-label="&Eacute;couter 15">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">16</span><span class="nf">seize</span><button class="say" data-audio="nombres/16-seize.mp3" aria-label="&Eacute;couter 16">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">17</span><span class="nf">dix-sept</span><button class="say" data-audio="nombres/17-dix-sept.mp3" aria-label="&Eacute;couter 17">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">18</span><span class="nf">dix-huit</span><button class="say" data-audio="nombres/18-dix-huit.mp3" aria-label="&Eacute;couter 18">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">19</span><span class="nf">dix-neuf</span><button class="say" data-audio="nombres/19-dix-neuf.mp3" aria-label="&Eacute;couter 19">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">20</span><span class="nf">vingt</span><button class="say" data-audio="nombres/20-vingt.mp3" aria-label="&Eacute;couter 20">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">21</span><span class="nf">vingt et un</span><button class="say" data-audio="nombres/21-vingt-et-un.mp3" aria-label="&Eacute;couter 21">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">22</span><span class="nf">vingt-deux</span><button class="say" data-audio="nombres/22-vingt-deux.mp3" aria-label="&Eacute;couter 22">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">23</span><span class="nf">vingt-trois</span><button class="say" data-audio="nombres/23-vingt-trois.mp3" aria-label="&Eacute;couter 23">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">24</span><span class="nf">vingt-quatre</span><button class="say" data-audio="nombres/24-vingt-quatre.mp3" aria-label="&Eacute;couter 24">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">25</span><span class="nf">vingt-cinq</span><button class="say" data-audio="nombres/25-vingt-cinq.mp3" aria-label="&Eacute;couter 25">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">26</span><span class="nf">vingt-six</span><button class="say" data-audio="nombres/26-vingt-six.mp3" aria-label="&Eacute;couter 26">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">27</span><span class="nf">vingt-sept</span><button class="say" data-audio="nombres/27-vingt-sept.mp3" aria-label="&Eacute;couter 27">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">28</span><span class="nf">vingt-huit</span><button class="say" data-audio="nombres/28-vingt-huit.mp3" aria-label="&Eacute;couter 28">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">29</span><span class="nf">vingt-neuf</span><button class="say" data-audio="nombres/29-vingt-neuf.mp3" aria-label="&Eacute;couter 29">&#128266;</button></div>
+            <div class="num-cell"><span class="nn">30</span><span class="nf">trente</span><button class="say" data-audio="nombres/30-trente.mp3" aria-label="&Eacute;couter 30">&#128266;</button></div>
+        </div>
+        <div class="rule-box"><strong>Two patterns save you memorizing:</strong> 17&ndash;19 are just &ldquo;ten + digit&rdquo; (<em>dix-sept</em> = 10-7). And 21&ndash;29 are &ldquo;vingt + digit,&rdquo; with a little <em>et</em> only in <strong>21</strong> (<em>vingt <strong>et</strong> un</em>) &mdash; the rest are hyphenated (<em>vingt-deux</em>&hellip;).</div>
+    </div>
+
+    <!-- PART 2 · virtue -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9884; PART 2 &middot; UNE VERTU FRAN&Ccedil;AISE <span class="pill-time">6 min</span></div>
+        <div class="virtue">
+            <div class="tag">LE SERVICE &middot; SERVICE</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;"><strong>Louis Braille</strong> (1809&ndash;1852) lost his sight as a child in his father's workshop in a small town near Paris. As a teenager at a school for the blind, he invented a system of raised dots that let blind people read and write by touch &mdash; a whole alphabet reimagined. He gave it to the world freely, asking nothing.</p>
+            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">You spent this week learning an alphabet with your eyes and ears. Braille built one for the fingertips &mdash; and made it a gift. That's <em>service</em>: using what you learn to open a door for someone else.</p>
+        </div>
+    </div>
+
+    <!-- PART 3 · eval by ear -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 3 &middot; QUEL NOMBRE&nbsp;? <span class="pill-time">12 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Play the clip <em>without looking at the grid</em> and choose the number you hear.</p>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="nombres/07-sept.mp3" aria-label="&Eacute;couter">&#128266;</button> Which number is this?</div>
+            <div class="widget-options">
+                <button data-no="That was six.">6</button>
+                <button data-correct="1" data-ok="Oui &mdash; sept (7).">7</button>
+                <button data-no="Neuf is 9.">9</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="nombres/12-douze.mp3" aria-label="&Eacute;couter">&#128266;</button> Which number is this?</div>
+            <div class="widget-options">
+                <button data-no="Deux is 2.">2</button>
+                <button data-correct="1" data-ok="Exact &mdash; douze (12).">12</button>
+                <button data-no="Vingt is 20.">20</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="nombres/21-vingt-et-un.mp3" aria-label="&Eacute;couter">&#128266;</button> Which number is this?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; vingt et un (21), the only one with 'et'.">21</button>
+                <button data-no="Vingt-deux is 22.">22</button>
+                <button data-no="Trente et un would be 31 (out of range here).">31</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Count out loud 1&rarr;30 without the audio, then <strong>backwards</strong> 30&rarr;20. Then say your age and your phone-number digits in French. Numbers only stick when you produce them, not just hear them.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 0.06</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends tomorrow with the days of the week and an active review of everything &mdash; letters, accents, sounds, numbers &mdash; before graded work opens in Week 2.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Then count 1&rarr;30 out loud once, cleanly.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; TRENTE&nbsp;! FIN DE LA SEMAINE 1&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Letters, accents, sounds, and now numbers &mdash; in one week you built the entire toolkit for reading French aloud. That's a real foundation. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 0.05 &middot; Les nombres 1&ndash;30</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

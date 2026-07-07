@@ -1,0 +1,352 @@
+﻿<!--
+  French 1 (0701320) · S2 Module 7 · Lesson 7.02 (Day 2 of 10)
+  Official Optima interactive lesson template + French accents + integrated audio.
+  Deployment: GitHub-hosted, embedded in Canvas. Delete .preview-banner before deploy.
+  Audio: AUDIO_BASE points at the shared /audio library (03_Development/audio/).
+  Widget runtime is the shared superset (reflect + eval + reveal). All audio refs resolve to generated clips.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 7.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS (byte-consistent with house template) ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+
+    /* ===== VOCAB / GRAMMAR AUDIO (integrated; click-to-hear) ===== */
+    .vocab-list { list-style: none; margin: 14px 0 0 0; padding: 0; }
+    .vocab-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 6px; margin-bottom: 8px; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .v-fr { font-weight: 600; color: #0E1C42; min-width: 170px; font-size: 17px; }
+    .v-en { color: #6b7a99; font-size: 15px; }
+    .play-bar { display: inline-flex; align-items: center; gap: 8px; background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; margin: 2px 0 8px; }
+    .play-bar:hover { background: #1B3A6B; }
+    .play-bar.playing { background: #C7922C; }
+    .play-bar.err { background: #C0392B; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable th { background: #EEF1F8; color: #0e1c42; font-weight: 600; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+
+    /* ===== FRENCH ACCENTS (layered on the Optima template; core chrome unchanged) ===== */
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 7</div>
+        <div style="font-size: 12px; color: #666;">La mode et le shopping</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 7.02 &middot; Day 2 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Le shopping &amp; les pronoms COD</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Fashion &amp; Shopping</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Le shopping &amp; le pronom COD &mdash; Say It Without Repeating</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Yesterday you named the clothes. Today you go shopping &mdash; and learn the word that replaces the noun so you don't say it twice.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">First, ten shopping words: buying, trying on, sizes, prices. Then the module's big idea &mdash; the <strong>direct object pronoun</strong> (<em>le, la, l', les</em>). Instead of &ldquo;I like the sweater, I wear the sweater,&rdquo; French says &ldquo;I like the sweater, I wear <u>it</u>&rdquo; &mdash; <em>je <strong>le</strong> porte</em>. Rule 1: the pronoun goes <strong>before</strong> the verb.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and pronounce the shopping words (words 11&ndash;20).</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose <em>le / la / l' / les</em> to match a noun's gender and number, and place it before the verb.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 · Vocab set B ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; AU MAGASIN <span class="pill-time">13 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Ten more words &mdash; listen, then repeat</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">These are the words of the shop: what you <em>do</em> there (<em>porter, acheter, essayer, voir</em>) and what you talk about (<em>la taille, la couleur, cher, bon march&eacute;</em>). Click the <strong>&#128266;</strong> and say each one back.</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-porter.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">porter</span><span class="v-en">to wear</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-acheter.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">acheter</span><span class="v-en">to buy</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-essayer.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">essayer</span><span class="v-en">to try on</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-le-magasin.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">le magasin</span><span class="v-en">the store</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-la-taille.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">la taille</span><span class="v-en">the size</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-la-couleur.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">la couleur</span><span class="v-en">the color</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-cher.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">cher</span><span class="v-en">expensive</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-bon-marche.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">bon march&eacute;</span><span class="v-en">cheap / inexpensive</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-voir.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">voir</span><span class="v-en">to see</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-la-vitrine.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">la vitrine</span><span class="v-en">the shop window</span></li>
+        </ul>
+        <div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <strong>Module 7 Vocabulaire</strong> page and mix yesterday's clothing words with today's shopping words. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 · Grammar Rule 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129504; PART 2 &middot; LA GRAMMAIRE &mdash; LE PRONOM COD <span class="pill-time">17 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">A word that replaces the thing</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>direct object pronoun</strong> (in French, <em>le pronom COD</em>) stands in for a noun you've already named, so you don't repeat it. English does this too: &ldquo;I see the dress &mdash; I love <u>it</u>.&rdquo; The French pronoun you choose must <strong>match the gender and number</strong> of the noun it replaces, and &mdash; here is Rule 1 &mdash; <span style="border-bottom:2px solid #C7922C;">it goes <em>before</em> the verb</span>, not after.</p>
+
+        <table class="gtable">
+            <thead><tr><th>Replaces&hellip;</th><th>Pronoun</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>masculine noun</td><td><span class="pron">le</span></td><td>Le pull ? Je <strong>le</strong> porte.</td></tr>
+                <tr><td>feminine noun</td><td><span class="pron">la</span></td><td>La robe ? Je <strong>la</strong> trouve jolie.</td></tr>
+                <tr><td>before a vowel (m. or f.)</td><td><span class="pron">l'</span></td><td>Le manteau ? Je <strong>l'</strong>essaie.</td></tr>
+                <tr><td>plural noun</td><td><span class="pron">les</span></td><td>Les chaussures ? Je <strong>les</strong> ach&egrave;te.</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 8px 0;">Hear all four. Notice the pronoun always lands right before the verb:</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m7-dop-le.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je <strong>le</strong> porte souvent.</span><span class="v-en">I wear it often. (le pull)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m7-dop-la.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je <strong>la</strong> trouve jolie.</span><span class="v-en">I find it pretty. (la robe)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m7-dop-l.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je <strong>l'</strong>essaie.</span><span class="v-en">I'm trying it on. (le manteau)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m7-dop-les.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je <strong>les</strong> ach&egrave;te.</span><span class="v-en">I'm buying them. (les chaussures)</span></li>
+        </ul>
+    </div>
+
+    <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 3 &middot; V&Eacute;RIFIE TA COMPR&Eacute;HENSION <span class="pill-time">10 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the pronoun that matches the noun. You get instant feedback &mdash; this is practice, not a grade.</p>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Le pantalon ? Je ______ porte tous les jours.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; le pantalon is masculine, so le.">le</button>
+                <button data-no="Not quite &mdash; la is for feminine nouns; le pantalon is masculine.">la</button>
+                <button data-no="Not quite &mdash; les is plural; le pantalon is singular.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">La jupe ? Je ______ trouve trop ch&egrave;re.</div>
+            <div class="widget-options">
+                <button data-no="Close &mdash; le is for masculine nouns; la jupe is feminine.">le</button>
+                <button data-correct="1" data-ok="Exact ! la jupe is feminine, so la.">la</button>
+                <button data-no="Not quite &mdash; les is plural.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Les chaussures ? Je ______ ach&egrave;te aujourd'hui.</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; le is singular masculine.">le</button>
+                <button data-no="Close &mdash; la is singular feminine; chaussures is plural.">la</button>
+                <button data-correct="1" data-ok="Voil&agrave; ! les chaussures is plural, so les.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Le manteau ? Je ______ essaie. (careful &mdash; the verb starts with a vowel!)</div>
+            <div class="widget-options">
+                <button data-no="Almost &mdash; before a vowel, le drops its e and becomes l'.">le</button>
+                <button data-correct="1" data-ok="Parfait ! Before a vowel, le &rarr; l' : je l'essaie.">l'</button>
+                <button data-no="Not quite &mdash; les is plural; le manteau is singular.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 7.03</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow: the pronoun in the <em>past</em>. When you say &ldquo;I bought it&rdquo; in the pass&eacute; compos&eacute;, the pronoun jumps in front of <em>ai/as/a</em> &mdash; and the past participle can grow an extra letter (<em>je l'ai achet&eacute;e</em>). Full table included.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mark as Done -->
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page in Canvas so your progress is recorded. Then say the four pronouns out loud with an example each: <em>le pull &rarr; je le porte, la robe &rarr; je la trouve jolie&hellip;</em></div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute;&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have all twenty words and the one idea that unlocks the module: match the pronoun to the noun, and put it before the verb. Hold onto <em>le, la, l', les</em> &mdash; everything this week is built on it. <em>&Agrave; demain&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.02 &middot; Le shopping &amp; les pronoms COD</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (house superset: reflect + eval + reveal) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
+
+<!-- ===== AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2684 @@
+﻿{
+    "engine":  "onecore",
+    "format":  "mp3",
+    "rotation":  [
+                     "Hortense",
+                     "Julie",
+                     "Paul"
+                 ],
+    "count":  334,
+    "clips":  [
+                  {
+                      "id":  "alphabet/a",
+                      "text":  "a",
+                      "gloss":  "the letter A",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/a.mp3"
+                  },
+                  {
+                      "id":  "alphabet/b",
+                      "text":  "bé",
+                      "gloss":  "the letter B",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/b.mp3"
+                  },
+                  {
+                      "id":  "alphabet/c",
+                      "text":  "cé",
+                      "gloss":  "the letter C",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/c.mp3"
+                  },
+                  {
+                      "id":  "alphabet/d",
+                      "text":  "dé",
+                      "gloss":  "the letter D",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/d.mp3"
+                  },
+                  {
+                      "id":  "alphabet/e",
+                      "text":  "eu",
+                      "gloss":  "the letter E",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/e.mp3"
+                  },
+                  {
+                      "id":  "alphabet/f",
+                      "text":  "èfe",
+                      "gloss":  "the letter F",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/f.mp3"
+                  },
+                  {
+                      "id":  "alphabet/g",
+                      "text":  "gé",
+                      "gloss":  "the letter G",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/g.mp3"
+                  },
+                  {
+                      "id":  "alphabet/h",
+                      "text":  "ache",
+                      "gloss":  "the letter H",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/h.mp3"
+                  },
+                  {
+                      "id":  "alphabet/i",
+                      "text":  "i",
+                      "gloss":  "the letter I",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/i.mp3"
+                  },
+                  {
+                      "id":  "alphabet/j",
+                      "text":  "ji",
+                      "gloss":  "the letter J",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/j.mp3"
+                  },
+                  {
+                      "id":  "alphabet/k",
+                      "text":  "ka",
+                      "gloss":  "the letter K",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/k.mp3"
+                  },
+                  {
+                      "id":  "alphabet/l",
+                      "text":  "èl",
+                      "gloss":  "the letter L",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/l.mp3"
+                  },
+                  {
+                      "id":  "alphabet/m",
+                      "text":  "ème",
+                      "gloss":  "the letter M",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/m.mp3"
+                  },
+                  {
+                      "id":  "alphabet/n",
+                      "text":  "ène",
+                      "gloss":  "the letter N",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/n.mp3"
+                  },
+                  {
+                      "id":  "alphabet/o",
+                      "text":  "o",
+                      "gloss":  "the letter O",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/o.mp3"
+                  },
+                  {
+                      "id":  "alphabet/p",
+                      "text":  "pé",
+                      "gloss":  "the letter P",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/p.mp3"
+                  },
+                  {
+                      "id":  "alphabet/q",
+                      "text":  "ku",
+                      "gloss":  "the letter Q",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/q.mp3"
+                  },
+                  {
+                      "id":  "alphabet/r",
+                      "text":  "ère",
+                      "gloss":  "the letter R",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/r.mp3"
+                  },
+                  {
+                      "id":  "alphabet/s",
+                      "text":  "èsse",
+                      "gloss":  "the letter S",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/s.mp3"
+                  },
+                  {
+                      "id":  "alphabet/t",
+                      "text":  "té",
+                      "gloss":  "the letter T",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/t.mp3"
+                  },
+                  {
+                      "id":  "alphabet/u",
+                      "text":  "u",
+                      "gloss":  "the letter U",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/u.mp3"
+                  },
+                  {
+                      "id":  "alphabet/v",
+                      "text":  "vé",
+                      "gloss":  "the letter V",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/v.mp3"
+                  },
+                  {
+                      "id":  "alphabet/w",
+                      "text":  "double vé",
+                      "gloss":  "the letter W",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/w.mp3"
+                  },
+                  {
+                      "id":  "alphabet/x",
+                      "text":  "ikse",
+                      "gloss":  "the letter X",
+                      "type":  "alphabet",
+                      "voice":  "Julie",
+                      "file":  "audio/alphabet/x.mp3"
+                  },
+                  {
+                      "id":  "alphabet/y",
+                      "text":  "i grec",
+                      "gloss":  "the letter Y",
+                      "type":  "alphabet",
+                      "voice":  "Paul",
+                      "file":  "audio/alphabet/y.mp3"
+                  },
+                  {
+                      "id":  "alphabet/z",
+                      "text":  "zède",
+                      "gloss":  "the letter Z",
+                      "type":  "alphabet",
+                      "voice":  "Hortense",
+                      "file":  "audio/alphabet/z.mp3"
+                  },
+                  {
+                      "id":  "accents/accent-aigu",
+                      "text":  "l\u0027accent aigu",
+                      "gloss":  "acute accent — é",
+                      "type":  "accent",
+                      "voice":  "Julie",
+                      "file":  "audio/accents/accent-aigu.mp3"
+                  },
+                  {
+                      "id":  "accents/accent-grave",
+                      "text":  "l\u0027accent grave",
+                      "gloss":  "grave accent — è, à, ù",
+                      "type":  "accent",
+                      "voice":  "Julie",
+                      "file":  "audio/accents/accent-grave.mp3"
+                  },
+                  {
+                      "id":  "accents/accent-circonflexe",
+                      "text":  "l\u0027accent circonflexe",
+                      "gloss":  "circumflex — ê, â, î, ô, û",
+                      "type":  "accent",
+                      "voice":  "Paul",
+                      "file":  "audio/accents/accent-circonflexe.mp3"
+                  },
+                  {
+                      "id":  "accents/cedille",
+                      "text":  "la cédille",
+                      "gloss":  "cedilla — ç",
+                      "type":  "accent",
+                      "voice":  "Hortense",
+                      "file":  "audio/accents/cedille.mp3"
+                  },
+                  {
+                      "id":  "accents/trema",
+                      "text":  "le tréma",
+                      "gloss":  "diaeresis — ë, ï, ü",
+                      "type":  "accent",
+                      "voice":  "Julie",
+                      "file":  "audio/accents/trema.mp3"
+                  },
+                  {
+                      "id":  "nombres/01-un",
+                      "text":  "un",
+                      "gloss":  "1",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/01-un.mp3"
+                  },
+                  {
+                      "id":  "nombres/02-deux",
+                      "text":  "deux",
+                      "gloss":  "2",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/02-deux.mp3"
+                  },
+                  {
+                      "id":  "nombres/03-trois",
+                      "text":  "trois",
+                      "gloss":  "3",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/03-trois.mp3"
+                  },
+                  {
+                      "id":  "nombres/04-quatre",
+                      "text":  "quatre",
+                      "gloss":  "4",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/04-quatre.mp3"
+                  },
+                  {
+                      "id":  "nombres/05-cinq",
+                      "text":  "cinq",
+                      "gloss":  "5",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/05-cinq.mp3"
+                  },
+                  {
+                      "id":  "nombres/06-six",
+                      "text":  "six",
+                      "gloss":  "6",
+                      "type":  "nombre",
+                      "voice":  "Paul",
+                      "file":  "audio/nombres/06-six.mp3"
+                  },
+                  {
+                      "id":  "nombres/07-sept",
+                      "text":  "sept",
+                      "gloss":  "7",
+                      "type":  "nombre",
+                      "voice":  "Paul",
+                      "file":  "audio/nombres/07-sept.mp3"
+                  },
+                  {
+                      "id":  "nombres/08-huit",
+                      "text":  "huit",
+                      "gloss":  "8",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/08-huit.mp3"
+                  },
+                  {
+                      "id":  "nombres/09-neuf",
+                      "text":  "neuf",
+                      "gloss":  "9",
+                      "type":  "nombre",
+                      "voice":  "Paul",
+                      "file":  "audio/nombres/09-neuf.mp3"
+                  },
+                  {
+                      "id":  "nombres/10-dix",
+                      "text":  "dix",
+                      "gloss":  "10",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/10-dix.mp3"
+                  },
+                  {
+                      "id":  "nombres/11-onze",
+                      "text":  "onze",
+                      "gloss":  "11",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/11-onze.mp3"
+                  },
+                  {
+                      "id":  "nombres/12-douze",
+                      "text":  "douze",
+                      "gloss":  "12",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/12-douze.mp3"
+                  },
+                  {
+                      "id":  "nombres/13-treize",
+                      "text":  "treize",
+                      "gloss":  "13",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/13-treize.mp3"
+                  },
+                  {
+                      "id":  "nombres/14-quatorze",
+                      "text":  "quatorze",
+                      "gloss":  "14",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/14-quatorze.mp3"
+                  },
+                  {
+                      "id":  "nombres/15-quinze",
+                      "text":  "quinze",
+                      "gloss":  "15",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/15-quinze.mp3"
+                  },
+                  {
+                      "id":  "nombres/16-seize",
+                      "text":  "seize",
+                      "gloss":  "16",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/16-seize.mp3"
+                  },
+                  {
+                      "id":  "nombres/17-dix-sept",
+                      "text":  "dix-sept",
+                      "gloss":  "17",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/17-dix-sept.mp3"
+                  },
+                  {
+                      "id":  "nombres/18-dix-huit",
+                      "text":  "dix-huit",
+                      "gloss":  "18",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/18-dix-huit.mp3"
+                  },
+                  {
+                      "id":  "nombres/19-dix-neuf",
+                      "text":  "dix-neuf",
+                      "gloss":  "19",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/19-dix-neuf.mp3"
+                  },
+                  {
+                      "id":  "nombres/20-vingt",
+                      "text":  "vingt",
+                      "gloss":  "20",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/20-vingt.mp3"
+                  },
+                  {
+                      "id":  "nombres/21-vingt-et-un",
+                      "text":  "vingt et un",
+                      "gloss":  "21",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/21-vingt-et-un.mp3"
+                  },
+                  {
+                      "id":  "nombres/22-vingt-deux",
+                      "text":  "vingt-deux",
+                      "gloss":  "22",
+                      "type":  "nombre",
+                      "voice":  "Paul",
+                      "file":  "audio/nombres/22-vingt-deux.mp3"
+                  },
+                  {
+                      "id":  "nombres/23-vingt-trois",
+                      "text":  "vingt-trois",
+                      "gloss":  "23",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/23-vingt-trois.mp3"
+                  },
+                  {
+                      "id":  "nombres/24-vingt-quatre",
+                      "text":  "vingt-quatre",
+                      "gloss":  "24",
+                      "type":  "nombre",
+                      "voice":  "Paul",
+                      "file":  "audio/nombres/24-vingt-quatre.mp3"
+                  },
+                  {
+                      "id":  "nombres/25-vingt-cinq",
+                      "text":  "vingt-cinq",
+                      "gloss":  "25",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/25-vingt-cinq.mp3"
+                  },
+                  {
+                      "id":  "nombres/26-vingt-six",
+                      "text":  "vingt-six",
+                      "gloss":  "26",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/26-vingt-six.mp3"
+                  },
+                  {
+                      "id":  "nombres/27-vingt-sept",
+                      "text":  "vingt-sept",
+                      "gloss":  "27",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/27-vingt-sept.mp3"
+                  },
+                  {
+                      "id":  "nombres/28-vingt-huit",
+                      "text":  "vingt-huit",
+                      "gloss":  "28",
+                      "type":  "nombre",
+                      "voice":  "Hortense",
+                      "file":  "audio/nombres/28-vingt-huit.mp3"
+                  },
+                  {
+                      "id":  "nombres/29-vingt-neuf",
+                      "text":  "vingt-neuf",
+                      "gloss":  "29",
+                      "type":  "nombre",
+                      "voice":  "Julie",
+                      "file":  "audio/nombres/29-vingt-neuf.mp3"
+                  },
+                  {
+                      "id":  "nombres/30-trente",
+                      "text":  "trente",
+                      "gloss":  "30",
+                      "type":  "nombre",
+                      "voice":  "Paul",
+                      "file":  "audio/nombres/30-trente.mp3"
+                  },
+                  {
+                      "id":  "jours/lundi",
+                      "text":  "lundi",
+                      "gloss":  "Monday",
+                      "type":  "jour",
+                      "voice":  "Julie",
+                      "file":  "audio/jours/lundi.mp3"
+                  },
+                  {
+                      "id":  "jours/mardi",
+                      "text":  "mardi",
+                      "gloss":  "Tuesday",
+                      "type":  "jour",
+                      "voice":  "Julie",
+                      "file":  "audio/jours/mardi.mp3"
+                  },
+                  {
+                      "id":  "jours/mercredi",
+                      "text":  "mercredi",
+                      "gloss":  "Wednesday",
+                      "type":  "jour",
+                      "voice":  "Julie",
+                      "file":  "audio/jours/mercredi.mp3"
+                  },
+                  {
+                      "id":  "jours/jeudi",
+                      "text":  "jeudi",
+                      "gloss":  "Thursday",
+                      "type":  "jour",
+                      "voice":  "Paul",
+                      "file":  "audio/jours/jeudi.mp3"
+                  },
+                  {
+                      "id":  "jours/vendredi",
+                      "text":  "vendredi",
+                      "gloss":  "Friday",
+                      "type":  "jour",
+                      "voice":  "Julie",
+                      "file":  "audio/jours/vendredi.mp3"
+                  },
+                  {
+                      "id":  "jours/samedi",
+                      "text":  "samedi",
+                      "gloss":  "Saturday",
+                      "type":  "jour",
+                      "voice":  "Julie",
+                      "file":  "audio/jours/samedi.mp3"
+                  },
+                  {
+                      "id":  "jours/dimanche",
+                      "text":  "dimanche",
+                      "gloss":  "Sunday",
+                      "type":  "jour",
+                      "voice":  "Julie",
+                      "file":  "audio/jours/dimanche.mp3"
+                  },
+                  {
+                      "id":  "phonics/petit",
+                      "text":  "petit",
+                      "gloss":  "silent final -t",
+                      "type":  "phonics",
+                      "voice":  "Hortense",
+                      "file":  "audio/phonics/petit.mp3"
+                  },
+                  {
+                      "id":  "phonics/francais",
+                      "text":  "français",
+                      "gloss":  "silent final -s; ç",
+                      "type":  "phonics",
+                      "voice":  "Julie",
+                      "file":  "audio/phonics/francais.mp3"
+                  },
+                  {
+                      "id":  "phonics/beaucoup",
+                      "text":  "beaucoup",
+                      "gloss":  "silent final -p",
+                      "type":  "phonics",
+                      "voice":  "Paul",
+                      "file":  "audio/phonics/beaucoup.mp3"
+                  },
+                  {
+                      "id":  "phonics/salut",
+                      "text":  "salut",
+                      "gloss":  "silent final -t",
+                      "type":  "phonics",
+                      "voice":  "Hortense",
+                      "file":  "audio/phonics/salut.mp3"
+                  },
+                  {
+                      "id":  "phonics/bon",
+                      "text":  "bon",
+                      "gloss":  "nasal vowel: on",
+                      "type":  "phonics",
+                      "voice":  "Hortense",
+                      "file":  "audio/phonics/bon.mp3"
+                  },
+                  {
+                      "id":  "phonics/grand",
+                      "text":  "grand",
+                      "gloss":  "nasal vowel: an; silent -d",
+                      "type":  "phonics",
+                      "voice":  "Julie",
+                      "file":  "audio/phonics/grand.mp3"
+                  },
+                  {
+                      "id":  "phonics/vingt",
+                      "text":  "vingt",
+                      "gloss":  "nasal vowel: in; silent -gt",
+                      "type":  "phonics",
+                      "voice":  "Paul",
+                      "file":  "audio/phonics/vingt.mp3"
+                  },
+                  {
+                      "id":  "phonics/un-pain",
+                      "text":  "un pain",
+                      "gloss":  "nasal vowels: un + in",
+                      "type":  "phonics",
+                      "voice":  "Paul",
+                      "file":  "audio/phonics/un-pain.mp3"
+                  },
+                  {
+                      "id":  "phonics/les-amis",
+                      "text":  "les amis",
+                      "gloss":  "liaison (z sound)",
+                      "type":  "phonics",
+                      "voice":  "Paul",
+                      "file":  "audio/phonics/les-amis.mp3"
+                  },
+                  {
+                      "id":  "phonics/vous-avez",
+                      "text":  "vous avez",
+                      "gloss":  "liaison (z sound)",
+                      "type":  "phonics",
+                      "voice":  "Julie",
+                      "file":  "audio/phonics/vous-avez.mp3"
+                  },
+                  {
+                      "id":  "phonics/nous-avons",
+                      "text":  "nous avons",
+                      "gloss":  "liaison (z sound)",
+                      "type":  "phonics",
+                      "voice":  "Julie",
+                      "file":  "audio/phonics/nous-avons.mp3"
+                  },
+                  {
+                      "id":  "phonics/comment-allez-vous",
+                      "text":  "Comment allez-vous ?",
+                      "gloss":  "liaison (t sound)",
+                      "type":  "phonics",
+                      "voice":  "Paul",
+                      "file":  "audio/phonics/comment-allez-vous.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-reveiller",
+                      "text":  "se réveiller",
+                      "gloss":  "to wake up",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-reveiller.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-lever",
+                      "text":  "se lever",
+                      "gloss":  "to get up",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/se-lever.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-laver",
+                      "text":  "se laver",
+                      "gloss":  "to wash oneself / wash up",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-laver.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-doucher",
+                      "text":  "se doucher",
+                      "gloss":  "to shower",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/se-doucher.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-brosser-les-dents",
+                      "text":  "se brosser les dents",
+                      "gloss":  "to brush one\u0027s teeth",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/se-brosser-les-dents.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-coiffer",
+                      "text":  "se coiffer",
+                      "gloss":  "to do one\u0027s hair",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/se-coiffer.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-raser",
+                      "text":  "se raser",
+                      "gloss":  "to shave",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-raser.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-maquiller",
+                      "text":  "se maquiller",
+                      "gloss":  "to put on makeup",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/se-maquiller.mp3"
+                  },
+                  {
+                      "id":  "vocab/s-habiller",
+                      "text":  "s\u0027habiller",
+                      "gloss":  "to get dressed",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s-habiller.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-depecher",
+                      "text":  "se dépêcher",
+                      "gloss":  "to hurry",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-depecher.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-promener",
+                      "text":  "se promener",
+                      "gloss":  "to go for a walk",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/se-promener.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-reposer",
+                      "text":  "se reposer",
+                      "gloss":  "to rest",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/se-reposer.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-retrouver",
+                      "text":  "se retrouver",
+                      "gloss":  "to meet up (with someone)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-retrouver.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-coucher",
+                      "text":  "se coucher",
+                      "gloss":  "to go to bed",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-coucher.mp3"
+                  },
+                  {
+                      "id":  "vocab/s-endormir",
+                      "text":  "s\u0027endormir",
+                      "gloss":  "to fall asleep",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s-endormir.mp3"
+                  },
+                  {
+                      "id":  "vocab/se-sentir",
+                      "text":  "se sentir",
+                      "gloss":  "to feel",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/se-sentir.mp3"
+                  },
+                  {
+                      "id":  "vocab/tot",
+                      "text":  "tôt",
+                      "gloss":  "early",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/tot.mp3"
+                  },
+                  {
+                      "id":  "vocab/tard",
+                      "text":  "tard",
+                      "gloss":  "late",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/tard.mp3"
+                  },
+                  {
+                      "id":  "vocab/d-abord",
+                      "text":  "d\u0027abord",
+                      "gloss":  "first / first of all",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/d-abord.mp3"
+                  },
+                  {
+                      "id":  "vocab/ensuite",
+                      "text":  "ensuite",
+                      "gloss":  "then / next",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/ensuite.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-je-me-leve",
+                      "text":  "Je me lève.",
+                      "gloss":  "I get up.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m05-je-me-leve.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-tu-te-leves",
+                      "text":  "Tu te lèves.",
+                      "gloss":  "You get up.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m05-tu-te-leves.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-il-se-leve",
+                      "text":  "Il se lève.",
+                      "gloss":  "He gets up.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m05-il-se-leve.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-je-mhabille",
+                      "text":  "Je m\u0027habille.",
+                      "gloss":  "I get dressed.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m05-je-mhabille.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-il-sendort",
+                      "text":  "Il s\u0027endort.",
+                      "gloss":  "He falls asleep.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m05-il-sendort.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-neg-lever",
+                      "text":  "Je ne me lève pas tôt le samedi.",
+                      "gloss":  "I don\u0027t get up early on Saturdays.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m05-neg-lever.mp3"
+                  },
+                  {
+                      "id":  "grammar/m05-neg-habiller",
+                      "text":  "Elle ne s\u0027habille pas vite.",
+                      "gloss":  "She doesn\u0027t get dressed quickly.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m05-neg-habiller.mp3"
+                  },
+                  {
+                      "id":  "passage/m05-lea-01",
+                      "text":  "Je me réveille toujours à six heures et demie, pas parce que je veux, mais parce que mon cours commence à huit heures. D\u0027abord, je me douche pendant dix minutes. Ensuite, je me coiffe et je m\u0027habille. Je me dépêche beaucoup le mardi parce que les bus sont pleins.",
+                      "gloss":  "Léa\u0027s morning, paragraph 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m05-lea-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m05-lea-02",
+                      "text":  "Mon père se réveille plus tard que moi, il travaille à la maison. Ma mère, elle, se lève très tôt et se brosse les dents avant tout le monde. Nous nous retrouvons à table pour le petit-déjeuner pendant quinze minutes seulement.",
+                      "gloss":  "Léa\u0027s morning, paragraph 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m05-lea-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m05-lea-03",
+                      "text":  "Le soir, je rentre à dix-sept heures. Je me repose un peu, puis je fais mes devoirs. Je me couche normalement à vingt-deux heures trente. Je m\u0027endors vite, je suis toujours fatiguée!",
+                      "gloss":  "Léa\u0027s morning, paragraph 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m05-lea-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/bonjour",
+                      "text":  "bonjour",
+                      "gloss":  "hello / good day",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/bonjour.mp3"
+                  },
+                  {
+                      "id":  "vocab/salut",
+                      "text":  "salut",
+                      "gloss":  "hi / bye (informal)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/salut.mp3"
+                  },
+                  {
+                      "id":  "vocab/bonsoir",
+                      "text":  "bonsoir",
+                      "gloss":  "good evening",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/bonsoir.mp3"
+                  },
+                  {
+                      "id":  "vocab/au-revoir",
+                      "text":  "au revoir",
+                      "gloss":  "goodbye",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/au-revoir.mp3"
+                  },
+                  {
+                      "id":  "vocab/a-bientot",
+                      "text":  "à bientôt",
+                      "gloss":  "see you soon",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/a-bientot.mp3"
+                  },
+                  {
+                      "id":  "vocab/a-demain",
+                      "text":  "à demain",
+                      "gloss":  "see you tomorrow",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/a-demain.mp3"
+                  },
+                  {
+                      "id":  "vocab/a-plus-tard",
+                      "text":  "à plus tard",
+                      "gloss":  "see you later",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/a-plus-tard.mp3"
+                  },
+                  {
+                      "id":  "vocab/merci",
+                      "text":  "merci",
+                      "gloss":  "thank you",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/merci.mp3"
+                  },
+                  {
+                      "id":  "vocab/de-rien",
+                      "text":  "de rien",
+                      "gloss":  "you\u0027re welcome",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/de-rien.mp3"
+                  },
+                  {
+                      "id":  "vocab/s-il-vous-plait",
+                      "text":  "s\u0027il vous plaît",
+                      "gloss":  "please (formal)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s-il-vous-plait.mp3"
+                  },
+                  {
+                      "id":  "vocab/oui",
+                      "text":  "oui",
+                      "gloss":  "yes",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/oui.mp3"
+                  },
+                  {
+                      "id":  "vocab/non",
+                      "text":  "non",
+                      "gloss":  "no",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/non.mp3"
+                  },
+                  {
+                      "id":  "vocab/monsieur",
+                      "text":  "monsieur",
+                      "gloss":  "sir / Mr.",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/monsieur.mp3"
+                  },
+                  {
+                      "id":  "vocab/madame",
+                      "text":  "madame",
+                      "gloss":  "ma\u0027am / Mrs.",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/madame.mp3"
+                  },
+                  {
+                      "id":  "vocab/mademoiselle",
+                      "text":  "mademoiselle",
+                      "gloss":  "miss",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/mademoiselle.mp3"
+                  },
+                  {
+                      "id":  "vocab/enchante",
+                      "text":  "enchanté",
+                      "gloss":  "nice to meet you",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/enchante.mp3"
+                  },
+                  {
+                      "id":  "vocab/je-m-appelle",
+                      "text":  "je m\u0027appelle",
+                      "gloss":  "my name is",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/je-m-appelle.mp3"
+                  },
+                  {
+                      "id":  "vocab/comment-tu-t-appelles",
+                      "text":  "comment tu t\u0027appelles ?",
+                      "gloss":  "what\u0027s your name? (informal)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/comment-tu-t-appelles.mp3"
+                  },
+                  {
+                      "id":  "vocab/comment-allez-vous-greeting",
+                      "text":  "comment allez-vous ?",
+                      "gloss":  "how are you? (formal)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/comment-allez-vous-greeting.mp3"
+                  },
+                  {
+                      "id":  "vocab/ca-va",
+                      "text":  "ça va",
+                      "gloss":  "it\u0027s going fine / how\u0027s it going",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/ca-va.mp3"
+                  },
+                  {
+                      "id":  "vocab/pardon",
+                      "text":  "pardon",
+                      "gloss":  "excuse me / sorry",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/pardon.mp3"
+                  },
+                  {
+                      "id":  "vocab/excusez-moi",
+                      "text":  "excusez-moi",
+                      "gloss":  "excuse me (formal)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/excusez-moi.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-je-suis",
+                      "text":  "Je suis étudiant.",
+                      "gloss":  "I am a student.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m01-je-suis.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-tu-es",
+                      "text":  "Tu es français ?",
+                      "gloss":  "Are you French?",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m01-tu-es.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-il-est",
+                      "text":  "Il est professeur.",
+                      "gloss":  "He is a teacher.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m01-il-est.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-elle-est",
+                      "text":  "Elle est américaine.",
+                      "gloss":  "She is American.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m01-elle-est.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-nous-sommes",
+                      "text":  "Nous sommes amis.",
+                      "gloss":  "We are friends.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m01-nous-sommes.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-vous-etes",
+                      "text":  "Vous êtes madame Martin ?",
+                      "gloss":  "Are you Mrs. Martin?",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m01-vous-etes.mp3"
+                  },
+                  {
+                      "id":  "grammar/m01-ils-sont",
+                      "text":  "Ils sont contents.",
+                      "gloss":  "They are happy.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m01-ils-sont.mp3"
+                  },
+                  {
+                      "id":  "passage/m01-lucas-01",
+                      "text":  "Bonjour ! Je m\u0027appelle Lucas. Je suis étudiant à Lyon et j\u0027ai quinze ans.",
+                      "gloss":  "Lucas introduces himself, 1",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/m01-lucas-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m01-lucas-02",
+                      "text":  "Comment allez-vous ? Moi, ça va très bien, merci. Voici mon amie : elle s\u0027appelle Camille et elle est française aussi.",
+                      "gloss":  "Lucas introduces himself, 2",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/m01-lucas-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m01-lucas-03",
+                      "text":  "Nous sommes contents d\u0027être ici. Au revoir, et à bientôt !",
+                      "gloss":  "Lucas introduces himself, 3",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/m01-lucas-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-ecole",
+                      "text":  "l\u0027école",
+                      "gloss":  "school (f.)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/l-ecole.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-classe",
+                      "text":  "la classe",
+                      "gloss":  "the class / classroom",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-classe.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-professeur",
+                      "text":  "le professeur",
+                      "gloss":  "the teacher",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-professeur.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-eleve",
+                      "text":  "l\u0027élève",
+                      "gloss":  "the student / pupil",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/l-eleve.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-livre",
+                      "text":  "le livre",
+                      "gloss":  "the book",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-livre.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-cahier",
+                      "text":  "le cahier",
+                      "gloss":  "the notebook",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-cahier.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-stylo",
+                      "text":  "le stylo",
+                      "gloss":  "the pen",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-stylo.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-devoirs",
+                      "text":  "les devoirs",
+                      "gloss":  "homework",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/les-devoirs.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-maths",
+                      "text":  "les maths",
+                      "gloss":  "math",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/les-maths.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-francais",
+                      "text":  "le français",
+                      "gloss":  "French (subject)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-francais.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-histoire",
+                      "text":  "l\u0027histoire",
+                      "gloss":  "history",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/l-histoire.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-sciences",
+                      "text":  "les sciences",
+                      "gloss":  "science",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/les-sciences.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-anglais",
+                      "text":  "l\u0027anglais",
+                      "gloss":  "English (subject)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/l-anglais.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-art",
+                      "text":  "l\u0027art",
+                      "gloss":  "art",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/l-art.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-musique",
+                      "text":  "la musique",
+                      "gloss":  "music",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-musique.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-sport",
+                      "text":  "le sport",
+                      "gloss":  "sports / P.E.",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-sport.mp3"
+                  },
+                  {
+                      "id":  "vocab/parler",
+                      "text":  "parler",
+                      "gloss":  "to speak",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/parler.mp3"
+                  },
+                  {
+                      "id":  "vocab/etudier",
+                      "text":  "étudier",
+                      "gloss":  "to study",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/etudier.mp3"
+                  },
+                  {
+                      "id":  "vocab/ecouter",
+                      "text":  "écouter",
+                      "gloss":  "to listen (to)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/ecouter.mp3"
+                  },
+                  {
+                      "id":  "vocab/regarder",
+                      "text":  "regarder",
+                      "gloss":  "to watch / look at",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/regarder.mp3"
+                  },
+                  {
+                      "id":  "vocab/aimer",
+                      "text":  "aimer",
+                      "gloss":  "to like / love",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/aimer.mp3"
+                  },
+                  {
+                      "id":  "vocab/travailler",
+                      "text":  "travailler",
+                      "gloss":  "to work",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/travailler.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-je-parle",
+                      "text":  "Je parle français.",
+                      "gloss":  "I speak French.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m02-je-parle.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-tu-parles",
+                      "text":  "Tu parles anglais ?",
+                      "gloss":  "Do you speak English?",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m02-tu-parles.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-il-parle",
+                      "text":  "Il parle avec le professeur.",
+                      "gloss":  "He speaks with the teacher.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m02-il-parle.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-nous-parlons",
+                      "text":  "Nous parlons en classe.",
+                      "gloss":  "We speak in class.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m02-nous-parlons.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-vous-parlez",
+                      "text":  "Vous parlez espagnol ?",
+                      "gloss":  "Do you speak Spanish?",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m02-vous-parlez.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-ils-parlent",
+                      "text":  "Ils parlent beaucoup.",
+                      "gloss":  "They talk a lot.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m02-ils-parlent.mp3"
+                  },
+                  {
+                      "id":  "grammar/m02-neg-aimer",
+                      "text":  "Je n\u0027aime pas les devoirs.",
+                      "gloss":  "I don\u0027t like homework.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m02-neg-aimer.mp3"
+                  },
+                  {
+                      "id":  "passage/m02-ecole-01",
+                      "text":  "J\u0027aime beaucoup l\u0027école. J\u0027étudie les maths, le français et l\u0027histoire.",
+                      "gloss":  "A school day, 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m02-ecole-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m02-ecole-02",
+                      "text":  "Le matin, j\u0027écoute le professeur et je travaille avec mes amis. Nous parlons français en classe.",
+                      "gloss":  "A school day, 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m02-ecole-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m02-ecole-03",
+                      "text":  "Je n\u0027aime pas les devoirs, mais j\u0027adore la musique et le sport. Et toi, tu aimes l\u0027école ?",
+                      "gloss":  "A school day, 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m02-ecole-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-famille",
+                      "text":  "la famille",
+                      "gloss":  "the family",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-famille.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-pere",
+                      "text":  "le père",
+                      "gloss":  "the father",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-pere.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-mere",
+                      "text":  "la mère",
+                      "gloss":  "the mother",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-mere.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-parents",
+                      "text":  "les parents",
+                      "gloss":  "the parents",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/les-parents.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-frere",
+                      "text":  "le frère",
+                      "gloss":  "the brother",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-frere.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-soeur",
+                      "text":  "la sœur",
+                      "gloss":  "the sister",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-soeur.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-fils",
+                      "text":  "le fils",
+                      "gloss":  "the son",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-fils.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-fille",
+                      "text":  "la fille",
+                      "gloss":  "the daughter / girl",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-fille.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-grands-parents",
+                      "text":  "les grands-parents",
+                      "gloss":  "the grandparents",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/les-grands-parents.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-grand-pere",
+                      "text":  "le grand-père",
+                      "gloss":  "the grandfather",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-grand-pere.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-grand-mere",
+                      "text":  "la grand-mère",
+                      "gloss":  "the grandmother",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-grand-mere.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-oncle",
+                      "text":  "l\u0027oncle",
+                      "gloss":  "the uncle",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/l-oncle.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-tante",
+                      "text":  "la tante",
+                      "gloss":  "the aunt",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-tante.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-cousin",
+                      "text":  "le cousin",
+                      "gloss":  "the (male) cousin",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-cousin.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-cousine",
+                      "text":  "la cousine",
+                      "gloss":  "the (female) cousin",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-cousine.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-bebe",
+                      "text":  "le bébé",
+                      "gloss":  "the baby",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-bebe.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-chien",
+                      "text":  "le chien",
+                      "gloss":  "the dog",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-chien.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-chat",
+                      "text":  "le chat",
+                      "gloss":  "the cat",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-chat.mp3"
+                  },
+                  {
+                      "id":  "vocab/avoir",
+                      "text":  "avoir",
+                      "gloss":  "to have",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/avoir.mp3"
+                  },
+                  {
+                      "id":  "vocab/avoir-ans",
+                      "text":  "avoir treize ans",
+                      "gloss":  "to be ... years old (e.g. avoir treize ans = to be 13)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/avoir-ans.mp3"
+                  },
+                  {
+                      "id":  "vocab/avoir-faim",
+                      "text":  "avoir faim",
+                      "gloss":  "to be hungry",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/avoir-faim.mp3"
+                  },
+                  {
+                      "id":  "vocab/avoir-soif",
+                      "text":  "avoir soif",
+                      "gloss":  "to be thirsty",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/avoir-soif.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-j-ai",
+                      "text":  "J\u0027ai un frère et une sœur.",
+                      "gloss":  "I have a brother and a sister.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m03-j-ai.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-tu-as",
+                      "text":  "Tu as un chien ?",
+                      "gloss":  "Do you have a dog?",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m03-tu-as.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-il-a",
+                      "text":  "Il a douze ans.",
+                      "gloss":  "He is twelve (years old).",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m03-il-a.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-nous-avons",
+                      "text":  "Nous avons une grande famille.",
+                      "gloss":  "We have a big family.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m03-nous-avons.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-vous-avez",
+                      "text":  "Vous avez des cousins ?",
+                      "gloss":  "Do you have cousins?",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m03-vous-avez.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-ils-ont",
+                      "text":  "Ils ont un chat.",
+                      "gloss":  "They have a cat.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m03-ils-ont.mp3"
+                  },
+                  {
+                      "id":  "grammar/m03-j-ai-faim",
+                      "text":  "J\u0027ai faim et j\u0027ai soif.",
+                      "gloss":  "I\u0027m hungry and thirsty.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m03-j-ai-faim.mp3"
+                  },
+                  {
+                      "id":  "passage/m03-famille-01",
+                      "text":  "Voici ma famille. Nous sommes cinq : mon père, ma mère, mon frère, ma sœur et moi.",
+                      "gloss":  "My family, 1",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/m03-famille-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m03-famille-02",
+                      "text":  "Mon frère a dix-huit ans et ma sœur a huit ans. Nous avons aussi un chien.",
+                      "gloss":  "My family, 2",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/m03-famille-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m03-famille-03",
+                      "text":  "Mes grands-parents habitent à Nice. J\u0027ai deux cousins et une cousine. J\u0027aime beaucoup ma famille.",
+                      "gloss":  "My family, 3",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/m03-famille-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-heure",
+                      "text":  "l\u0027heure",
+                      "gloss":  "the time / hour",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/l-heure.mp3"
+                  },
+                  {
+                      "id":  "vocab/midi",
+                      "text":  "midi",
+                      "gloss":  "noon",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/midi.mp3"
+                  },
+                  {
+                      "id":  "vocab/minuit",
+                      "text":  "minuit",
+                      "gloss":  "midnight",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/minuit.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-matin",
+                      "text":  "le matin",
+                      "gloss":  "the morning",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-matin.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-apres-midi",
+                      "text":  "l\u0027après-midi",
+                      "gloss":  "the afternoon",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/l-apres-midi.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-soir",
+                      "text":  "le soir",
+                      "gloss":  "the evening",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-soir.mp3"
+                  },
+                  {
+                      "id":  "vocab/et-demie",
+                      "text":  "et demie",
+                      "gloss":  "half past",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/et-demie.mp3"
+                  },
+                  {
+                      "id":  "vocab/et-quart",
+                      "text":  "et quart",
+                      "gloss":  "quarter past",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/et-quart.mp3"
+                  },
+                  {
+                      "id":  "vocab/moins-le-quart",
+                      "text":  "moins le quart",
+                      "gloss":  "quarter to",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/moins-le-quart.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-emploi-du-temps",
+                      "text":  "l\u0027emploi du temps",
+                      "gloss":  "the schedule / timetable",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/l-emploi-du-temps.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-cours",
+                      "text":  "le cours",
+                      "gloss":  "the class / course",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-cours.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-recreation",
+                      "text":  "la récréation",
+                      "gloss":  "recess / break",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-recreation.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-pause-dejeuner",
+                      "text":  "la pause déjeuner",
+                      "gloss":  "the lunch break",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-pause-dejeuner.mp3"
+                  },
+                  {
+                      "id":  "vocab/commencer",
+                      "text":  "commencer",
+                      "gloss":  "to begin",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/commencer.mp3"
+                  },
+                  {
+                      "id":  "vocab/finir",
+                      "text":  "finir",
+                      "gloss":  "to finish",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/finir.mp3"
+                  },
+                  {
+                      "id":  "vocab/quelle-heure-est-il",
+                      "text":  "quelle heure est-il ?",
+                      "gloss":  "what time is it?",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/quelle-heure-est-il.mp3"
+                  },
+                  {
+                      "id":  "vocab/a-quelle-heure",
+                      "text":  "à quelle heure",
+                      "gloss":  "at what time",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/a-quelle-heure.mp3"
+                  },
+                  {
+                      "id":  "vocab/quand",
+                      "text":  "quand",
+                      "gloss":  "when",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/quand.mp3"
+                  },
+                  {
+                      "id":  "vocab/pourquoi",
+                      "text":  "pourquoi",
+                      "gloss":  "why",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/pourquoi.mp3"
+                  },
+                  {
+                      "id":  "vocab/combien",
+                      "text":  "combien",
+                      "gloss":  "how much / how many",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/combien.mp3"
+                  },
+                  {
+                      "id":  "vocab/aujourd-hui",
+                      "text":  "aujourd\u0027hui",
+                      "gloss":  "today",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/aujourd-hui.mp3"
+                  },
+                  {
+                      "id":  "vocab/demain",
+                      "text":  "demain",
+                      "gloss":  "tomorrow",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/demain.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-il-est-heures",
+                      "text":  "Il est huit heures.",
+                      "gloss":  "It is eight o\u0027clock.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m04-il-est-heures.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-il-est-demie",
+                      "text":  "Il est huit heures et demie.",
+                      "gloss":  "It is half past eight.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m04-il-est-demie.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-il-est-quart",
+                      "text":  "Il est neuf heures et quart.",
+                      "gloss":  "It is quarter past nine.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m04-il-est-quart.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-midi",
+                      "text":  "Il est midi.",
+                      "gloss":  "It is noon.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m04-midi.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-estce",
+                      "text":  "Est-ce que tu as cours aujourd\u0027hui ?",
+                      "gloss":  "Do you have class today?",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m04-estce.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-inversion",
+                      "text":  "As-tu cours le lundi ?",
+                      "gloss":  "Do you have class on Mondays?",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m04-inversion.mp3"
+                  },
+                  {
+                      "id":  "grammar/m04-quand",
+                      "text":  "Quand est-ce que le cours commence ?",
+                      "gloss":  "When does the class start?",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m04-quand.mp3"
+                  },
+                  {
+                      "id":  "passage/m04-edt-01",
+                      "text":  "Le matin, mon premier cours commence à huit heures. J\u0027ai maths, puis français.",
+                      "gloss":  "My schedule, 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m04-edt-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m04-edt-02",
+                      "text":  "À midi, nous avons une pause déjeuner d\u0027une heure. L\u0027après-midi, j\u0027ai histoire et sport.",
+                      "gloss":  "My schedule, 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m04-edt-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m04-edt-03",
+                      "text":  "Les cours finissent à dix-sept heures. Le mercredi, il n\u0027y a pas cours l\u0027après-midi !",
+                      "gloss":  "My schedule, 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m04-edt-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/jouer",
+                      "text":  "jouer",
+                      "gloss":  "to play",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/jouer.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-football",
+                      "text":  "le football",
+                      "gloss":  "soccer / football",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-football.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-basket",
+                      "text":  "le basket",
+                      "gloss":  "basketball",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-basket.mp3"
+                  },
+                  {
+                      "id":  "vocab/nager",
+                      "text":  "nager",
+                      "gloss":  "to swim",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/nager.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-piscine",
+                      "text":  "la piscine",
+                      "gloss":  "the swimming pool",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-piscine.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-cinema",
+                      "text":  "le cinéma",
+                      "gloss":  "the movies / cinema",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-cinema.mp3"
+                  },
+                  {
+                      "id":  "vocab/lire",
+                      "text":  "lire",
+                      "gloss":  "to read",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/lire.mp3"
+                  },
+                  {
+                      "id":  "vocab/danser",
+                      "text":  "danser",
+                      "gloss":  "to dance",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/danser.mp3"
+                  },
+                  {
+                      "id":  "vocab/chanter",
+                      "text":  "chanter",
+                      "gloss":  "to sing",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/chanter.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-parc",
+                      "text":  "le parc",
+                      "gloss":  "the park",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-parc.mp3"
+                  },
+                  {
+                      "id":  "vocab/faire-du-velo",
+                      "text":  "faire du vélo",
+                      "gloss":  "to go biking",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/faire-du-velo.mp3"
+                  },
+                  {
+                      "id":  "vocab/faire-les-magasins",
+                      "text":  "faire les magasins",
+                      "gloss":  "to go shopping",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/faire-les-magasins.mp3"
+                  },
+                  {
+                      "id":  "vocab/aller",
+                      "text":  "aller",
+                      "gloss":  "to go",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/aller.mp3"
+                  },
+                  {
+                      "id":  "vocab/il-fait-beau",
+                      "text":  "il fait beau",
+                      "gloss":  "the weather is nice",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/il-fait-beau.mp3"
+                  },
+                  {
+                      "id":  "vocab/il-fait-chaud",
+                      "text":  "il fait chaud",
+                      "gloss":  "it\u0027s hot out",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/il-fait-chaud.mp3"
+                  },
+                  {
+                      "id":  "vocab/il-fait-froid",
+                      "text":  "il fait froid",
+                      "gloss":  "it\u0027s cold out",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/il-fait-froid.mp3"
+                  },
+                  {
+                      "id":  "vocab/il-pleut",
+                      "text":  "il pleut",
+                      "gloss":  "it\u0027s raining",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/il-pleut.mp3"
+                  },
+                  {
+                      "id":  "vocab/il-neige",
+                      "text":  "il neige",
+                      "gloss":  "it\u0027s snowing",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/il-neige.mp3"
+                  },
+                  {
+                      "id":  "vocab/quel-temps-fait-il",
+                      "text":  "quel temps fait-il ?",
+                      "gloss":  "what\u0027s the weather like?",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/quel-temps-fait-il.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-week-end",
+                      "text":  "le week-end",
+                      "gloss":  "the weekend",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-week-end.mp3"
+                  },
+                  {
+                      "id":  "vocab/souvent",
+                      "text":  "souvent",
+                      "gloss":  "often",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/souvent.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-temps-libre",
+                      "text":  "le temps libre",
+                      "gloss":  "free time",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-temps-libre.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-je-vais",
+                      "text":  "Je vais au cinéma.",
+                      "gloss":  "I am going to the movies.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m06-je-vais.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-tu-vas",
+                      "text":  "Tu vas à la piscine ?",
+                      "gloss":  "Are you going to the pool?",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m06-tu-vas.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-il-va",
+                      "text":  "Il va jouer au football.",
+                      "gloss":  "He is going to play soccer.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m06-il-va.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-nous-allons",
+                      "text":  "Nous allons nager.",
+                      "gloss":  "We are going to swim.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m06-nous-allons.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-futur",
+                      "text":  "Je vais regarder un film ce soir.",
+                      "gloss":  "I am going to watch a film tonight.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m06-futur.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-beau",
+                      "text":  "S\u0027il fait beau, on va au parc.",
+                      "gloss":  "If it\u0027s nice out, we go to the park.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m06-beau.mp3"
+                  },
+                  {
+                      "id":  "grammar/m06-pleut",
+                      "text":  "Quand il pleut, je vais lire à la maison.",
+                      "gloss":  "When it rains, I read at home.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m06-pleut.mp3"
+                  },
+                  {
+                      "id":  "passage/m06-loisirs-01",
+                      "text":  "Le week-end, j\u0027ai beaucoup de temps libre. Le samedi, je vais souvent à la piscine avec mes amis.",
+                      "gloss":  "Free time, 1",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/m06-loisirs-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m06-loisirs-02",
+                      "text":  "S\u0027il fait beau, nous allons faire du vélo au parc. S\u0027il pleut, je vais au cinéma ou je lis.",
+                      "gloss":  "Free time, 2",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/m06-loisirs-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m06-loisirs-03",
+                      "text":  "Le dimanche soir, je vais faire mes devoirs. Et toi, qu\u0027est-ce que tu vas faire ce week-end ?",
+                      "gloss":  "Free time, 3",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/m06-loisirs-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-pain",
+                      "text":  "le pain",
+                      "gloss":  "bread",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-pain.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-fromage",
+                      "text":  "le fromage",
+                      "gloss":  "cheese",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-fromage.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-viande",
+                      "text":  "la viande",
+                      "gloss":  "meat",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-viande.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-poisson",
+                      "text":  "le poisson",
+                      "gloss":  "fish",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-poisson.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-legumes",
+                      "text":  "les légumes",
+                      "gloss":  "vegetables",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/les-legumes.mp3"
+                  },
+                  {
+                      "id":  "vocab/les-fruits",
+                      "text":  "les fruits",
+                      "gloss":  "fruit",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/les-fruits.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-pomme",
+                      "text":  "la pomme",
+                      "gloss":  "apple",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-pomme.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-lait",
+                      "text":  "le lait",
+                      "gloss":  "milk",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-lait.mp3"
+                  },
+                  {
+                      "id":  "vocab/l-eau",
+                      "text":  "l\u0027eau",
+                      "gloss":  "water",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/l-eau.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-jus",
+                      "text":  "le jus",
+                      "gloss":  "juice",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-jus.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-cafe",
+                      "text":  "le café",
+                      "gloss":  "coffee / café",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-cafe.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-the",
+                      "text":  "le thé",
+                      "gloss":  "tea",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-the.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-croissant",
+                      "text":  "le croissant",
+                      "gloss":  "croissant",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-croissant.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-dejeuner",
+                      "text":  "le déjeuner",
+                      "gloss":  "lunch",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-dejeuner.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-diner",
+                      "text":  "le dîner",
+                      "gloss":  "dinner",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-diner.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-petit-dejeuner",
+                      "text":  "le petit-déjeuner",
+                      "gloss":  "breakfast",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-petit-dejeuner.mp3"
+                  },
+                  {
+                      "id":  "vocab/manger",
+                      "text":  "manger",
+                      "gloss":  "to eat",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/manger.mp3"
+                  },
+                  {
+                      "id":  "vocab/boire",
+                      "text":  "boire",
+                      "gloss":  "to drink",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/boire.mp3"
+                  },
+                  {
+                      "id":  "vocab/je-voudrais",
+                      "text":  "je voudrais",
+                      "gloss":  "I would like",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/je-voudrais.mp3"
+                  },
+                  {
+                      "id":  "vocab/delicieux",
+                      "text":  "délicieux",
+                      "gloss":  "delicious",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/delicieux.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-repas",
+                      "text":  "le repas",
+                      "gloss":  "the meal",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-repas.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-boulangerie",
+                      "text":  "la boulangerie",
+                      "gloss":  "the bakery",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-boulangerie.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-du",
+                      "text":  "Je mange du pain.",
+                      "gloss":  "I eat (some) bread.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m07-du.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-de-la",
+                      "text":  "Je voudrais de la viande.",
+                      "gloss":  "I would like (some) meat.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m07-de-la.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-des",
+                      "text":  "Il mange des légumes.",
+                      "gloss":  "He eats (some) vegetables.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m07-des.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-de-l",
+                      "text":  "Elle boit de l\u0027eau.",
+                      "gloss":  "She drinks (some) water.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m07-de-l.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-voudrais",
+                      "text":  "Je voudrais un café, s\u0027il vous plaît.",
+                      "gloss":  "I would like a coffee, please.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m07-voudrais.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-neg-de",
+                      "text":  "Je ne mange pas de viande.",
+                      "gloss":  "I don\u0027t eat meat.",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m07-neg-de.mp3"
+                  },
+                  {
+                      "id":  "grammar/m07-boire",
+                      "text":  "Nous buvons du jus le matin.",
+                      "gloss":  "We drink juice in the morning.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m07-boire.mp3"
+                  },
+                  {
+                      "id":  "passage/m07-table-01",
+                      "text":  "En France, le petit-déjeuner est simple : du pain, du beurre et un café ou un chocolat chaud.",
+                      "gloss":  "At the table, 1",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/m07-table-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m07-table-02",
+                      "text":  "À midi, le déjeuner est souvent le grand repas. On mange de la viande ou du poisson avec des légumes.",
+                      "gloss":  "At the table, 2",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/m07-table-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m07-table-03",
+                      "text":  "Le soir, le dîner est plus léger. J\u0027adore le fromage et, comme dessert, des fruits. Bon appétit !",
+                      "gloss":  "At the table, 3",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/m07-table-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/paris",
+                      "text":  "Paris",
+                      "gloss":  "Paris",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/paris.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-tour-eiffel",
+                      "text":  "la tour Eiffel",
+                      "gloss":  "the Eiffel Tower",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/la-tour-eiffel.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-louvre",
+                      "text":  "le Louvre",
+                      "gloss":  "the Louvre",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-louvre.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-musee",
+                      "text":  "le musée",
+                      "gloss":  "the museum",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-musee.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-seine",
+                      "text":  "la Seine",
+                      "gloss":  "the Seine (river)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-seine.mp3"
+                  },
+                  {
+                      "id":  "vocab/notre-dame",
+                      "text":  "Notre-Dame",
+                      "gloss":  "Notre-Dame",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/notre-dame.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-quartier",
+                      "text":  "le quartier",
+                      "gloss":  "the neighborhood",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-quartier.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-rue",
+                      "text":  "la rue",
+                      "gloss":  "the street",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-rue.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-metro",
+                      "text":  "le métro",
+                      "gloss":  "the subway / metro",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-metro.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-gare",
+                      "text":  "la gare",
+                      "gloss":  "the train station",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-gare.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-jardin",
+                      "text":  "le jardin",
+                      "gloss":  "the garden",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/le-jardin.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-monument",
+                      "text":  "le monument",
+                      "gloss":  "the monument",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/le-monument.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-cathedrale",
+                      "text":  "la cathédrale",
+                      "gloss":  "the cathedral",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-cathedrale.mp3"
+                  },
+                  {
+                      "id":  "vocab/visiter",
+                      "text":  "visiter",
+                      "gloss":  "to visit",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/visiter.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-france",
+                      "text":  "la France",
+                      "gloss":  "France",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/la-france.mp3"
+                  },
+                  {
+                      "id":  "vocab/le-drapeau",
+                      "text":  "le drapeau",
+                      "gloss":  "the flag",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/le-drapeau.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-langue-francaise",
+                      "text":  "la langue française",
+                      "gloss":  "the French language",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-langue-francaise.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-culture",
+                      "text":  "la culture",
+                      "gloss":  "culture",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-culture.mp3"
+                  },
+                  {
+                      "id":  "vocab/francais-francaise",
+                      "text":  "français, française",
+                      "gloss":  "French (m., f.)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/francais-francaise.mp3"
+                  },
+                  {
+                      "id":  "vocab/la-capitale",
+                      "text":  "la capitale",
+                      "gloss":  "the capital",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/la-capitale.mp3"
+                  },
+                  {
+                      "id":  "vocab/celebre",
+                      "text":  "célèbre",
+                      "gloss":  "famous",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/celebre.mp3"
+                  },
+                  {
+                      "id":  "vocab/decouvrir",
+                      "text":  "découvrir",
+                      "gloss":  "to discover",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/decouvrir.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-etre",
+                      "text":  "Je suis fier d\u0027être ici.",
+                      "gloss":  "I am proud to be here. (être review)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m08-etre.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-avoir",
+                      "text":  "Paris a beaucoup de musées.",
+                      "gloss":  "Paris has many museums. (avoir review)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/m08-avoir.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-aller",
+                      "text":  "Nous allons visiter la tour Eiffel.",
+                      "gloss":  "We are going to visit the Eiffel Tower. (aller + inf. review)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m08-aller.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-reflexive",
+                      "text":  "On se promène le long de la Seine.",
+                      "gloss":  "We stroll along the Seine. (reflexive review)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/m08-reflexive.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-partitif",
+                      "text":  "On mange du pain et des croissants.",
+                      "gloss":  "We eat bread and croissants. (partitive review)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m08-partitif.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-heure",
+                      "text":  "Le musée ouvre à neuf heures.",
+                      "gloss":  "The museum opens at nine. (time review)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m08-heure.mp3"
+                  },
+                  {
+                      "id":  "grammar/m08-question",
+                      "text":  "Est-ce que tu veux visiter le Louvre ?",
+                      "gloss":  "Do you want to visit the Louvre? (question review)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/m08-question.mp3"
+                  },
+                  {
+                      "id":  "passage/m08-paris-01",
+                      "text":  "Aujourd\u0027hui, nous sommes à Paris ! D\u0027abord, nous allons visiter la tour Eiffel, puis le musée du Louvre.",
+                      "gloss":  "A day in Paris, 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m08-paris-01.mp3"
+                  },
+                  {
+                      "id":  "passage/m08-paris-02",
+                      "text":  "On se promène le long de la Seine. À midi, on mange du pain, du fromage et des fruits dans un jardin.",
+                      "gloss":  "A day in Paris, 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m08-paris-02.mp3"
+                  },
+                  {
+                      "id":  "passage/m08-paris-03",
+                      "text":  "Paris est magnifique. J\u0027apprends le français depuis un semestre, et maintenant je comprends un peu la culture française !",
+                      "gloss":  "A day in Paris, 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/m08-paris-03.mp3"
+                  }
+              ]
+}

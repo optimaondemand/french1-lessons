@@ -1,0 +1,248 @@
+<!--
+  French 1 (0701320) · S1 Module 0 · Lesson 0.04 (Day 4 of 10) — Orientation / Phonics.
+  Les sons II: nasal vowels + liaison. Audio: phonics nasal words + liaison phrases. Widget: evaluative.
+  AUDIO_BASE = ../../audio/. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Lesson 0.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .vocab-list { list-style: none; margin: 14px 0 0 0; padding: 0; }
+    .vocab-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 6px; margin-bottom: 8px; }
+    .v-fr { font-weight: 600; color: #0E1C42; min-width: 150px; font-size: 18px; }
+    .v-en { color: #6b7a99; font-size: 15px; }
+    .rule-box { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 12px 16px; margin: 10px 0; font-size: 17px; color: #1a2340; line-height: 1.6; }
+    .lz { color: #7A1C28; font-weight: 700; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 0</div>
+        <div style="font-size: 12px; color: #666;">Le fran&ccedil;ais</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 0.04 &middot; Day 4 of 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Les sons II &mdash; nasales &amp; liaison</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Orientation &amp; Phonics</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 0.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Les sons II &mdash; Nasal Vowels &amp; Liaison</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Two sounds carry the whole French &ldquo;accent&rdquo; &mdash; the nasal vowels, and the way words link together.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">If yesterday was about what French <em>drops</em>, today is about what makes it <em>flow</em>. Nasal vowels give French its music; liaison is why <em>les amis</em> sounds like one connected word. Get these two, and you sound French.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and produce the three main nasal vowels (<em>on, an, in</em>).</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> hear liaison &mdash; a silent final consonant linking to the next word's vowel.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 · nasals -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128067; PART 1 &middot; LES VOYELLES NASALES <span class="pill-time">16 min</span></div>
+        <div class="rule-box"><strong>What's a nasal vowel?</strong> When a vowel is followed by <strong>n</strong> or <strong>m</strong>, the air goes partly through your nose and the n/m mostly <em>disappears</em>. You don't say the &ldquo;n&rdquo; &mdash; the vowel just takes on a humming, nasal color.</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 6px 0;">Three families cover most of French. Play each and let the sound resonate:</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="phonics/bon.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">bo<span class="lz">n</span></span><span class="v-en">good &mdash; the <strong>on</strong> sound (no &ldquo;n&rdquo; said)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="phonics/grand.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">gra<span class="lz">nd</span></span><span class="v-en">big/tall &mdash; the <strong>an</strong> sound (n and d silent)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="phonics/vingt.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">vi<span class="lz">ngt</span></span><span class="v-en">twenty &mdash; the <strong>in</strong> sound (&ldquo;van&rdquo;)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="phonics/un-pain.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">u<span class="lz">n</span> pai<span class="lz">n</span></span><span class="v-en">a loaf of bread &mdash; two nasals in a row (<strong>un + in</strong>)</span></li>
+        </ul>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Tip: pinch your nose lightly and say <em>bon</em>. If you feel a buzz, you're nasalizing correctly.</p>
+    </div>
+
+    <!-- PART 2 · liaison -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128279; PART 2 &middot; LA LIAISON <span class="pill-time">14 min</span></div>
+        <div class="rule-box"><strong>What's liaison?</strong> A final consonant that's normally silent <em>wakes up</em> and links to the next word when that word starts with a vowel. It's why French sounds connected, not choppy. Most often the linking sound is a <span class="lz">z</span>.</div>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="phonics/les-amis.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">les<span class="lz">_z_</span>amis</span><span class="v-en">the friends &mdash; &ldquo;lay-zah-MEE&rdquo;</span></li>
+            <li class="vocab-item"><button class="say" data-audio="phonics/vous-avez.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">vous<span class="lz">_z_</span>avez</span><span class="v-en">you have &mdash; &ldquo;voo-zah-VAY&rdquo;</span></li>
+            <li class="vocab-item"><button class="say" data-audio="phonics/nous-avons.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">nous<span class="lz">_z_</span>avons</span><span class="v-en">we have &mdash; &ldquo;noo-zah-VON&rdquo;</span></li>
+            <li class="vocab-item"><button class="say" data-audio="phonics/comment-allez-vous.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Commen<span class="lz">t_t_</span>allez-vous&nbsp;?</span><span class="v-en">How are you? &mdash; the t links (&ldquo;koh-mahn-tah-lay-VOO&rdquo;)</span></li>
+        </ul>
+    </div>
+
+    <!-- PART 3 · eval -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 3 &middot; V&Eacute;RIFIE <span class="pill-time">10 min</span></div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="phonics/bon.mp3" aria-label="&Eacute;couter">&#128266;</button> In <em>bon</em>, do you pronounce the <strong>n</strong>?</div>
+            <div class="widget-options">
+                <button data-no="Listen again &mdash; the n vanishes into a nasal vowel.">Yes, a clear &ldquo;n&rdquo;</button>
+                <button data-correct="1" data-ok="Right &mdash; it's a nasal vowel; the n isn't said.">No &mdash; it's nasal</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="phonics/les-amis.mp3" aria-label="&Eacute;couter">&#128266;</button> Why do you hear a &ldquo;z&rdquo; in <em>les amis</em>?</div>
+            <div class="widget-options">
+                <button data-no="It's not a nasal &mdash; listen for the linking sound between words.">a nasal vowel</button>
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; liaison: the silent s of 'les' links to 'amis' as a z.">liaison (the s links as z)</button>
+                <button data-no="No accent is involved here.">an accent mark</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-question">Which word contains the <strong>an</strong> nasal sound?</div>
+            <div class="widget-options">
+                <button data-no="'bon' is the on sound.">bon</button>
+                <button data-correct="1" data-ok="Oui &mdash; grand has the 'an' nasal (and silent n, d).">grand</button>
+                <button data-no="'vingt' is the in sound.">vingt</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Shadow the four liaison phrases until each sounds like a single connected word, with no gap where the link happens. Then say <em>Comment allez-vous&nbsp;?</em> five times &mdash; you'll use it constantly.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 0.05</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow: your first real words to <em>count</em> on &mdash; the numbers 1 to 30 &mdash; and the story of a Frenchman who gave the world a way to read by touch.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Then say <em>bon</em>, <em>grand</em>, <em>vingt</em> with the nasal buzz, and <em>les amis</em> with the z-link.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; MAINTENANT, &Ccedil;A SONNE FRAN&Ccedil;AIS&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Nasals for the music, liaison for the flow &mdash; you now have the two features that most say &ldquo;French&rdquo; to any listener. That's the whole sound system, in your ear. <em>&Agrave; demain&nbsp;!</em></p>
+    </div>
+
+</div>
+
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 0.04 &middot; Les sons II &mdash; nasales &amp; liaison</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+</body>
+</html>
