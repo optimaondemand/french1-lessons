@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>French 1 — S1 Syllabus | 0701320</title>
+<style>
+:root {
+  --cream:      #F5F0E8;
+  --bleu:       #1C2E4A;
+  --rouge:      #7A1C28;
+  --or:         #9A7B1E;
+  --ardoise:    #5A6478;
+  --bleu-light: #E8EDF4;
+  --rouge-light:#F4E8EA;
+  --or-light:   #F4F0E0;
+  --text:       #1A1A2E;
+  --muted:      #6B7280;
+  --accent:     var(--rouge);
+  --accent-light: var(--rouge-light);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Georgia,'Times New Roman',serif;
+  background:var(--cream);color:var(--text);
+  line-height:1.65;padding:2.5rem 2rem;
+  max-width:960px;margin:0 auto;
+}
+h1,h2,h3{font-family:Georgia,serif;font-weight:bold}
+.section-label{
+  font-family:system-ui,sans-serif;font-size:0.68rem;
+  font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:0.4rem;
+}
+h2{font-size:1.15rem;color:var(--bleu);margin-bottom:0.9rem;
+   padding-bottom:0.4rem;border-bottom:2px solid var(--accent)}
+h3{font-size:0.95rem;color:var(--bleu);margin-bottom:0.6rem}
+section{margin-bottom:2.75rem}
+p{margin-bottom:0.75rem;font-size:0.95rem}
+
+/* Header */
+.course-header{
+  border-bottom:4px solid var(--accent);
+  padding-bottom:1.5rem;margin-bottom:2.5rem;
+}
+.course-header h1{font-size:1.85rem;color:var(--bleu)}
+.course-header .sem-label{
+  display:inline-block;background:var(--accent);color:#fff;
+  font-family:system-ui,sans-serif;font-size:0.75rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  padding:0.2rem 0.7rem;border-radius:2px;margin-top:0.4rem;
+}
+.course-header .subtitle{
+  font-size:0.88rem;color:var(--ardoise);margin-top:0.5rem;
+  font-family:system-ui,sans-serif;
+}
+.meta{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:0.8rem;
+  font-family:system-ui,sans-serif;font-size:0.8rem;color:var(--muted)}
+
+/* Info boxes */
+.info-box{
+  background:var(--bleu-light);border-left:4px solid var(--bleu);
+  padding:1.1rem 1.4rem;margin-bottom:1.25rem;
+  font-family:system-ui,sans-serif;font-size:0.875rem;line-height:1.65;
+}
+.info-box.accent{background:var(--accent-light);border-left-color:var(--accent)}
+.info-box.or{background:var(--or-light);border-left-color:var(--or)}
+
+/* Goal list */
+.goal-list{list-style:none;padding:0;
+  display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;
+  font-family:system-ui,sans-serif;font-size:0.875rem;
+}
+.goal-list li{
+  padding-left:1.1rem;position:relative;line-height:1.5;
+}
+.goal-list li::before{
+  content:'';position:absolute;left:0;top:0.55rem;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);flex-shrink:0;
+}
+@media(max-width:600px){.goal-list{grid-template-columns:1fr}}
+
+/* Module table */
+.table-wrap{overflow-x:auto;margin-bottom:1rem}
+table{width:100%;border-collapse:collapse;
+  font-size:0.84rem;font-family:system-ui,sans-serif}
+th{background:var(--bleu);color:#fff;padding:0.65rem 0.9rem;
+   text-align:left;font-size:0.77rem;font-weight:600;letter-spacing:0.03em}
+td{padding:0.65rem 0.9rem;border-bottom:1px solid rgba(28,46,74,0.1);
+   vertical-align:top;line-height:1.45}
+tr:nth-child(even) td{background:rgba(232,237,244,0.35)}
+.mod-cell{font-weight:700;color:var(--bleu);white-space:nowrap;font-size:0.8rem}
+.gate-row td{background:rgba(122,28,40,0.06)!important;
+  border-top:2px solid var(--rouge);border-bottom:2px solid var(--rouge)}
+.gate-badge{display:inline-block;background:var(--rouge);color:#fff;
+  font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  padding:0.1rem 0.4rem;border-radius:2px;margin-left:0.35rem;vertical-align:middle}
+.irr-tag{display:inline-block;background:rgba(154,123,30,0.12);
+  color:var(--or);border:1px solid rgba(154,123,30,0.3);
+  font-size:0.7rem;font-weight:700;padding:0.08rem 0.35rem;
+  border-radius:2px;font-family:system-ui,sans-serif}
+
+/* Assessment cards */
+.assess-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:0.9rem;margin-bottom:1rem}
+.assess-card{background:#fff;border:1px solid rgba(28,46,74,0.13);
+  border-top:3px solid var(--accent);padding:0.85rem;
+  font-family:system-ui,sans-serif}
+.assess-card.total{border-top-color:var(--bleu)}
+.pts{font-size:1.4rem;font-weight:700;color:var(--accent);
+  font-variant-numeric:tabular-nums}
+.assess-card.total .pts{color:var(--bleu)}
+.a-lbl{font-size:0.7rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.06em;color:var(--ardoise);margin-top:0.12rem}
+.a-det{font-size:0.77rem;color:var(--muted);margin-top:0.3rem;line-height:1.4}
+
+/* Grade weight bars */
+.w-row{display:flex;align-items:center;gap:0.85rem;margin-bottom:0.5rem;
+  font-family:system-ui,sans-serif;font-size:0.83rem}
+.w-label{width:14rem;flex-shrink:0}
+.w-bg{flex:1;height:7px;background:rgba(28,46,74,0.1);
+  border-radius:2px;overflow:hidden}
+.w-bar{height:100%;background:var(--accent);border-radius:2px}
+.w-pct{width:3rem;text-align:right;font-weight:700;
+  color:var(--accent);font-variant-numeric:tabular-nums}
+
+/* Project box */
+.project-box{
+  background:#fff;border:1px solid rgba(122,28,40,0.25);
+  border-top:4px solid var(--accent);padding:1.25rem 1.4rem;
+  font-family:system-ui,sans-serif;font-size:0.875rem;
+}
+.project-box h3{color:var(--accent);margin-bottom:0.75rem;font-size:1rem}
+.param-box{
+  background:var(--accent-light);border:1px solid rgba(122,28,40,0.2);
+  padding:0.85rem 1rem;margin-top:0.85rem;font-size:0.84rem;
+}
+.param-box strong{display:block;margin-bottom:0.4rem;color:var(--accent)}
+.param-box ul{padding-left:1.2rem;line-height:1.6}
+
+/* Rank table */
+.rank-table th{background:var(--accent)}
+.rank-table td:first-child{font-weight:700;color:var(--accent);
+  font-family:system-ui,sans-serif}
+.rank-table td:nth-child(2){font-weight:600;font-family:system-ui,sans-serif;
+  font-variant-numeric:tabular-nums}
+
+/* Final exam box */
+.final-box{
+  background:var(--bleu);color:#fff;padding:1.1rem 1.4rem;
+  font-family:system-ui,sans-serif;font-size:0.875rem;line-height:1.6;
+}
+.final-box strong{font-size:1rem;display:block;margin-bottom:0.3rem}
+
+/* Policy list */
+.policy-list{list-style:none;padding:0;
+  font-family:system-ui,sans-serif;font-size:0.875rem}
+.policy-list li{padding:0.6rem 0;border-bottom:1px solid rgba(28,46,74,0.1);
+  padding-left:1rem;position:relative;line-height:1.5}
+.policy-list li::before{content:'—';position:absolute;left:0;color:var(--accent)}
+</style>
+</head>
+<body>
+<!-- ===== OPTIMA MASTHEAD (added 2026-08-04) ===== -->
+<div style="background:linear-gradient(120deg,#0E1C42,#1c3270);border-bottom:5px solid #55C8E8;padding:20px 32px;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
+  <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+    <div style="width:48px;height:48px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width:46px;height:37px;object-fit:contain;" /></div>
+    <div style="flex:1;min-width:180px;">
+      <div style="font-size:19px;color:#FFFFFF;line-height:1.2;">Optima Academy Online</div>
+      <div style="font-size:11px;color:#55C8E8;letter-spacing:.3px;">An Education Experience Company</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:21px;color:#FFFFFF;line-height:1.2;letter-spacing:.5px;">FRENCH 1</div>
+      <div style="font-size:12px;color:#9FB2D6;margin-top:2px;">Semester 1 &middot; 0701320</div>
+    </div>
+  </div>
+</div>
+<div style="display:flex;height:6px;"><i style="flex:1;background:#1C2E4A;"></i><i style="flex:1;background:#F5F0E8;"></i><i style="flex:1;background:#7A1C28;"></i></div>
+<!-- ===== END OPTIMA MASTHEAD ===== -->
+
+<header class="course-header">
+  <div class="section-label">Optima Academy Online — World Languages</div>
+  <h1>French 1</h1>
+  <span class="sem-label">Semester 1 — Découverte</span>
+  <div class="subtitle">Course 0701320 &nbsp;·&nbsp; Full Year &nbsp;·&nbsp; Grades 9–12 &nbsp;·&nbsp; 1 Credit &nbsp;·&nbsp; Asynchronous Online</div>
+  <div class="meta">
+    <span>Standards: WL.K12.NM → WL.K12.NH</span>
+    <span>Entry: Novice Mid &nbsp;·&nbsp; Exit target: Novice High</span>
+    <span>9 modules (M0–M8) + Final</span>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <div class="section-label">About This Course</div>
+  <h2>Welcome to French 1</h2>
+  <p>French 1 is a full-year course that takes you from your first words in French to the point where you can hold basic conversations, describe your world, and engage with French culture on its own terms. Semester 1 — <em>Découverte</em> (Discovery) — introduces you to the language through the lens of everyday life in France: greetings, school, family, food, and the city of Paris.</p>
+  <p>This is an asynchronous course, meaning you work through each module on your own schedule within a two-week window. Modules follow the school calendar — due dates are tied to the academic year, not left open-ended. Each module combines listening, reading, speaking, writing, and cultural study, because language is learned by doing all five.</p>
+  <div class="info-box">
+    <strong>A note on learning French:</strong> French is not memorized — it is practiced. The vocabulary checks in this course have one attempt by design. Students who review their module words throughout the two weeks do well; students who try to memorize the night before do not. Treat every module as a two-week immersion, not a two-day sprint.
+  </div>
+</section>
+
+<!-- WHAT YOU WILL LEARN -->
+<section>
+  <div class="section-label">Communicative Goals</div>
+  <h2>What You Will Learn in Semester 1</h2>
+  <p>By the end of Semester 1 you will be able to:</p>
+  <ul class="goal-list">
+    <li>Introduce yourself, greet others, and exchange basic personal information</li>
+    <li>Describe your classroom, school, and daily environment</li>
+    <li>Talk about your family, ages, and personal characteristics</li>
+    <li>Discuss your school schedule and express likes and dislikes</li>
+    <li>Describe your daily routine from morning to evening</li>
+    <li>Talk about leisure activities and what you plan to do</li>
+    <li>Order food and drink and discuss French café culture</li>
+    <li>Ask and answer questions about Paris and French landmarks</li>
+    <li>Use the irregular verbs <em>aller, vouloir,</em> and <em>pouvoir</em> in context</li>
+    <li>Read short authentic French texts with the help of glosses</li>
+  </ul>
+
+  <h3 style="margin-top:1.5rem">Grammar You Will Study</h3>
+  <div class="info-box" style="margin-top:0.5rem">
+    <strong>Verb system:</strong> être (all persons) · regular -er verbs · avoir (all persons) · regular -ir verbs · reflexive verbs in present tense · futur proche (aller + infinitif) · irregular verbs: aller, vouloir, pouvoir<br><br>
+    <strong>Nouns and adjectives:</strong> definite and indefinite articles · adjective agreement (gender and number) · possessive adjectives (mon/ma/mes, ton/ta/tes…)<br><br>
+    <strong>Sentences and questions:</strong> ne…pas negation · partitive articles (du/de la/de l'/des) · question formation with est-ce que, inversion, and question words (qui, où, quand, comment, pourquoi, combien)<br><br>
+    <strong>Numbers:</strong> 1–30 · telling time · days of the week · months of the year
+  </div>
+</section>
+
+<!-- MODULE OVERVIEW -->
+<section>
+  <div class="section-label">Modules</div>
+  <h2>Semester 1 Module Overview</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Module</th>
+          <th>Theme</th>
+          <th>Grammar Focus</th>
+          <th>Irregular Verb</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mod-cell">M0<br>Weeks 1–2</td>
+          <td><strong>Le français dans le monde</strong><br>Orientation: phonetics, alphabet, accent marks</td>
+          <td>Numbers 1–30; pronunciation rules; accent marks and typing; days</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M1<br>Weeks 3–4</td>
+          <td><strong>Bonjour!</strong><br>Greetings and introductions</td>
+          <td>Être (all persons); subject pronouns</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M2<br>Weeks 5–6</td>
+          <td><strong>En classe</strong><br>School and supplies</td>
+          <td>Regular -er verbs; ne…pas; definite and indefinite articles</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M3<br>Weeks 7–8</td>
+          <td><strong>Ma famille</strong><br>Family and descriptions</td>
+          <td>Avoir (all persons); adjective agreement; possessive adjectives; idiomatic avoir (avoir faim, soif, peur…)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M4<br>Weeks 9–10</td>
+          <td><strong>À l'école</strong><br>School subjects and schedules</td>
+          <td>Regular -ir verbs; telling time</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M5<br>Weeks 11–12</td>
+          <td><strong>La vie quotidienne</strong><br>Daily routines</td>
+          <td>Reflexive verbs in present tense; reflexive pronoun placement</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M6<br>Weeks 13–14</td>
+          <td><strong>Les loisirs</strong><br>Leisure and sport</td>
+          <td>Futur proche (aller + infinitif); contracted articles au/aux; weather expressions (il fait beau/froid) as chunks</td>
+          <td><span class="irr-tag">aller</span></td>
+        </tr>
+        <tr>
+          <td class="mod-cell">M7<br>Weeks 15–16</td>
+          <td><strong>À table!</strong><br>Food and café culture</td>
+          <td>Partitive articles; negation de; expressions of quantity</td>
+          <td><span class="irr-tag">vouloir</span></td>
+        </tr>
+        <tr class="gate-row">
+          <td class="mod-cell">M8 <span class="gate-badge">Gate</span><br>Weeks 17–18</td>
+          <td><strong>Paris &amp; Je suis français(e)</strong><br>Landmarks and directions; French identity; S1 capstone</td>
+          <td>Question formation (est-ce que, inversion, question words); synthesis of all S1 grammar</td>
+          <td><span class="irr-tag">pouvoir</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="info-box accent">
+    <strong>Gate Check — M8 (capstone):</strong> At the end of Module 8 you will be assessed on all Semester 1 verb types and question formation. You must score 80% or above to advance to Semester 2 without a review plan. This is not a penalty — it is a checkpoint to make sure you are prepared for the new grammar Semester 2 introduces.
+  </div>
+</section>
+
+<!-- ASSESSMENT -->
+<section>
+  <div class="section-label">Assessment</div>
+  <h2>How You Will Be Assessed</h2>
+  <p>Every module carries <strong>90 graded points</strong> across four components, plus an ungraded Carte de France practice map:</p>
+  <div class="assess-grid">
+    <div class="assess-card">
+      <div class="pts">30</div>
+      <div class="a-lbl">Grammar Quiz</div>
+      <div class="a-det">Auto-graded · 2 attempts · Tests grammar and listening comprehension · Includes an audio clip with questions</div>
+    </div>
+    <div class="assess-card">
+      <div class="pts">25</div>
+      <div class="a-lbl">Vocabulary Check</div>
+      <div class="a-det"><strong>1 attempt only.</strong> 20 new module words + 5 words from earlier modules. Study throughout the two weeks — not the night before.</div>
+    </div>
+    <div class="assess-card">
+      <div class="pts">20</div>
+      <div class="a-lbl">Langue en action</div>
+      <div class="a-det">Auto-graded · Structured exercises: fill in the correct form, put sentences in order, complete a passage · Apply what you have learned</div>
+    </div>
+    <div class="assess-card">
+      <div class="pts">15</div>
+      <div class="a-lbl">Speaking Task</div>
+      <div class="a-det">Record your spoken response to a French prompt · Submitted via Canvas · A non-graded Phonétique practice section prepares you before you record</div>
+    </div>
+    <div class="assess-card">
+      <div class="pts">—</div>
+      <div class="a-lbl">Carte de France</div>
+      <div class="a-det"><strong>Ungraded practice.</strong> Interactive map of France · identify regions and landmarks · scope grows with each module · a perfect run on the end-of-semester mastery challenge earns extra credit (see below)</div>
+    </div>
+    <div class="assess-card total">
+      <div class="pts">90</div>
+      <div class="a-lbl">Module Total (graded)</div>
+      <div class="a-det">Four graded components. Carte, in-module VR activities, and module surveys are formative/ungraded. Your final grade is weighted (below).</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.75rem">How Modules Combine Into Your Grade</h3>
+  <div style="margin-top:0.75rem">
+    <div class="w-row"><span class="w-label">Grammar Quizzes</span><div class="w-bg"><div class="w-bar" style="width:25%"></div></div><span class="w-pct">25%</span></div>
+    <div class="w-row"><span class="w-label">Vocabulary Checks</span><div class="w-bg"><div class="w-bar" style="width:20%"></div></div><span class="w-pct">20%</span></div>
+    <div class="w-row"><span class="w-label">Langue en action</span><div class="w-bg"><div class="w-bar" style="width:20%"></div></div><span class="w-pct">20%</span></div>
+    <div class="w-row"><span class="w-label">Speaking Tasks</span><div class="w-bg"><div class="w-bar" style="width:15%"></div></div><span class="w-pct">15%</span></div>
+    <div class="w-row"><span class="w-label">Semester Project (VR)</span><div class="w-bg"><div class="w-bar" style="width:10%"></div></div><span class="w-pct">10%</span></div>
+    <div class="w-row"><span class="w-label">Semester 1 Final Exam</span><div class="w-bg"><div class="w-bar" style="width:10%"></div></div><span class="w-pct">10%</span></div>
+  </div>
+  <p style="font-family:system-ui,sans-serif;font-size:0.9rem;margin-top:0.75rem"><strong>Extra credit:</strong> Carte de France is practice all semester. Once, in the capstone module, a short <em>Carte mastery challenge</em> can earn up to <strong>+1%</strong> on your semester grade for a top score — so your map practice can give your grade a small boost.</p>
+  <div class="info-box" style="margin-top:1rem">
+    <strong>No quiz in Quarter 1.</strong> Your first major assessment is the M8 gate check at the end of Quarter 2. Quarter 1 module grades (quizzes, vocabulary checks, and tasks within each module) count toward your category percentages — there is no separate Q1 test.
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section>
+  <div class="section-label">Semester Project</div>
+  <h2>S1 Semester Project — Mon café parisien (VR)</h2>
+  <div class="project-box">
+    <h3>Mon café parisien — Build It, Then Present It</h3>
+    <p>At the end of Semester 1 you will build your own Parisian café in virtual reality and present it in French. You work through this on your own, in your own time — there is no scheduled session to attend and no one you have to meet. The project is worth <strong>100 points</strong> and has three parts.</p>
+
+    <div class="param-box">
+      <strong>Part 1 — Preparation (20 pts)</strong>
+      <ul>
+        <li>Complete a short cultural briefing on French café etiquette</li>
+        <li>Plan your café: what it looks like, what it serves, what makes it French</li>
+        <li>Draft the French menu you will build, using S1 food and drink vocabulary</li>
+      </ul>
+    </div>
+
+    <div class="param-box">
+      <strong>Part 2 — Build and Present (60 pts)</strong>
+      <ul>
+        <li>Build your café in the VR space: tables, counter, and a menu board</li>
+        <li>Write your menu in French using partitive articles (<em>du café, de la limonade, des croissants</em>)</li>
+        <li>Record a spoken tour of your café — welcome your visitor using the <em>vous</em> register, present the menu, and recommend one item with <em>je voudrais</em> or <em>vous pouvez prendre</em></li>
+        <li>Point out one detail of French café culture you built in on purpose, and say why</li>
+        <li>Graded on: communicative accuracy, vocabulary use, social register, pronunciation</li>
+      </ul>
+    </div>
+
+    <div class="param-box">
+      <strong>Part 3 — Written Reflection (20 pts)</strong>
+      <ul>
+        <li>Write 40–60 words in French describing your café</li>
+        <li>Use present tense verbs from S1 (être, avoir, -er, -ir verbs, reflexives)</li>
+        <li>Structured prompts provided — not a free composition</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL EXAM -->
+<section>
+  <div class="section-label">Final Exam</div>
+  <div class="final-box">
+    <strong>Semester 1 Final Exam (end of Quarter 2)</strong>
+    The S1 Final Exam covers all grammar, vocabulary, and cultural content from M0 through M8. It includes listening comprehension, reading comprehension, structured grammar questions, and short written production. There is no Quarter 1 exam — the final is the only cumulative exam for Semester 1. It counts for 10% of your Semester 1 grade.
+  </div>
+</section>
+
+<!-- RANKS -->
+<section>
+  <div class="section-label">Rank System</div>
+  <h2>Your Rank — La progression</h2>
+  <p style="font-family:system-ui,sans-serif;font-size:0.875rem;margin-bottom:1rem">Your semester average determines your rank. Ranks reflect your progress on the journey from first encounter with French to cultural fluency.</p>
+  <div class="table-wrap">
+    <table class="rank-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Average</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apprenti(e)</td>
+          <td>0–59</td>
+          <td>Beginning the journey — foundational skills need reinforcement</td>
+        </tr>
+        <tr>
+          <td>Explorateur / Exploratrice</td>
+          <td>60–69</td>
+          <td>Actively exploring the language — building confidence and consistency</td>
+        </tr>
+        <tr>
+          <td>Voyageur / Voyageuse</td>
+          <td>70–79</td>
+          <td>Moving through the language with growing ease and understanding</td>
+        </tr>
+        <tr>
+          <td>Guide</td>
+          <td>80–89</td>
+          <td>Able to lead and explain — strong command of S1 material</td>
+        </tr>
+        <tr>
+          <td>Ambassadeur / Ambassadrice</td>
+          <td>90–100</td>
+          <td>Representing the language and culture with excellence and confidence</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- POLICIES -->
+<section>
+  <div class="section-label">Policies</div>
+  <h2>Course Policies</h2>
+  <ul class="policy-list">
+    <li><strong>Late work:</strong> Assignments submitted after the module close date may receive a maximum of 70% of available points. Contact your facilitator before the deadline if you anticipate a conflict.</li>
+    <li><strong>Vocabulary Check attempts:</strong> The Vocabulary Check has one attempt only. There are no exceptions. Review your module words throughout the two-week window — not at the last minute.</li>
+    <li><strong>Grammar Quiz attempts:</strong> The Grammar Quiz allows two attempts. Your highest score is recorded.</li>
+    <li><strong>VR work:</strong> The short VR activities inside modules are formative and ungraded — participation is expected, and a reflection or survey may accompany one as a completion requirement. The end-of-semester VR project is different: it <em>is</em> graded, and it is worth 10% of your semester grade (see Semester Project above). All VR work in this course is done solo, on your own schedule.</li>
+    <li><strong>Accommodations:</strong> Students with documented accommodations should contact their facilitator at the start of the semester. Extended time and alternative format arrangements are honored in accordance with Optima's accommodation policy.</li>
+    <li><strong>Academic honesty:</strong> All submitted work must be your own. Translation tools may be used as a reference for checking individual words — not for composing or correcting your responses. Work submitted through AI composition tools will not receive credit.</li>
+    <li><strong>Course audio:</strong> Every French word, example sentence, and reading passage in this course has a recording. Click the <strong>&#128266;</strong> speaker button on any lesson page to hear it, and use the Vocabulaire flip-card page to drill your module words by ear. Listening questions on the Grammar Quiz and Vocabulary Check play the same recordings. Headphones are strongly recommended.</li>
+  </ul>
+</section>
+
+</body>
+</html>
