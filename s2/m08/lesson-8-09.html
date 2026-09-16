@@ -28,6 +28,24 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-btn:hover { background: #1B3A6B; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -93,6 +111,194 @@
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">RECALL + CHOOSE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Five quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which word is the <strong>female</strong> singer?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! chanteur &rarr; chanteuse.">la chanteuse</button>
+                <button data-no="That is the male singer.">le chanteur</button>
+                <button data-no="That is the concert.">le concert</button>
+                <button data-no="That is the song.">la chanson</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question"><em>Offrir</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s c&eacute;l&eacute;brer.">to celebrate</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! offrir un cadeau.">to give (a gift)</button>
+                <button data-no="That&rsquo;s danser.">to dance</button>
+                <button data-no="That&rsquo;s inviter.">to invite</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which is an instrument you <strong>hit</strong>?</div>
+            <div class="widget-options">
+                <button data-no="You pluck that one.">la guitare</button>
+                <button data-no="That is a song.">la chanson</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! the drums.">la batterie</button>
+                <button data-no="You press its keys.">le piano</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question"><em>L&rsquo;anniversaire</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s la f&ecirc;te.">the party</button>
+                <button data-no="That&rsquo;s le cadeau.">the gift</button>
+                <button data-no="That&rsquo;s la chanson.">the song</button>
+                <button data-correct="1" data-ok="Exact&nbsp;!">the birthday</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which word is an <strong>adverb</strong> meaning <em>better</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! mieux modifies a verb: il chante mieux.">mieux</button>
+                <button data-no="That is the adjective: un meilleur chanteur.">meilleur</button>
+                <button data-no="That just means more.">plus</button>
+                <button data-no="That means as / also.">aussi</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3 · Accord & conjugaison -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LUI / LEUR + COMPARISONS <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 8&rsquo;s grammar: the indirect object pronouns, and building comparisons with <em>plus / moins / aussi&hellip; que</em>.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">J&rsquo;offre un cadeau <em>&agrave; ma s&oelig;ur</em>. &rarr; Je ______ offre un cadeau.</div>
+            <div class="widget-options">
+                <button data-no="That is for more than one person.">leur</button>
+                <button data-no="That is a direct object pronoun.">la</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! lui for one person, male or female.">lui</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Je parle <em>&agrave; mes amis</em>. &rarr; Je ______ parle.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! leur for several people.">leur</button>
+                <button data-no="That is for one person.">lui</button>
+                <button data-no="That is a direct object pronoun.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Cette f&ecirc;te est ______ amusante ______ la f&ecirc;te de l&rsquo;ann&eacute;e derni&egrave;re.</div>
+            <div class="widget-options">
+                <button data-no="Comparisons use que, not de.">plus&hellip; de</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! plus &hellip; que = more &hellip; than.">plus&hellip; que</button>
+                <button data-no="French uses aussi &hellip; que.">aussi&hellip; comme</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Mon fr&egrave;re est ______ grand ______ moi. <em>(less tall)</em></div>
+            <div class="widget-options">
+                <button data-no="That means as &hellip; as.">aussi&hellip; que</button>
+                <button data-no="That means more.">plus&hellip; que</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! moins &hellip; que = less &hellip; than.">moins&hellip; que</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Elle chante ______ bien ______ sa s&oelig;ur. <em>(equally)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! aussi &hellip; que = as &hellip; as.">aussi&hellip; que</button>
+                <button data-no="That means less.">moins&hellip; que</button>
+                <button data-no="That means more.">plus&hellip; que</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Il joue du piano ______ que moi. <em>(better — modifying a verb)</em></div>
+            <div class="widget-options">
+                <button data-no="Not a French form.">plus bien</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! a verb takes mieux.">mieux</button>
+                <button data-no="meilleur is an adjective.">meilleur</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">C&rsquo;est un ______ chanteur que son fr&egrave;re. <em>(better — modifying a noun)</em></div>
+            <div class="widget-options">
+                <button data-no="French uses meilleur instead.">plus bon</button>
+                <button data-no="mieux is an adverb.">mieux</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! a noun takes meilleur.">meilleur</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 4 · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal the answer.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Rewrite with a pronoun: <em>J&rsquo;offre une guitare &agrave; ma s&oelig;ur.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je lui offre une guitare.</strong><br><span style="font-size:15px;color:#41506b;">lui replaces &agrave; + one person.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Say it in French: <em>This party is more fun than last year&rsquo;s.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Cette f&ecirc;te est plus amusante que celle de l&rsquo;ann&eacute;e derni&egrave;re.</strong><br><span style="font-size:15px;color:#41506b;">plus &hellip; que.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Say it in French: <em>He plays better than me.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Il joue mieux que moi.</strong><br><span style="font-size:15px;color:#41506b;">A verb takes mieux, never meilleur.</span></div>
+        </div>
+    </div>
+
 
     
     
@@ -140,5 +346,54 @@
 </div>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

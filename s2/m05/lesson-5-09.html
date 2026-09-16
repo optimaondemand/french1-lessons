@@ -28,6 +28,24 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-btn:hover { background: #1B3A6B; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -93,6 +111,194 @@
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">RECALL + CHOOSE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Five quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><em>Le centre-ville</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! the city centre.">downtown</button>
+                <button data-no="That&rsquo;s la place.">the square</button>
+                <button data-no="That&rsquo;s le pont.">the bridge</button>
+                <button data-no="That&rsquo;s l&rsquo;arr&ecirc;t.">the bus stop</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which means <em>on foot</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s by car.">en voiture</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! &agrave; pied.">&agrave; pied</button>
+                <button data-no="That&rsquo;s by train.">en train</button>
+                <button data-no="That&rsquo;s by bus.">en bus</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><em>L&rsquo;arr&ecirc;t</em> is where you&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Not what the word means.">meet friends</button>
+                <button data-no="That&rsquo;s for le plan.">buy a map</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! l&rsquo;arr&ecirc;t de bus.">wait for the bus</button>
+                <button data-no="That&rsquo;s le pont.">cross the river</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which verb means <em>to go down / get off</em>?</div>
+            <div class="widget-options">
+                <button data-no="That means to go up or get on.">monter</button>
+                <button data-no="That means to return home.">rentrer</button>
+                <button data-no="That means to stay.">rester</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! descendre.">descendre</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question"><em>Loin de</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! loin de.">far from</button>
+                <button data-no="That&rsquo;s &agrave; c&ocirc;t&eacute; de.">next to</button>
+                <button data-no="That&rsquo;s devant.">in front of</button>
+                <button data-no="That&rsquo;s derri&egrave;re.">behind</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3 · Accord & conjugaison -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">&Ecirc;TRE VERBS + AGREEMENT <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 5&rsquo;s grammar: the verbs that take <em>&ecirc;tre</em> in the pass&eacute; compos&eacute;, and making the participle agree.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Elle ______ all&eacute;e en ville.</div>
+            <div class="widget-options">
+                <button data-no="aller takes &ecirc;tre, not avoir.">a</button>
+                <button data-no="That is plural.">sont</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! aller takes &ecirc;tre.">est</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Nous ______ partis &agrave; dix heures.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! nous sommes partis.">sommes</button>
+                <button data-no="partir takes &ecirc;tre.">avons</button>
+                <button data-no="That goes with vous.">&ecirc;tes</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Mes s&oelig;urs sont ______. <em>(partir)</em></div>
+            <div class="widget-options">
+                <button data-no="That is masculine plural.">partis</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! feminine plural: -es.">parties</button>
+                <button data-no="That is feminine singular.">partie</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Il est ______ du bus. <em>(descendre)</em></div>
+            <div class="widget-options">
+                <button data-no="That is plural.">descendus</button>
+                <button data-no="That is feminine.">descendue</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! masculine singular.">descendu</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which verb takes <strong>&ecirc;tre</strong> in the pass&eacute; compos&eacute;?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! arriver is an &ecirc;tre verb.">arriver</button>
+                <button data-no="regarder takes avoir.">regarder</button>
+                <button data-no="manger takes avoir.">manger</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Elles sont ______ tard. <em>(rentrer)</em></div>
+            <div class="widget-options">
+                <button data-no="That is masculine plural.">rentr&eacute;s</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! feminine plural.">rentr&eacute;es</button>
+                <button data-no="No agreement shown.">rentr&eacute;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Marie dit&nbsp;: &laquo;&nbsp;Je suis ______.&nbsp;&raquo; <em>(tomber)</em></div>
+            <div class="widget-options">
+                <button data-no="That is the masculine form.">tomb&eacute;</button>
+                <button data-no="That is plural.">tomb&eacute;es</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! Marie is feminine, so -e.">tomb&eacute;e</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 4 · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal the answer.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>I (f.) went into town with my sister.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je suis all&eacute;e en ville avec ma s&oelig;ur.</strong><br><span style="font-size:15px;color:#41506b;">aller takes &ecirc;tre, and the participle agrees: all&eacute;e.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Say it in French: <em>We got on the bus downtown.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Nous sommes mont&eacute;s dans le bus au centre-ville.</strong><br><span style="font-size:15px;color:#41506b;">monter is an &ecirc;tre verb.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Make it feminine plural: <em>Ils sont sortis ensemble.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Elles sont sorties ensemble.</strong><br><span style="font-size:15px;color:#41506b;">&ecirc;tre verbs agree with the subject: sorties.</span></div>
+        </div>
+    </div>
+
 
     
     
@@ -140,5 +346,54 @@
 </div>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

@@ -28,6 +28,24 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-btn:hover { background: #1B3A6B; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -94,6 +112,194 @@
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">RECALL + CHOOSE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Five quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><em>Le week-end dernier</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! dernier = last.">last weekend</button>
+                <button data-no="That&rsquo;s ce week-end.">this weekend</button>
+                <button data-no="That&rsquo;s chaque week-end.">every weekend</button>
+                <button data-no="That&rsquo;s prochain.">next weekend</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which one means <em>to meet</em>?</div>
+            <div class="widget-options">
+                <button data-no="That means to win or earn.">gagner</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! rencontrer.">rencontrer</button>
+                <button data-no="That means to travel.">voyager</button>
+                <button data-no="That means to stay.">rester</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><em>Amusant</em> describes something that is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s difficile.">difficult</button>
+                <button data-no="That&rsquo;s ennuyeux.">boring</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! amusant = fun, amusing.">fun</button>
+                <button data-no="That&rsquo;s tard.">late</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which expression means <em>never</em>?</div>
+            <div class="widget-options">
+                <button data-no="That means already.">d&eacute;j&agrave;</button>
+                <button data-no="That means often.">souvent</button>
+                <button data-no="That means last night.">hier soir</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! ne&hellip; jamais.">ne&hellip; jamais</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question"><em>Jouer aux jeux vid&eacute;o</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;!">to play video games</button>
+                <button data-no="That&rsquo;s faire du sport.">to do sport</button>
+                <button data-no="That&rsquo;s regarder un film.">to watch a film</button>
+                <button data-no="That&rsquo;s &eacute;couter de la musique.">to listen to music</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3 · Accord & conjugaison -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">PASS&Eacute; COMPOS&Eacute; WITH AVOIR <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 4&rsquo;s grammar: building the pass&eacute; compos&eacute; with <em>avoir</em>, and placing the negation.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Hier, j&rsquo;______ regard&eacute; un film.</div>
+            <div class="widget-options">
+                <button data-no="That goes with tu.">as</button>
+                <button data-no="That goes with il/elle/on.">a</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! j&rsquo;ai regard&eacute;.">ai</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Nous ______ jou&eacute; au basket au parc.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! nous avons jou&eacute;.">avons</button>
+                <button data-no="That goes with ils/elles.">ont</button>
+                <button data-no="That goes with vous.">avez</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">The past participle of <em>manger</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="-er verbs take -&eacute;.">mangi</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! -er &rarr; -&eacute;.">mang&eacute;</button>
+                <button data-no="That is the infinitive.">manger</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">The past participle of <em>finir</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="-ir verbs take -i.">finu</button>
+                <button data-no="That is the present tense.">finit</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! -ir &rarr; -i.">fini</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Elle a ______ ses amis au concert. <em>(rencontrer)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! rencontrer &rarr; rencontr&eacute;.">rencontr&eacute;</button>
+                <button data-no="That is the present tense.">rencontre</button>
+                <button data-no="That is the infinitive.">rencontrer</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Which sentence places the negation correctly?</div>
+            <div class="widget-options">
+                <button data-no="The auxiliary must follow the subject.">Je ne visit&eacute; jamais ai Paris.</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! n&rsquo;&hellip; jamais wraps the auxiliary.">Je n&rsquo;ai jamais visit&eacute; Paris.</button>
+                <button data-no="jamais goes before the participle.">Je n&rsquo;ai visit&eacute; jamais Paris.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Where does <em>d&eacute;j&agrave;</em> go? <em>J&rsquo;ai ___ mang&eacute;.</em></div>
+            <div class="widget-options">
+                <button data-no="Not the natural position here.">D&eacute;j&agrave; j&rsquo;ai mang&eacute;.</button>
+                <button data-no="Short adverbs sit before the participle.">J&rsquo;ai mang&eacute; d&eacute;j&agrave;.</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! between auxiliary and participle.">J&rsquo;ai d&eacute;j&agrave; mang&eacute;.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 4 · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal the answer.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>Last weekend I watched a film.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Le week-end dernier, j&rsquo;ai regard&eacute; un film.</strong><br><span style="font-size:15px;color:#41506b;">avoir + past participle.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Make it negative: <em>J&rsquo;ai fait mes devoirs.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je n&rsquo;ai pas fait mes devoirs.</strong><br><span style="font-size:15px;color:#41506b;">ne and pas wrap the auxiliary, not the participle.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Say it in French: <em>We ate a big pizza.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Nous avons mang&eacute; une grande pizza.</strong><br><span style="font-size:15px;color:#41506b;">grande is a BANGS adjective, so it comes before the noun.</span></div>
+        </div>
+    </div>
+
 
     
     
@@ -141,5 +347,54 @@
 </div>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>
