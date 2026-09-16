@@ -28,6 +28,24 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-btn:hover { background: #1B3A6B; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -93,6 +111,194 @@
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LISTEN + CHOOSE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Five quick checks on this module&rsquo;s words. Press &#128266; to hear the word, then choose. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m1-egoiste.mp3" aria-label="&Eacute;couter">&#128266;</button> Which English meaning matches the word you hear?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s dr&ocirc;le.">funny</button>
+                <button data-no="That&rsquo;s g&eacute;n&eacute;reux.">generous</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! &eacute;go&iuml;ste = selfish.">selfish</button>
+                <button data-no="That&rsquo;s timide.">shy</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m1-travailleur.mp3" aria-label="&Eacute;couter">&#128266;</button> Which English meaning matches the word you hear?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s jeune.">young</button>
+                <button data-no="That&rsquo;s paresseux &mdash; the opposite.">lazy</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! travailleur = hard-working.">hard-working</button>
+                <button data-no="That&rsquo;s s&eacute;rieux.">serious</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which word means <em>the youngest child</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! And l&rsquo;a&icirc;n&eacute; is the eldest.">le benjamin</button>
+                <button data-no="That&rsquo;s the big brother &mdash; not quite the same idea.">le grand fr&egrave;re</button>
+                <button data-no="That&rsquo;s the <em>eldest</em> child.">l&rsquo;a&icirc;n&eacute;</button>
+                <button data-no="That&rsquo;s character or personality.">le caract&egrave;re</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m1-genereux.mp3" aria-label="&Eacute;couter">&#128266;</button> Which English meaning matches the word you hear?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s curieux.">curious</button>
+                <button data-no="That&rsquo;s &eacute;go&iuml;ste &mdash; the opposite.">selfish</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! g&eacute;n&eacute;reux = generous.">generous</button>
+                <button data-no="That&rsquo;s m&eacute;chant.">mean</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">The opposite of <em>gentil</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That means young.">jeune</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! gentil (kind) &harr; m&eacute;chant (mean).">m&eacute;chant</button>
+                <button data-no="That means funny.">dr&ocirc;le</button>
+                <button data-no="That&rsquo;s another word close to <em>kind</em>, not its opposite.">sympathique</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3 · Accord & conjugaison -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">ADJECTIVE AGREEMENT + FAIRE <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on what Module 1 asks you to produce: making adjectives agree, the three irregulars (<em>beau, nouveau, vieux</em>), BANGS placement, and <em>faire</em>. Take them twice if you like.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Ma s&oelig;ur est tr&egrave;s ______. <em>(s&eacute;rieux)</em></div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the masculine form.">s&eacute;rieux</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! -eux &rarr; -euse in the feminine.">s&eacute;rieuse</button>
+                <button data-no="Not a French form &mdash; -eux becomes -euse.">s&eacute;rieuxe</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Mon fr&egrave;re est <strong>gentil</strong>, et ma s&oelig;ur est ______.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! gentil &rarr; gentille.">gentille</button>
+                <button data-no="That&rsquo;s the masculine form &mdash; the sister needs the feminine.">gentil</button>
+                <button data-no="Close &mdash; but French doubles the l: gentille.">gentile</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><button class="say" data-audio="grammar/s2m1-nouvel.mp3" aria-label="&Eacute;couter">&#128266;</button> Un ______ appartement. <em>(nouveau, before a vowel)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! Before a vowel sound, nouveau &rarr; nouvel.">nouvel</button>
+                <button data-no="Before a vowel it becomes nouvel &mdash; listen again.">nouveau</button>
+                <button data-no="That&rsquo;s the feminine form.">nouvelle</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question"><button class="say" data-audio="grammar/s2m1-belle.mp3" aria-label="&Eacute;couter">&#128266;</button> Une ______ maison. <em>(beau)</em></div>
+            <div class="widget-options">
+                <button data-no="bel is masculine, used before a vowel.">bel</button>
+                <button data-no="That&rsquo;s masculine; maison is feminine.">beau</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! beau &rarr; belle in the feminine.">belle</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question"><button class="say" data-audio="grammar/s2m1-vieille.mp3" aria-label="&Eacute;couter">&#128266;</button> Une ______ photo de famille. <em>(vieux)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! vieux &rarr; vieille.">vieille</button>
+                <button data-no="That&rsquo;s the masculine form.">vieux</button>
+                <button data-no="vieil is masculine, before a vowel.">vieil</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><button class="say" data-audio="grammar/s2m1-bangs.mp3" aria-label="&Eacute;couter">&#128266;</button> Which phrase places the adjective correctly?</div>
+            <div class="widget-options">
+                <button data-no="The article always comes first.">grande une famille</button>
+                <button data-no="Most adjectives follow the noun, but BANGS ones come first.">une famille grande</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! <strong>S</strong>ize is a BANGS adjective &mdash; it goes before the noun.">une grande famille</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><button class="say" data-audio="grammar/s2m1-faisons.mp3" aria-label="&Eacute;couter">&#128266;</button> Le week-end, nous ______ une promenade. <em>(faire)</em></div>
+            <div class="widget-options">
+                <button data-no="That goes with je or tu.">fais</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! nous faisons.">faisons</button>
+                <button data-no="That goes with vous.">faites</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 4 · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal the answer.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>My big brother is serious and hard-working.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Mon grand fr&egrave;re est s&eacute;rieux et travailleur.</strong><br><span style="font-size:15px;color:#41506b;">grand comes before the noun (BANGS); the two adjectives after it stay masculine.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Make it feminine: <em>Il est curieux et g&eacute;n&eacute;reux.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Elle est curieuse et g&eacute;n&eacute;reuse.</strong><br><span style="font-size:15px;color:#41506b;">Both adjectives end in -eux, so both become -euse.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Place the adjective: <em>(beau) &hellip; une maison</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>une belle maison</strong><br><span style="font-size:15px;color:#41506b;">beau is a BANGS adjective (Beauty), so it goes before the noun &mdash; and agrees: belle.</span></div>
+        </div>
+    </div>
+
 
     
     
@@ -165,5 +371,54 @@
 </script>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>
