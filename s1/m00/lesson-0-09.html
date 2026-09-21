@@ -28,6 +28,28 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .accent-bank { background: #FFFFFF; border: 1.5px dashed #0E1C42; border-radius: 8px; padding: 16px 18px; margin: 12px 0; font-size: 30px; line-height: 2.2; letter-spacing: 0.12em; word-spacing: 0.60em; color: #0E1C42; text-align: center; user-select: text; -webkit-user-select: text; }
+    .accent-bank .lower { display: block; }
+    .accent-bank .upper { display: block; margin-top: 6px; border-top: 1px solid #E3E9F2; padding-top: 10px; }
+    .kbd-list { font-size: 16px; color: #1a2340; line-height: 1.75; margin: 10px 0 0 0; padding-left: 20px; }
+    .kbd-list li { margin-bottom: 7px; }
+    .kbd { background: #F0F2F8; border: 1px solid #C9D3E4; border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; font-family: Consolas, "Courier New", monospace; font-size: 14px; color: #0E1C42; }
 </style>
 </head>
 <body>
@@ -97,6 +119,354 @@
     
     
 
+    <!-- PART 2 · Les lettres et les accents -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9998; Les lettres et les accents</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES 5 ACCENTS + L&rsquo;ALPHABET <span class="pill-time">10 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Module 0 does not ask you to remember words yet &mdash; it asks you to know how French is built. Eight checks on the five accent marks and the alphabet. Nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which accent sits on the <em>e</em> in <em>caf&eacute;</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! it leans forward, and it only ever sits on an e.">l&rsquo;accent aigu</button>
+                <button data-no="That one leans the other way &mdash; as in tr&egrave;s.">l&rsquo;accent grave</button>
+                <button data-no="That is the little hat &mdash; as in for&ecirc;t.">l&rsquo;accent circonflexe</button>
+                <button data-no="That is the two dots &mdash; as in No&euml;l.">le tr&eacute;ma</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">The mark under the <em>c</em> in <em>fran&ccedil;ais</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Those are two dots, and they sit on a vowel.">le tr&eacute;ma</button>
+                <button data-correct="1" data-ok="Exact ! la c&eacute;dille &mdash; the little tail.">la c&eacute;dille</button>
+                <button data-no="That sits on a vowel, not under a c.">l&rsquo;accent grave</button>
+                <button data-no="That sits on top of an e.">l&rsquo;accent aigu</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which accent tells you to sound two vowels <strong>separately</strong>, as in <em>No&euml;l</em>?</div>
+            <div class="widget-options">
+                <button data-no="That changes how one e sounds.">l&rsquo;accent aigu</button>
+                <button data-correct="1" data-ok="Oui ! no-EL, not nole &mdash; the two dots split them.">le tr&eacute;ma</button>
+                <button data-no="That changes how one vowel sounds.">l&rsquo;accent grave</button>
+                <button data-no="That usually marks a letter that has vanished.">l&rsquo;accent circonflexe</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which accent often marks a letter that has <strong>disappeared</strong> &mdash; usually an s, as in <em>for&ecirc;t</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! for&ecirc;t was once forest &mdash; the hat remembers the s.">l&rsquo;accent circonflexe</button>
+                <button data-no="That splits two vowels apart.">le tr&eacute;ma</button>
+                <button data-no="That changes the sound of an e.">l&rsquo;accent aigu</button>
+                <button data-no="That works on a c, not a vowel.">la c&eacute;dille</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">The <em>&ccedil;</em> makes the letter <em>c</em> sound like&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! fran&ccedil;ais sounds like fran-SAY, not fran-KAY.">s</button>
+                <button data-no="That is what a bare c does before a, o and u &mdash; the c&eacute;dille prevents it.">k</button>
+                <button data-no="Not a sound the c&eacute;dille makes.">z</button>
+                <button data-no="That would be ch in French.">sh</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><em>L&rsquo;accent aigu</em> appears on only one letter. Which?</div>
+            <div class="widget-options">
+                <button data-no="a takes the grave or the circonflexe, never the aigu.">a</button>
+                <button data-correct="1" data-ok="Exact ! &eacute; and nothing else.">e</button>
+                <button data-no="u takes the grave, the circonflexe or the tr&eacute;ma.">u</button>
+                <button data-no="o takes the circonflexe &mdash; as in h&ocirc;tel.">o</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">How many letters are in the French alphabet?</div>
+            <div class="widget-options">
+                <button data-no="Fewer than the real number.">24</button>
+                <button data-correct="1" data-ok="Oui ! the same 26 as English &mdash; the accents are not extra letters.">26</button>
+                <button data-no="The accented forms are not counted separately.">28</button>
+                <button data-no="That is another language&rsquo;s alphabet.">32</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Which letter is called <em>i grec</em> &mdash; literally “Greek i”?</div>
+            <div class="widget-options">
+                <button data-no="That one is just called i.">I</button>
+                <button data-no="That one is called g&eacute;.">G</button>
+                <button data-correct="1" data-ok="Exact ! Y = i grec, because it came from Greek.">Y</button>
+                <button data-no="That one is called ji.">J</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128266; Les sons du fran&ccedil;ais</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES FINALES MUETTES + LES NASALES + LA LIAISON <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">The rules that make written French turn into spoken French. These are exactly the rules tomorrow&rsquo;s Pronunciation &amp; Sound Quiz asks about.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Most final consonants in French are&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That is the English habit &mdash; French drops most of them.">pronounced</button>
+                <button data-correct="1" data-ok="Oui ! you write them, you do not say them.">silent</button>
+                <button data-no="Not a French rule.">doubled</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which final letters are often <strong>still</strong> pronounced &mdash; the <em>CaReFuL</em> hint?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! spell CaReFuL and you have them.">c, r, f, l</button>
+                <button data-no="Those are usually silent at the end.">b, d, g</button>
+                <button data-no="Those are usually silent &mdash; and m and n often make a nasal instead.">m, n, p</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which word has a <strong>pronounced</strong> final <em>t</em>?</div>
+            <div class="widget-options">
+                <button data-no="The t is silent here &mdash; nothing follows it.">petit</button>
+                <button data-correct="1" data-ok="Oui ! the final -e wakes the t up.">petite</button>
+                <button data-no="One of them does sound it.">neither of them</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">A final <em>-e</em> in French usually&hellip;</div>
+            <div class="widget-options">
+                <button data-no="French does not stress it at all.">is loudly stressed</button>
+                <button data-correct="1" data-ok="Exact ! that is the whole difference between petit and petite.">is silent, but makes the consonant before it sound</button>
+                <button data-no="That would be i.">sounds like “ee”</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">A <strong>nasal vowel</strong> forms when a vowel is followed by&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! the n or m colours the vowel and then disappears.">n or m</button>
+                <button data-no="Those stay as ordinary consonants.">r or l</button>
+                <button data-no="That makes a vowel pair, not a nasal.">another vowel</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><em>bon</em> has which nasal sound?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact !">on</button>
+                <button data-no="That is the sound in grand.">an</button>
+                <button data-no="That is the sound in vingt.">in</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><em>vingt</em> has which nasal sound?</div>
+            <div class="widget-options">
+                <button data-no="That is the sound in bon.">on</button>
+                <button data-no="That is the sound in grand.">an</button>
+                <button data-correct="1" data-ok="Oui ! spelled -ingt, but the sound is in.">in</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question"><strong>Liaison</strong> most often adds which sound between two words?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! les amis sounds like lay-ZAH-mee.">z</button>
+                <button data-no="Not a liaison sound.">v</button>
+                <button data-no="Not a liaison sound.">sh</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128197; Les nombres et les jours</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">1–30 + LES 7 JOURS <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Six checks on the two lists you will use all year. The full set of numbers and days, with audio for each, is on your R&eacute;f&eacute;rence page.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which is the correct spelling of <strong>17</strong>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! French builds it as ten-seven, with a hyphen.">dix-sept</button>
+                <button data-no="The ten comes first.">sept-dix</button>
+                <button data-no="The x stays, and the hyphen is needed.">dizsept</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">How is <strong>25</strong> written in French?</div>
+            <div class="widget-options">
+                <button data-no="The et only appears in vingt et un.">vingt et cinq</button>
+                <button data-correct="1" data-ok="Exact ! hyphen, no et.">vingt-cinq</button>
+                <button data-no="The twenty comes first.">cinq-vingt</button>
+                <button data-no="cinq never takes an -e.">vingt-cinque</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which figure is <em>dix-huit</em>?</div>
+            <div class="widget-options">
+                <button data-no="That is huit on its own.">8</button>
+                <button data-correct="1" data-ok="Oui ! ten plus eight.">18</button>
+                <button data-no="That would be vingt-huit.">28</button>
+                <button data-no="That is a different number altogether.">80</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which day is <em>jeudi</em>?</div>
+            <div class="widget-options">
+                <button data-no="That is mardi.">Tuesday</button>
+                <button data-correct="1" data-ok="Exact ! jeudi = Thursday.">Thursday</button>
+                <button data-no="That is samedi.">Saturday</button>
+                <button data-no="That is dimanche.">Sunday</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which day comes right after <em>vendredi</em>?</div>
+            <div class="widget-options">
+                <button data-no="That comes earlier in the week.">mercredi</button>
+                <button data-correct="1" data-ok="Oui ! vendredi, then samedi.">samedi</button>
+                <button data-no="That is one day further on.">dimanche</button>
+                <button data-no="That is where the week starts again.">lundi</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">The French week <strong>begins</strong> on which day?</div>
+            <div class="widget-options">
+                <button data-no="That is where it ends.">dimanche</button>
+                <button data-correct="1" data-ok="Exact ! a French calendar starts on Monday, not Sunday.">lundi</button>
+                <button data-no="That is the start of the weekend, not the week.">samedi</button>
+                <button data-no="That is the second day.">mardi</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2d · Le clavier -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9000;&#65039; &Eacute;crire les accents &mdash; ton clavier</div>
+            <span class="practice-badge">GARDE CETTE PAGE</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">COPIE-COLLE + TON APPAREIL <span class="pill-time">garde-le sous la main</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.65;margin-bottom:4px;"><strong>Les accents font partie du mot.</strong> <em>caf&eacute;</em> is not <em>cafe</em>, any more than <em>cat</em> is <em>cot</em> &mdash; the mark is part of the spelling, exactly like a letter. Build the habit now and every module after this one gets easier.</div>
+        <div style="font-size:15px;color:#41506b;line-height:1.6;margin:10px 0 2px 0;">Select any character below and copy it. It works on every device, and needs nothing installed.</div>
+        <div class="accent-bank">
+            <span class="lower">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span>
+            <span class="upper">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span>
+        </div>
+        <div style="font-size:15px;color:#41506b;line-height:1.6;margin-top:14px;"><strong>Faster, once you know your own keyboard:</strong></div>
+        <ul class="kbd-list">
+            <li><strong>Phone or tablet</strong> &mdash; press and <strong>hold</strong> the plain letter, then slide to the accented one. Hold <span class="kbd">e</span> for &eacute; &egrave; &ecirc; &euml;, <span class="kbd">c</span> for &ccedil;, <span class="kbd">a</span> for &agrave; &acirc;, <span class="kbd">o</span> for &ocirc;, <span class="kbd">u</span> for &ugrave; &ucirc; &uuml;.</li>
+            <li><strong>Mac</strong> &mdash; hold <span class="kbd">Option</span> and a mark, release, then type the letter: <span class="kbd">Option</span>+<span class="kbd">e</span> then <span class="kbd">e</span> gives &eacute; &middot; <span class="kbd">Option</span>+<span class="kbd">`</span> gives &egrave; &agrave; &ugrave; &middot; <span class="kbd">Option</span>+<span class="kbd">i</span> gives &ecirc; &icirc; &ocirc; &middot; <span class="kbd">Option</span>+<span class="kbd">u</span> gives &euml; &iuml; &middot; <span class="kbd">Option</span>+<span class="kbd">c</span> gives &ccedil;.</li>
+            <li><strong>Chromebook</strong> &mdash; add the <em>US International</em> keyboard in Settings &rsaquo; Languages and inputs. Then <span class="kbd">'</span> then <span class="kbd">e</span> gives &eacute; &middot; <span class="kbd">`</span> then <span class="kbd">e</span> gives &egrave; &middot; <span class="kbd">^</span> then <span class="kbd">e</span> gives &ecirc; &middot; <span class="kbd">'</span> then <span class="kbd">c</span> gives &ccedil;.</li>
+            <li><strong>Windows</strong> &mdash; hold <span class="kbd">Alt</span> and type the number on the <em>number pad</em>: &eacute; is <span class="kbd">Alt</span>+<span class="kbd">0233</span> &middot; &egrave; <span class="kbd">0232</span> &middot; &ecirc; <span class="kbd">0234</span> &middot; &agrave; <span class="kbd">0224</span> &middot; &ccedil; <span class="kbd">0231</span> &middot; &ocirc; <span class="kbd">0244</span> &middot; &icirc; <span class="kbd">0238</span>. No number pad? Copy from the strip above.</li>
+        </ul>
+    </div>
+
+    <!-- PART 2e · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; &Eacute;cris-le correctement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES 5 MOTS DU QUIZ <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">These five words are exactly what tomorrow&rsquo;s quiz asks you to <strong>type</strong>. Write each one out first &mdash; by hand or on the keyboard &mdash; then reveal it and check every mark.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Write <em>coffee</em> in French.</div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>caf&eacute;</strong><br><span style="font-size:15px;color:#41506b;">An <em>accent aigu</em> on the e &mdash; and it is the only accent that letter takes.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Write the word for <em>French</em> &mdash; the language.</div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>fran&ccedil;ais</strong><br><span style="font-size:15px;color:#41506b;">The <em>c&eacute;dille</em> keeps the c soft in front of the a.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Write the verb meaning <em>to be</em>.</div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>&ecirc;tre</strong><br><span style="font-size:15px;color:#41506b;">A <em>circonflexe</em> on the e &mdash; a vanished s, from the old spelling estre.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 4</div>
+            <div class="widget-question">Write <em>Christmas</em> in French.</div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>No&euml;l</strong><br><span style="font-size:15px;color:#41506b;">A <em>tr&eacute;ma</em> on the e, so you say the two vowels apart: no-EL.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 5</div>
+            <div class="widget-question">Write the word for <em>boy</em>.</div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>gar&ccedil;on</strong><br><span style="font-size:15px;color:#41506b;">The <em>c&eacute;dille</em> again &mdash; without it, garcon would start to sound like gar-KON.</span></div>
+        </div>
+    </div>
+
     <!-- PART 3 · recap -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128221; PART 3 &middot; NOTE RAPIDE <span class="pill-time">2 min</span></div>
@@ -140,5 +510,54 @@
 </div>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>
