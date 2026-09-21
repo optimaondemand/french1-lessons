@@ -39,6 +39,12 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -108,6 +114,241 @@
     
     
 
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LA FAMILLE + LES EXPRESSIONS AVEC AVOIR <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight checks that touch <strong>every word on your Vocabulaire page</strong> &mdash; the same words your Vocabulary Check asks you to recognise and type. Wrong answers show you the right one; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><em>le p&egrave;re</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! le p&egrave;re = the father.">the father</button>
+                <button data-no="That&rsquo;s la m&egrave;re.">the mother</button>
+                <button data-no="That&rsquo;s le fr&egrave;re.">the brother</button>
+                <button data-no="That&rsquo;s le fils.">the son</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which word means <em>the daughter</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the son.">le fils</button>
+                <button data-correct="1" data-ok="Exact ! la fille = the daughter.">la fille</button>
+                <button data-no="That&rsquo;s the sister.">la s&oelig;ur</button>
+                <button data-no="That&rsquo;s the mother.">la m&egrave;re</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><em>le p&egrave;re et la m&egrave;re</em> together are&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Those are the grandparents.">les grands-parents</button>
+                <button data-correct="1" data-ok="Oui ! les parents.">les parents</button>
+                <button data-no="That&rsquo;s one person &mdash; the grandfather.">le grand-p&egrave;re</button>
+                <button data-no="That&rsquo;s one person &mdash; the grandmother.">la grand-m&egrave;re</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Your father&rsquo;s sister is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the uncle &mdash; a man.">l&rsquo;oncle</button>
+                <button data-no="That&rsquo;s a female cousin.">la cousine</button>
+                <button data-correct="1" data-ok="Exact ! la tante = the aunt.">la tante</button>
+                <button data-no="That&rsquo;s the grandmother.">la grand-m&egrave;re</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which one is a pet rather than a person?</div>
+            <div class="widget-options">
+                <button data-no="A baby is a person.">le b&eacute;b&eacute;</button>
+                <button data-no="That&rsquo;s a family member.">le cousin</button>
+                <button data-correct="1" data-ok="Oui ! le chat = the cat.">le chat</button>
+                <button data-no="That&rsquo;s the family as a whole.">la famille</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><em>J&rsquo;ai un chien et un chat.</em> means I have&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That would be un fr&egrave;re et une s&oelig;ur.">a brother and a sister</button>
+                <button data-correct="1" data-ok="Exact ! un chien = a dog, un chat = a cat.">a dog and a cat</button>
+                <button data-no="That would be un fils et une fille.">a son and a daughter</button>
+                <button data-no="That would be un oncle et une tante.">an uncle and an aunt</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><em>avoir faim</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! French uses avoir, not &ecirc;tre: j&rsquo;ai faim.">to be hungry</button>
+                <button data-no="That&rsquo;s avoir soif.">to be thirsty</button>
+                <button data-no="That&rsquo;s avoir &hellip; ans.">to be &hellip; years old</button>
+                <button data-no="That would just be avoir une famille.">to have a family</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">“J&rsquo;ai quinze ans” means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Word for word, yes &mdash; but that is not what it means.">I have fifteen</button>
+                <button data-correct="1" data-ok="Exact ! for age French says avoir, never &ecirc;tre.">I am fifteen years old</button>
+                <button data-no="ans means years, not dollars.">I am fifteen dollars</button>
+                <button data-no="fr&egrave;res would have to be there for that.">I have fifteen brothers</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2b · Le verbe avoir -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Le verbe <em>avoir</em> &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES SIX FORMES + L&rsquo;&Eacute;LISION + L&rsquo;ÂGE <span class="pill-time">14 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight items on exactly what tomorrow&rsquo;s Grammar Quiz asks you to produce: the six forms of <em>avoir</em>, <em>j&rsquo;</em> before a vowel, and the French way of giving an age.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">______ un fr&egrave;re. <em>(avoir &mdash; with</em> je<em>)</em></div>
+            <div class="widget-options">
+                <button data-no="je cannot sit next to a vowel &mdash; it becomes j&rsquo;.">Je ai</button>
+                <button data-correct="1" data-ok="Oui ! j&rsquo; before a vowel sound.">J&rsquo;ai</button>
+                <button data-no="Right elision, wrong form &mdash; je takes ai.">J&rsquo;as</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Tu ______ un chien ? <em>(avoir)</em></div>
+            <div class="widget-options">
+                <button data-no="That goes with je.">ai</button>
+                <button data-correct="1" data-ok="Exact ! tu as.">as</button>
+                <button data-no="That goes with il, elle or on.">a</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Elle ______ huit ans. <em>(avoir)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! il, elle and on take a.">a</button>
+                <button data-no="That&rsquo;s the tu form.">as</button>
+                <button data-no="That&rsquo;s plural &mdash; ils or elles.">ont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Nous ______ une grande famille. <em>(avoir)</em></div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the vous form.">avez</button>
+                <button data-correct="1" data-ok="Exact ! nous avons.">avons</button>
+                <button data-no="That goes with ils or elles.">ont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Vous ______ des cousins ? <em>(avoir)</em></div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the nous form.">avons</button>
+                <button data-correct="1" data-ok="Oui ! vous avez.">avez</button>
+                <button data-no="That goes with ils or elles.">ont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Ils ______ un chat. <em>(avoir)</em></div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s singular.">a</button>
+                <button data-no="That&rsquo;s the vous form.">avez</button>
+                <button data-correct="1" data-ok="Exact ! ils and elles take ont.">ont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">For giving an <strong>age</strong>, French uses&hellip;</div>
+            <div class="widget-options">
+                <button data-no="English says I am fifteen, but French does not.">&ecirc;tre</button>
+                <button data-correct="1" data-ok="Oui ! j&rsquo;ai quinze ans &mdash; literally I have fifteen years.">avoir</button>
+                <button data-no="aller is for going.">aller</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question"><em>J&rsquo;ai faim</em> et <em>j&rsquo;ai ______</em>. (thirsty)</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! avoir soif = to be thirsty.">soif</button>
+                <button data-no="That&rsquo;s hungry &mdash; already said.">faim</button>
+                <button data-no="ans is for age.">ans</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2c · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal it.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>I have a sister.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>J&rsquo;ai une s&oelig;ur.</strong><br><span style="font-size:15px;color:#41506b;">je becomes j&rsquo; before the vowel of ai.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Say it in French: <em>She is eight years old.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Elle a huit ans.</strong><br><span style="font-size:15px;color:#41506b;">French gives an age with avoir, never with &ecirc;tre &mdash; and ans cannot be left out.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Say it in French: <em>They have a dog.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Ils ont un chien.</strong><br><span style="font-size:15px;color:#41506b;">ils and elles take ont.</span></div>
+        </div>
+    </div>
+
     <!-- PART 3 · recap -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128221; PART 3 &middot; NOTE RAPIDE <span class="pill-time">2 min</span></div>
@@ -174,5 +415,54 @@
 </script>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

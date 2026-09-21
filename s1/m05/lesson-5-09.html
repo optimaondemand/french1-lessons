@@ -39,6 +39,12 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -108,6 +114,239 @@
     
     
 
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LA JOURN&Eacute;E + LES MOTS DE L&rsquo;ORDRE <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight checks that touch <strong>every word on your Vocabulaire page</strong> &mdash; the same words your Vocabulary Check asks you to recognise and type. Wrong answers show you the right one; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which verb means <em>to wake up</em> &mdash; the very first thing that happens?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! se r&eacute;veiller comes before everything else.">se r&eacute;veiller</button>
+                <button data-no="That&rsquo;s to get up &mdash; it comes just after.">se lever</button>
+                <button data-no="That&rsquo;s to go to bed.">se coucher</button>
+                <button data-no="That&rsquo;s to fall asleep &mdash; the very last step.">s&rsquo;endormir</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which means <em>to shave</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s to wash up.">se laver</button>
+                <button data-correct="1" data-ok="Exact ! se raser = to shave.">se raser</button>
+                <button data-no="That&rsquo;s to do your hair.">se coiffer</button>
+                <button data-no="That&rsquo;s to put on makeup.">se maquiller</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><em>se brosser les dents</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s se doucher.">to shower</button>
+                <button data-correct="1" data-ok="Oui ! les dents = the teeth.">to brush your teeth</button>
+                <button data-no="That&rsquo;s s&rsquo;habiller.">to get dressed</button>
+                <button data-no="That&rsquo;s se d&eacute;p&ecirc;cher.">to hurry</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which means <em>to meet up with someone</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s to go for a walk.">se promener</button>
+                <button data-no="That&rsquo;s to rest.">se reposer</button>
+                <button data-correct="1" data-ok="Exact ! se retrouver = to meet up.">se retrouver</button>
+                <button data-no="That&rsquo;s to feel.">se sentir</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which means <em>early</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! t&ocirc;t = early.">t&ocirc;t</button>
+                <button data-no="That&rsquo;s late &mdash; the opposite.">tard</button>
+                <button data-no="That means first of all.">d&rsquo;abord</button>
+                <button data-no="That means next.">ensuite</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><em>D&rsquo;abord</em> je me r&eacute;veille, ______ je me l&egrave;ve.</div>
+            <div class="widget-options">
+                <button data-no="That tells you when, not what comes next.">t&ocirc;t</button>
+                <button data-correct="1" data-ok="Exact ! d&rsquo;abord&hellip; ensuite&hellip; orders the steps.">ensuite</button>
+                <button data-no="That tells you when, not what comes next.">tard</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Which one belongs to the <strong>evening</strong>?</div>
+            <div class="widget-options">
+                <button data-no="That is how the day starts.">se r&eacute;veiller</button>
+                <button data-correct="1" data-ok="Oui ! se coucher = to go to bed.">se coucher</button>
+                <button data-no="That can happen at any time, but it is not the end of the day.">se doucher</button>
+                <button data-no="That is part of getting ready.">se coiffer</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Which verb is <strong>reflexive</strong> &mdash; done to yourself?</div>
+            <div class="widget-options">
+                <button data-no="On its own that means to wash something else &mdash; a car, a plate.">laver</button>
+                <button data-correct="1" data-ok="Exact ! the se is what turns it back on you.">se laver</button>
+                <button data-no="The se changes the meaning &mdash; that is the whole point.">both mean the same</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2b · Les verbes pronominaux -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Les verbes pronominaux &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES SIX PRONOMS + L&rsquo;&Eacute;LISION + LA N&Eacute;GATION <span class="pill-time">14 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight items on exactly what tomorrow&rsquo;s Grammar Quiz asks you to produce: the reflexive pronoun for each person, <em>s&rsquo;</em> before a vowel, and where <em>ne&hellip;pas</em> goes.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Je ______ (se lever) &agrave; sept heures.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! je takes me.">me l&egrave;ve</button>
+                <button data-no="That goes with tu.">te l&egrave;ves</button>
+                <button data-no="That goes with il, elle or on.">se l&egrave;ve</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Tu ______ (se coucher) tard.</div>
+            <div class="widget-options">
+                <button data-no="That goes with je.">me couche</button>
+                <button data-correct="1" data-ok="Exact ! tu takes te.">te couches</button>
+                <button data-no="That goes with il, elle or on.">se couche</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Elle ______ (s&rsquo;habiller).</div>
+            <div class="widget-options">
+                <button data-no="se cannot sit next to a vowel &mdash; it becomes s&rsquo;.">se habille</button>
+                <button data-correct="1" data-ok="Oui ! s&rsquo; before a vowel.">s&rsquo;habille</button>
+                <button data-no="That goes with je.">m&rsquo;habille</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Nous ______ (se reposer) le dimanche.</div>
+            <div class="widget-options">
+                <button data-no="That goes with vous.">vous reposez</button>
+                <button data-correct="1" data-ok="Exact ! the pronoun and the ending both say nous.">nous reposons</button>
+                <button data-no="That goes with ils or elles.">se reposent</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Vous ______ (se laver).</div>
+            <div class="widget-options">
+                <button data-no="That goes with nous.">nous lavons</button>
+                <button data-correct="1" data-ok="Oui ! vous takes vous.">vous lavez</button>
+                <button data-no="That goes with ils or elles.">se lavent</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Ils ______ (se d&eacute;p&ecirc;cher) le matin.</div>
+            <div class="widget-options">
+                <button data-no="That goes with nous.">nous d&eacute;p&ecirc;chons</button>
+                <button data-correct="1" data-ok="Exact ! ils and elles keep se.">se d&eacute;p&ecirc;chent</button>
+                <button data-no="That goes with vous.">vous d&eacute;p&ecirc;chez</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Complete the negation: Je ______ l&egrave;ve pas t&ocirc;t.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! ne goes in front of the pronoun, pas after the verb.">ne me</button>
+                <button data-no="ne always comes first.">me ne</button>
+                <button data-no="The pronoun me cannot be dropped.">ne</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Before a vowel, <em>se</em> becomes&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! s&rsquo;habille, s&rsquo;endort.">s&rsquo;</button>
+                <button data-no="That is a different word altogether.">ce</button>
+                <button data-no="That means his or her.">sa</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2c · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal it.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>I get up at seven o&rsquo;clock.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je me l&egrave;ve &agrave; sept heures.</strong><br><span style="font-size:15px;color:#41506b;">The pronoun me sits between je and the verb.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Say it in French: <em>She gets dressed.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Elle s&rsquo;habille.</strong><br><span style="font-size:15px;color:#41506b;">se becomes s&rsquo; in front of the h of habiller.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Make it negative: <em>Je me l&egrave;ve t&ocirc;t.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je ne me l&egrave;ve pas t&ocirc;t.</strong><br><span style="font-size:15px;color:#41506b;">ne goes before me, and pas after the verb &mdash; the pronoun stays inside.</span></div>
+        </div>
+    </div>
+
     <!-- PART 3 · recap -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128221; PART 3 &middot; NOTE RAPIDE <span class="pill-time">2 min</span></div>
@@ -174,5 +413,54 @@
 </script>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

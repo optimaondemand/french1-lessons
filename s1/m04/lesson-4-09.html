@@ -39,6 +39,12 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -108,6 +114,240 @@
     
     
 
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">L&rsquo;HEURE + L&rsquo;EMPLOI DU TEMPS + LES MOTS INTERROGATIFS <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight checks that touch <strong>every word on your Vocabulaire page</strong> &mdash; the same words your Vocabulary Check asks you to recognise and type. Wrong answers show you the right one; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><em>Quelle heure est-il ?</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! it asks for the time right now.">What time is it?</button>
+                <button data-no="That&rsquo;s &agrave; quelle heure.">At what time?</button>
+                <button data-no="That&rsquo;s quand.">When?</button>
+                <button data-no="That&rsquo;s combien.">How many?</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">8:30 → Il est huit heures ______.</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s quarter past &mdash; 8:15.">et quart</button>
+                <button data-correct="1" data-ok="Exact ! et demie = half past.">et demie</button>
+                <button data-no="That&rsquo;s quarter to.">moins le quart</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which word asks <em>why</em>?</div>
+            <div class="widget-options">
+                <button data-no="That asks when.">quand</button>
+                <button data-no="That asks how much or how many.">combien</button>
+                <button data-correct="1" data-ok="Oui ! pourquoi = why.">pourquoi</button>
+                <button data-no="That asks at what time.">&agrave; quelle heure</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question"><em>midi</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! midi = noon.">12:00 in the middle of the day</button>
+                <button data-no="That&rsquo;s minuit.">12:00 in the middle of the night</button>
+                <button data-no="That&rsquo;s le matin.">the morning</button>
+                <button data-no="That&rsquo;s le soir.">the evening</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">The opposite of <em>le matin</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the afternoon &mdash; the middle of the day.">l&rsquo;apr&egrave;s-midi</button>
+                <button data-correct="1" data-ok="Oui ! morning and evening are the two ends of the day.">le soir</button>
+                <button data-no="That&rsquo;s a single moment, not a part of the day.">minuit</button>
+                <button data-no="That just means the hour, or the time.">l&rsquo;heure</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Which one is the <strong>whole week&rsquo;s timetable</strong>, not a single part of the day?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s one class.">le cours</button>
+                <button data-correct="1" data-ok="Exact ! your timetable for the whole week.">l&rsquo;emploi du temps</button>
+                <button data-no="That&rsquo;s the break between classes.">la r&eacute;cr&eacute;ation</button>
+                <button data-no="That&rsquo;s the lunch break.">la pause d&eacute;jeuner</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><em>commencer</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s finir.">to finish</button>
+                <button data-correct="1" data-ok="Oui ! le cours commence &agrave; huit heures.">to begin</button>
+                <button data-no="Not one of this module&rsquo;s verbs.">to ask</button>
+                <button data-no="Not one of this module&rsquo;s verbs.">to wait</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Which word means <em>today</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s tomorrow.">demain</button>
+                <button data-correct="1" data-ok="Exact ! aujourd&rsquo;hui = today.">aujourd&rsquo;hui</button>
+                <button data-no="That&rsquo;s the morning &mdash; a part of any day.">le matin</button>
+                <button data-no="That&rsquo;s the evening &mdash; a part of any day.">le soir</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2b · L'heure et les questions -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; L&rsquo;heure et les questions &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">DIRE L&rsquo;HEURE + EST-CE QUE + L&rsquo;INVERSION <span class="pill-time">14 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight items on exactly what tomorrow&rsquo;s Grammar Quiz asks you to produce: telling the time, and the two ways of asking a question.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">It&rsquo;s 8:15. Il est huit heures ______.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! quarter past.">et quart</button>
+                <button data-no="That&rsquo;s half past &mdash; 8:30.">et demie</button>
+                <button data-no="That&rsquo;s quarter to.">moins le quart</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">It&rsquo;s 8:45 &mdash; quarter to nine. Il est neuf heures ______.</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s quarter past.">et quart</button>
+                <button data-no="That&rsquo;s half past.">et demie</button>
+                <button data-correct="1" data-ok="Exact ! French counts back from the next hour.">moins le quart</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">One o&rsquo;clock is Il est ______.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! heure is feminine, and singular at one o&rsquo;clock.">une heure</button>
+                <button data-no="heure is feminine &mdash; une.">un heure</button>
+                <button data-no="Only one hour, so no -s.">une heures</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">“It is midnight” is Il est ______.</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s noon.">midi</button>
+                <button data-correct="1" data-ok="Exact ! minuit = midnight.">minuit</button>
+                <button data-no="That&rsquo;s the evening in general, not a time.">le soir</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which makes a yes/no question the <strong>easy</strong> way?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! put est-ce que in front and change nothing else.">Est-ce que tu as cours ?</button>
+                <button data-no="combien asks how many &mdash; not a yes/no question.">Combien tu as cours ?</button>
+                <button data-no="pourquoi asks why &mdash; not a yes/no question.">Pourquoi tu as cours ?</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">The inversion of <em>Tu as cours</em> is ______ cours ?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! swap the verb and the subject, and join them with a hyphen.">As-tu</button>
+                <button data-no="The verb has to come first.">Tu-as</button>
+                <button data-no="That is the wrong verb &mdash; the sentence uses avoir.">Est-tu</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Which asks <em>at what time</em>?</div>
+            <div class="widget-options">
+                <button data-no="That asks what time it is now.">quelle heure est-il</button>
+                <button data-correct="1" data-ok="Oui ! the &agrave; is what makes it at what time.">&agrave; quelle heure</button>
+                <button data-no="That asks when, without naming a clock time.">quand</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Correct spelling of “the schedule”?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact !">l&rsquo;emploi du temps</button>
+                <button data-no="emploi has no -s here, and temps always does.">l&rsquo;emplois du temp</button>
+                <button data-no="le becomes l&rsquo; before a vowel.">le emploi du temps</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2c · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal it.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>It is ten o&rsquo;clock.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Il est dix heures.</strong><br><span style="font-size:15px;color:#41506b;">heures is plural from two o&rsquo;clock onwards.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Turn it into a question with <em>est-ce que</em>: <em>Le cours commence &agrave; huit heures.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Est-ce que le cours commence &agrave; huit heures ?</strong><br><span style="font-size:15px;color:#41506b;">Nothing else changes &mdash; est-ce que simply goes in front.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Ask <em>when does the class start?</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Quand est-ce que le cours commence ?</strong><br><span style="font-size:15px;color:#41506b;">The question word comes first, then est-ce que.</span></div>
+        </div>
+    </div>
+
     <!-- PART 3 · recap -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128221; PART 3 &middot; NOTE RAPIDE <span class="pill-time">2 min</span></div>
@@ -174,5 +414,54 @@
 </script>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

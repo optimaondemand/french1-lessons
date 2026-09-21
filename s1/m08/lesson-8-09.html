@@ -28,6 +28,12 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -97,6 +103,241 @@
     
     
 
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">PARIS + L&rsquo;IDENTIT&Eacute; FRAN&Ccedil;AISE <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight checks that touch <strong>every word on your Vocabulaire page</strong> &mdash; the same words your Vocabulary Check asks you to recognise and type. Wrong answers show you the right one; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which one is a <strong>museum</strong>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s a monument &mdash; you go up it, not round it.">la tour Eiffel</button>
+                <button data-correct="1" data-ok="Oui ! le Louvre is the famous museum.">le Louvre</button>
+                <button data-no="That&rsquo;s the river running through Paris.">la Seine</button>
+                <button data-no="That&rsquo;s the train station.">la gare</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which one do you travel <strong>on</strong>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the street &mdash; you walk along it.">la rue</button>
+                <button data-correct="1" data-ok="Exact ! the Paris underground.">le m&eacute;tro</button>
+                <button data-no="That&rsquo;s a neighbourhood of the city.">le quartier</button>
+                <button data-no="That&rsquo;s the train station &mdash; the building, not the ride.">la gare</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><em>Notre-Dame</em> is which kind of building?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s a garden.">le jardin</button>
+                <button data-correct="1" data-ok="Oui ! la cath&eacute;drale Notre-Dame.">la cath&eacute;drale</button>
+                <button data-no="The general word for a landmark &mdash; but Notre-Dame is a church.">le monument</button>
+                <button data-no="That&rsquo;s a museum.">le mus&eacute;e</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which verb means <em>to discover</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s to visit &mdash; close, but not the same.">visiter</button>
+                <button data-correct="1" data-ok="Exact ! d&eacute;couvrir = to discover.">d&eacute;couvrir</button>
+                <button data-no="That&rsquo;s to read.">lire</button>
+                <button data-no="That&rsquo;s to swim.">nager</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Paris est la ______ de la France.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! la capitale = the capital.">capitale</button>
+                <button data-no="That&rsquo;s a train station.">gare</button>
+                <button data-no="That&rsquo;s a street.">rue</button>
+                <button data-no="That&rsquo;s a language.">langue</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><em>c&eacute;l&egrave;bre</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! un monument c&eacute;l&egrave;bre.">famous</button>
+                <button data-no="Not what it means &mdash; look at the English word celebrity.">far away</button>
+                <button data-no="Not what it means.">closed</button>
+                <button data-no="That&rsquo;s fran&ccedil;ais.">French</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><em>le drapeau</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! bleu, blanc, rouge.">the flag</button>
+                <button data-no="That&rsquo;s la culture.">the culture</button>
+                <button data-no="That&rsquo;s la langue fran&ccedil;aise.">the French language</button>
+                <button data-no="That&rsquo;s la capitale.">the capital</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question"><em>fran&ccedil;ais, fran&ccedil;aise</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s c&eacute;l&egrave;bre.">famous</button>
+                <button data-correct="1" data-ok="Exact ! il est fran&ccedil;ais, elle est fran&ccedil;aise.">French &mdash; the masculine and feminine forms</button>
+                <button data-no="That&rsquo;s le drapeau.">the flag</button>
+                <button data-no="That&rsquo;s d&eacute;couvrir.">to discover</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2b · Révision générale -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; R&eacute;vision g&eacute;n&eacute;rale &mdash; M1 &agrave; M7</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">UN ITEM PAR MODULE &mdash; COMME L&rsquo;EXAMEN <span class="pill-time">14 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Module 8 pulls the whole semester back together, and so does its Grammar Quiz. One item from each earlier module, in order &mdash; if one of these is shaky, that is the module to revisit tonight.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><strong>M1 &middot; &ecirc;tre.</strong> Nous ______ fran&ccedil;ais.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! nous sommes.">sommes</button>
+                <button data-no="That goes with ils or elles.">sont</button>
+                <button data-no="That goes with vous.">&ecirc;tes</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question"><strong>M2 &middot; les verbes en -er.</strong> Nous ______ fran&ccedil;ais. <em>(parler)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! nous takes -ons.">parlons</button>
+                <button data-no="That goes with vous.">parlez</button>
+                <button data-no="That goes with ils or elles.">parlent</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><strong>M3 &middot; avoir.</strong> Paris ______ beaucoup de mus&eacute;es.</div>
+            <div class="widget-options">
+                <button data-no="Paris is not the museums &mdash; it has them.">est</button>
+                <button data-correct="1" data-ok="Oui ! il, elle and a place name all take a.">a</button>
+                <button data-no="That&rsquo;s aller.">va</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question"><strong>M4 &middot; les questions.</strong> Which asks <em>What time is it?</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact !">Quelle heure est-il ?</button>
+                <button data-no="That asks when, with no clock time.">Quand ?</button>
+                <button data-no="That asks how much or how many.">Combien ?</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question"><strong>M5 &middot; les verbes pronominaux.</strong> On ______ prom&egrave;ne.</div>
+            <div class="widget-options">
+                <button data-no="That goes with je.">me</button>
+                <button data-correct="1" data-ok="Oui ! on behaves exactly like il and elle.">se</button>
+                <button data-no="on looks plural in meaning, but it takes the il form.">nous</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question"><strong>M6 &middot; aller + infinitif.</strong> Je ______ visiter Paris.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! je vais visiter &mdash; the near future.">vais</button>
+                <button data-no="That goes with tu.">vas</button>
+                <button data-no="That goes with nous.">allons</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><strong>M7 &middot; les partitifs.</strong> Je ne mange pas ______ viande.</div>
+            <div class="widget-options">
+                <button data-no="After a negative the partitive collapses.">de la</button>
+                <button data-correct="1" data-ok="Oui ! negative → de, every time.">de</button>
+                <button data-no="viande is feminine, and this is negative anyway.">du</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question"><strong>M8 &middot; la synth&egrave;se.</strong> Which is correctly formed?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact ! aller, then the plain verb.">Nous allons visiter</button>
+                <button data-no="aller has to come first.">Nous visiter allons</button>
+                <button data-no="The second verb stays in the infinitive.">Nous allons visitons</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2c · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal it.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>We are going to visit the Eiffel Tower.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Nous allons visiter la tour Eiffel.</strong><br><span style="font-size:15px;color:#41506b;">aller + infinitive, exactly as in Module 6.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Say it in French: <em>Paris is the capital of France.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Paris est la capitale de la France.</strong><br><span style="font-size:15px;color:#41506b;">&ecirc;tre for what something is, and la France keeps its article.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Say it in French: <em>I am French.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je suis fran&ccedil;ais. / Je suis fran&ccedil;aise.</strong><br><span style="font-size:15px;color:#41506b;">fran&ccedil;aise with the -e if you are female. Both are correct.</span></div>
+        </div>
+    </div>
+
     <!-- PART 3 · recap -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128221; PART 3 &middot; NOTE RAPIDE <span class="pill-time">2 min</span></div>
@@ -163,5 +404,54 @@
 </script>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

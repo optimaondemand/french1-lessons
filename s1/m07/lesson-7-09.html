@@ -39,6 +39,12 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+
+.widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+.widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.reveal-body { display: none; margin-top: 12px; }
+.reveal-body.show { display: block; }
 </style>
 </head>
 <body>
@@ -108,6 +114,241 @@
     
     
 
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LA NOURRITURE + LES REPAS <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight checks that touch <strong>every word on your Vocabulaire page</strong> &mdash; the same words your Vocabulary Check asks you to recognise and type. Wrong answers show you the right one; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which one is <em>bread</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! le pain.">le pain</button>
+                <button data-no="That&rsquo;s cheese.">le fromage</button>
+                <button data-no="That&rsquo;s meat.">la viande</button>
+                <button data-no="That&rsquo;s fish.">le poisson</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which word means <em>vegetables</em>?</div>
+            <div class="widget-options">
+                <button data-no="Those are fruits.">les fruits</button>
+                <button data-correct="1" data-ok="Exact ! les l&eacute;gumes.">les l&eacute;gumes</button>
+                <button data-no="That&rsquo;s the apple &mdash; a fruit, and singular.">la pomme</button>
+                <button data-no="That&rsquo;s milk.">le lait</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which one is a <strong>drink</strong>?</div>
+            <div class="widget-options">
+                <button data-no="You eat that.">le pain</button>
+                <button data-correct="1" data-ok="Oui ! le jus = juice.">le jus</button>
+                <button data-no="You eat that.">le croissant</button>
+                <button data-no="You eat that.">le fromage</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which one is <em>water</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s coffee.">le caf&eacute;</button>
+                <button data-correct="1" data-ok="Exact ! l&rsquo;eau &mdash; and it is feminine.">l&rsquo;eau</button>
+                <button data-no="That&rsquo;s tea.">le th&eacute;</button>
+                <button data-no="That&rsquo;s milk.">le lait</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">The <strong>evening</strong> meal is called&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s lunch.">le d&eacute;jeuner</button>
+                <button data-correct="1" data-ok="Oui ! le d&icirc;ner &mdash; note the circumflex.">le d&icirc;ner</button>
+                <button data-no="That&rsquo;s breakfast.">le petit-d&eacute;jeuner</button>
+                <button data-no="That just means the meal, any meal.">le repas</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Which verb means <em>to eat</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s to drink.">boire</button>
+                <button data-correct="1" data-ok="Exact ! manger.">manger</button>
+                <button data-no="That means I would like.">je voudrais</button>
+                <button data-no="That&rsquo;s an adjective &mdash; delicious.">d&eacute;licieux</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question"><em>je voudrais</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s je mange.">I eat</button>
+                <button data-correct="1" data-ok="Oui ! the polite way to order.">I would like</button>
+                <button data-no="That&rsquo;s je bois.">I drink</button>
+                <button data-no="That&rsquo;s j&rsquo;ai.">I have</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Where do you buy <em>le pain</em> and <em>le croissant</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s a meal, not a shop.">le repas</button>
+                <button data-correct="1" data-ok="Exact ! la boulangerie = the bakery.">la boulangerie</button>
+                <button data-no="That&rsquo;s lunch, not a shop.">le d&eacute;jeuner</button>
+                <button data-no="That&rsquo;s dinner, not a shop.">le d&icirc;ner</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2b · Les partitifs -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Les partitifs &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">DU &middot; DE LA &middot; DE L&rsquo; &middot; DES + LA N&Eacute;GATION <span class="pill-time">14 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight items on exactly what tomorrow&rsquo;s Grammar Quiz asks you to produce: which partitive goes with which noun, and what happens to it after a negative.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Je mange ______ pain. <em>(le pain)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! masculine → du.">du</button>
+                <button data-no="That is for feminine nouns.">de la</button>
+                <button data-no="That is for plurals.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Je voudrais ______ viande. <em>(la viande)</em></div>
+            <div class="widget-options">
+                <button data-no="That is for masculine nouns.">du</button>
+                <button data-correct="1" data-ok="Exact ! feminine → de la.">de la</button>
+                <button data-no="That is for plurals.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Elle boit ______ eau. <em>(l&rsquo;eau)</em></div>
+            <div class="widget-options">
+                <button data-no="eau is feminine, and it starts with a vowel.">du</button>
+                <button data-no="Right gender, but de la cannot sit next to a vowel.">de la</button>
+                <button data-correct="1" data-ok="Oui ! before a vowel, de la becomes de l&rsquo;.">de l&rsquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Il mange ______ l&eacute;gumes. <em>(les l&eacute;gumes)</em></div>
+            <div class="widget-options">
+                <button data-no="That is singular masculine.">du</button>
+                <button data-no="That is singular feminine.">de la</button>
+                <button data-correct="1" data-ok="Exact ! plural → des.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Je ne mange pas ______ viande. <em>(negative)</em></div>
+            <div class="widget-options">
+                <button data-no="After a negative the partitive collapses.">de la</button>
+                <button data-correct="1" data-ok="Oui ! after ne&hellip;pas, du / de la / des all become simply de.">de</button>
+                <button data-no="After a negative the partitive collapses.">du</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Je ne bois pas ______ caf&eacute;. <em>(negative)</em></div>
+            <div class="widget-options">
+                <button data-no="That is the positive form &mdash; je bois du caf&eacute;.">du</button>
+                <button data-correct="1" data-ok="Exact ! the same rule: negative → de.">de</button>
+                <button data-no="caf&eacute; does not start with a vowel, and this is negative anyway.">de l&rsquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Which is correct?</div>
+            <div class="widget-options">
+                <button data-no="de la cannot sit next to a vowel.">je bois de la eau</button>
+                <button data-correct="1" data-ok="Oui !">je bois de l&rsquo;eau</button>
+                <button data-no="eau is feminine, and du cannot sit next to a vowel either.">je bois du eau</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Je voudrais ______ caf&eacute;, s&rsquo;il vous pla&icirc;t. <em>(one whole cup)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! one whole cup is un caf&eacute; &mdash; the partitive is for an unmeasured amount.">un</button>
+                <button data-no="That would be some coffee, not one cup.">du</button>
+                <button data-no="caf&eacute; is masculine, and this is one whole cup.">de la</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2c · Défi éclair -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal it.</div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
+            <div class="widget-question">Say it in French: <em>I eat some bread.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je mange du pain.</strong><br><span style="font-size:15px;color:#41506b;">pain is masculine, so du.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
+            <div class="widget-question">Say it in French: <em>She drinks some water.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Elle boit de l&rsquo;eau.</strong><br><span style="font-size:15px;color:#41506b;">eau is feminine but starts with a vowel, so de la becomes de l&rsquo;.</span></div>
+        </div>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
+            <div class="widget-question">Make it negative: <em>Je mange de la viande.</em></div>
+            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <div class="reveal-body"><strong>Je ne mange pas de viande.</strong><br><span style="font-size:15px;color:#41506b;">After ne&hellip;pas every partitive flattens to de.</span></div>
+        </div>
+    </div>
+
     <!-- PART 3 · recap -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128221; PART 3 &middot; NOTE RAPIDE <span class="pill-time">2 min</span></div>
@@ -174,5 +415,54 @@
 </script>
 
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>
