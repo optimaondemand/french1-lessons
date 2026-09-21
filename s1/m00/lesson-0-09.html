@@ -50,6 +50,18 @@
     .kbd-list { font-size: 16px; color: #1a2340; line-height: 1.75; margin: 10px 0 0 0; padding-left: 20px; }
     .kbd-list li { margin-bottom: 7px; }
     .kbd { background: #F0F2F8; border: 1px solid #C9D3E4; border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; font-family: Consolas, "Courier New", monospace; font-size: 14px; color: #0E1C42; }
+
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
 </style>
 </head>
 <body>
@@ -426,44 +438,80 @@
         </ul>
     </div>
 
-    <!-- PART 2e · Défi éclair -->
+    <!-- PART 2s · Orthographe -->
 
     <div class="activity-card">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
-            <div style="font-size: 20px; color: #0e1c42;">&#9889; &Eacute;cris-le correctement</div>
+            <div style="font-size: 20px; color: #0e1c42;">&#9997;&#65039; &Eacute;cris-le &mdash; orthographe</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
         </div>
-        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES 5 MOTS DU QUIZ <span class="pill-time">8 min</span></div>
-        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">These five words are exactly what tomorrow&rsquo;s quiz asks you to <strong>type</strong>. Write each one out first &mdash; by hand or on the keyboard &mdash; then reveal it and check every mark.</div>
-        <div class="optima-widget">
-            <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
-            <div class="widget-question">Write <em>coffee</em> in French.</div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
-            <div class="reveal-body"><strong>caf&eacute;</strong><br><span style="font-size:15px;color:#41506b;">An <em>accent aigu</em> on the e &mdash; and it is the only accent that letter takes.</span></div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES MOTS &Agrave; &Eacute;CRIRE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Your Vocabulary Check does not only ask you to <em>recognise</em> these words &mdash; it asks you to <strong>type</strong> them, with the article, the accents and the hyphens. Type each one, press <strong>V&eacute;rifier</strong>, and the feedback will name exactly what is missing. Nothing is recorded.</div>
+        <div class="optima-widget ow-spell" data-answer="caf&eacute;">
+            <div class="widget-kicker">&#9998; MOT 1</div>
+            <div class="widget-question">coffee</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="coffee">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; accent aigu</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
-        <div class="optima-widget">
-            <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
-            <div class="widget-question">Write the word for <em>French</em> &mdash; the language.</div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
-            <div class="reveal-body"><strong>fran&ccedil;ais</strong><br><span style="font-size:15px;color:#41506b;">The <em>c&eacute;dille</em> keeps the c soft in front of the a.</span></div>
+        <div class="optima-widget ow-spell" data-answer="fran&ccedil;ais">
+            <div class="widget-kicker">&#9998; MOT 2</div>
+            <div class="widget-question">French (the language)</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="French (the language)">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; c&eacute;dille</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
-        <div class="optima-widget">
-            <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
-            <div class="widget-question">Write the verb meaning <em>to be</em>.</div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
-            <div class="reveal-body"><strong>&ecirc;tre</strong><br><span style="font-size:15px;color:#41506b;">A <em>circonflexe</em> on the e &mdash; a vanished s, from the old spelling estre.</span></div>
+        <div class="optima-widget ow-spell" data-answer="&ecirc;tre">
+            <div class="widget-kicker">&#9998; MOT 3</div>
+            <div class="widget-question">to be (the verb)</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="to be (the verb)">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; circonflexe</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
-        <div class="optima-widget">
-            <div class="widget-kicker">&#9889; D&Eacute;FI 4</div>
-            <div class="widget-question">Write <em>Christmas</em> in French.</div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
-            <div class="reveal-body"><strong>No&euml;l</strong><br><span style="font-size:15px;color:#41506b;">A <em>tr&eacute;ma</em> on the e, so you say the two vowels apart: no-EL.</span></div>
+        <div class="optima-widget ow-spell" data-answer="No&euml;l">
+            <div class="widget-kicker">&#9998; MOT 4</div>
+            <div class="widget-question">Christmas</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="Christmas">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; tr&eacute;ma</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
-        <div class="optima-widget">
-            <div class="widget-kicker">&#9889; D&Eacute;FI 5</div>
-            <div class="widget-question">Write the word for <em>boy</em>.</div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
-            <div class="reveal-body"><strong>gar&ccedil;on</strong><br><span style="font-size:15px;color:#41506b;">The <em>c&eacute;dille</em> again &mdash; without it, garcon would start to sound like gar-KON.</span></div>
+        <div class="optima-widget ow-spell" data-answer="gar&ccedil;on">
+            <div class="widget-kicker">&#9998; MOT 5</div>
+            <div class="widget-question">boy</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="boy">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; c&eacute;dille</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="trois">
+            <div class="widget-kicker">&#9998; MOT 6</div>
+            <div class="widget-question">three</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="three">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; no accent at all &mdash; check before you add one</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
     </div>
 
@@ -512,17 +560,81 @@
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 <script>
 (function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/’/g, "'").replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae')
+            .normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
+
+  function judge(got, target) {
+    if (!got) return { k: 'empty' };
+    if (got === target) return { k: 'perfect' };
+    if (deacc(got) === deacc(target)) return { k: 'accent' };
+    if (deacc(got) === deacc(dropArt(target))) return { k: 'article' };
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return { k: 'hyphen' };
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return { k: 'apostrophe' };
+    if (deacc(dropHyp(dropArt(got))) === deacc(dropHyp(dropArt(target)))) return { k: 'article' };
+    return { k: 'no' };
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var target = norm(el.dataset.answer);
+    var shown = el.dataset.answer;
+    var got = norm(input.value);
+    var v = judge(got, target);
+    var tries = (parseInt(el.dataset.tries || '0', 10)) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 && v.k !== 'perfect' && v.k !== 'accent'
+      ? ' <span style="color:#41506b;">La r&eacute;ponse&nbsp;: <strong>' + shown + '</strong></span>' : '';
+
+    if (v.k === 'empty') { setFb(el, 'fb-warn', '&Eacute;cris quelque chose d&rsquo;abord.'); return; }
+    if (v.k === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;!</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v.k === 'accent') {
+      setFb(el, 'fb-warn', '<strong>Accept&eacute;</strong> &mdash; but the word is written <strong>' + shown +
+        '</strong>. The accent is part of the spelling, like a letter.');
+    } else if (v.k === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Your Vocabulary Check wants the whole thing: <strong>' +
+        shown + '</strong>.' + tail);
+    } else if (v.k === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong> It is written <strong>' + shown + '</strong>.' + tail);
+    } else if (v.k === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong> It is written <strong>' + shown + '</strong>.' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Pas encore. Try again &mdash; the R&eacute;f&eacute;rence page has it.' + tail);
+    }
+  }
+
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.className = 'widget-feedback'; f.textContent = ''; });
       w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
       w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
-      delete w.dataset.answered;
+      w.querySelectorAll('.spell-input').forEach(function (s) { s.value = ''; s.classList.remove('ok', 'no'); });
+      delete w.dataset.answered; delete w.dataset.tries;
       return;
     }
+    var sc = e.target.closest('.spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');
     if (rBtn) {
       var rw = rBtn.closest('.optima-widget');
@@ -554,7 +666,13 @@
       var body = host.querySelector('.reveal-body');
       if (body) body.classList.add('show');
       rv.style.display = 'none';
-      return;
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
     }
   });
 })();

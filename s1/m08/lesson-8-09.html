@@ -34,6 +34,18 @@
 .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
 .reveal-body { display: none; margin-top: 12px; }
 .reveal-body.show { display: block; }
+
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
 </style>
 </head>
 <body>
@@ -309,6 +321,83 @@
         </div>
     </div>
 
+    <!-- PART 2s · Orthographe -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9997;&#65039; &Eacute;cris-le &mdash; orthographe</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES MOTS TAP&Eacute;S DU QUIZ <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Your Vocabulary Check does not only ask you to <em>recognise</em> these words &mdash; it asks you to <strong>type</strong> them, with the article, the accents and the hyphens. Type each one, press <strong>V&eacute;rifier</strong>, and the feedback will name exactly what is missing. Nothing is recorded.</div>
+        <div class="optima-widget ow-spell" data-answer="le mus&eacute;e">
+            <div class="widget-kicker">&#9998; MOT 1</div>
+            <div class="widget-question">the museum</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="the museum">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; article + accent aigu</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la cath&eacute;drale">
+            <div class="widget-kicker">&#9998; MOT 2</div>
+            <div class="widget-question">the cathedral</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="the cathedral">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; article + accent aigu</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="c&eacute;l&egrave;bre">
+            <div class="widget-kicker">&#9998; MOT 3</div>
+            <div class="widget-question">famous</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="famous">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; two different accents &mdash; aigu then grave</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le quartier">
+            <div class="widget-kicker">&#9998; MOT 4</div>
+            <div class="widget-question">the neighbourhood</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="the neighbourhood">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; article required</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le drapeau">
+            <div class="widget-kicker">&#9998; MOT 5</div>
+            <div class="widget-question">the flag</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="the flag">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; article required</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la capitale">
+            <div class="widget-kicker">&#9998; MOT 6</div>
+            <div class="widget-question">the capital</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="&eacute;cris-le en fran&ccedil;ais&hellip;" aria-label="the capital">
+                <button class="spell-check">V&eacute;rifier</button>
+            </div>
+            <div class="spell-trap">&#9755; article required</div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
     <!-- PART 2c · Défi éclair -->
 
     <div class="activity-card">
@@ -406,17 +495,81 @@
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 <script>
 (function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/’/g, "'").replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae')
+            .normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
+
+  function judge(got, target) {
+    if (!got) return { k: 'empty' };
+    if (got === target) return { k: 'perfect' };
+    if (deacc(got) === deacc(target)) return { k: 'accent' };
+    if (deacc(got) === deacc(dropArt(target))) return { k: 'article' };
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return { k: 'hyphen' };
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return { k: 'apostrophe' };
+    if (deacc(dropHyp(dropArt(got))) === deacc(dropHyp(dropArt(target)))) return { k: 'article' };
+    return { k: 'no' };
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var target = norm(el.dataset.answer);
+    var shown = el.dataset.answer;
+    var got = norm(input.value);
+    var v = judge(got, target);
+    var tries = (parseInt(el.dataset.tries || '0', 10)) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 && v.k !== 'perfect' && v.k !== 'accent'
+      ? ' <span style="color:#41506b;">La r&eacute;ponse&nbsp;: <strong>' + shown + '</strong></span>' : '';
+
+    if (v.k === 'empty') { setFb(el, 'fb-warn', '&Eacute;cris quelque chose d&rsquo;abord.'); return; }
+    if (v.k === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;!</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v.k === 'accent') {
+      setFb(el, 'fb-warn', '<strong>Accept&eacute;</strong> &mdash; but the word is written <strong>' + shown +
+        '</strong>. The accent is part of the spelling, like a letter.');
+    } else if (v.k === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Your Vocabulary Check wants the whole thing: <strong>' +
+        shown + '</strong>.' + tail);
+    } else if (v.k === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong> It is written <strong>' + shown + '</strong>.' + tail);
+    } else if (v.k === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong> It is written <strong>' + shown + '</strong>.' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Pas encore. Try again &mdash; the R&eacute;f&eacute;rence page has it.' + tail);
+    }
+  }
+
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.className = 'widget-feedback'; f.textContent = ''; });
       w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
       w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
-      delete w.dataset.answered;
+      w.querySelectorAll('.spell-input').forEach(function (s) { s.value = ''; s.classList.remove('ok', 'no'); });
+      delete w.dataset.answered; delete w.dataset.tries;
       return;
     }
+    var sc = e.target.closest('.spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');
     if (rBtn) {
       var rw = rBtn.closest('.optima-widget');
@@ -448,7 +601,13 @@
       var body = host.querySelector('.reveal-body');
       if (body) body.classList.add('show');
       rv.style.display = 'none';
-      return;
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
     }
   });
 })();
