@@ -46,6 +46,25 @@
 .reveal-btn:hover { background: #1B3A6B; }
 .reveal-body { display: none; margin-top: 12px; }
 .reveal-body.show { display: block; }
+<!-- S2 DRILL CSS -->
+.widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+.widget-feedback.fb-warn { border-left-color: #C7922C; }
+.widget-feedback.fb-no { border-left-color: #C0392B; }
+.spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+.spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+.spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+.spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+.spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+.spell-check:hover { background: #1B3A6B; }
+.spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+.accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
+.accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
+.accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
+.say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+.say:hover { background: #1B3A6B; }
+.say.playing { background: #C7922C; }
+.say.err { background: #C0392B; }
 </style>
 </head>
 <body>
@@ -119,7 +138,7 @@
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
         </div>
         <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">RECALL + CHOOSE <span class="pill-time">8 min</span></div>
-        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Five quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
             <div class="widget-question"><em>La vitrine</em> is&hellip;</div>
@@ -176,6 +195,42 @@
                 <button data-no="That&rsquo;s le prix.">the price</button>
                 <button data-no="That&rsquo;s la couleur.">the colour</button>
                 <button data-no="That&rsquo;s le manteau.">the coat</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Which one means <em>the coat</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the skirt.">la jupe</button>
+                <button data-no="That&rsquo;s the jeans.">le jean</button>
+                <button data-correct="1" data-ok="Oui ! le manteau = the coat.">le manteau</button>
+                <button data-no="That&rsquo;s clothes in general.">les v&ecirc;tements</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Where do you buy clothes?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the color.">la couleur</button>
+                <button data-correct="1" data-ok="Exact ! le magasin = the store.">le magasin</button>
+                <button data-no="That&rsquo;s the size.">la taille</button>
+                <button data-no="That&rsquo;s the hat.">le chapeau</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">The opposite of <em>bon march&eacute;</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s calm.">calme</button>
+                <button data-no="That&rsquo;s fun.">amusant</button>
+                <button data-correct="1" data-ok="Oui ! cher = expensive.">cher</button>
+                <button data-no="That&rsquo;s magnificent.">magnifique</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
@@ -270,6 +325,256 @@
         </div>
     </div>
 
+    <!-- PART 3s &middot; &Eacute;cris-le &mdash; orthographe -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9997;&#65039; &Eacute;cris-le &mdash; orthographe</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES MOTS TAP&Eacute;S DU VOCABULARY CHECK <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Your quiz asks you to <strong>type</strong> these, not just recognise them. Type each one and press <strong>Check</strong>. <strong>Here the accents count:</strong> a missing accent is marked wrong, and so is a missing article. The feedback names exactly what is missing. Copy an accent from the strip under each box if your keyboard will not make it. Nothing is recorded.</div>
+        <div class="optima-widget ow-spell" data-answer="la chemise">
+            <div class="widget-kicker">&#9998; MOT 1</div>
+            <div class="widget-question">the shirt</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the shirt">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le pantalon">
+            <div class="widget-kicker">&#9998; MOT 2</div>
+            <div class="widget-question">the pants</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the pants">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; singular in French</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la jupe">
+            <div class="widget-kicker">&#9998; MOT 3</div>
+            <div class="widget-question">the skirt</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the skirt">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le pull">
+            <div class="widget-kicker">&#9998; MOT 4</div>
+            <div class="widget-question">the sweater</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the sweater">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; double l</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le magasin">
+            <div class="widget-kicker">&#9998; MOT 5</div>
+            <div class="widget-question">the store</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the store">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la couleur">
+            <div class="widget-kicker">&#9998; MOT 6</div>
+            <div class="widget-question">the color</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the color">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; ou, then eu</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="bon march&eacute;">
+            <div class="widget-kicker">&#9998; MOT 7</div>
+            <div class="widget-question">cheap / inexpensive</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="cheap">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; two words, one accent</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="les v&ecirc;tements">
+            <div class="widget-kicker">&#9998; MOT 8</div>
+            <div class="widget-question">clothes</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="clothes">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; les + a circumflex</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="les chaussures">
+            <div class="widget-kicker">&#9998; MOT 9</div>
+            <div class="widget-question">the shoes</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the shoes">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; les; double s</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="essayer">
+            <div class="widget-kicker">&#9998; MOT 10</div>
+            <div class="widget-question">to try on</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="to try on">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; double s, then y</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3t &middot; &Eacute;cris la forme &mdash; les pronoms et voir -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; &Eacute;cris la forme &mdash; les pronoms <em>le, la, les</em> et <em>voir</em></div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES FORMES TAP&Eacute;ES DU QUIZ <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">The <em>Langue en action</em> and Grammar quizzes ask you to <strong>type</strong> these. Type only what goes in the blank (the last one: the whole sentence). <strong>Accents count here.</strong> Nothing is recorded.</div>
+        <div class="optima-widget ow-spell" data-answer="Je la vois.">
+            <div class="widget-kicker">&#9998; FORME 1</div>
+            <div class="widget-question">Rewrite with a pronoun: <em>Je vois la chemise.</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="rewrite: je vois la chemise">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; the pronoun goes BEFORE the verb</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="Je les ach&egrave;te.">
+            <div class="widget-kicker">&#9998; FORME 2</div>
+            <div class="widget-question">Rewrite with a pronoun: <em>J&rsquo;ach&egrave;te les chemises.</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="rewrite: j ach&egrave;te les chemises">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; les before the verb; keep the accent</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="ne l&rsquo;ach&egrave;te pas">
+            <div class="widget-kicker">&#9998; FORME 3</div>
+            <div class="widget-question">Le manteau ? Je ______. <em>(ne&hellip; pas + pronoun + acheter)</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="negative with a pronoun">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; ne + l&rsquo; + verb + pas</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="achet&eacute;">
+            <div class="widget-kicker">&#9998; FORME 4</div>
+            <div class="widget-question">Le jean ? Je l&rsquo;ai ______. <em>(acheter)</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="acheter, participle">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; masculine: no extra letter</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="vue">
+            <div class="widget-kicker">&#9998; FORME 5</div>
+            <div class="widget-question">La jupe ? Je l&rsquo;ai ______ dans la vitrine. <em>(voir)</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="voir, participle, feminine">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; la before avoir: add -e</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="Je l&rsquo;ai achet&eacute;e.">
+            <div class="widget-kicker">&#9998; FORME 6</div>
+            <div class="widget-question">Rewrite in the past with a pronoun: <em>J&rsquo;ach&egrave;te la robe.</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="rewrite in the past: j ach&egrave;te la robe">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; la before avoir: add -e</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="voyons">
+            <div class="widget-kicker">&#9998; FORME 7</div>
+            <div class="widget-question">Nous ______ la vitrine. <em>(voir)</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="voir, nous">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; y in the middle</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="voient">
+            <div class="widget-kicker">&#9998; FORME 8</div>
+            <div class="widget-question">Ils ______ le magasin. <em>(voir)</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="voir, ils">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; i in the middle</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="J&rsquo;ai vu la jupe et je l&rsquo;ai achet&eacute;e.">
+            <div class="widget-kicker">&#9998; FORME 9</div>
+            <div class="widget-question">Type the whole sentence in French: <em>I saw the skirt and I bought it.</em></div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="I saw the skirt and I bought it">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; vu, then l&rsquo;ai achet&eacute;e</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&eacute; &agrave; &egrave; &ccedil; &ecirc; &ocirc; &icirc; &oelig; &ugrave; &euml; &iuml; &acirc; &uuml; &ucirc;</span><span class="as-glyphs">&Eacute; &Agrave; &Ccedil; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
     <!-- PART 4 · Défi éclair -->
 
     <div class="activity-card">
@@ -282,19 +587,19 @@
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
             <div class="widget-question">Rewrite with a pronoun: <em>J&rsquo;ach&egrave;te le manteau.</em></div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <button class="reveal-btn">Reveal the answer</button>
             <div class="reveal-body"><strong>Je l&rsquo;ach&egrave;te.</strong><br><span style="font-size:15px;color:#41506b;">le elides to l&rsquo; before a vowel.</span></div>
         </div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
             <div class="widget-question">Say it in French: <em>The dress? I tried it on.</em></div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <button class="reveal-btn">Reveal the answer</button>
             <div class="reveal-body"><strong>La robe&nbsp;? Je l&rsquo;ai essay&eacute;e.</strong><br><span style="font-size:15px;color:#41506b;">The preceding feminine object makes the participle agree.</span></div>
         </div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
             <div class="widget-question">Say it in French: <em>The shoes? I love them and I&rsquo;m buying them.</em></div>
-            <button class="reveal-btn">Voir la r&eacute;ponse</button>
+            <button class="reveal-btn">Reveal the answer</button>
             <div class="reveal-body"><strong>Les chaussures&nbsp;? Je les adore, et je les ach&egrave;te&nbsp;!</strong><br><span style="font-size:15px;color:#41506b;">les before each verb.</span></div>
         </div>
     </div>
@@ -391,6 +696,87 @@
       if (body) body.classList.add('show');
       rv.style.display = 'none';
       return;
+    }
+  });
+})();
+</script>
+<script>
+/* S2 spelling checker - STRICT on accents (David 2026-09-28: demands high; the graded quiz keeps its leeway). */
+(function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/[’`´]/g, "'").replace(/ /g, ' ')
+      .replace(/\s+/g, ' ').trim().toLowerCase()
+      .replace(/\s*[.?!]$/, '');  /* a missing final full stop or question mark is not an error */
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
+
+  function judge(got, target) {
+    if (!got) return 'empty';
+    if (got === target) return 'perfect';
+    if (deacc(got) === deacc(target)) return 'accent';
+    if (dropArt(target) !== target && (got === dropArt(target) || deacc(got) === deacc(dropArt(target)))) return 'article';
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return 'hyphen';
+    if (target.indexOf('-') >= 0 && deacc(got.replace(/[-\s]/g, '')) === deacc(target.replace(/[-\s]/g, ''))) return 'hyphen';  /* weekend for week-end */
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return 'apostrophe';
+    return 'no';
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var shown = el.dataset.answer;
+    var v = judge(norm(input.value), norm(shown));
+    var tries = parseInt(el.dataset.tries || '0', 10) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 ? ' <span style="color:#41506b;">The answer: <strong>' + shown + '</strong></span>' : '';
+    if (v === 'empty') { setFb(el, 'fb-warn', 'Type something first.'); return; }
+    if (v === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;!</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v === 'accent') {
+      setFb(el, 'fb-no', '<strong>Check the accents.</strong> The letters are right, but an accent is missing or wrong. ' +
+        'The accent is part of the spelling, like a letter &mdash; copy it from the accent strip under the box.' + tail);
+    } else if (v === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Learn the word with its article.' + tail);
+    } else if (v === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong>' + tail);
+    } else if (v === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong>' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Not yet. Try again.' + tail);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var sc = e.target.closest('.ow-spell .spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
+    var rs = e.target.closest('.ow-spell .widget-reset');
+    if (rs) {
+      var w = rs.closest('.optima-widget');
+      var inp = w.querySelector('.spell-input');
+      inp.value = ''; inp.classList.remove('ok', 'no');
+      var fb = w.querySelector('.widget-feedback');
+      fb.className = 'widget-feedback'; fb.innerHTML = '';
+      delete w.dataset.tries;
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
     }
   });
 })();
