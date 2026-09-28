@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carte de France — M05</title>
+<title>Carte de France</title>
 <style>
 :root{
   --cream:#F5F0E8; --bleu:#1C2E4A; --rouge:#7A1C28; --or:#9A7B1E;
@@ -55,24 +55,24 @@ svg{width:100%;height:auto;display:block;touch-action:manipulation;}
 <body>
 <div class="wrap">
   <h1>Carte de France — Les régions</h1>
-  <div class="sub">Module 05 · les 13 régions métropolitaines · geometry from official region boundaries</div>
+  <div class="sub">The 13 regions of metropolitan France · drawn from the official region boundaries</div>
 
-  <div class="tip" id="explore-tip">Mode <b>Explorer</b> : survolez une région pour voir son nom. Cliquez pour épingler l'étiquette.</div>
+  <div class="tip" id="explore-tip"><b>Explore</b> mode: hover over a region to see its name. Click to pin the label.</div>
 
   <div class="bar">
     <div class="modes">
-      <button id="mExplore" class="on" onclick="setMode('explore')">Explorer</button>
+      <button id="mExplore" class="on" onclick="setMode('explore')">Explore</button>
       <button id="mQuiz" onclick="setMode('quiz')">Quiz</button>
     </div>
-    <button class="btn" id="startBtn" onclick="startQuiz()" style="display:none">Commencer</button>
+    <button class="btn" id="startBtn" onclick="startQuiz()" style="display:none">Start</button>
     <div class="stat">
-      <span>Trouvées : <b id="score">0</b>/13</span>
-      <span>Erreurs : <b id="errors">0</b></span>
-      <span>Temps : <b id="timer">0:00</b></span>
+      <span>Found: <b id="score">0</b>/13</span>
+      <span>Errors: <b id="errors">0</b></span>
+      <span>Time: <b id="timer">0:00</b></span>
     </div>
   </div>
 
-  <div class="prompt" id="prompt">Choisissez un mode pour commencer.</div>
+  <div class="prompt" id="prompt">Choose a mode to begin.</div>
 
   <div class="map-card">
     <svg id="map" viewBox="0 0 760 760" role="img" aria-label="Carte des régions de France"></svg>
@@ -80,12 +80,7 @@ svg{width:100%;height:auto;display:block;touch-action:manipulation;}
 
   <div class="done" id="done"></div>
 
-  <div class="note">
-    <b>Deployment note:</b> this is an interactive JavaScript widget, so it is <em>not</em> Canvas-native —
-    it must be hosted (GitHub Pages) and embedded via <code>&lt;iframe&gt;</code>, the same route as other
-    interactive widgets. It runs fully offline as a single file for review. Score reporting to Canvas
-    (screenshot submission now; <code>postMessage</code>/LTI later) is a separate step.
-  </div>
+
 </div>
 
 <script>
@@ -171,8 +166,8 @@ function setMode(m){
   document.getElementById('errors').textContent=0;
   document.getElementById('timer').textContent='0:00';
   document.getElementById('prompt').innerHTML = (m==='explore')
-    ? 'Survolez les régions pour explorer la carte.'
-    : 'Cliquez sur <b>Commencer</b> pour démarrer le quiz.';
+    ? 'Hover over the regions to explore the map.'
+    : 'Click <b>Start</b> to begin the quiz.';
 }
 function resetRegionClasses(){
   svg.querySelectorAll('path').forEach(p=>{p.setAttribute('class','region');});
@@ -191,17 +186,17 @@ function startQuiz(){
 }
 function nextPrompt(){
   if(idx>=order.length){ finish(); return; }
-  document.getElementById('prompt').innerHTML = 'Trouvez : <span class="find">'+order[idx]+'</span>';
+  document.getElementById('prompt').innerHTML = 'Find: <span class="find">'+order[idx]+'</span>';
 }
 function finish(){
   stopTimer();
   const secs = Math.round((Date.now()-t0)/1000);
   const mm = Math.floor(secs/60), ss = String(secs%60).padStart(2,'0');
   const d = document.getElementById('done');
-  d.innerHTML = 'Terminé ! <b>'+score+'/13</b> régions · <b>'+errors+'</b> erreur(s) · temps : <b>'+mm+':'+ss+'</b>. '
-    + '<button class="btn" style="margin-left:.6rem" onclick="startQuiz()">Recommencer</button>';
+  d.innerHTML = 'Done! <b>'+score+'/13</b> regions · <b>'+errors+'</b> error(s) · time: <b>'+mm+':'+ss+'</b>. '
+    + '<button class="btn" style="margin-left:.6rem" onclick="startQuiz()">Play again</button>';
   d.classList.add('show');
-  document.getElementById('prompt').innerHTML = 'Quiz terminé.';
+  document.getElementById('prompt').innerHTML = 'Quiz complete.';
 }
 function startTimer(){ stopTimer(); timerId=setInterval(()=>{
   const secs=Math.round((Date.now()-t0)/1000);
