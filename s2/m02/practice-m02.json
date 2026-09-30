@@ -1,0 +1,170 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 2 · Les régions",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "la région",
+   "en": "the region",
+   "audio": "vocab/s2m2-la-region.mp3"
+  },
+  {
+   "t": "la Bretagne",
+   "en": "Brittany",
+   "audio": "vocab/s2m2-la-bretagne.mp3"
+  },
+  {
+   "t": "l’Alsace",
+   "en": "Alsace",
+   "audio": "vocab/s2m2-l-alsace.mp3"
+  },
+  {
+   "t": "la Provence",
+   "en": "Provence",
+   "audio": "vocab/s2m2-la-provence.mp3"
+  },
+  {
+   "t": "la Normandie",
+   "en": "Normandy",
+   "audio": "vocab/s2m2-la-normandie.mp3"
+  },
+  {
+   "t": "la montagne",
+   "en": "the mountain",
+   "audio": "vocab/s2m2-la-montagne.mp3"
+  },
+  {
+   "t": "la mer",
+   "en": "the sea",
+   "audio": "vocab/s2m2-la-mer.mp3"
+  },
+  {
+   "t": "la plage",
+   "en": "the beach",
+   "audio": "vocab/s2m2-la-plage.mp3"
+  },
+  {
+   "t": "la campagne",
+   "en": "the countryside",
+   "audio": "vocab/s2m2-la-campagne.mp3"
+  },
+  {
+   "t": "la forêt",
+   "en": "the forest",
+   "audio": "vocab/s2m2-la-foret.mp3"
+  },
+  {
+   "t": "le fleuve",
+   "en": "the (large) river",
+   "audio": "vocab/s2m2-le-fleuve.mp3"
+  },
+  {
+   "t": "la côte",
+   "en": "the coast",
+   "audio": "vocab/s2m2-la-cote.mp3"
+  },
+  {
+   "t": "le village",
+   "en": "the village",
+   "audio": "vocab/s2m2-le-village.mp3"
+  },
+  {
+   "t": "le climat",
+   "en": "the climate",
+   "audio": "vocab/s2m2-le-climat.mp3"
+  },
+  {
+   "t": "le nord",
+   "en": "the north",
+   "audio": "vocab/s2m2-le-nord.mp3"
+  },
+  {
+   "t": "le sud",
+   "en": "the south",
+   "audio": "vocab/s2m2-le-sud.mp3"
+  },
+  {
+   "t": "l’est",
+   "en": "the east",
+   "audio": "vocab/s2m2-l-est.mp3"
+  },
+  {
+   "t": "l’ouest",
+   "en": "the west",
+   "audio": "vocab/s2m2-l-ouest.mp3"
+  },
+  {
+   "t": "ensoleillé",
+   "en": "sunny",
+   "audio": "vocab/s2m2-ensoleille.mp3"
+  },
+  {
+   "t": "la frontière",
+   "en": "the border",
+   "audio": "vocab/s2m2-la-frontiere.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aller",
+   "gloss": "to go",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "vais",
+     "vas",
+     "va",
+     "allons",
+     "allez",
+     "vont"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "faire",
+   "gloss": "to do, make",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "fais",
+     "fais",
+     "fait",
+     "faisons",
+     "faites",
+     "font"
+    ]
+   }
+  },
+  {
+   "inf": "visiter",
+   "gloss": "to visit",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "visite",
+     "visites",
+     "visite",
+     "visitons",
+     "visitez",
+     "visitent"
+    ]
+   }
+  }
+ ]
+}

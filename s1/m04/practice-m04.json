@@ -1,0 +1,150 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 4 · L’emploi du temps",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "l’heure",
+   "en": "the time / hour",
+   "audio": "vocab/l-heure.mp3"
+  },
+  {
+   "t": "midi",
+   "en": "noon",
+   "audio": "vocab/midi.mp3"
+  },
+  {
+   "t": "minuit",
+   "en": "midnight",
+   "audio": "vocab/minuit.mp3"
+  },
+  {
+   "t": "le matin",
+   "en": "the morning",
+   "audio": "vocab/le-matin.mp3"
+  },
+  {
+   "t": "l’après-midi",
+   "en": "the afternoon",
+   "audio": "vocab/l-apres-midi.mp3"
+  },
+  {
+   "t": "le soir",
+   "en": "the evening",
+   "audio": "vocab/le-soir.mp3"
+  },
+  {
+   "t": "et demie",
+   "en": "half past",
+   "audio": "vocab/et-demie.mp3"
+  },
+  {
+   "t": "et quart",
+   "en": "quarter past",
+   "audio": "vocab/et-quart.mp3"
+  },
+  {
+   "t": "moins le quart",
+   "en": "quarter to",
+   "audio": "vocab/moins-le-quart.mp3"
+  },
+  {
+   "t": "l’emploi du temps",
+   "en": "the schedule / timetable",
+   "audio": "vocab/l-emploi-du-temps.mp3"
+  },
+  {
+   "t": "le cours",
+   "en": "the class / course",
+   "audio": "vocab/le-cours.mp3"
+  },
+  {
+   "t": "la récréation",
+   "en": "recess / break",
+   "audio": "vocab/la-recreation.mp3"
+  },
+  {
+   "t": "la pause déjeuner",
+   "en": "the lunch break",
+   "audio": "vocab/la-pause-dejeuner.mp3"
+  },
+  {
+   "t": "commencer",
+   "en": "to begin",
+   "audio": "vocab/commencer.mp3"
+  },
+  {
+   "t": "finir",
+   "en": "to finish",
+   "audio": "vocab/finir.mp3"
+  },
+  {
+   "t": "quelle heure est-il ?",
+   "en": "what time is it?",
+   "audio": "vocab/quelle-heure-est-il.mp3"
+  },
+  {
+   "t": "à quelle heure",
+   "en": "at what time",
+   "audio": "vocab/a-quelle-heure.mp3"
+  },
+  {
+   "t": "quand",
+   "en": "when",
+   "audio": "vocab/quand.mp3"
+  },
+  {
+   "t": "pourquoi",
+   "en": "why",
+   "audio": "vocab/pourquoi.mp3"
+  },
+  {
+   "t": "combien",
+   "en": "how much / how many",
+   "audio": "vocab/combien.mp3"
+  },
+  {
+   "t": "aujourd’hui",
+   "en": "today",
+   "audio": "vocab/aujourd-hui.mp3"
+  },
+  {
+   "t": "demain",
+   "en": "tomorrow",
+   "audio": "vocab/demain.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "parler",
+   "gloss": "to speak",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "parle",
+     "parles",
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+    ]
+   }
+  }
+ ]
+}

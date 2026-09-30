@@ -1,0 +1,324 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 8 · La musique et la fête · Music & Celebration",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "la chanson",
+   "en": "the song",
+   "audio": "vocab/s2m8-la-chanson.mp3"
+  },
+  {
+   "t": "le chanteur",
+   "en": "the singer (m.)",
+   "audio": "vocab/s2m8-le-chanteur.mp3"
+  },
+  {
+   "t": "la chanteuse",
+   "en": "the singer (f.)",
+   "audio": "vocab/s2m8-la-chanteuse.mp3"
+  },
+  {
+   "t": "le concert",
+   "en": "the concert",
+   "audio": "vocab/s2m8-le-concert.mp3"
+  },
+  {
+   "t": "la fête",
+   "en": "the party / celebration",
+   "audio": "vocab/s2m8-la-fete.mp3"
+  },
+  {
+   "t": "l’anniversaire",
+   "en": "the birthday",
+   "audio": "vocab/s2m8-l-anniversaire.mp3"
+  },
+  {
+   "t": "le cadeau",
+   "en": "the gift",
+   "audio": "vocab/s2m8-le-cadeau.mp3"
+  },
+  {
+   "t": "danser",
+   "en": "to dance",
+   "audio": "vocab/s2m8-danser.mp3"
+  },
+  {
+   "t": "chanter",
+   "en": "to sing",
+   "audio": "vocab/s2m8-chanter.mp3"
+  },
+  {
+   "t": "offrir",
+   "en": "to give (a gift)",
+   "audio": "vocab/s2m8-offrir.mp3"
+  },
+  {
+   "t": "inviter",
+   "en": "to invite",
+   "audio": "vocab/s2m8-inviter.mp3"
+  },
+  {
+   "t": "célébrer",
+   "en": "to celebrate",
+   "audio": "vocab/s2m8-celebrer.mp3"
+  },
+  {
+   "t": "la guitare",
+   "en": "the guitar",
+   "audio": "vocab/s2m8-la-guitare.mp3"
+  },
+  {
+   "t": "le piano",
+   "en": "the piano",
+   "audio": "vocab/s2m8-le-piano.mp3"
+  },
+  {
+   "t": "la batterie",
+   "en": "the drums",
+   "audio": "vocab/s2m8-la-batterie.mp3"
+  },
+  {
+   "t": "mieux",
+   "en": "better (adverb)",
+   "audio": "vocab/s2m8-mieux.mp3"
+  },
+  {
+   "t": "meilleur",
+   "en": "better / best (adjective)",
+   "audio": "vocab/s2m8-meilleur.mp3"
+  },
+  {
+   "t": "plus… que",
+   "en": "more… than",
+   "audio": "vocab/s2m8-plus-que.mp3"
+  },
+  {
+   "t": "moins… que",
+   "en": "less… than",
+   "audio": "vocab/s2m8-moins-que.mp3"
+  },
+  {
+   "t": "aussi… que",
+   "en": "as… as",
+   "audio": "vocab/s2m8-aussi-que.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aimer",
+   "gloss": "to like / love",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "aime",
+     "aimes",
+     "aime",
+     "aimons",
+     "aimez",
+     "aiment"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "célébrer",
+   "gloss": "to celebrate",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai célébré",
+     "as célébré",
+     "a célébré",
+     "avons célébré",
+     "avez célébré",
+     "ont célébré"
+    ],
+    "imparfait": [
+     "célébrais",
+     "célébrais",
+     "célébrait",
+     "célébrions",
+     "célébriez",
+     "célébraient"
+    ]
+   }
+  },
+  {
+   "inf": "chanter",
+   "gloss": "to sing",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "chante",
+     "chantes",
+     "chante",
+     "chantons",
+     "chantez",
+     "chantent"
+    ],
+    "passe_compose": [
+     "ai chanté",
+     "as chanté",
+     "a chanté",
+     "avons chanté",
+     "avez chanté",
+     "ont chanté"
+    ],
+    "imparfait": [
+     "chantais",
+     "chantais",
+     "chantait",
+     "chantions",
+     "chantiez",
+     "chantaient"
+    ]
+   }
+  },
+  {
+   "inf": "danser",
+   "gloss": "to dance",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "danse",
+     "danses",
+     "danse",
+     "dansons",
+     "dansez",
+     "dansent"
+    ],
+    "passe_compose": [
+     "ai dansé",
+     "as dansé",
+     "a dansé",
+     "avons dansé",
+     "avez dansé",
+     "ont dansé"
+    ],
+    "imparfait": [
+     "dansais",
+     "dansais",
+     "dansait",
+     "dansions",
+     "dansiez",
+     "dansaient"
+    ]
+   }
+  },
+  {
+   "inf": "inviter",
+   "gloss": "to invite",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "invite",
+     "invites",
+     "invite",
+     "invitons",
+     "invitez",
+     "invitent"
+    ],
+    "passe_compose": [
+     "ai invité",
+     "as invité",
+     "a invité",
+     "avons invité",
+     "avez invité",
+     "ont invité"
+    ],
+    "imparfait": [
+     "invitais",
+     "invitais",
+     "invitait",
+     "invitions",
+     "invitiez",
+     "invitaient"
+    ]
+   }
+  },
+  {
+   "inf": "jouer",
+   "gloss": "to play",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "joue",
+     "joues",
+     "joue",
+     "jouons",
+     "jouez",
+     "jouent"
+    ]
+   }
+  },
+  {
+   "inf": "offrir",
+   "gloss": "to give (a gift)",
+   "tag": "irregular",
+   "forms": {
+    "imparfait": [
+     "offrais",
+     "offrais",
+     "offrait",
+     "offrions",
+     "offriez",
+     "offraient"
+    ]
+   }
+  },
+  {
+   "inf": "parler",
+   "gloss": "to speak",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "parle",
+     "parles",
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+    ],
+    "passe_compose": [
+     "ai parlé",
+     "as parlé",
+     "a parlé",
+     "avons parlé",
+     "avez parlé",
+     "ont parlé"
+    ]
+   }
+  },
+  {
+   "inf": "voir",
+   "gloss": "to see",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "vois",
+     "vois",
+     "voit",
+     "voyons",
+     "voyez",
+     "voient"
+    ]
+   }
+  }
+ ]
+}

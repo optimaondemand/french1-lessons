@@ -1,0 +1,353 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 4 · Le temps libre",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "le passé",
+   "en": "the past",
+   "audio": "vocab/s2m4-le-passe.mp3"
+  },
+  {
+   "t": "hier",
+   "en": "yesterday",
+   "audio": "vocab/s2m4-hier.mp3"
+  },
+  {
+   "t": "hier soir",
+   "en": "last night",
+   "audio": "vocab/s2m4-hier-soir.mp3"
+  },
+  {
+   "t": "le week-end dernier",
+   "en": "last weekend",
+   "audio": "vocab/s2m4-le-week-end-dernier.mp3"
+  },
+  {
+   "t": "la semaine dernière",
+   "en": "last week",
+   "audio": "vocab/s2m4-la-semaine-derniere.mp3"
+  },
+  {
+   "t": "venir",
+   "en": "to come",
+   "audio": "vocab/s2m4-venir.mp3"
+  },
+  {
+   "t": "regarder un film",
+   "en": "to watch a movie",
+   "audio": "vocab/s2m4-regarder-un-film.mp3"
+  },
+  {
+   "t": "écouter de la musique",
+   "en": "to listen to music",
+   "audio": "vocab/s2m4-ecouter-de-la-musique.mp3"
+  },
+  {
+   "t": "jouer aux jeux vidéo",
+   "en": "to play video games",
+   "audio": "vocab/s2m4-jouer-aux-jeux-video.mp3"
+  },
+  {
+   "t": "faire du sport",
+   "en": "to do / play sports",
+   "audio": "vocab/s2m4-faire-du-sport.mp3"
+  },
+  {
+   "t": "rencontrer",
+   "en": "to meet",
+   "audio": "vocab/s2m4-rencontrer.mp3"
+  },
+  {
+   "t": "rester",
+   "en": "to stay",
+   "audio": "vocab/s2m4-rester.mp3"
+  },
+  {
+   "t": "gagner",
+   "en": "to win / earn",
+   "audio": "vocab/s2m4-gagner.mp3"
+  },
+  {
+   "t": "voyager",
+   "en": "to travel",
+   "audio": "vocab/s2m4-voyager.mp3"
+  },
+  {
+   "t": "déjà",
+   "en": "already",
+   "audio": "vocab/s2m4-deja.mp3"
+  },
+  {
+   "t": "ne… jamais",
+   "en": "never",
+   "audio": "vocab/s2m4-ne-jamais.mp3"
+  },
+  {
+   "t": "le concert",
+   "en": "the concert",
+   "audio": "vocab/s2m4-le-concert.mp3"
+  },
+  {
+   "t": "la fête",
+   "en": "the party",
+   "audio": "vocab/s2m4-la-fete.mp3"
+  },
+  {
+   "t": "le match",
+   "en": "the game / match",
+   "audio": "vocab/s2m4-le-match.mp3"
+  },
+  {
+   "t": "amusant",
+   "en": "fun / amusing",
+   "audio": "vocab/s2m4-amusant.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "écouter",
+   "gloss": "to listen to",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "écoute",
+     "écoutes",
+     "écoute",
+     "écoutons",
+     "écoutez",
+     "écoutent"
+    ],
+    "passe_compose": [
+     "ai écouté",
+     "as écouté",
+     "a écouté",
+     "avons écouté",
+     "avez écouté",
+     "ont écouté"
+    ]
+   }
+  },
+  {
+   "inf": "faire",
+   "gloss": "to do, make",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "fais",
+     "fais",
+     "fait",
+     "faisons",
+     "faites",
+     "font"
+    ],
+    "passe_compose": [
+     "ai fait",
+     "as fait",
+     "a fait",
+     "avons fait",
+     "avez fait",
+     "ont fait"
+    ]
+   }
+  },
+  {
+   "inf": "finir",
+   "gloss": "to finish",
+   "tag": "regular -ir",
+   "forms": {
+    "passe_compose": [
+     "ai fini",
+     "as fini",
+     "a fini",
+     "avons fini",
+     "avez fini",
+     "ont fini"
+    ]
+   }
+  },
+  {
+   "inf": "gagner",
+   "gloss": "to win / earn",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "gagne",
+     "gagnes",
+     "gagne",
+     "gagnons",
+     "gagnez",
+     "gagnent"
+    ],
+    "passe_compose": [
+     "ai gagné",
+     "as gagné",
+     "a gagné",
+     "avons gagné",
+     "avez gagné",
+     "ont gagné"
+    ]
+   }
+  },
+  {
+   "inf": "jouer",
+   "gloss": "to play",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "joue",
+     "joues",
+     "joue",
+     "jouons",
+     "jouez",
+     "jouent"
+    ],
+    "passe_compose": [
+     "ai joué",
+     "as joué",
+     "a joué",
+     "avons joué",
+     "avez joué",
+     "ont joué"
+    ]
+   }
+  },
+  {
+   "inf": "manger",
+   "gloss": "to eat",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai mangé",
+     "as mangé",
+     "a mangé",
+     "avons mangé",
+     "avez mangé",
+     "ont mangé"
+    ]
+   }
+  },
+  {
+   "inf": "prendre",
+   "gloss": "to take, have (food)",
+   "tag": "irregular",
+   "forms": {
+    "passe_compose": [
+     "ai pris",
+     "as pris",
+     "a pris",
+     "avons pris",
+     "avez pris",
+     "ont pris"
+    ]
+   }
+  },
+  {
+   "inf": "regarder",
+   "gloss": "to watch, look at",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "regarde",
+     "regardes",
+     "regarde",
+     "regardons",
+     "regardez",
+     "regardent"
+    ],
+    "passe_compose": [
+     "ai regardé",
+     "as regardé",
+     "a regardé",
+     "avons regardé",
+     "avez regardé",
+     "ont regardé"
+    ]
+   }
+  },
+  {
+   "inf": "rencontrer",
+   "gloss": "to meet",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "rencontre",
+     "rencontres",
+     "rencontre",
+     "rencontrons",
+     "rencontrez",
+     "rencontrent"
+    ],
+    "passe_compose": [
+     "ai rencontré",
+     "as rencontré",
+     "a rencontré",
+     "avons rencontré",
+     "avez rencontré",
+     "ont rencontré"
+    ]
+   }
+  },
+  {
+   "inf": "rester",
+   "gloss": "to stay",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "reste",
+     "restes",
+     "reste",
+     "restons",
+     "restez",
+     "restent"
+    ]
+   }
+  },
+  {
+   "inf": "venir",
+   "gloss": "to come",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "viens",
+     "viens",
+     "vient",
+     "venons",
+     "venez",
+     "viennent"
+    ]
+   }
+  },
+  {
+   "inf": "voyager",
+   "gloss": "to travel",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai voyagé",
+     "as voyagé",
+     "a voyagé",
+     "avons voyagé",
+     "avez voyagé",
+     "ont voyagé"
+    ]
+   }
+  }
+ ]
+}

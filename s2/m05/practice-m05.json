@@ -1,0 +1,368 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 5 · La ville · City Life",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "la ville",
+   "en": "the city",
+   "audio": "vocab/s2m5-la-ville.mp3"
+  },
+  {
+   "t": "le centre-ville",
+   "en": "downtown / city center",
+   "audio": "vocab/s2m5-le-centre-ville.mp3"
+  },
+  {
+   "t": "le bus",
+   "en": "the bus",
+   "audio": "vocab/s2m5-le-bus.mp3"
+  },
+  {
+   "t": "le tramway",
+   "en": "the tram",
+   "audio": "vocab/s2m5-le-tramway.mp3"
+  },
+  {
+   "t": "le train",
+   "en": "the train",
+   "audio": "vocab/s2m5-le-train.mp3"
+  },
+  {
+   "t": "la voiture",
+   "en": "the car",
+   "audio": "vocab/s2m5-la-voiture.mp3"
+  },
+  {
+   "t": "à pied",
+   "en": "on foot",
+   "audio": "vocab/s2m5-a-pied.mp3"
+  },
+  {
+   "t": "arriver",
+   "en": "to arrive",
+   "audio": "vocab/s2m5-arriver.mp3"
+  },
+  {
+   "t": "partir",
+   "en": "to leave",
+   "audio": "vocab/s2m5-partir.mp3"
+  },
+  {
+   "t": "sortir",
+   "en": "to go out",
+   "audio": "vocab/s2m5-sortir.mp3"
+  },
+  {
+   "t": "entrer",
+   "en": "to enter",
+   "audio": "vocab/s2m5-entrer.mp3"
+  },
+  {
+   "t": "monter",
+   "en": "to go up / get on",
+   "audio": "vocab/s2m5-monter.mp3"
+  },
+  {
+   "t": "descendre",
+   "en": "to go down / get off",
+   "audio": "vocab/s2m5-descendre.mp3"
+  },
+  {
+   "t": "rentrer",
+   "en": "to return home",
+   "audio": "vocab/s2m5-rentrer.mp3"
+  },
+  {
+   "t": "tomber",
+   "en": "to fall",
+   "audio": "vocab/s2m5-tomber.mp3"
+  },
+  {
+   "t": "le plan",
+   "en": "the (city) map",
+   "audio": "vocab/s2m5-le-plan.mp3"
+  },
+  {
+   "t": "la place",
+   "en": "the square",
+   "audio": "vocab/s2m5-la-place.mp3"
+  },
+  {
+   "t": "le pont",
+   "en": "the bridge",
+   "audio": "vocab/s2m5-le-pont.mp3"
+  },
+  {
+   "t": "l’arrêt",
+   "en": "the (bus) stop",
+   "audio": "vocab/s2m5-l-arret.mp3"
+  },
+  {
+   "t": "loin de",
+   "en": "far from",
+   "audio": "vocab/s2m5-loin-de.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aller",
+   "gloss": "to go",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis allé(e)",
+     "es allé(e)",
+     "est allé",
+     "sommes allé(e)s",
+     "êtes allé(e)(s)",
+     "sont allé"
+    ]
+   }
+  },
+  {
+   "inf": "arriver",
+   "gloss": "to arrive",
+   "tag": "takes être",
+   "forms": {
+    "present": [
+     "arrive",
+     "arrives",
+     "arrive",
+     "arrivons",
+     "arrivez",
+     "arrivent"
+    ],
+    "passe_compose": [
+     "suis arrivé(e)",
+     "es arrivé(e)",
+     "est arrivé",
+     "sommes arrivé(e)s",
+     "êtes arrivé(e)(s)",
+     "sont arrivé"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "descendre",
+   "gloss": "to go down / get off",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis descendu(e)",
+     "es descendu(e)",
+     "est descendu",
+     "sommes descendu(e)s",
+     "êtes descendu(e)(s)",
+     "sont descendu"
+    ]
+   }
+  },
+  {
+   "inf": "entrer",
+   "gloss": "to enter",
+   "tag": "takes être",
+   "forms": {
+    "present": [
+     "entre",
+     "entres",
+     "entre",
+     "entrons",
+     "entrez",
+     "entrent"
+    ],
+    "passe_compose": [
+     "suis entré(e)",
+     "es entré(e)",
+     "est entré",
+     "sommes entré(e)s",
+     "êtes entré(e)(s)",
+     "sont entré"
+    ]
+   }
+  },
+  {
+   "inf": "faire",
+   "gloss": "to do, make",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "fais",
+     "fais",
+     "fait",
+     "faisons",
+     "faites",
+     "font"
+    ],
+    "passe_compose": [
+     "ai fait",
+     "as fait",
+     "a fait",
+     "avons fait",
+     "avez fait",
+     "ont fait"
+    ]
+   }
+  },
+  {
+   "inf": "manger",
+   "gloss": "to eat",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai mangé",
+     "as mangé",
+     "a mangé",
+     "avons mangé",
+     "avez mangé",
+     "ont mangé"
+    ]
+   }
+  },
+  {
+   "inf": "monter",
+   "gloss": "to go up / get on",
+   "tag": "takes être",
+   "forms": {
+    "present": [
+     "monte",
+     "montes",
+     "monte",
+     "montons",
+     "montez",
+     "montent"
+    ],
+    "passe_compose": [
+     "suis monté(e)",
+     "es monté(e)",
+     "est monté",
+     "sommes monté(e)s",
+     "êtes monté(e)(s)",
+     "sont monté"
+    ]
+   }
+  },
+  {
+   "inf": "partir",
+   "gloss": "to leave",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis parti(e)",
+     "es parti(e)",
+     "est parti",
+     "sommes parti(e)s",
+     "êtes parti(e)(s)",
+     "sont parti"
+    ]
+   }
+  },
+  {
+   "inf": "prendre",
+   "gloss": "to take, have (food)",
+   "tag": "irregular",
+   "forms": {
+    "passe_compose": [
+     "ai pris",
+     "as pris",
+     "a pris",
+     "avons pris",
+     "avez pris",
+     "ont pris"
+    ]
+   }
+  },
+  {
+   "inf": "rentrer",
+   "gloss": "to return home",
+   "tag": "takes être",
+   "forms": {
+    "present": [
+     "rentre",
+     "rentres",
+     "rentre",
+     "rentrons",
+     "rentrez",
+     "rentrent"
+    ],
+    "passe_compose": [
+     "suis rentré(e)",
+     "es rentré(e)",
+     "est rentré",
+     "sommes rentré(e)s",
+     "êtes rentré(e)(s)",
+     "sont rentré"
+    ]
+   }
+  },
+  {
+   "inf": "rester",
+   "gloss": "to stay",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis resté(e)",
+     "es resté(e)",
+     "est resté",
+     "sommes resté(e)s",
+     "êtes resté(e)(s)",
+     "sont resté"
+    ]
+   }
+  },
+  {
+   "inf": "sortir",
+   "gloss": "to go out",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis sorti(e)",
+     "es sorti(e)",
+     "est sorti",
+     "sommes sorti(e)s",
+     "êtes sorti(e)(s)",
+     "sont sorti"
+    ]
+   }
+  },
+  {
+   "inf": "tomber",
+   "gloss": "to fall",
+   "tag": "takes être",
+   "forms": {
+    "present": [
+     "tombe",
+     "tombes",
+     "tombe",
+     "tombons",
+     "tombez",
+     "tombent"
+    ],
+    "passe_compose": [
+     "suis tombé(e)",
+     "es tombé(e)",
+     "est tombé",
+     "sommes tombé(e)s",
+     "êtes tombé(e)(s)",
+     "sont tombé"
+    ]
+   }
+  }
+ ]
+}

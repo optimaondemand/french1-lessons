@@ -1,0 +1,210 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 2 · L'école",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "l’école",
+   "en": "school (f.)",
+   "audio": "vocab/l-ecole.mp3"
+  },
+  {
+   "t": "la classe",
+   "en": "the class / classroom",
+   "audio": "vocab/la-classe.mp3"
+  },
+  {
+   "t": "le professeur",
+   "en": "the teacher",
+   "audio": "vocab/le-professeur.mp3"
+  },
+  {
+   "t": "l’élève",
+   "en": "the student / pupil",
+   "audio": "vocab/l-eleve.mp3"
+  },
+  {
+   "t": "le livre",
+   "en": "the book",
+   "audio": "vocab/le-livre.mp3"
+  },
+  {
+   "t": "le cahier",
+   "en": "the notebook",
+   "audio": "vocab/le-cahier.mp3"
+  },
+  {
+   "t": "le stylo",
+   "en": "the pen",
+   "audio": "vocab/le-stylo.mp3"
+  },
+  {
+   "t": "les devoirs",
+   "en": "homework",
+   "audio": "vocab/les-devoirs.mp3"
+  },
+  {
+   "t": "les maths",
+   "en": "math",
+   "audio": "vocab/les-maths.mp3"
+  },
+  {
+   "t": "le français",
+   "en": "French (subject)",
+   "audio": "vocab/le-francais.mp3"
+  },
+  {
+   "t": "l’histoire",
+   "en": "history",
+   "audio": "vocab/l-histoire.mp3"
+  },
+  {
+   "t": "les sciences",
+   "en": "science",
+   "audio": "vocab/les-sciences.mp3"
+  },
+  {
+   "t": "l’anglais",
+   "en": "English (subject)",
+   "audio": "vocab/l-anglais.mp3"
+  },
+  {
+   "t": "l’art",
+   "en": "art",
+   "audio": "vocab/l-art.mp3"
+  },
+  {
+   "t": "la musique",
+   "en": "music",
+   "audio": "vocab/la-musique.mp3"
+  },
+  {
+   "t": "le sport",
+   "en": "sports / P.E.",
+   "audio": "vocab/le-sport.mp3"
+  },
+  {
+   "t": "parler",
+   "en": "to speak",
+   "audio": "vocab/parler.mp3"
+  },
+  {
+   "t": "étudier",
+   "en": "to study",
+   "audio": "vocab/etudier.mp3"
+  },
+  {
+   "t": "écouter",
+   "en": "to listen (to)",
+   "audio": "vocab/ecouter.mp3"
+  },
+  {
+   "t": "regarder",
+   "en": "to watch / look at",
+   "audio": "vocab/regarder.mp3"
+  },
+  {
+   "t": "aimer",
+   "en": "to like / love",
+   "audio": "vocab/aimer.mp3"
+  },
+  {
+   "t": "travailler",
+   "en": "to work",
+   "audio": "vocab/travailler.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aimer",
+   "gloss": "to like / love",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "aime",
+     "aimes",
+     "aime",
+     "aimons",
+     "aimez",
+     "aiment"
+    ]
+   }
+  },
+  {
+   "inf": "écouter",
+   "gloss": "to listen to",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "écoute",
+     "écoutes",
+     "écoute",
+     "écoutons",
+     "écoutez",
+     "écoutent"
+    ]
+   }
+  },
+  {
+   "inf": "étudier",
+   "gloss": "to study",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "étudie",
+     "étudies",
+     "étudie",
+     "étudions",
+     "étudiez",
+     "étudient"
+    ]
+   }
+  },
+  {
+   "inf": "parler",
+   "gloss": "to speak",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "parle",
+     "parles",
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+    ]
+   }
+  },
+  {
+   "inf": "regarder",
+   "gloss": "to watch, look at",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "regarde",
+     "regardes",
+     "regarde",
+     "regardons",
+     "regardez",
+     "regardent"
+    ]
+   }
+  },
+  {
+   "inf": "travailler",
+   "gloss": "to work",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "travaille",
+     "travailles",
+     "travaille",
+     "travaillons",
+     "travaillez",
+     "travaillent"
+    ]
+   }
+  }
+ ]
+}

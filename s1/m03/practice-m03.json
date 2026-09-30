@@ -1,0 +1,165 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 3 · La famille",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "la famille",
+   "en": "the family",
+   "audio": "vocab/la-famille.mp3"
+  },
+  {
+   "t": "le père",
+   "en": "the father",
+   "audio": "vocab/le-pere.mp3"
+  },
+  {
+   "t": "la mère",
+   "en": "the mother",
+   "audio": "vocab/la-mere.mp3"
+  },
+  {
+   "t": "les parents",
+   "en": "the parents",
+   "audio": "vocab/les-parents.mp3"
+  },
+  {
+   "t": "le frère",
+   "en": "the brother",
+   "audio": "vocab/le-frere.mp3"
+  },
+  {
+   "t": "la sœur",
+   "en": "the sister",
+   "audio": "vocab/la-soeur.mp3"
+  },
+  {
+   "t": "le fils",
+   "en": "the son",
+   "audio": "vocab/le-fils.mp3"
+  },
+  {
+   "t": "la fille",
+   "en": "the daughter / girl",
+   "audio": "vocab/la-fille.mp3"
+  },
+  {
+   "t": "les grands-parents",
+   "en": "the grandparents",
+   "audio": "vocab/les-grands-parents.mp3"
+  },
+  {
+   "t": "le grand-père",
+   "en": "the grandfather",
+   "audio": "vocab/le-grand-pere.mp3"
+  },
+  {
+   "t": "la grand-mère",
+   "en": "the grandmother",
+   "audio": "vocab/la-grand-mere.mp3"
+  },
+  {
+   "t": "l’oncle",
+   "en": "the uncle",
+   "audio": "vocab/l-oncle.mp3"
+  },
+  {
+   "t": "la tante",
+   "en": "the aunt",
+   "audio": "vocab/la-tante.mp3"
+  },
+  {
+   "t": "le cousin",
+   "en": "the (male) cousin",
+   "audio": "vocab/le-cousin.mp3"
+  },
+  {
+   "t": "la cousine",
+   "en": "the (female) cousin",
+   "audio": "vocab/la-cousine.mp3"
+  },
+  {
+   "t": "le bébé",
+   "en": "the baby",
+   "audio": "vocab/le-bebe.mp3"
+  },
+  {
+   "t": "le chien",
+   "en": "the dog",
+   "audio": "vocab/le-chien.mp3"
+  },
+  {
+   "t": "le chat",
+   "en": "the cat",
+   "audio": "vocab/le-chat.mp3"
+  },
+  {
+   "t": "avoir",
+   "en": "to have",
+   "audio": "vocab/avoir.mp3"
+  },
+  {
+   "t": "avoir … ans",
+   "en": "to be … years old",
+   "audio": "vocab/avoir-ans.mp3"
+  },
+  {
+   "t": "avoir faim",
+   "en": "to be hungry",
+   "audio": "vocab/avoir-faim.mp3"
+  },
+  {
+   "t": "avoir soif",
+   "en": "to be thirsty",
+   "audio": "vocab/avoir-soif.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aimer",
+   "gloss": "to like / love",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "aime",
+     "aimes",
+     "aime",
+     "aimons",
+     "aimez",
+     "aiment"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "parler",
+   "gloss": "to speak",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "parle",
+     "parles",
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+    ]
+   }
+  }
+ ]
+}

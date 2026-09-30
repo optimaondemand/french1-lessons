@@ -1,0 +1,305 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 5 · La vie quotidienne",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "se réveiller",
+   "en": "to wake up",
+   "audio": "vocab/se-reveiller.mp3"
+  },
+  {
+   "t": "se lever",
+   "en": "to get up",
+   "audio": "vocab/se-lever.mp3"
+  },
+  {
+   "t": "se laver",
+   "en": "to wash up",
+   "audio": "vocab/se-laver.mp3"
+  },
+  {
+   "t": "se doucher",
+   "en": "to shower",
+   "audio": "vocab/se-doucher.mp3"
+  },
+  {
+   "t": "se brosser les dents",
+   "en": "to brush one’s teeth",
+   "audio": "vocab/se-brosser-les-dents.mp3"
+  },
+  {
+   "t": "se coiffer",
+   "en": "to do one’s hair",
+   "audio": "vocab/se-coiffer.mp3"
+  },
+  {
+   "t": "se raser",
+   "en": "to shave",
+   "audio": "vocab/se-raser.mp3"
+  },
+  {
+   "t": "se maquiller",
+   "en": "to put on makeup",
+   "audio": "vocab/se-maquiller.mp3"
+  },
+  {
+   "t": "s’habiller",
+   "en": "to get dressed",
+   "audio": "vocab/s-habiller.mp3"
+  },
+  {
+   "t": "se dépêcher",
+   "en": "to hurry",
+   "audio": "vocab/se-depecher.mp3"
+  },
+  {
+   "t": "se promener",
+   "en": "to go for a walk",
+   "audio": "vocab/se-promener.mp3"
+  },
+  {
+   "t": "se reposer",
+   "en": "to rest",
+   "audio": "vocab/se-reposer.mp3"
+  },
+  {
+   "t": "se retrouver",
+   "en": "to meet up",
+   "audio": "vocab/se-retrouver.mp3"
+  },
+  {
+   "t": "se coucher",
+   "en": "to go to bed",
+   "audio": "vocab/se-coucher.mp3"
+  },
+  {
+   "t": "s’endormir",
+   "en": "to fall asleep",
+   "audio": "vocab/s-endormir.mp3"
+  },
+  {
+   "t": "se sentir",
+   "en": "to feel",
+   "audio": "vocab/se-sentir.mp3"
+  },
+  {
+   "t": "tôt",
+   "en": "early",
+   "audio": "vocab/tot.mp3"
+  },
+  {
+   "t": "tard",
+   "en": "late",
+   "audio": "vocab/tard.mp3"
+  },
+  {
+   "t": "d’abord",
+   "en": "first / first of all",
+   "audio": "vocab/d-abord.mp3"
+  },
+  {
+   "t": "ensuite",
+   "en": "then / next",
+   "audio": "vocab/ensuite.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "s'habiller",
+   "gloss": "to get dressed",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "m'habille",
+     "t'habilles",
+     "s'habille",
+     "nous habillons",
+     "vous habillez",
+     "s'habillent"
+    ]
+   }
+  },
+  {
+   "inf": "se coiffer",
+   "gloss": "to do one’s hair",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me coiffe",
+     "te coiffes",
+     "se coiffe",
+     "nous coiffons",
+     "vous coiffez",
+     "se coiffent"
+    ]
+   }
+  },
+  {
+   "inf": "se coucher",
+   "gloss": "to go to bed",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me couche",
+     "te couches",
+     "se couche",
+     "nous couchons",
+     "vous couchez",
+     "se couchent"
+    ]
+   }
+  },
+  {
+   "inf": "se dépêcher",
+   "gloss": "to hurry",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me dépêche",
+     "te dépêches",
+     "se dépêche",
+     "nous dépêchons",
+     "vous dépêchez",
+     "se dépêchent"
+    ]
+   }
+  },
+  {
+   "inf": "se doucher",
+   "gloss": "to shower",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me douche",
+     "te douches",
+     "se douche",
+     "nous douchons",
+     "vous douchez",
+     "se douchent"
+    ]
+   }
+  },
+  {
+   "inf": "se laver",
+   "gloss": "to wash up",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me lave",
+     "te laves",
+     "se lave",
+     "nous lavons",
+     "vous lavez",
+     "se lavent"
+    ]
+   }
+  },
+  {
+   "inf": "se maquiller",
+   "gloss": "to put on makeup",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me maquille",
+     "te maquilles",
+     "se maquille",
+     "nous maquillons",
+     "vous maquillez",
+     "se maquillent"
+    ]
+   }
+  },
+  {
+   "inf": "se raser",
+   "gloss": "to shave",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me rase",
+     "te rases",
+     "se rase",
+     "nous rasons",
+     "vous rasez",
+     "se rasent"
+    ]
+   }
+  },
+  {
+   "inf": "se reposer",
+   "gloss": "to rest",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me repose",
+     "te reposes",
+     "se repose",
+     "nous reposons",
+     "vous reposez",
+     "se reposent"
+    ]
+   }
+  },
+  {
+   "inf": "se retrouver",
+   "gloss": "to meet up",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me retrouve",
+     "te retrouves",
+     "se retrouve",
+     "nous retrouvons",
+     "vous retrouvez",
+     "se retrouvent"
+    ]
+   }
+  },
+  {
+   "inf": "se réveiller",
+   "gloss": "to wake up",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me réveille",
+     "te réveilles",
+     "se réveille",
+     "nous réveillons",
+     "vous réveillez",
+     "se réveillent"
+    ]
+   }
+  },
+  {
+   "inf": "travailler",
+   "gloss": "to work",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "travaille",
+     "travailles",
+     "travaille",
+     "travaillons",
+     "travaillez",
+     "travaillent"
+    ]
+   }
+  }
+ ]
+}

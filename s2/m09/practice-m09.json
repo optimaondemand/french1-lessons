@@ -1,0 +1,278 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 9 · Être français",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "être français",
+   "en": "to be French",
+   "audio": "vocab/s2m9-etre-francais.mp3"
+  },
+  {
+   "t": "l'identité",
+   "en": "identity",
+   "audio": "vocab/s2m9-l-identite.mp3"
+  },
+  {
+   "t": "la culture",
+   "en": "culture",
+   "audio": "vocab/s2m9-la-culture.mp3"
+  },
+  {
+   "t": "la langue",
+   "en": "language",
+   "audio": "vocab/s2m9-la-langue.mp3"
+  },
+  {
+   "t": "la tradition",
+   "en": "tradition",
+   "audio": "vocab/s2m9-la-tradition.mp3"
+  },
+  {
+   "t": "la liberté",
+   "en": "liberty",
+   "audio": "vocab/s2m9-la-liberte.mp3"
+  },
+  {
+   "t": "l'égalité",
+   "en": "equality",
+   "audio": "vocab/s2m9-l-egalite.mp3"
+  },
+  {
+   "t": "la fraternité",
+   "en": "fraternity / brotherhood",
+   "audio": "vocab/s2m9-la-fraternite.mp3"
+  },
+  {
+   "t": "la devise",
+   "en": "the motto",
+   "audio": "vocab/s2m9-la-devise.mp3"
+  },
+  {
+   "t": "le drapeau",
+   "en": "the flag",
+   "audio": "vocab/s2m9-le-drapeau.mp3"
+  },
+  {
+   "t": "fier",
+   "en": "proud (m.) / fière (f.)",
+   "audio": "vocab/s2m9-fier.mp3"
+  },
+  {
+   "t": "le pays",
+   "en": "the country",
+   "audio": "vocab/s2m9-le-pays.mp3"
+  },
+  {
+   "t": "le citoyen",
+   "en": "the citizen",
+   "audio": "vocab/s2m9-le-citoyen.mp3"
+  },
+  {
+   "t": "la fête nationale",
+   "en": "the national holiday",
+   "audio": "vocab/s2m9-la-fete-nationale.mp3"
+  },
+  {
+   "t": "le patrimoine",
+   "en": "heritage",
+   "audio": "vocab/s2m9-le-patrimoine.mp3"
+  },
+  {
+   "t": "le plus",
+   "en": "the most (superlative)",
+   "audio": "vocab/s2m9-le-plus.mp3"
+  },
+  {
+   "t": "le moins",
+   "en": "the least (superlative)",
+   "audio": "vocab/s2m9-le-moins.mp3"
+  },
+  {
+   "t": "je voudrais",
+   "en": "I would like",
+   "audio": "vocab/s2m9-voudrais.mp3"
+  },
+  {
+   "t": "représenter",
+   "en": "to represent",
+   "audio": "vocab/s2m9-representer.mp3"
+  },
+  {
+   "t": "découvrir",
+   "en": "to discover",
+   "audio": "vocab/s2m9-decouvrir.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aimer",
+   "gloss": "to like / love",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "aime",
+     "aimes",
+     "aime",
+     "aimons",
+     "aimez",
+     "aiment"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "commencer",
+   "gloss": "to begin",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai commencé",
+     "as commencé",
+     "a commencé",
+     "avons commencé",
+     "avez commencé",
+     "ont commencé"
+    ]
+   }
+  },
+  {
+   "inf": "découvrir",
+   "gloss": "to discover",
+   "tag": "irregular",
+   "forms": {
+    "passe_compose": [
+     "ai découvert",
+     "as découvert",
+     "a découvert",
+     "avons découvert",
+     "avez découvert",
+     "ont découvert"
+    ],
+    "imparfait": [
+     "découvrais",
+     "découvrais",
+     "découvrait",
+     "découvrions",
+     "découvriez",
+     "découvraient"
+    ]
+   }
+  },
+  {
+   "inf": "être",
+   "gloss": "to be",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "suis",
+     "es",
+     "est",
+     "sommes",
+     "êtes",
+     "sont"
+    ],
+    "passe_compose": [
+     "ai été",
+     "as été",
+     "a été",
+     "avons été",
+     "avez été",
+     "ont été"
+    ],
+    "imparfait": [
+     "étais",
+     "étais",
+     "était",
+     "étions",
+     "étiez",
+     "étaient"
+    ]
+   }
+  },
+  {
+   "inf": "parler",
+   "gloss": "to speak",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "parle",
+     "parles",
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+    ],
+    "imparfait": [
+     "parlais",
+     "parlais",
+     "parlait",
+     "parlions",
+     "parliez",
+     "parlaient"
+    ]
+   }
+  },
+  {
+   "inf": "représenter",
+   "gloss": "to represent",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "représente",
+     "représentes",
+     "représente",
+     "représentons",
+     "représentez",
+     "représentent"
+    ],
+    "passe_compose": [
+     "ai représenté",
+     "as représenté",
+     "a représenté",
+     "avons représenté",
+     "avez représenté",
+     "ont représenté"
+    ],
+    "imparfait": [
+     "représentais",
+     "représentais",
+     "représentait",
+     "représentions",
+     "représentiez",
+     "représentaient"
+    ]
+   }
+  },
+  {
+   "inf": "visiter",
+   "gloss": "to visit",
+   "tag": "regular -er",
+   "forms": {
+    "passe_compose": [
+     "ai visité",
+     "as visité",
+     "a visité",
+     "avons visité",
+     "avez visité",
+     "ont visité"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 1 · Bonjour !",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "bonjour",
+   "en": "hello / good day",
+   "audio": "vocab/bonjour.mp3"
+  },
+  {
+   "t": "salut",
+   "en": "hi / bye (informal)",
+   "audio": "vocab/salut.mp3"
+  },
+  {
+   "t": "bonsoir",
+   "en": "good evening",
+   "audio": "vocab/bonsoir.mp3"
+  },
+  {
+   "t": "au revoir",
+   "en": "goodbye",
+   "audio": "vocab/au-revoir.mp3"
+  },
+  {
+   "t": "à bientôt",
+   "en": "see you soon",
+   "audio": "vocab/a-bientot.mp3"
+  },
+  {
+   "t": "à demain",
+   "en": "see you tomorrow",
+   "audio": "vocab/a-demain.mp3"
+  },
+  {
+   "t": "à plus tard",
+   "en": "see you later",
+   "audio": "vocab/a-plus-tard.mp3"
+  },
+  {
+   "t": "merci",
+   "en": "thank you",
+   "audio": "vocab/merci.mp3"
+  },
+  {
+   "t": "de rien",
+   "en": "you’re welcome",
+   "audio": "vocab/de-rien.mp3"
+  },
+  {
+   "t": "s’il vous plaît",
+   "en": "please (formal)",
+   "audio": "vocab/s-il-vous-plait.mp3"
+  },
+  {
+   "t": "oui",
+   "en": "yes",
+   "audio": "vocab/oui.mp3"
+  },
+  {
+   "t": "non",
+   "en": "no",
+   "audio": "vocab/non.mp3"
+  },
+  {
+   "t": "monsieur",
+   "en": "sir / Mr.",
+   "audio": "vocab/monsieur.mp3"
+  },
+  {
+   "t": "madame",
+   "en": "ma’am / Mrs.",
+   "audio": "vocab/madame.mp3"
+  },
+  {
+   "t": "mademoiselle",
+   "en": "miss",
+   "audio": "vocab/mademoiselle.mp3"
+  },
+  {
+   "t": "enchanté",
+   "en": "nice to meet you",
+   "audio": "vocab/enchante.mp3"
+  },
+  {
+   "t": "je m’appelle",
+   "en": "my name is",
+   "audio": "vocab/je-m-appelle.mp3"
+  },
+  {
+   "t": "comment tu t’appelles ?",
+   "en": "what’s your name? (informal)",
+   "audio": "vocab/comment-tu-t-appelles.mp3"
+  },
+  {
+   "t": "comment allez-vous ?",
+   "en": "how are you? (formal)",
+   "audio": "vocab/comment-allez-vous-greeting.mp3"
+  },
+  {
+   "t": "ça va",
+   "en": "it’s going fine / how’s it going",
+   "audio": "vocab/ca-va.mp3"
+  },
+  {
+   "t": "pardon",
+   "en": "excuse me / sorry",
+   "audio": "vocab/pardon.mp3"
+  },
+  {
+   "t": "excusez-moi",
+   "en": "excuse me (formal)",
+   "audio": "vocab/excusez-moi.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "être",
+   "gloss": "to be",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "suis",
+     "es",
+     "est",
+     "sommes",
+     "êtes",
+     "sont"
+    ]
+   }
+  }
+ ]
+}

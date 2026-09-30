@@ -1,0 +1,225 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 6 · Le temps libre",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "jouer",
+   "en": "to play",
+   "audio": "vocab/jouer.mp3"
+  },
+  {
+   "t": "le football",
+   "en": "soccer / football",
+   "audio": "vocab/le-football.mp3"
+  },
+  {
+   "t": "le basket",
+   "en": "basketball",
+   "audio": "vocab/le-basket.mp3"
+  },
+  {
+   "t": "nager",
+   "en": "to swim",
+   "audio": "vocab/nager.mp3"
+  },
+  {
+   "t": "la piscine",
+   "en": "the swimming pool",
+   "audio": "vocab/la-piscine.mp3"
+  },
+  {
+   "t": "le cinéma",
+   "en": "the movies / cinema",
+   "audio": "vocab/le-cinema.mp3"
+  },
+  {
+   "t": "lire",
+   "en": "to read",
+   "audio": "vocab/lire.mp3"
+  },
+  {
+   "t": "danser",
+   "en": "to dance",
+   "audio": "vocab/danser.mp3"
+  },
+  {
+   "t": "chanter",
+   "en": "to sing",
+   "audio": "vocab/chanter.mp3"
+  },
+  {
+   "t": "le parc",
+   "en": "the park",
+   "audio": "vocab/le-parc.mp3"
+  },
+  {
+   "t": "faire du vélo",
+   "en": "to go biking",
+   "audio": "vocab/faire-du-velo.mp3"
+  },
+  {
+   "t": "faire les magasins",
+   "en": "to go shopping",
+   "audio": "vocab/faire-les-magasins.mp3"
+  },
+  {
+   "t": "aller",
+   "en": "to go",
+   "audio": "vocab/aller.mp3"
+  },
+  {
+   "t": "il fait beau",
+   "en": "the weather is nice",
+   "audio": "vocab/il-fait-beau.mp3"
+  },
+  {
+   "t": "il fait chaud",
+   "en": "it’s hot out",
+   "audio": "vocab/il-fait-chaud.mp3"
+  },
+  {
+   "t": "il fait froid",
+   "en": "it’s cold out",
+   "audio": "vocab/il-fait-froid.mp3"
+  },
+  {
+   "t": "il pleut",
+   "en": "it’s raining",
+   "audio": "vocab/il-pleut.mp3"
+  },
+  {
+   "t": "il neige",
+   "en": "it’s snowing",
+   "audio": "vocab/il-neige.mp3"
+  },
+  {
+   "t": "quel temps fait-il ?",
+   "en": "what’s the weather like?",
+   "audio": "vocab/quel-temps-fait-il.mp3"
+  },
+  {
+   "t": "le week-end",
+   "en": "the weekend",
+   "audio": "vocab/le-week-end.mp3"
+  },
+  {
+   "t": "souvent",
+   "en": "often",
+   "audio": "vocab/souvent.mp3"
+  },
+  {
+   "t": "le temps libre",
+   "en": "free time",
+   "audio": "vocab/le-temps-libre.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aller",
+   "gloss": "to go",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "vais",
+     "vas",
+     "va",
+     "allons",
+     "allez",
+     "vont"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "chanter",
+   "gloss": "to sing",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "chante",
+     "chantes",
+     "chante",
+     "chantons",
+     "chantez",
+     "chantent"
+    ]
+   }
+  },
+  {
+   "inf": "danser",
+   "gloss": "to dance",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "danse",
+     "danses",
+     "danse",
+     "dansons",
+     "dansez",
+     "dansent"
+    ]
+   }
+  },
+  {
+   "inf": "jouer",
+   "gloss": "to play",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "joue",
+     "joues",
+     "joue",
+     "jouons",
+     "jouez",
+     "jouent"
+    ]
+   }
+  },
+  {
+   "inf": "se dépêcher",
+   "gloss": "to hurry",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me dépêche",
+     "te dépêches",
+     "se dépêche",
+     "nous dépêchons",
+     "vous dépêchez",
+     "se dépêchent"
+    ]
+   }
+  },
+  {
+   "inf": "se doucher",
+   "gloss": "to shower",
+   "tag": "reflexive",
+   "forms": {
+    "present": [
+     "me douche",
+     "te douches",
+     "se douche",
+     "nous douchons",
+     "vous douchez",
+     "se douchent"
+    ]
+   }
+  }
+ ]
+}

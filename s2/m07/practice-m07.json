@@ -1,0 +1,263 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 7 · La mode et le shopping",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "les vêtements",
+   "en": "clothes",
+   "audio": "vocab/s2m7-les-vetements.mp3"
+  },
+  {
+   "t": "la chemise",
+   "en": "the shirt",
+   "audio": "vocab/s2m7-la-chemise.mp3"
+  },
+  {
+   "t": "le pantalon",
+   "en": "the pants",
+   "audio": "vocab/s2m7-le-pantalon.mp3"
+  },
+  {
+   "t": "la robe",
+   "en": "the dress",
+   "audio": "vocab/s2m7-la-robe.mp3"
+  },
+  {
+   "t": "la jupe",
+   "en": "the skirt",
+   "audio": "vocab/s2m7-la-jupe.mp3"
+  },
+  {
+   "t": "le manteau",
+   "en": "the coat",
+   "audio": "vocab/s2m7-le-manteau.mp3"
+  },
+  {
+   "t": "les chaussures",
+   "en": "the shoes",
+   "audio": "vocab/s2m7-les-chaussures.mp3"
+  },
+  {
+   "t": "le chapeau",
+   "en": "the hat",
+   "audio": "vocab/s2m7-le-chapeau.mp3"
+  },
+  {
+   "t": "le pull",
+   "en": "the sweater",
+   "audio": "vocab/s2m7-le-pull.mp3"
+  },
+  {
+   "t": "le jean",
+   "en": "the jeans",
+   "audio": "vocab/s2m7-le-jean.mp3"
+  },
+  {
+   "t": "porter",
+   "en": "to wear",
+   "audio": "vocab/s2m7-porter.mp3"
+  },
+  {
+   "t": "acheter",
+   "en": "to buy",
+   "audio": "vocab/s2m7-acheter.mp3"
+  },
+  {
+   "t": "essayer",
+   "en": "to try on",
+   "audio": "vocab/s2m7-essayer.mp3"
+  },
+  {
+   "t": "le magasin",
+   "en": "the store",
+   "audio": "vocab/s2m7-le-magasin.mp3"
+  },
+  {
+   "t": "la taille",
+   "en": "the size",
+   "audio": "vocab/s2m7-la-taille.mp3"
+  },
+  {
+   "t": "la couleur",
+   "en": "the color",
+   "audio": "vocab/s2m7-la-couleur.mp3"
+  },
+  {
+   "t": "cher",
+   "en": "expensive",
+   "audio": "vocab/s2m7-cher.mp3"
+  },
+  {
+   "t": "bon marché",
+   "en": "cheap / inexpensive",
+   "audio": "vocab/s2m7-bon-marche.mp3"
+  },
+  {
+   "t": "voir",
+   "en": "to see",
+   "audio": "vocab/s2m7-voir.mp3"
+  },
+  {
+   "t": "la vitrine",
+   "en": "the shop window",
+   "audio": "vocab/s2m7-la-vitrine.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "acheter",
+   "gloss": "to buy",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai acheté",
+     "as acheté",
+     "a acheté",
+     "avons acheté",
+     "avez acheté",
+     "ont acheté"
+    ],
+    "imparfait": [
+     "achetais",
+     "achetais",
+     "achetait",
+     "achetions",
+     "achetiez",
+     "achetaient"
+    ]
+   }
+  },
+  {
+   "inf": "aimer",
+   "gloss": "to like / love",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "aime",
+     "aimes",
+     "aime",
+     "aimons",
+     "aimez",
+     "aiment"
+    ]
+   }
+  },
+  {
+   "inf": "aller",
+   "gloss": "to go",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "vais",
+     "vas",
+     "va",
+     "allons",
+     "allez",
+     "vont"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "essayer",
+   "gloss": "to try on",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai essayé",
+     "as essayé",
+     "a essayé",
+     "avons essayé",
+     "avez essayé",
+     "ont essayé"
+    ],
+    "imparfait": [
+     "essayais",
+     "essayais",
+     "essayait",
+     "essayions",
+     "essayiez",
+     "essayaient"
+    ]
+   }
+  },
+  {
+   "inf": "porter",
+   "gloss": "to wear",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "porte",
+     "portes",
+     "porte",
+     "portons",
+     "portez",
+     "portent"
+    ],
+    "passe_compose": [
+     "ai porté",
+     "as porté",
+     "a porté",
+     "avons porté",
+     "avez porté",
+     "ont porté"
+    ],
+    "imparfait": [
+     "portais",
+     "portais",
+     "portait",
+     "portions",
+     "portiez",
+     "portaient"
+    ]
+   }
+  },
+  {
+   "inf": "voir",
+   "gloss": "to see",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "vois",
+     "vois",
+     "voit",
+     "voyons",
+     "voyez",
+     "voient"
+    ],
+    "passe_compose": [
+     "ai vu",
+     "as vu",
+     "a vu",
+     "avons vu",
+     "avez vu",
+     "ont vu"
+    ],
+    "imparfait": [
+     "voyais",
+     "voyais",
+     "voyait",
+     "voyions",
+     "voyiez",
+     "voyaient"
+    ]
+   }
+  }
+ ]
+}

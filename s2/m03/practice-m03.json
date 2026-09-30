@@ -1,0 +1,185 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 3 · À table !",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "le restaurant",
+   "en": "the restaurant",
+   "audio": "vocab/s2m3-le-restaurant.mp3"
+  },
+  {
+   "t": "le menu",
+   "en": "the set menu",
+   "audio": "vocab/s2m3-le-menu.mp3"
+  },
+  {
+   "t": "la carte",
+   "en": "the menu (à la carte)",
+   "audio": "vocab/s2m3-la-carte.mp3"
+  },
+  {
+   "t": "l’entrée",
+   "en": "the starter / appetizer",
+   "audio": "vocab/s2m3-l-entree.mp3"
+  },
+  {
+   "t": "le plat principal",
+   "en": "the main course",
+   "audio": "vocab/s2m3-le-plat-principal.mp3"
+  },
+  {
+   "t": "le dessert",
+   "en": "the dessert",
+   "audio": "vocab/s2m3-le-dessert.mp3"
+  },
+  {
+   "t": "la boisson",
+   "en": "the drink / beverage",
+   "audio": "vocab/s2m3-la-boisson.mp3"
+  },
+  {
+   "t": "le serveur",
+   "en": "the waiter",
+   "audio": "vocab/s2m3-le-serveur.mp3"
+  },
+  {
+   "t": "l’addition",
+   "en": "the check / bill",
+   "audio": "vocab/s2m3-l-addition.mp3"
+  },
+  {
+   "t": "commander",
+   "en": "to order",
+   "audio": "vocab/s2m3-commander.mp3"
+  },
+  {
+   "t": "prendre",
+   "en": "to take / to have (food)",
+   "audio": "vocab/s2m3-prendre.mp3"
+  },
+  {
+   "t": "une tranche de",
+   "en": "a slice of",
+   "audio": "vocab/s2m3-une-tranche-de.mp3"
+  },
+  {
+   "t": "un morceau de",
+   "en": "a piece of",
+   "audio": "vocab/s2m3-un-morceau-de.mp3"
+  },
+  {
+   "t": "une bouteille de",
+   "en": "a bottle of",
+   "audio": "vocab/s2m3-une-bouteille-de.mp3"
+  },
+  {
+   "t": "un verre de",
+   "en": "a glass of",
+   "audio": "vocab/s2m3-un-verre-de.mp3"
+  },
+  {
+   "t": "assez de",
+   "en": "enough of",
+   "audio": "vocab/s2m3-assez-de.mp3"
+  },
+  {
+   "t": "la spécialité",
+   "en": "the specialty",
+   "audio": "vocab/s2m3-la-specialite.mp3"
+  },
+  {
+   "t": "l’assiette",
+   "en": "the plate",
+   "audio": "vocab/s2m3-l-assiette.mp3"
+  },
+  {
+   "t": "goûter",
+   "en": "to taste",
+   "audio": "vocab/s2m3-gouter.mp3"
+  },
+  {
+   "t": "avoir faim",
+   "en": "to be hungry",
+   "audio": "vocab/s2m3-avoir-faim.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "commander",
+   "gloss": "to order",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "commande",
+     "commandes",
+     "commande",
+     "commandons",
+     "commandez",
+     "commandent"
+    ]
+   }
+  },
+  {
+   "inf": "goûter",
+   "gloss": "to taste",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "goûte",
+     "goûtes",
+     "goûte",
+     "goûtons",
+     "goûtez",
+     "goûtent"
+    ]
+   }
+  },
+  {
+   "inf": "prendre",
+   "gloss": "to take, have (food)",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "prends",
+     "prends",
+     "prend",
+     "prenons",
+     "prenez",
+     "prennent"
+    ]
+   }
+  },
+  {
+   "inf": "regarder",
+   "gloss": "to watch, look at",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "regarde",
+     "regardes",
+     "regarde",
+     "regardons",
+     "regardez",
+     "regardent"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,332 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 6 · L’art et les musées",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "le tableau",
+   "en": "the painting",
+   "audio": "vocab/s2m6-le-tableau.mp3"
+  },
+  {
+   "t": "la peinture",
+   "en": "painting (the art form)",
+   "audio": "vocab/s2m6-la-peinture.mp3"
+  },
+  {
+   "t": "le peintre",
+   "en": "the painter",
+   "audio": "vocab/s2m6-le-peintre.mp3"
+  },
+  {
+   "t": "l’artiste",
+   "en": "the artist",
+   "audio": "vocab/s2m6-l-artiste.mp3"
+  },
+  {
+   "t": "la sculpture",
+   "en": "the sculpture",
+   "audio": "vocab/s2m6-la-sculpture.mp3"
+  },
+  {
+   "t": "l’exposition",
+   "en": "the exhibition",
+   "audio": "vocab/s2m6-l-exposition.mp3"
+  },
+  {
+   "t": "le chef-d’œuvre",
+   "en": "the masterpiece",
+   "audio": "vocab/s2m6-le-chef-doeuvre.mp3"
+  },
+  {
+   "t": "le film",
+   "en": "the film",
+   "audio": "vocab/s2m6-le-film.mp3"
+  },
+  {
+   "t": "l’acteur",
+   "en": "the actor",
+   "audio": "vocab/s2m6-l-acteur.mp3"
+  },
+  {
+   "t": "l’actrice",
+   "en": "the actress",
+   "audio": "vocab/s2m6-l-actrice.mp3"
+  },
+  {
+   "t": "admirer",
+   "en": "to admire",
+   "audio": "vocab/s2m6-admirer.mp3"
+  },
+  {
+   "t": "dessiner",
+   "en": "to draw",
+   "audio": "vocab/s2m6-dessiner.mp3"
+  },
+  {
+   "t": "impressionnant",
+   "en": "impressive",
+   "audio": "vocab/s2m6-impressionnant.mp3"
+  },
+  {
+   "t": "autrefois",
+   "en": "in the past / formerly",
+   "audio": "vocab/s2m6-autrefois.mp3"
+  },
+  {
+   "t": "d’habitude",
+   "en": "usually",
+   "audio": "vocab/s2m6-d-habitude.mp3"
+  },
+  {
+   "t": "pendant",
+   "en": "during",
+   "audio": "vocab/s2m6-pendant.mp3"
+  },
+  {
+   "t": "calme",
+   "en": "calm / quiet",
+   "audio": "vocab/s2m6-calme.mp3"
+  },
+  {
+   "t": "magnifique",
+   "en": "magnificent",
+   "audio": "vocab/s2m6-magnifique.mp3"
+  },
+  {
+   "t": "le billet",
+   "en": "the ticket",
+   "audio": "vocab/s2m6-le-billet.mp3"
+  },
+  {
+   "t": "la salle",
+   "en": "the room / gallery",
+   "audio": "vocab/s2m6-la-salle.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "admirer",
+   "gloss": "to admire",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "admire",
+     "admires",
+     "admire",
+     "admirons",
+     "admirez",
+     "admirent"
+    ],
+    "passe_compose": [
+     "ai admiré",
+     "as admiré",
+     "a admiré",
+     "avons admiré",
+     "avez admiré",
+     "ont admiré"
+    ],
+    "imparfait": [
+     "admirais",
+     "admirais",
+     "admirait",
+     "admirions",
+     "admiriez",
+     "admiraient"
+    ]
+   }
+  },
+  {
+   "inf": "aller",
+   "gloss": "to go",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis allé(e)",
+     "es allé(e)",
+     "est allé",
+     "sommes allé(e)s",
+     "êtes allé(e)(s)",
+     "sont allé"
+    ],
+    "imparfait": [
+     "allais",
+     "allais",
+     "allait",
+     "allions",
+     "alliez",
+     "allaient"
+    ]
+   }
+  },
+  {
+   "inf": "arriver",
+   "gloss": "to arrive",
+   "tag": "takes être",
+   "forms": {
+    "passe_compose": [
+     "suis arrivé(e)",
+     "es arrivé(e)",
+     "est arrivé",
+     "sommes arrivé(e)s",
+     "êtes arrivé(e)(s)",
+     "sont arrivé"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ],
+    "imparfait": [
+     "avais",
+     "avais",
+     "avait",
+     "avions",
+     "aviez",
+     "avaient"
+    ]
+   }
+  },
+  {
+   "inf": "commencer",
+   "gloss": "to begin",
+   "tag": "spelling change",
+   "forms": {
+    "passe_compose": [
+     "ai commencé",
+     "as commencé",
+     "a commencé",
+     "avons commencé",
+     "avez commencé",
+     "ont commencé"
+    ]
+   }
+  },
+  {
+   "inf": "dessiner",
+   "gloss": "to draw",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "dessine",
+     "dessines",
+     "dessine",
+     "dessinons",
+     "dessinez",
+     "dessinent"
+    ],
+    "passe_compose": [
+     "ai dessiné",
+     "as dessiné",
+     "a dessiné",
+     "avons dessiné",
+     "avez dessiné",
+     "ont dessiné"
+    ],
+    "imparfait": [
+     "dessinais",
+     "dessinais",
+     "dessinait",
+     "dessinions",
+     "dessiniez",
+     "dessinaient"
+    ]
+   }
+  },
+  {
+   "inf": "entrer",
+   "gloss": "to enter",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "entre",
+     "entres",
+     "entre",
+     "entrons",
+     "entrez",
+     "entrent"
+    ]
+   }
+  },
+  {
+   "inf": "faire",
+   "gloss": "to do, make",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "fais",
+     "fais",
+     "fait",
+     "faisons",
+     "faites",
+     "font"
+    ],
+    "imparfait": [
+     "faisais",
+     "faisais",
+     "faisait",
+     "faisions",
+     "faisiez",
+     "faisaient"
+    ]
+   }
+  },
+  {
+   "inf": "regarder",
+   "gloss": "to watch, look at",
+   "tag": "regular -er",
+   "forms": {
+    "imparfait": [
+     "regardais",
+     "regardais",
+     "regardait",
+     "regardions",
+     "regardiez",
+     "regardaient"
+    ]
+   }
+  },
+  {
+   "inf": "visiter",
+   "gloss": "to visit",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "visite",
+     "visites",
+     "visite",
+     "visitons",
+     "visitez",
+     "visitent"
+    ],
+    "passe_compose": [
+     "ai visité",
+     "as visité",
+     "a visité",
+     "avons visité",
+     "avez visité",
+     "ont visité"
+    ],
+    "imparfait": [
+     "visitais",
+     "visitais",
+     "visitait",
+     "visitions",
+     "visitiez",
+     "visitaient"
+    ]
+   }
+  }
+ ]
+}

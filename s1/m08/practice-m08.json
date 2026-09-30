@@ -1,0 +1,180 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 8 · Paris & l'identité française",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "Paris",
+   "en": "Paris",
+   "audio": "vocab/paris.mp3"
+  },
+  {
+   "t": "la tour Eiffel",
+   "en": "the Eiffel Tower",
+   "audio": "vocab/la-tour-eiffel.mp3"
+  },
+  {
+   "t": "le Louvre",
+   "en": "the Louvre",
+   "audio": "vocab/le-louvre.mp3"
+  },
+  {
+   "t": "le musée",
+   "en": "the museum",
+   "audio": "vocab/le-musee.mp3"
+  },
+  {
+   "t": "la Seine",
+   "en": "the Seine (river)",
+   "audio": "vocab/la-seine.mp3"
+  },
+  {
+   "t": "Notre-Dame",
+   "en": "Notre-Dame",
+   "audio": "vocab/notre-dame.mp3"
+  },
+  {
+   "t": "le quartier",
+   "en": "the neighborhood",
+   "audio": "vocab/le-quartier.mp3"
+  },
+  {
+   "t": "la rue",
+   "en": "the street",
+   "audio": "vocab/la-rue.mp3"
+  },
+  {
+   "t": "le métro",
+   "en": "the subway / metro",
+   "audio": "vocab/le-metro.mp3"
+  },
+  {
+   "t": "la gare",
+   "en": "the train station",
+   "audio": "vocab/la-gare.mp3"
+  },
+  {
+   "t": "le jardin",
+   "en": "the garden",
+   "audio": "vocab/le-jardin.mp3"
+  },
+  {
+   "t": "le monument",
+   "en": "the monument",
+   "audio": "vocab/le-monument.mp3"
+  },
+  {
+   "t": "la cathédrale",
+   "en": "the cathedral",
+   "audio": "vocab/la-cathedrale.mp3"
+  },
+  {
+   "t": "visiter",
+   "en": "to visit",
+   "audio": "vocab/visiter.mp3"
+  },
+  {
+   "t": "la France",
+   "en": "France",
+   "audio": "vocab/la-france.mp3"
+  },
+  {
+   "t": "le drapeau",
+   "en": "the flag",
+   "audio": "vocab/le-drapeau.mp3"
+  },
+  {
+   "t": "la langue française",
+   "en": "the French language",
+   "audio": "vocab/la-langue-francaise.mp3"
+  },
+  {
+   "t": "la culture",
+   "en": "culture",
+   "audio": "vocab/la-culture.mp3"
+  },
+  {
+   "t": "français, française",
+   "en": "French (m., f.)",
+   "audio": "vocab/francais-francaise.mp3"
+  },
+  {
+   "t": "la capitale",
+   "en": "the capital",
+   "audio": "vocab/la-capitale.mp3"
+  },
+  {
+   "t": "célèbre",
+   "en": "famous",
+   "audio": "vocab/celebre.mp3"
+  },
+  {
+   "t": "découvrir",
+   "en": "to discover",
+   "audio": "vocab/decouvrir.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aller",
+   "gloss": "to go",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "vais",
+     "vas",
+     "va",
+     "allons",
+     "allez",
+     "vont"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "parler",
+   "gloss": "to speak",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "parle",
+     "parles",
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+    ]
+   }
+  },
+  {
+   "inf": "visiter",
+   "gloss": "to visit",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "visite",
+     "visites",
+     "visite",
+     "visitons",
+     "visitez",
+     "visitent"
+    ]
+   }
+  }
+ ]
+}

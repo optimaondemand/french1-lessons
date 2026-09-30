@@ -1,0 +1,150 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 1",
+ "title": "Module 7 · À table",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "le pain",
+   "en": "bread",
+   "audio": "vocab/le-pain.mp3"
+  },
+  {
+   "t": "le fromage",
+   "en": "cheese",
+   "audio": "vocab/le-fromage.mp3"
+  },
+  {
+   "t": "la viande",
+   "en": "meat",
+   "audio": "vocab/la-viande.mp3"
+  },
+  {
+   "t": "le poisson",
+   "en": "fish",
+   "audio": "vocab/le-poisson.mp3"
+  },
+  {
+   "t": "les légumes",
+   "en": "vegetables",
+   "audio": "vocab/les-legumes.mp3"
+  },
+  {
+   "t": "les fruits",
+   "en": "fruit",
+   "audio": "vocab/les-fruits.mp3"
+  },
+  {
+   "t": "la pomme",
+   "en": "apple",
+   "audio": "vocab/la-pomme.mp3"
+  },
+  {
+   "t": "le lait",
+   "en": "milk",
+   "audio": "vocab/le-lait.mp3"
+  },
+  {
+   "t": "l’eau",
+   "en": "water",
+   "audio": "vocab/l-eau.mp3"
+  },
+  {
+   "t": "le jus",
+   "en": "juice",
+   "audio": "vocab/le-jus.mp3"
+  },
+  {
+   "t": "le café",
+   "en": "coffee / café",
+   "audio": "vocab/le-cafe.mp3"
+  },
+  {
+   "t": "le thé",
+   "en": "tea",
+   "audio": "vocab/le-the.mp3"
+  },
+  {
+   "t": "le croissant",
+   "en": "croissant",
+   "audio": "vocab/le-croissant.mp3"
+  },
+  {
+   "t": "le petit-déjeuner",
+   "en": "breakfast",
+   "audio": "vocab/le-petit-dejeuner.mp3"
+  },
+  {
+   "t": "le déjeuner",
+   "en": "lunch",
+   "audio": "vocab/le-dejeuner.mp3"
+  },
+  {
+   "t": "le dîner",
+   "en": "dinner",
+   "audio": "vocab/le-diner.mp3"
+  },
+  {
+   "t": "le repas",
+   "en": "the meal",
+   "audio": "vocab/le-repas.mp3"
+  },
+  {
+   "t": "manger",
+   "en": "to eat",
+   "audio": "vocab/manger.mp3"
+  },
+  {
+   "t": "boire",
+   "en": "to drink",
+   "audio": "vocab/boire.mp3"
+  },
+  {
+   "t": "je voudrais",
+   "en": "I would like",
+   "audio": "vocab/je-voudrais.mp3"
+  },
+  {
+   "t": "délicieux",
+   "en": "delicious",
+   "audio": "vocab/delicieux.mp3"
+  },
+  {
+   "t": "la boulangerie",
+   "en": "the bakery",
+   "audio": "vocab/la-boulangerie.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "aimer",
+   "gloss": "to like / love",
+   "tag": "regular -er",
+   "forms": {
+    "present": [
+     "aime",
+     "aimes",
+     "aime",
+     "aimons",
+     "aimez",
+     "aiment"
+    ]
+   }
+  },
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  }
+ ]
+}

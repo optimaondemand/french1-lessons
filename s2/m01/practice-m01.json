@@ -1,0 +1,140 @@
+{
+ "lang": "fr",
+ "course": "French 1 · Semester 2",
+ "title": "Module 1 · La famille en détail · Family & Character",
+ "audioBase": "../../audio/",
+ "words": [
+  {
+   "t": "le caractère",
+   "en": "character / personality",
+   "audio": "vocab/s2m1-le-caractere.mp3"
+  },
+  {
+   "t": "gentil",
+   "en": "kind (f. gentille)",
+   "audio": "vocab/s2m1-gentil.mp3"
+  },
+  {
+   "t": "méchant",
+   "en": "mean / nasty",
+   "audio": "vocab/s2m1-mechant.mp3"
+  },
+  {
+   "t": "timide",
+   "en": "shy",
+   "audio": "vocab/s2m1-timide.mp3"
+  },
+  {
+   "t": "sympathique",
+   "en": "nice / friendly",
+   "audio": "vocab/s2m1-sympa.mp3"
+  },
+  {
+   "t": "sérieux",
+   "en": "serious",
+   "audio": "vocab/s2m1-serieux.mp3"
+  },
+  {
+   "t": "drôle",
+   "en": "funny",
+   "audio": "vocab/s2m1-drole.mp3"
+  },
+  {
+   "t": "paresseux",
+   "en": "lazy",
+   "audio": "vocab/s2m1-paresseux.mp3"
+  },
+  {
+   "t": "travailleur",
+   "en": "hard-working",
+   "audio": "vocab/s2m1-travailleur.mp3"
+  },
+  {
+   "t": "intelligent",
+   "en": "intelligent",
+   "audio": "vocab/s2m1-intelligent.mp3"
+  },
+  {
+   "t": "généreux",
+   "en": "generous",
+   "audio": "vocab/s2m1-genereux.mp3"
+  },
+  {
+   "t": "égoïste",
+   "en": "selfish",
+   "audio": "vocab/s2m1-egoiste.mp3"
+  },
+  {
+   "t": "curieux",
+   "en": "curious",
+   "audio": "vocab/s2m1-curieux.mp3"
+  },
+  {
+   "t": "beau",
+   "en": "handsome / beautiful (irr.)",
+   "audio": "vocab/s2m1-beau.mp3"
+  },
+  {
+   "t": "nouveau",
+   "en": "new (irr.)",
+   "audio": "vocab/s2m1-nouveau.mp3"
+  },
+  {
+   "t": "vieux",
+   "en": "old (irr.)",
+   "audio": "vocab/s2m1-vieux.mp3"
+  },
+  {
+   "t": "jeune",
+   "en": "young",
+   "audio": "vocab/s2m1-jeune.mp3"
+  },
+  {
+   "t": "l’aîné",
+   "en": "the eldest child",
+   "audio": "vocab/s2m1-aine.mp3"
+  },
+  {
+   "t": "le benjamin",
+   "en": "the youngest child",
+   "audio": "vocab/s2m1-benjamin.mp3"
+  },
+  {
+   "t": "faire",
+   "en": "to do / to make",
+   "audio": "vocab/s2m1-faire.mp3"
+  }
+ ],
+ "verbs": [
+  {
+   "inf": "avoir",
+   "gloss": "to have",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "ai",
+     "as",
+     "a",
+     "avons",
+     "avez",
+     "ont"
+    ]
+   }
+  },
+  {
+   "inf": "faire",
+   "gloss": "to do, make",
+   "tag": "irregular",
+   "forms": {
+    "present": [
+     "fais",
+     "fais",
+     "fait",
+     "faisons",
+     "faites",
+     "font"
+    ]
+   }
+  }
+ ]
+}
