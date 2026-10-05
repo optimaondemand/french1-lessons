@@ -1,0 +1,417 @@
+<!--
+  Remedial French 1 (catch-up) · Lesson A · DRAFT 2026-10-05
+  Built on the official French 1 lesson chrome (copied from s1/m03/lesson-3-02.html).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>French 1 &mdash; Catch-up Lesson A</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS (byte-consistent with house template) ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+
+    /* ===== VOCAB / GRAMMAR AUDIO (integrated; click-to-hear) ===== */
+    .vocab-list { list-style: none; margin: 14px 0 0 0; padding: 0; }
+    .vocab-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 6px; margin-bottom: 8px; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .v-fr { font-weight: 600; color: #0E1C42; min-width: 170px; font-size: 17px; }
+    .v-en { color: #6b7a99; font-size: 15px; }
+    .play-bar { display: inline-flex; align-items: center; gap: 8px; background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; margin: 2px 0 8px; }
+    .play-bar:hover { background: #1B3A6B; }
+    .play-bar.playing { background: #C7922C; }
+    .play-bar.err { background: #C0392B; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
+    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable th { background: #EEF1F8; color: #0e1c42; font-weight: 600; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+
+    /* ===== FRENCH ACCENTS (layered on the Optima template; core chrome unchanged) ===== */
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore i { flex: 1; display: block; }
+    .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div data-ra-skip style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+</div>
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div data-ra-skip style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Course</div>
+        <div style="font-size: 17px; color: #0e1c42;">Catch-up &middot; Quarter 1</div>
+        <div style="font-size: 12px; color: #666;">Remedial French 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson A &middot; Catch-up Day 7</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Un, une, des &amp; les possessifs</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Family</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Catch-up Lesson A</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Un, une, des &amp; mon, ma, mes &mdash; Articles + Possessives</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Every French noun carries a gender &mdash; and two families of little words follow that gender everywhere.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already say <em>le livre</em> and <em>la classe</em>. Today you learn the partners of <em>le</em> and <em>la</em> &mdash; <strong>un, une, des</strong> (a, an, some) &mdash; and the words for <strong>my, your, his, her, our, their</strong>. Both change with the noun, so you learn them once and use them in every sentence about your family from now on.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose <em>le / la / l' / les</em> or <em>un / une / des</em> to match a noun's gender and number.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose the possessive (<em>mon, ma, mes</em>&hellip;) that matches the thing I'm talking about.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 &middot; Check-in (reflective) ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9200; PART 1 &middot; SE METTRE EN ROUTE <span class="pill-time">3 min</span></div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN &middot; no wrong answer</div>
+            <div class="widget-question">In English, does the word <em>my</em> change when you talk about your brother instead of your sister?</div>
+            <div class="widget-options">
+                <button data-response="Right &mdash; English 'my' never changes. In French it does: mon fr&egrave;re, but ma s&oelig;ur. That's today's surprise.">No, it's always "my"</button>
+                <button data-response="Most people never notice! English 'my' stays the same. French picks a different word to match the noun &mdash; you'll see how in Part 3.">I've never thought about it</button>
+                <button data-response="Good instinct for French &mdash; but in English, 'my' stays the same. In French it really does change: mon fr&egrave;re, ma s&oelig;ur, mes parents.">Maybe it does?</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 &middot; Articles ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LES ARTICLES &mdash; THE, A, SOME <span class="pill-time">12 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Two sets of little words, one rule</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You've learned every noun with <em>le, la, l'</em> or <em>les</em> in front &mdash; that's the word for <strong>the</strong>. Each one has a partner that means <strong>a / an</strong> (and, in the plural, <strong>some</strong>). <span style="border-bottom:2px solid #C7922C;">Both sets follow the noun's gender and number.</span></p>
+        <table class="gtable">
+            <thead><tr><th></th><th>Masculine</th><th>Feminine</th><th>Plural (m. or f.)</th></tr></thead>
+            <tbody>
+                <tr><td><strong>the</strong></td><td><span class="pron">le</span> livre</td><td><span class="pron">la</span> classe</td><td><span class="pron">les</span> livres</td></tr>
+                <tr><td><strong>a / an / some</strong></td><td><span class="pron">un</span> livre</td><td><span class="pron">une</span> classe</td><td><span class="pron">des</span> livres</td></tr>
+            </tbody>
+        </table>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 8px 0;">Three things to notice:</p>
+        <ul style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">
+            <li><strong>Before a vowel</strong>, <em>le</em> and <em>la</em> shrink to <em>l'</em> (<em>l'&eacute;l&egrave;ve</em>) &mdash; but <em>un</em> and <em>une</em> never shrink: <em>un &eacute;l&egrave;ve</em> (a boy student), <em>une &eacute;l&egrave;ve</em> (a girl student).</li>
+            <li><strong>Plural nouns add -s</strong>, and you can't hear it: <em>livre</em> and <em>livres</em> sound the same. The article tells your ear it's plural &mdash; <em>le</em> sounds like &ldquo;luh,&rdquo; <em>les</em> like &ldquo;lay.&rdquo;</li>
+            <li><strong>French never drops the article.</strong> English says &ldquo;I'm looking at books&rdquo;; French says <em>Je regarde <u>des</u> livres</em>.</li>
+        </ul>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 8px 0;">Play each one and <strong>say it back out loud</strong> &mdash; listen for the little word in front:</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="vocab/le-livre.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">le livre</span><span class="v-en">the book</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/un-livre.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">un livre</span><span class="v-en">a book</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/des-livres.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">des livres</span><span class="v-en">(some) books</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/la-classe.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">la classe</span><span class="v-en">the class</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/une-classe.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">une classe</span><span class="v-en">a class</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/je-regarde-un-livre.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je regarde un livre.</span><span class="v-en">I'm looking at a book.</span></li>
+        </ul>
+    </div>
+
+    <!-- ===== PART 3 &middot; Possessives ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129504; PART 3 &middot; LES POSSESSIFS &mdash; MY, YOUR, HIS, HER&hellip; <span class="pill-time">14 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Match the thing, not the owner</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The rule: <span style="border-bottom:2px solid #C7922C;">a possessive matches the noun that comes after it</span> &mdash; masculine, feminine, or plural &mdash; exactly like <em>le / la / les</em>. Read across each row.</p>
+        <table class="gtable">
+            <thead><tr><th>Owner</th><th>+ masculine noun</th><th>+ feminine noun</th><th>+ plural noun</th></tr></thead>
+            <tbody>
+                <tr><td>je &rarr; my</td><td><span class="pron">mon</span> p&egrave;re</td><td><span class="pron">ma</span> m&egrave;re</td><td><span class="pron">mes</span> parents</td></tr>
+                <tr><td>tu &rarr; your</td><td><span class="pron">ton</span> fr&egrave;re</td><td><span class="pron">ta</span> s&oelig;ur</td><td><span class="pron">tes</span> grands-parents</td></tr>
+                <tr><td>il / elle &rarr; his / her</td><td><span class="pron">son</span> fils</td><td><span class="pron">sa</span> fille</td><td><span class="pron">ses</span> parents</td></tr>
+                <tr><td>nous &rarr; our</td><td><span class="pron">notre</span> p&egrave;re</td><td><span class="pron">notre</span> m&egrave;re</td><td><span class="pron">nos</span> parents</td></tr>
+                <tr><td>vous &rarr; your</td><td><span class="pron">votre</span> fr&egrave;re</td><td><span class="pron">votre</span> s&oelig;ur</td><td><span class="pron">vos</span> parents</td></tr>
+                <tr><td>ils / elles &rarr; their</td><td><span class="pron">leur</span> fils</td><td><span class="pron">leur</span> fille</td><td><span class="pron">leurs</span> parents</td></tr>
+            </tbody>
+        </table>
+        <div style="background: #E8F6FB; border-left: 4px solid #2196D0; border-radius: 6px; padding: 14px 18px; margin: 14px 0; font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Two surprises.</strong> (1) <em>son p&egrave;re</em> means <strong>his</strong> father <em>or</em> <strong>her</strong> father &mdash; French matches <em>p&egrave;re</em> (masculine), not the owner. (2) Before a vowel, <em>ma / ta / sa</em> become <em>mon / ton / son</em> so the words glide: <em>mon &eacute;cole</em>, <em>mon amie</em>.</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 8px 0;">Hear them in sentences, and <strong>say each one back out loud</strong>:</p>
+        <ul class="vocab-list">
+            <li class="vocab-item"><button class="say" data-audio="catchup/mon-pere-est-professeur.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Mon p&egrave;re est professeur.</span><span class="v-en">My father is a teacher.</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/ma-soeur-est-etudiante.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Ma s&oelig;ur est &eacute;tudiante.</span><span class="v-en">My sister is a student.</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/mes-grands-parents-sont-francais.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Mes grands-parents sont fran&ccedil;ais.</span><span class="v-en">My grandparents are French.</span></li>
+            <li class="vocab-item"><button class="say" data-audio="catchup/lea-regarde-son-pere.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">L&eacute;a regarde son p&egrave;re.</span><span class="v-en">L&eacute;a is looking at her father.</span></li>
+        </ul>
+    </div>
+
+    <!-- ===== PART 4 &middot; Self-check (evaluative) ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 4 &middot; V&Eacute;RIFIE TA COMPR&Eacute;HENSION <span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the word that fits. Take your time &mdash; look at the noun first, then choose. Instant feedback; this is practice, not a grade.</p>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Je regarde ______ livre. <span style="color:#6b7a99;">(a book)</span></div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; livre is masculine (le livre), so its partner is un.">une</button>
+                <button data-correct="1" data-ok="Oui ! le livre &rarr; un livre.">un</button>
+                <button data-no="Not quite &mdash; des is for plural nouns (des livres).">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Nous regardons ______ cahiers. <span style="color:#6b7a99;">(some notebooks)</span></div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; le is singular, and it means 'the'.">le</button>
+                <button data-no="Not quite &mdash; un is singular; cahiers is plural.">un</button>
+                <button data-correct="1" data-ok="Exact ! Plural + 'some' &rarr; des cahiers.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">______ m&egrave;re est professeur. <span style="color:#6b7a99;">(my)</span></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Voil&agrave; ! m&egrave;re is feminine &rarr; ma m&egrave;re.">Ma</button>
+                <button data-no="Not quite &mdash; mon goes with a masculine noun (mon p&egrave;re).">Mon</button>
+                <button data-no="Not quite &mdash; mes is for plural nouns (mes parents).">Mes</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Paul aime ______ grands-parents. <span style="color:#6b7a99;">(his)</span></div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; son goes with one masculine noun.">son</button>
+                <button data-no="Not quite &mdash; sa goes with one feminine noun.">sa</button>
+                <button data-correct="1" data-ok="Parfait ! grands-parents is plural &rarr; ses.">ses</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">J'aime ______ &eacute;cole. <span style="color:#6b7a99;">(my &mdash; &eacute;cole starts with a vowel)</span></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui ! Before a vowel, ma becomes mon: mon &eacute;cole.">mon</button>
+                <button data-no="Close &mdash; &eacute;cole is feminine, but before a vowel ma becomes mon.">ma</button>
+                <button data-no="Not quite &mdash; mes is for plural nouns.">mes</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">L&eacute;a regarde ______ p&egrave;re. <span style="color:#6b7a99;">(her)</span></div>
+            <div class="widget-options">
+                <button data-no="It's her father &mdash; but p&egrave;re is masculine, and the possessive matches p&egrave;re.">sa</button>
+                <button data-correct="1" data-ok="Exact ! p&egrave;re is masculine &rarr; son p&egrave;re, even though L&eacute;a is a girl.">son</button>
+                <button data-no="Not quite &mdash; ses is for plural nouns.">ses</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 5 &middot; Commit then reveal ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; &Agrave; TON TOUR <span class="pill-time">3 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On paper or in your head, write three sentences about your own family with <em>mon</em>, <em>ma</em> and <em>mes</em> and the verb <em>&ecirc;tre</em>. Then <strong>say them out loud</strong>. Commit first &mdash; then reveal a model.</p>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#129504; MA FAMILLE &middot; three sentences</div>
+            <button class="reveal-btn">Reveal a model</button>
+            <div class="reveal-body">
+                <table class="gtable">
+                    <tbody>
+                        <tr><td>Mon p&egrave;re est professeur.</td><td>mon + masculine</td></tr>
+                        <tr><td>Ma s&oelig;ur est &eacute;tudiante.</td><td>ma + feminine</td></tr>
+                        <tr><td>Mes grands-parents sont fran&ccedil;ais.</td><td>mes + plural</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3.02</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Next you meet the verb <strong>avoir</strong> (to have) &mdash; and you'll use today's words straight away: <em>j'ai <u>un</u> fr&egrave;re et <u>une</u> s&oelig;ur</em>.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mark as Done -->
+    <div class="markdone">
+        <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page in Canvas so your progress is recorded. Then say out loud, from memory: <em>mon p&egrave;re, ma m&egrave;re, mes parents</em>.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute; !</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">One rule runs both word families: <strong>look at the noun</strong>. Masculine, feminine, or plural &mdash; the little word in front follows it. <em>Allez, on continue !</em></p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Catch-up &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Catch-up Lesson A &middot; Articles &amp; possessifs</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (house superset: reflect + eval + reveal) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
+
+<!-- ===== AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
+<script>
+(function () {
+  var AUDIO_BASE = '../../audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
+  var player = new Audio();
+  var active = null;
+  function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
+  player.addEventListener('ended', clearActive);
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-audio]');
+    if (!el) return;
+    e.preventDefault();
+    if (active === el && !player.paused) { player.pause(); clearActive(); return; }
+    clearActive();
+    el.classList.remove('err');
+    player.src = AUDIO_BASE + el.getAttribute('data-audio');
+    player.currentTime = 0;
+    var p = player.play();
+    if (p && p.catch) {
+      p.then(function () { el.classList.add('playing'); active = el; })
+       .catch(function () { el.classList.add('err'); el.setAttribute('title', 'Audio unavailable'); });
+    } else { el.classList.add('playing'); active = el; }
+  });
+})();
+</script>
+
+<script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+</body>
+</html>
