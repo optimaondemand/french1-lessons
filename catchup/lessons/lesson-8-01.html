@@ -1,6 +1,6 @@
 <!--
-  French 1 (0701320) · S1 Module 2 · Lesson 2.01 (Day 1 of 10)
-  REFERENCE BUILD — official Optima interactive lesson template + integrated vocab audio.
+  French 1 (0701320) · S1 Module 8 · Lesson 8.01 (Day 1 of 10) — CAPSTONE & GATE.
+  Official Optima interactive lesson template + French accents + integrated vocab audio. Widget: reflective check-in.
   Deployment: GitHub-hosted, embedded in Canvas. Delete .preview-banner before deploy.
   Audio: AUDIO_BASE points at the shared /audio library; mp3s already generated in 03_Development/audio/.
 -->
@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>French 1 &mdash; Lesson 2.01</title>
+<title>French 1 &mdash; Lesson 8.01</title>
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
@@ -43,6 +43,7 @@
     .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
     .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
     .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .gatebadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 
     /* ===== FRENCH ACCENTS (layered on the Optima template; core chrome unchanged) ===== */
     .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
@@ -75,20 +76,20 @@
 <div data-ra-skip style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 2</div>
-        <div style="font-size: 12px; color: #666;">L'&eacute;cole</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 8</div>
+        <div style="font-size: 12px; color: #666;">Paris &amp; l'identit&eacute; fran&ccedil;aise</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.01 &middot; Catch-up Day 9</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.01 &middot; Catch-up Day 30</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
-        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">La salle de classe &mdash; The Classroom</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Paris &mdash; la capitale</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
-        <div style="font-size: 16px; color: #0e1c42;">School</div>
+        <div style="font-size: 16px; color: #0e1c42;">Capstone &amp; Gate</div>
     </div>
 </div>
 
@@ -97,16 +98,16 @@
 
     <!-- Title strip -->
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.01</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> La salle de classe &mdash; The Classroom</div>
+        <div style="margin-bottom: 6px;"><span class="gatebadge">CAPSTONE &middot; GATE</span></div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Bienvenue &agrave; Paris &mdash; the Capital &amp; the Capstone</div>
         <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
     </div>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What does it take to learn well alongside others &mdash; and how do you name the room where it happens, in French?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This module is about school. Today you meet the first eleven words of the classroom &mdash; the room, the people in it, the things on your desk, the subjects you study. You will <strong>hear each one spoken</strong> before you ever say it, because a word you can hear is a word you can use.</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A whole semester of French comes to rest in one city &mdash; and this module is the <em>gate</em> you walk through to close it.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Module 8 is your <strong>Semester&nbsp;1 synthesis checkpoint</strong> &mdash; the gate. There is no new grammar here: instead you gather everything you have built (greetings, school, family, schedules, routines, leisure, food) and use it to talk about <strong>Paris</strong> and about being <em>fran&ccedil;ais(e)</em>. Today you meet the city's landmarks by ear. Hold the essential question in mind all week: <em>What have you learned this semester about French &mdash; and about yourself as a language learner?</em></div>
     </div>
 
     <!-- Objectives -->
@@ -114,11 +115,11 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and pronounce eleven French words for the classroom, its people, and school subjects.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and pronounce eleven Paris landmark and city words.</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> match each spoken word to its meaning by ear.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> match each spoken landmark to its meaning by ear.</div>
         </div>
     </div>
 
@@ -129,7 +130,7 @@
             <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Headphones or speakers &mdash; today is a listening day.</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your vocabulary notebook or flashcard app.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your vocabulary notebook or flashcard app &mdash; and, if you like, your notes from Modules 0&ndash;7.</div>
         </div>
     </div>
 
@@ -137,17 +138,17 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9200; PART 1 &middot; SE METTRE EN ROUTE <span class="pill-time">12 min</span></div>
 
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">First, a quick look back</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Module 1 you learned to introduce yourself: <em>je suis &eacute;tudiant</em> (I am a student). In this module you step into the place that word points to &mdash; <em>l'&eacute;cole</em>. Warm up by saying aloud what you already know: <em>bonjour</em>, <em>je m'appelle&hellip;</em>, <em>je suis &eacute;tudiant(e)</em>.</p>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Look how far you've come</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A semester ago, French was just sounds. Now you can greet people, describe your family and your school day, tell time, talk about your routine and your free time, and order food. This module asks you to bring all of it to one place &mdash; <em>Paris</em> &mdash; and to notice what it means to speak, even a little, as a <em>fran&ccedil;ais(e)</em>. Because this is the <strong>gate</strong>, the work here also gets you ready for the cumulative <strong>Semester&nbsp;1 Final Exam</strong>.</p>
 
         <!-- WIDGET: reflective check-in (no wrong answer) -->
         <div class="optima-widget ow-reflect">
             <div class="widget-kicker">&#128173; QUICK CHECK-IN &middot; no wrong answer</div>
-            <div class="widget-question">Which part of a school day comes most alive for you?</div>
+            <div class="widget-question">Looking back over the semester, what surprised you most about learning French?</div>
             <div class="widget-options">
-                <button data-response="Le cours &mdash; the lesson itself! You'll love that this module gives you the verbs for it: &eacute;couter, &eacute;tudier, travailler.">The lessons and subjects</button>
-                <button data-response="Les gens &mdash; the people! Then le professeur and l'&eacute;l&egrave;ve are about to become your most useful words.">The people around me</button>
-                <button data-response="Un bon &eacute;quilibre &mdash; a balance. French school life mixes long class days with real breaks.">A bit of both, in balance</button>
+                <button data-response="C'est vrai &mdash; and this module proves it: you'll understand a whole day in Paris using only what you already know.">How much I can already understand</button>
+                <button data-response="A real insight &mdash; the sounds are the hard part, and you've been training your ear all year. Paris is where it pays off.">That the sounds were the hard part</button>
+                <button data-response="Beautiful &mdash; language and culture travel together. Paris is the perfect place to feel that connection.">How connected it is to the culture</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
@@ -156,28 +157,28 @@
 
     <!-- ===== PART 2 · Vocab with audio ===== -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LE VOCABULAIRE DE L'&Eacute;COLE <span class="pill-time">18 min</span></div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LE VOCABULAIRE DE PARIS <span class="pill-time">18 min</span></div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Listen, then repeat</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Click the <strong>&#128266;</strong> on each word and say it back out loud. Notice the little word in front &mdash; <strong>le</strong>, <strong>la</strong>, <strong>l'</strong>, <strong>les</strong>. That's the <em>article</em>, and it tells you the word's gender. Learn each noun <em>with</em> its article, as one chunk; today, just get them in your ear.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Click the <strong>&#128266;</strong> on each word and say it back out loud. These are the landmarks and the everyday city words you would need to actually move through Paris &mdash; the monuments, the river, the streets, the m&eacute;tro. You'll <em>hear</em> each one before you ever try to say it.</p>
 
         <ul class="vocab-list">
-            <li class="vocab-item"><button class="say" data-audio="vocab/l-ecole.mp3" aria-label="&Eacute;couter l'&eacute;cole">&#128266;</button><span class="v-fr">l&rsquo;&eacute;cole</span><span class="v-en">school (f.)</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/la-classe.mp3" aria-label="&Eacute;couter la classe">&#128266;</button><span class="v-fr">la classe</span><span class="v-en">the class / classroom</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/le-professeur.mp3" aria-label="&Eacute;couter le professeur">&#128266;</button><span class="v-fr">le professeur</span><span class="v-en">the teacher</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/l-eleve.mp3" aria-label="&Eacute;couter l'&eacute;l&egrave;ve">&#128266;</button><span class="v-fr">l&rsquo;&eacute;l&egrave;ve</span><span class="v-en">the student / pupil</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/le-livre.mp3" aria-label="&Eacute;couter le livre">&#128266;</button><span class="v-fr">le livre</span><span class="v-en">the book</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/le-cahier.mp3" aria-label="&Eacute;couter le cahier">&#128266;</button><span class="v-fr">le cahier</span><span class="v-en">the notebook</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/le-stylo.mp3" aria-label="&Eacute;couter le stylo">&#128266;</button><span class="v-fr">le stylo</span><span class="v-en">the pen</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/les-devoirs.mp3" aria-label="&Eacute;couter les devoirs">&#128266;</button><span class="v-fr">les devoirs</span><span class="v-en">homework</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/les-maths.mp3" aria-label="&Eacute;couter les maths">&#128266;</button><span class="v-fr">les maths</span><span class="v-en">math</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/le-francais.mp3" aria-label="&Eacute;couter le fran&ccedil;ais">&#128266;</button><span class="v-fr">le fran&ccedil;ais</span><span class="v-en">French (subject)</span></li>
-            <li class="vocab-item"><button class="say" data-audio="vocab/l-histoire.mp3" aria-label="&Eacute;couter l'histoire">&#128266;</button><span class="v-fr">l&rsquo;histoire</span><span class="v-en">history</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/paris.mp3" aria-label="&Eacute;couter Paris">&#128266;</button><span class="v-fr">Paris</span><span class="v-en">Paris</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/la-tour-eiffel.mp3" aria-label="&Eacute;couter la tour Eiffel">&#128266;</button><span class="v-fr">la tour Eiffel</span><span class="v-en">the Eiffel Tower</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/le-louvre.mp3" aria-label="&Eacute;couter le Louvre">&#128266;</button><span class="v-fr">le Louvre</span><span class="v-en">the Louvre</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/le-musee.mp3" aria-label="&Eacute;couter le mus&eacute;e">&#128266;</button><span class="v-fr">le mus&eacute;e</span><span class="v-en">the museum</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/la-seine.mp3" aria-label="&Eacute;couter la Seine">&#128266;</button><span class="v-fr">la Seine</span><span class="v-en">the Seine (river)</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/notre-dame.mp3" aria-label="&Eacute;couter Notre-Dame">&#128266;</button><span class="v-fr">Notre-Dame</span><span class="v-en">Notre-Dame</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/le-quartier.mp3" aria-label="&Eacute;couter le quartier">&#128266;</button><span class="v-fr">le quartier</span><span class="v-en">the neighborhood</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/la-rue.mp3" aria-label="&Eacute;couter la rue">&#128266;</button><span class="v-fr">la rue</span><span class="v-en">the street</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/le-metro.mp3" aria-label="&Eacute;couter le m&eacute;tro">&#128266;</button><span class="v-fr">le m&eacute;tro</span><span class="v-en">the subway / metro</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/la-gare.mp3" aria-label="&Eacute;couter la gare">&#128266;</button><span class="v-fr">la gare</span><span class="v-en">the train station</span></li>
+            <li class="vocab-item"><button class="say" data-audio="vocab/le-jardin.mp3" aria-label="&Eacute;couter le jardin">&#128266;</button><span class="v-fr">le jardin</span><span class="v-en">the garden</span></li>
         </ul>
 
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Shadowing is the single fastest way to make new sounds feel natural.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Notice the article &mdash; <em>le</em> or <em>la</em> &mdash; and say it together with the noun, the way a French speaker always would.</div>
         </div>
     </div>
 
@@ -185,8 +186,8 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128221; PART 3 &middot; R&Eacute;VISE TON VOCABULAIRE <span class="pill-time">10 min</span></div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Drill the words with the Vocabulaire page</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <strong>Module 2 Vocabulaire</strong> study page (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your checkpoint includes <strong>listening</strong> questions, practice by <em>hearing</em> the word and recalling its meaning.</p>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own paper or digital cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open the <strong>Module 8 Vocabulaire</strong> study page (in this module) &mdash; all 22 capstone words, each with its meaning and its <strong>audio</strong>, as flip cards you can drill by ear. Because your checkpoint includes <strong>listening</strong> questions, practice by <em>hearing</em> the word and recalling its meaning.</p>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Today, focus on the eleven landmark words above; tomorrow you add the eleven identity words. Making your own cards is a great booster &mdash; but optional.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -195,8 +196,8 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2.02</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Next: the rest of your school vocabulary (more subjects + the verbs of the classroom) and your first look at how regular <em>-er</em> verbs work.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 8.02</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Next: the identity words (France, the flag, the language, the culture) and the first of three grammar-review days &mdash; we revisit <em>&ecirc;tre</em> and <em>avoir</em>.</div>
             </div>
         </div>
     </div>
@@ -204,13 +205,13 @@
     <!-- Mark as Done (house completion-tracking standard) -->
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page in Canvas so your progress is recorded. Then make sure you can hear all eleven words in your head before the next lesson.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page in Canvas so your progress is recorded. Then make sure you can hear all eleven landmark words in your head before the next lesson.</div>
     </div>
 
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; ON EST PARTI(E)S&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have the first words of the French classroom. Say one of them out loud right now, from memory, with the audio in your ear. That&rsquo;s how a word becomes yours. <em>On continue&nbsp;!</em> On to the next lesson.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You've opened the last module of the semester with the heart of France in your ear. Say one landmark out loud right now, from memory &mdash; <em>la tour Eiffel</em> &mdash; and feel how natural it already is. <em>&Agrave; demain&nbsp;!</em></p>
     </div>
 
 </div>
@@ -218,8 +219,8 @@
 <!-- ===== FOOTER ===== -->
 <div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
-    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 1 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; La salle de classe &mdash; The Classroom</div>
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.01 &middot; Paris &mdash; la capitale</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
