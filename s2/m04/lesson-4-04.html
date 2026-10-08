@@ -46,6 +46,15 @@
     .rule-box { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 12px 16px; margin: 10px 0; font-size: 17px; color: #1a2340; line-height: 1.6; }
     .dict-row { display: flex; align-items: center; gap: 12px; }
     .dict-num { min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+    .dict-type { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .dict-in { flex: 1; min-width: 220px; font-size: 18px; padding: 8px 10px; border: 1px solid #b9c4d8; border-radius: 6px; font-family: inherit; }
+    .dict-check { background: #0E1C42; color: #fff; border: 0; border-radius: 6px; font-size: 15px; padding: 8px 16px; cursor: pointer; }
+    .dict-fb { display: none; margin-top: 8px; font-size: 16px; line-height: 1.6; padding: 8px 12px; border-radius: 6px; background: #FBF7EE; border-left: 4px solid #C7922C; }
+    .dict-fb.show { display: block; } .dict-fb.ok { background: #EAF6EE; border-left-color: #2A9D5C; }
+    .dict-fb .g { color: #1a6b3d; font-weight: 600; } .dict-fb .o { color: #b35c00; font-weight: 600; text-decoration: underline dotted; } .dict-fb .r { color: #B3261E; font-weight: 600; text-decoration: line-through; }
+    .dict-acc { margin: 4px 0 14px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 14px; color: #6b7a99; }
+    .dict-acc button { min-width: 34px; font-size: 17px; padding: 4px 8px; border: 1px solid #b9c4d8; background: #fff; border-radius: 5px; cursor: pointer; }
     .answer-fr { font-weight: 600; color: #1a6b3d; font-size: 17px; }
     .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
     .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
@@ -209,31 +218,38 @@
     <!-- PART 4 · Audio dictation -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127911; PART 4 &middot; LA DICT&Eacute;E <span class="pill-time">10 min</span></div>
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Hear it, write it, check it</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Play each clip (as many times as you need). Write down exactly what you hear &mdash; accents and all &mdash; <em>then</em> reveal to check. Don't reveal early; the struggle is the learning.</p>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Hear it, type it, check it</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Play each clip (as many times as you need). Type exactly what you hear &mdash; accents and all &mdash; <em>then</em> press <strong>Check</strong>. Use <strong>Reveal</strong> only after you have tried. Don't reveal early; the struggle is the learning.</p>
+
+        <div class="dict-acc" data-ra-skip>Accents: <button type="button">é</button><button type="button">è</button><button type="button">ê</button><button type="button">à</button><button type="button">â</button><button type="button">ç</button><button type="button">ô</button><button type="button">î</button><button type="button">ï</button><button type="button">û</button><button type="button">ù</button><button type="button">ë</button><button type="button">œ</button> <span>&mdash; click a box first, then a letter.</span></div>
 
         <div class="optima-widget">
-            <div class="dict-row"><span class="dict-num">1</span><button class="say" data-audio="grammar/s2m4-jai-mange.mp3" aria-label="&Eacute;couter la dict&eacute;e 1">&#128266;</button><span style="font-size:15px;color:#6b7a99;">Play, write, then reveal.</span></div>
+            <div class="dict-row"><span class="dict-num">1</span><button class="say" data-audio="grammar/s2m4-jai-mange.mp3" aria-label="&Eacute;couter la dict&eacute;e 1">&#128266;</button><span style="font-size:15px;color:#6b7a99;">Play, type, then check.</span></div>
+            <div class="dict-type"><input type="text" class="dict-in" lang="fr" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type what you hear"><button type="button" class="dict-check">Check</button></div><div class="dict-fb" aria-live="polite"></div>
             <button class="reveal-btn" style="margin-top:10px;">Reveal</button>
             <div class="reveal-body"><span class="answer-fr">J'ai mang&eacute; au restaurant hier soir.</span></div>
         </div>
         <div class="optima-widget">
-            <div class="dict-row"><span class="dict-num">2</span><button class="say" data-audio="grammar/s2m4-il-a-joue.mp3" aria-label="&Eacute;couter la dict&eacute;e 2">&#128266;</button><span style="font-size:15px;color:#6b7a99;">Play, write, then reveal.</span></div>
+            <div class="dict-row"><span class="dict-num">2</span><button class="say" data-audio="grammar/s2m4-il-a-joue.mp3" aria-label="&Eacute;couter la dict&eacute;e 2">&#128266;</button><span style="font-size:15px;color:#6b7a99;">Play, type, then check.</span></div>
+            <div class="dict-type"><input type="text" class="dict-in" lang="fr" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type what you hear"><button type="button" class="dict-check">Check</button></div><div class="dict-fb" aria-live="polite"></div>
             <button class="reveal-btn" style="margin-top:10px;">Reveal</button>
             <div class="reveal-body"><span class="answer-fr">Il a jou&eacute; au football samedi.</span></div>
         </div>
         <div class="optima-widget">
             <div class="dict-row"><span class="dict-num">3</span><button class="say" data-audio="grammar/s2m4-nous-avons-fini.mp3" aria-label="&Eacute;couter la dict&eacute;e 3">&#128266;</button><span style="font-size:15px;color:#6b7a99;">An -ir participle &mdash; listen for the -i.</span></div>
+            <div class="dict-type"><input type="text" class="dict-in" lang="fr" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type what you hear"><button type="button" class="dict-check">Check</button></div><div class="dict-fb" aria-live="polite"></div>
             <button class="reveal-btn" style="margin-top:10px;">Reveal</button>
             <div class="reveal-body"><span class="answer-fr">Nous avons fini nos devoirs.</span></div>
         </div>
         <div class="optima-widget">
             <div class="dict-row"><span class="dict-num">4</span><button class="say" data-audio="grammar/s2m4-neg-pc.mp3" aria-label="&Eacute;couter la dict&eacute;e 4">&#128266;</button><span style="font-size:15px;color:#6b7a99;">A negative sentence &mdash; catch the n'ai pas.</span></div>
+            <div class="dict-type"><input type="text" class="dict-in" lang="fr" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type what you hear"><button type="button" class="dict-check">Check</button></div><div class="dict-fb" aria-live="polite"></div>
             <button class="reveal-btn" style="margin-top:10px;">Reveal</button>
             <div class="reveal-body"><span class="answer-fr">Je n'ai pas regard&eacute; la t&eacute;l&eacute; hier.</span></div>
         </div>
         <div class="optima-widget">
             <div class="dict-row"><span class="dict-num">5</span><button class="say" data-audio="grammar/s2m4-viennent.mp3" aria-label="&Eacute;couter la dict&eacute;e 5">&#128266;</button><span style="font-size:15px;color:#6b7a99;">Present tense &mdash; the verb venir.</span></div>
+            <div class="dict-type"><input type="text" class="dict-in" lang="fr" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type what you hear"><button type="button" class="dict-check">Check</button></div><div class="dict-fb" aria-live="polite"></div>
             <button class="reveal-btn" style="margin-top:10px;">Reveal</button>
             <div class="reveal-body"><span class="answer-fr">Mes amis viennent chez moi ce soir.</span></div>
         </div>
@@ -349,6 +365,50 @@
 })();
 </script>
 
+<script>
+(function () {
+  var last = null;
+  function norm(x) { return x.toLowerCase().replace(/[’`´]/g, "'").replace(/[.!?,;:«»"]/g, ' ').replace(/\s+/g, ' ').trim(); }
+  function bare(x) { return x.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/œ/g, 'oe'); }
+  function esc(x) { return x.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+  document.addEventListener('focusin', function (e) { if (e.target.classList && e.target.classList.contains('dict-in')) last = e.target; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('dict-in')) { e.target.closest('.optima-widget').querySelector('.dict-check').click(); } });
+  document.addEventListener('click', function (e) {
+    var k = e.target.closest('.dict-acc button');
+    if (k) {
+      var inp = last || document.querySelector('.dict-in'); if (!inp) return;
+      var s = inp.selectionStart == null ? inp.value.length : inp.selectionStart, en = inp.selectionEnd == null ? s : inp.selectionEnd;
+      inp.value = inp.value.slice(0, s) + k.textContent + inp.value.slice(en); inp.focus(); inp.setSelectionRange(s + 1, s + 1); return;
+    }
+    var c = e.target.closest('.dict-check'); if (!c) return;
+    var w = c.closest('.optima-widget'), inp2 = w.querySelector('.dict-in'), fb = w.querySelector('.dict-fb');
+    var a = norm(w.querySelector('.answer-fr').textContent), g = norm(inp2.value);
+    fb.className = 'dict-fb show';
+    if (!g) { fb.innerHTML = 'Type what you hear first, then press <strong>Check</strong>.'; return; }
+    if (g === a) { fb.className = 'dict-fb show ok'; fb.innerHTML = '<strong>Parfait&nbsp;!</strong> Exactly right &mdash; accents and all.'; return; }
+    var aw = a.split(' '), gw = g.split(' '), ab = aw.map(bare), gb = gw.map(bare);
+    var L = []; for (var i = 0; i <= gw.length; i++) { L.push([]); for (var j = 0; j <= aw.length; j++) L[i].push(0); }
+    for (i = gw.length - 1; i >= 0; i--) for (j = aw.length - 1; j >= 0; j--) L[i][j] = gb[i] === ab[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+    var cls = [], acc = 0; i = 0; j = 0;
+    while (i < gw.length && j < aw.length) {
+      if (gb[i] === ab[j]) { var ok = gw[i] === aw[j]; if (!ok) acc++; cls[i] = ok ? 'g' : 'o'; i++; j++; }
+      else if (L[i + 1][j] >= L[i][j + 1]) { cls[i] = 'r'; i++; } else { j++; }
+    }
+    for (; i < gw.length; i++) cls[i] = 'r';
+    var missing = aw.length - L[0][0], wrong = cls.filter(function (x) { return x === 'r'; }).length;
+    var shown = gw.map(function (x, n) { return '<span class="' + cls[n] + '">' + esc(x) + '</span>'; }).join(' ');
+    if (!missing && !wrong) {
+      fb.innerHTML = '<strong>Almost!</strong> Every word is right &mdash; check the accent' + (acc > 1 ? 's' : '') + ' on the underlined word' + (acc > 1 ? 's' : '') + ':<br>' + shown;
+    } else {
+      var tips = [];
+      if (wrong) tips.push('<span class="r">crossed-out</span> word' + (wrong > 1 ? 's are' : ' is') + ' not in the sentence');
+      if (missing) tips.push(missing + ' word' + (missing > 1 ? 's are' : ' is') + ' missing');
+      if (acc) tips.push('<span class="o">underlined</span> = right word, check the accent');
+      fb.innerHTML = '<strong>Not quite &mdash; play it again.</strong> <span class="g">Green</span> words are right; ' + tips.join('; ') + '.<br>' + shown;
+    }
+  });
+})();
+</script>
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>
