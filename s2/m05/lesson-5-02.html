@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   French 1 (0701320) · S2 Module 5 · Lesson 5.02 (Day 2 of 10)
   Official Optima interactive lesson template + French accents + integrated audio.
   Deployment: GitHub-hosted, embedded in Canvas. Delete .preview-banner before deploy.
@@ -71,64 +71,148 @@
     .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
     .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
 </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Renoir skin (Module 1 · Le Déjeuner des canotiers) ---- */
+  :root { --ink:#1d2a44; --gold:#b8892e; --gold-lt:#e9d39a; --cream:#fbf6ea; --paper:#f3ece0; --rule:#e2d6bb; --muted:#5e5a52; --wine:#8c2f39; }
+  body { background: var(--paper); }
+  .canvas-frame { background: #fffdf8; box-shadow: 0 4px 24px rgba(60,40,10,.12); }
+  .pl-serif, .pl-h3, .pl-title, .pl-tlabel { font-family: 'Cormorant Garamond', Garamond, Georgia, serif; }
+  /* hero */
+  .pl-hero { position: relative; }
+  .pl-band { height: 300px; background: url(img/m5-hero.jpg) center 45% / cover; position: relative; }
+  .pl-band::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,24,40,.55) 0%, rgba(20,24,40,0) 38%, rgba(255,253,248,0) 70%, #fffdf8 100%); }
+  .pl-brand { position: absolute; z-index: 1; top: 16px; left: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; letter-spacing: .04em; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .pl-brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; padding: 3px; box-sizing: border-box; }
+  .pl-brand b { font-weight: 600; display: block; }
+  .pl-brand small { display: block; font-size: 11.5px; letter-spacing: .06em; opacity: .9; }
+  .pl-where { display: inline-block; margin: 8px 0 0; padding: 3px 14px; border: 1px solid var(--rule); border-radius: 999px; background: var(--cream); font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--ink); }
+  .pl-titlecard { position: relative; z-index: 2; max-width: 720px; margin: -120px auto 0; background: #fffdf8; border: 1px solid var(--rule); outline: 1px solid var(--gold-lt); outline-offset: -7px; padding: 22px 28px 16px; text-align: center; box-shadow: 0 8px 22px rgba(60,40,10,.18); }
+  .pl-kick { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+  .pl-title { font-size: 50px; line-height: 1.05; font-weight: 600; font-style: normal; letter-spacing: .01em; color: var(--ink); margin: 6px 0 2px; }
+  .pl-sub { font-size: 17px; color: var(--muted); }
+  .pl-flourish { display: block; margin: 10px auto 2px; width: 340px; max-width: 80%; height: auto; }
+  .pl-caption { text-align: center; font-size: 13px; color: var(--muted); padding: 10px 16px 0; font-style: italic; }
+  .pl-tric { display: flex; width: 90px; height: 3px; margin: 10px auto 0; } .pl-tric i { flex: 1; } .pl-tric .b { background: #2b4c8c; } .pl-tric .w { background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); } .pl-tric .r { background: #a83232; }
+  /* cards */
+  .pl-card { position: relative; background: #fff; border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin: 0 0 34px; box-shadow: 0 1px 3px rgba(60,40,10,.06); }
+  .pl-card + .pl-card::before { content: ''; position: absolute; top: -26px; left: 50%; width: 90px; height: 16px; transform: translateX(-50%);
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 16' fill='none' stroke='%23b8892e' stroke-width='1.3' stroke-linecap='round'%3E%3Cpath d='M38 8 C 28 8, 18 3, 6 8'/%3E%3Cpath d='M52 8 C 62 8, 72 3, 84 8'/%3E%3Cpath d='M45 2 L50 8 L45 14 L40 8 Z' fill='%23b8892e' stroke='none'/%3E%3Ccircle cx='4' cy='8.5' r='1.6' fill='%23b8892e' stroke='none'/%3E%3Ccircle cx='86' cy='8.5' r='1.6' fill='%23b8892e' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .mw-check { background: var(--ink) !important; border-radius: 999px !important; border-bottom: 3px solid var(--gold) !important; }
+  /* "All Your Work" card (my-work.js sets inline styles, so these need !important). Renoir look, same function (David 2026-10-23). */
+  .mw-save { position: relative; background: var(--cream) !important; border: 1px solid var(--rule) !important; border-top: 3px solid var(--gold) !important; border-radius: 4px !important;
+      outline: 1px solid var(--gold-lt); outline-offset: -7px; padding: 26px 30px 22px !important; box-shadow: 0 4px 16px rgba(60,40,10,.10) !important; }
+  .mw-save > div[style*="font-size:22px"] { font-family: 'Cormorant Garamond', Garamond, Georgia, serif; font-size: 30px !important; font-weight: 600 !important; letter-spacing: .01em !important; color: var(--ink) !important; }
+  .mw-save > div[style*="font-size:22px"]::after { content: ''; display: block; width: 120px; height: 12px; margin: 6px 0 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' fill='none' stroke='%23b8892e' stroke-width='1.2'%3E%3Cpath d='M52 6 C42 6 30 2 8 6'/%3E%3Cpath d='M68 6 C78 6 90 2 112 6'/%3E%3Cpath d='M60 1 L64 6 L60 11 L56 6 Z' fill='%23b8892e' stroke='none'/%3E%3C/svg%3E") left center / contain no-repeat; }
+  .mw-save p { color: var(--muted) !important; }
+  .mw-save .mw-name { border: 1.5px solid var(--rule) !important; border-bottom: 2px solid var(--gold) !important; border-radius: 4px !important; background: #fffdf8 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px !important; color: var(--ink); }
+  .mw-save .mw-copy { background: #fff !important; color: var(--ink) !important; border: 1.5px solid var(--ink) !important; border-radius: 999px !important; }
+  .mw-save .mw-pdf { background: var(--ink) !important; border-radius: 999px !important; border-bottom: 3px solid var(--gold) !important; box-shadow: 0 3px 10px rgba(29,42,68,.25) !important; }
+  .mw-save .mw-copy:hover { background: var(--cream) !important; } .mw-save .mw-pdf:hover { background: #2a3b5e !important; }
+  .pl-kicker { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .pl-part { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .pl-num { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--gold); outline: 1px solid var(--gold-lt); outline-offset: 2px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: 0; color: var(--ink); background: var(--cream); }
+  .pl-h3 { font-size: 28px !important; font-weight: 600; color: var(--ink) !important; margin: 4px 0 10px !important; line-height: 1.15; }
+  .pill-time { background: transparent; color: var(--gold); border: 1px solid var(--gold); letter-spacing: .05em; text-transform: none; }
+  .rule-box { background: var(--cream); border: 1px solid var(--rule); border-left: 4px solid var(--gold); border-radius: 3px; }
+  .bangs, .gtable { border: 1px solid var(--rule); }
+  .bangs th, .gtable th { background: var(--cream); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 600; border-color: var(--rule); }
+  .bangs td, .gtable td { border-color: var(--rule); }
+  .bangs td .pron { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; color: var(--gold); }
+  .bangs tbody tr:nth-child(even), .gtable tbody tr:nth-child(even) { background: #fdfaf3; }
+  .vocab-item { background: var(--cream); border-color: var(--rule); }
+  .say { background: var(--ink); border-radius: 50%; min-width: 40px; width: 40px; height: 40px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--gold-lt); }
+  .say:hover { background: #2b3d63; } .say.playing { background: var(--gold); }
+  .reveal-btn, .spell-check, .go-btn { background: var(--ink); border-radius: 999px; border-bottom: 3px solid var(--gold); padding: 9px 20px; }
+  .reveal-btn:hover, .spell-check:hover, .go-btn:hover { background: #2b3d63; }
+  .optima-widget { background: #fff; border: 1px solid var(--rule); border-left: 4px solid #2b4c8c; border-radius: 4px; }
+  .widget-kicker { color: #2b4c8c; letter-spacing: .14em; text-transform: uppercase; font-size: 11.5px; }
+  .widget-options button { border-color: var(--rule); border-radius: 999px; }
+  .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
+  .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
+  .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
+  .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
+  /* Dans le tableau */
+  .pl-tableau { margin: 18px 0 6px; padding: 18px 20px 14px; background: linear-gradient(180deg, var(--cream), #fff); border: 1px solid var(--rule); border-radius: 4px; }
+  .pl-tlabel { font-size: 24px; font-style: italic; font-weight: 600; color: var(--ink); text-align: center; }
+  .pl-tlabel small { display: block; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+  .pl-tableau p { font-size: 17px; color: #1a2340; line-height: 1.6; margin: 8px 0 12px; text-align: center; }
+  .pl-vigs { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+  .pl-vig { flex: 0 1 200px; margin: 0; text-align: center; }
+  .pl-oval { position: relative; width: 170px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 5px solid var(--gold); outline: 2px solid #3b2a1a; outline-offset: 0; box-shadow: 0 0 0 7px var(--gold-lt), 0 6px 14px rgba(40,25,10,.35); }
+  .pl-oval img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .pl-vig:hover .pl-oval img { transform: scale(1.12); }
+  .pl-letter { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin: -18px auto 0; position: relative; z-index: 1; border-radius: 50%; background: var(--ink); color: var(--gold-lt); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; border: 2px solid var(--gold); }
+  .pl-phrase { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; color: var(--ink); margin-top: 4px; }
+  .pl-phrase b { color: var(--wine); }
+  .pl-gloss { font-size: 14px; color: var(--muted); }
+  .pl-say { margin-top: 10px; }
+  .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
+  .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
+  .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
+  .pl-opts button { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 600; color: var(--ink); background: #fff; border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+  .pl-opts button:hover { border-color: var(--gold); background: var(--cream); }
+  .pl-opts button.on, .pl-opts button.right { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .pl-opts button.wrong { border-color: var(--wine); color: var(--wine); text-decoration: line-through; }
+  .pl-fb { min-height: 20px; font-size: 14.5px; line-height: 1.45; margin-top: 6px; }
+  .pl-fb.ok { color: #2f6b4f; font-weight: 600; } .pl-fb.no { color: var(--wine); }
+  .pl-wide { max-width: 760px; margin: 0 auto; background: #3b2a1a; padding: 7px; border-radius: 3px; box-shadow: 0 5px 14px rgba(40,25,10,.3); line-height: 0; }
+  .pl-wide img { width: 100%; height: auto; border: 4px solid var(--gold); box-sizing: border-box; }
+  .pl-model { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; justify-content: center; }
+  .pl-model .pl-oval { margin: 0; flex: 0 0 auto; }
+  .pl-mtext { flex: 1 1 360px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; line-height: 1.6; color: var(--ink); }
+  .pl-mtext mark { background: none; padding: 0 2px; border-bottom: 3px solid; font-weight: 600; color: inherit; }
+  .m-irr { border-color: var(--gold) !important; } .m-bangs { border-color: var(--wine) !important; } .m-agr { border-color: #2b4c8c !important; } .m-faire { border-color: #2f6b4f !important; }
+  .pl-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+  .pl-legend span { border-bottom: 3px solid; padding-bottom: 1px; }
+  .pl-card .pc-head .pc-kick, .pl-card .ts-head .ts-kick { display: none; }
+  .pl-look { margin: 16px auto 2px; max-width: 620px; background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 10px 16px; font-size: 16px; color: #1a2340; }
+  .pl-look summary { cursor: pointer; color: #2b4c8c; font-weight: 600; margin-top: 6px; }
+  .pl-look summary::marker { color: var(--gold); }
+  .assess-card { background: #fff; border: 1px solid var(--rule); border-top: 4px solid var(--wine); border-radius: 4px; box-shadow: 0 1px 3px rgba(60,40,10,.06); }
+  .assess-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 27px !important; font-weight: 600; color: var(--ink); }
+  .activity-card { border-color: var(--rule); border-top-color: var(--gold); border-radius: 4px; }
+  .duebar { background: #fbf3f3; border-color: #ead2d5; border-left-color: var(--wine); border-radius: 4px; }
+  .pl-foot { background: var(--ink) !important; border-top: 3px solid var(--gold) !important; }
+  @media (max-width: 640px) {
+    .pl-band { height: 200px; } .pl-titlecard { margin: -70px 12px 0; padding: 16px 14px 12px; } .pl-title { font-size: 36px; }
+    .pl-card { padding: 18px 16px; } .pl-h3 { font-size: 24px !important; }
+  }
+</style>
 </head>
 <body>
 <div class="canvas-frame">
 
 <!-- ===== HEADER ===== -->
-<div data-ra-skip style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
-    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
-        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
-        <div>
-            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
-            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
-        </div>
-    </div>
-    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+<div class="pl-hero" data-ra-skip>
+  <div class="pl-band"><div class="pl-brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt=""><span><b>Optima Academy Online</b><small>An Education Experience Company</small></span></div></div>
+  <div class="pl-titlecard">
+    <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 5 &middot; La ville</div>
+    <div class="pl-where">Lesson 5.02 &middot; Day 2 of 8</div>
+    <h1 class="pl-title">Le pass&eacute; compos&eacute; avec &ecirc;tre</h1>
+    <div class="pl-sub">The Verbs of Movement &middot; about 50 minutes</div>
+    <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
+  </div>
+  <div class="pl-caption">Le tableau du module&nbsp;: Gustave Caillebotte, <em>Rue de Paris, temps de pluie</em> (<em>Paris Street; Rainy Day</em>), 1877</div>
 </div>
-<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
-
-<!-- ===== METADATA STRIP ===== -->
-<div data-ra-skip style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 5</div>
-        <div style="font-size: 12px; color: #666;">La ville &middot; City Life</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.02 &middot; Day 2 of 8</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
-        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Le pass&eacute; compos&eacute; avec &ecirc;tre</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
-        <div style="font-size: 16px; color: #0e1c42;">City Life</div>
-    </div>
-</div>
-
-<!-- ===== BODY WRAPPER ===== -->
 <div style="padding: 24px 34px;">
 
     <!-- Title strip -->
-    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.02</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Le pass&eacute; compos&eacute; avec &ecirc;tre &mdash; The Verbs of Movement</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
-    </div>
-
     <!-- Today's Focus -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+    <div class="pl-card">
+        <div class="pl-kicker">TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Yesterday you learned to move through the city. Today you learn to say you <em>did</em> &mdash; with a brand-new helper verb.</div>
         <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You'll finish the vocabulary with more movement verbs and city landmarks, then meet the idea that runs the whole module: a special group of verbs forms the past tense with <strong>&ecirc;tre</strong>, not <em>avoir</em>. They're the verbs of <strong>coming and going</strong> &mdash; and there's a famous name to help you remember them: <strong>DR MRS VANDERTRAMP</strong>. You'll finish with a short <strong>ear-quiz</strong> &mdash; hear a word, choose its meaning &mdash; the exact skill your Vocabulary Check rewards.</div>
     </div>
 
     <!-- Objectives -->
-    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+    <div class="pl-card">
+        <div class="pl-kicker">BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and pronounce the movement verbs and city landmarks (words 11&ndash;20).</div>
@@ -144,9 +228,9 @@
     </div>
 
     <!-- ===== PART 1 · Vocab set B ===== -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; LES VERBES &amp; LES LIEUX <span class="pill-time">13 min</span></div>
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Ten more words &mdash; listen, then repeat</h3>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">I</span><span>LES VERBES &amp; LES LIEUX</span><span class="pill-time">13 min</span></div>
+        <h3 class="pl-h3">Ten more words &mdash; listen, then repeat</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">The first five are more <strong>movement verbs</strong> (they'll all take <em>&ecirc;tre</em>); the last five are <strong>city landmarks and directions</strong> you need to narrate a trip. Click the <strong>&#128266;</strong> and say each one back.</p>
         <ul class="vocab-list">
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m5-entrer.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">entrer</span><span class="v-en">to enter</span></li>
@@ -168,9 +252,9 @@
     </div>
 
     <!-- ===== PART 2 · Grammar Rule 1 ===== -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129504; PART 2 &middot; LA GRAMMAIRE &mdash; LE PASS&Eacute; COMPOS&Eacute; AVEC &Ecirc;TRE <span class="pill-time">17 min</span></div>
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">A different helper for verbs of coming and going</h3>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">II</span><span>LA GRAMMAIRE &mdash; LE PASS&Eacute; COMPOS&Eacute; AVEC &Ecirc;TRE</span><span class="pill-time">17 min</span></div>
+        <h3 class="pl-h3">A different helper for verbs of coming and going</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Module 4 you built the past with <em>avoir</em>: <em>j'ai mang&eacute;</em>. But a small, important group of verbs &mdash; almost all describing <strong>movement or a change of state</strong> &mdash; uses <strong>&ecirc;tre</strong> as the helper instead: <em>je <strong>suis</strong> all&eacute;</em> (I went), not <em>j'ai all&eacute;</em>. To remember which verbs, learn the name <span style="border-bottom:2px solid #C7922C;">DR MRS VANDERTRAMP</span>.</p>
 
         <div class="drmrs">
@@ -218,8 +302,8 @@
     </div>
 
     <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 3 &middot; V&Eacute;RIFIE TA COMPR&Eacute;HENSION <span class="pill-time">10 min</span></div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">III</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the form of <em>&ecirc;tre</em> that matches the subject. You get instant feedback &mdash; this is practice, not a grade.</p>
 
         <div class="optima-widget ow-eval">
@@ -260,8 +344,8 @@
     </div>
 
     <!-- PART 1 · by-ear self-quiz -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127911; PART 4 &middot; QUIZ &Agrave; L'OREILLE <span class="pill-time">12 min</span></div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">12 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
 
         <div class="optima-widget ow-eval">
@@ -297,8 +381,8 @@
     </div>
 
     <!-- What You'll Do Next -->
-    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+    <div class="pl-card">
+        <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
@@ -315,8 +399,8 @@
     </div>
 
     <!-- Wrap-up -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute;&nbsp;! (Well done!)</div>
+    <div class="pl-card">
+        <div class="pl-kicker">BIEN JOU&Eacute;&nbsp;! (Well done!)</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have all twenty words and the big idea of the module: verbs of coming and going take <em>&ecirc;tre</em>. Hold onto DR MRS VANDERTRAMP &mdash; everything this week is built on it. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
@@ -324,8 +408,8 @@
 
 <!-- ===== FOOTER ===== -->
 <div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
-<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
-    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
+<div class="pl-foot" style="padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #e9d39a;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
     <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.02 &middot; Le pass&eacute; compos&eacute; avec &ecirc;tre</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
@@ -388,7 +472,7 @@
 </script>
 <script>
 (function () {
-  var AUDIO_BASE = '../../audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
+  var AUDIO_BASE = 'https://optimaondemand.github.io/french1-lessons/audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
   var player = new Audio();
   var active = null;
   function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
@@ -410,6 +494,8 @@
   });
 })();
 </script>
-<script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<!-- mywork -->
+<script src="../../my-work.js"></script>
 </body>
 </html>

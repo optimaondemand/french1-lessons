@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   French 1 (0701320) · S2 Module 4 · Lesson 4.04 (Day 4 of 10)
   Official Optima template + French accents + integrated audio. Widgets: evaluative (ow-eval) + reveal (dictation).
   Audio dictation reuses the generated grammar clips. Delete .preview-banner before deploy.
@@ -87,59 +87,153 @@
     .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
     .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
     .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
+    /* reminder strip: four graded assessments per module, no dates (David 2026-10-22) */
+    .due-strip { margin: 0 0 16px; padding: 10px 14px; background: #fbf6ea; border: 1px solid #e2d6bb; border-left: 4px solid #8c2f39; border-radius: 6px; font-size: 16px; line-height: 1.6; color: #1a2340; }
+    .due-chip { display: inline-block; margin: 2px 3px 2px 0; padding: 1px 10px; border-radius: 999px; border: 1px solid #c9a9ae; background: #fff; font-size: 14.5px; white-space: nowrap; }
+    .due-chip::before { content: '○  '; color: #b08b91; }
+    .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
+    .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
+    .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Renoir skin (Module 1 · Le Déjeuner des canotiers) ---- */
+  :root { --ink:#1d2a44; --gold:#b8892e; --gold-lt:#e9d39a; --cream:#fbf6ea; --paper:#f3ece0; --rule:#e2d6bb; --muted:#5e5a52; --wine:#8c2f39; }
+  body { background: var(--paper); }
+  .canvas-frame { background: #fffdf8; box-shadow: 0 4px 24px rgba(60,40,10,.12); }
+  .pl-serif, .pl-h3, .pl-title, .pl-tlabel { font-family: 'Cormorant Garamond', Garamond, Georgia, serif; }
+  /* hero */
+  .pl-hero { position: relative; }
+  .pl-band { height: 300px; background: url(img/m4-hero.jpg) center 55% / cover; position: relative; }
+  .pl-band::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,24,40,.55) 0%, rgba(20,24,40,0) 38%, rgba(255,253,248,0) 70%, #fffdf8 100%); }
+  .pl-brand { position: absolute; z-index: 1; top: 16px; left: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; letter-spacing: .04em; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .pl-brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; padding: 3px; box-sizing: border-box; }
+  .pl-brand b { font-weight: 600; display: block; }
+  .pl-brand small { display: block; font-size: 11.5px; letter-spacing: .06em; opacity: .9; }
+  .pl-where { display: inline-block; margin: 8px 0 0; padding: 3px 14px; border: 1px solid var(--rule); border-radius: 999px; background: var(--cream); font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--ink); }
+  .pl-titlecard { position: relative; z-index: 2; max-width: 720px; margin: -120px auto 0; background: #fffdf8; border: 1px solid var(--rule); outline: 1px solid var(--gold-lt); outline-offset: -7px; padding: 22px 28px 16px; text-align: center; box-shadow: 0 8px 22px rgba(60,40,10,.18); }
+  .pl-kick { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+  .pl-title { font-size: 50px; line-height: 1.05; font-weight: 600; font-style: normal; letter-spacing: .01em; color: var(--ink); margin: 6px 0 2px; }
+  .pl-sub { font-size: 17px; color: var(--muted); }
+  .pl-flourish { display: block; margin: 10px auto 2px; width: 340px; max-width: 80%; height: auto; }
+  .pl-caption { text-align: center; font-size: 13px; color: var(--muted); padding: 10px 16px 0; font-style: italic; }
+  .pl-tric { display: flex; width: 90px; height: 3px; margin: 10px auto 0; } .pl-tric i { flex: 1; } .pl-tric .b { background: #2b4c8c; } .pl-tric .w { background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); } .pl-tric .r { background: #a83232; }
+  /* cards */
+  .pl-card { position: relative; background: #fff; border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin: 0 0 34px; box-shadow: 0 1px 3px rgba(60,40,10,.06); }
+  .pl-card + .pl-card::before { content: ''; position: absolute; top: -26px; left: 50%; width: 90px; height: 16px; transform: translateX(-50%);
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 16' fill='none' stroke='%23b8892e' stroke-width='1.3' stroke-linecap='round'%3E%3Cpath d='M38 8 C 28 8, 18 3, 6 8'/%3E%3Cpath d='M52 8 C 62 8, 72 3, 84 8'/%3E%3Cpath d='M45 2 L50 8 L45 14 L40 8 Z' fill='%23b8892e' stroke='none'/%3E%3Ccircle cx='4' cy='8.5' r='1.6' fill='%23b8892e' stroke='none'/%3E%3Ccircle cx='86' cy='8.5' r='1.6' fill='%23b8892e' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .mw-check { background: var(--ink) !important; border-radius: 999px !important; border-bottom: 3px solid var(--gold) !important; }
+  /* "All Your Work" card (my-work.js sets inline styles, so these need !important). Renoir look, same function (David 2026-10-23). */
+  .mw-save { position: relative; background: var(--cream) !important; border: 1px solid var(--rule) !important; border-top: 3px solid var(--gold) !important; border-radius: 4px !important;
+      outline: 1px solid var(--gold-lt); outline-offset: -7px; padding: 26px 30px 22px !important; box-shadow: 0 4px 16px rgba(60,40,10,.10) !important; }
+  .mw-save > div[style*="font-size:22px"] { font-family: 'Cormorant Garamond', Garamond, Georgia, serif; font-size: 30px !important; font-weight: 600 !important; letter-spacing: .01em !important; color: var(--ink) !important; }
+  .mw-save > div[style*="font-size:22px"]::after { content: ''; display: block; width: 120px; height: 12px; margin: 6px 0 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' fill='none' stroke='%23b8892e' stroke-width='1.2'%3E%3Cpath d='M52 6 C42 6 30 2 8 6'/%3E%3Cpath d='M68 6 C78 6 90 2 112 6'/%3E%3Cpath d='M60 1 L64 6 L60 11 L56 6 Z' fill='%23b8892e' stroke='none'/%3E%3C/svg%3E") left center / contain no-repeat; }
+  .mw-save p { color: var(--muted) !important; }
+  .mw-save .mw-name { border: 1.5px solid var(--rule) !important; border-bottom: 2px solid var(--gold) !important; border-radius: 4px !important; background: #fffdf8 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px !important; color: var(--ink); }
+  .mw-save .mw-copy { background: #fff !important; color: var(--ink) !important; border: 1.5px solid var(--ink) !important; border-radius: 999px !important; }
+  .mw-save .mw-pdf { background: var(--ink) !important; border-radius: 999px !important; border-bottom: 3px solid var(--gold) !important; box-shadow: 0 3px 10px rgba(29,42,68,.25) !important; }
+  .mw-save .mw-copy:hover { background: var(--cream) !important; } .mw-save .mw-pdf:hover { background: #2a3b5e !important; }
+  .pl-kicker { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .pl-part { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .pl-num { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--gold); outline: 1px solid var(--gold-lt); outline-offset: 2px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: 0; color: var(--ink); background: var(--cream); }
+  .pl-h3 { font-size: 28px !important; font-weight: 600; color: var(--ink) !important; margin: 4px 0 10px !important; line-height: 1.15; }
+  .pill-time { background: transparent; color: var(--gold); border: 1px solid var(--gold); letter-spacing: .05em; text-transform: none; }
+  .rule-box { background: var(--cream); border: 1px solid var(--rule); border-left: 4px solid var(--gold); border-radius: 3px; }
+  .bangs, .gtable { border: 1px solid var(--rule); }
+  .bangs th, .gtable th { background: var(--cream); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 600; border-color: var(--rule); }
+  .bangs td, .gtable td { border-color: var(--rule); }
+  .bangs td .pron { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; color: var(--gold); }
+  .bangs tbody tr:nth-child(even), .gtable tbody tr:nth-child(even) { background: #fdfaf3; }
+  .vocab-item { background: var(--cream); border-color: var(--rule); }
+  .say { background: var(--ink); border-radius: 50%; min-width: 40px; width: 40px; height: 40px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--gold-lt); }
+  .say:hover { background: #2b3d63; } .say.playing { background: var(--gold); }
+  .reveal-btn, .spell-check, .go-btn { background: var(--ink); border-radius: 999px; border-bottom: 3px solid var(--gold); padding: 9px 20px; }
+  .reveal-btn:hover, .spell-check:hover, .go-btn:hover { background: #2b3d63; }
+  .optima-widget { background: #fff; border: 1px solid var(--rule); border-left: 4px solid #2b4c8c; border-radius: 4px; }
+  .widget-kicker { color: #2b4c8c; letter-spacing: .14em; text-transform: uppercase; font-size: 11.5px; }
+  .widget-options button { border-color: var(--rule); border-radius: 999px; }
+  .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
+  .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
+  .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
+  .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
+  /* Dans le tableau */
+  .pl-tableau { margin: 18px 0 6px; padding: 18px 20px 14px; background: linear-gradient(180deg, var(--cream), #fff); border: 1px solid var(--rule); border-radius: 4px; }
+  .pl-tlabel { font-size: 24px; font-style: italic; font-weight: 600; color: var(--ink); text-align: center; }
+  .pl-tlabel small { display: block; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+  .pl-tableau p { font-size: 17px; color: #1a2340; line-height: 1.6; margin: 8px 0 12px; text-align: center; }
+  .pl-vigs { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+  .pl-vig { flex: 0 1 200px; margin: 0; text-align: center; }
+  .pl-oval { position: relative; width: 170px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 5px solid var(--gold); outline: 2px solid #3b2a1a; outline-offset: 0; box-shadow: 0 0 0 7px var(--gold-lt), 0 6px 14px rgba(40,25,10,.35); }
+  .pl-oval img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .pl-vig:hover .pl-oval img { transform: scale(1.12); }
+  .pl-letter { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin: -18px auto 0; position: relative; z-index: 1; border-radius: 50%; background: var(--ink); color: var(--gold-lt); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; border: 2px solid var(--gold); }
+  .pl-phrase { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; color: var(--ink); margin-top: 4px; }
+  .pl-phrase b { color: var(--wine); }
+  .pl-gloss { font-size: 14px; color: var(--muted); }
+  .pl-say { margin-top: 10px; }
+  .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
+  .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
+  .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
+  .pl-opts button { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 600; color: var(--ink); background: #fff; border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+  .pl-opts button:hover { border-color: var(--gold); background: var(--cream); }
+  .pl-opts button.on, .pl-opts button.right { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .pl-opts button.wrong { border-color: var(--wine); color: var(--wine); text-decoration: line-through; }
+  .pl-fb { min-height: 20px; font-size: 14.5px; line-height: 1.45; margin-top: 6px; }
+  .pl-fb.ok { color: #2f6b4f; font-weight: 600; } .pl-fb.no { color: var(--wine); }
+  .pl-wide { max-width: 760px; margin: 0 auto; background: #3b2a1a; padding: 7px; border-radius: 3px; box-shadow: 0 5px 14px rgba(40,25,10,.3); line-height: 0; }
+  .pl-wide img { width: 100%; height: auto; border: 4px solid var(--gold); box-sizing: border-box; }
+  .pl-model { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; justify-content: center; }
+  .pl-model .pl-oval { margin: 0; flex: 0 0 auto; }
+  .pl-mtext { flex: 1 1 360px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; line-height: 1.6; color: var(--ink); }
+  .pl-mtext mark { background: none; padding: 0 2px; border-bottom: 3px solid; font-weight: 600; color: inherit; }
+  .m-irr { border-color: var(--gold) !important; } .m-bangs { border-color: var(--wine) !important; } .m-agr { border-color: #2b4c8c !important; } .m-faire { border-color: #2f6b4f !important; }
+  .pl-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+  .pl-legend span { border-bottom: 3px solid; padding-bottom: 1px; }
+  .pl-card .pc-head .pc-kick, .pl-card .ts-head .ts-kick { display: none; }
+  .pl-look { margin: 16px auto 2px; max-width: 620px; background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 10px 16px; font-size: 16px; color: #1a2340; }
+  .pl-look summary { cursor: pointer; color: #2b4c8c; font-weight: 600; margin-top: 6px; }
+  .pl-look summary::marker { color: var(--gold); }
+  .assess-card { background: #fff; border: 1px solid var(--rule); border-top: 4px solid var(--wine); border-radius: 4px; box-shadow: 0 1px 3px rgba(60,40,10,.06); }
+  .assess-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 27px !important; font-weight: 600; color: var(--ink); }
+  .activity-card { border-color: var(--rule); border-top-color: var(--gold); border-radius: 4px; }
+  .duebar { background: #fbf3f3; border-color: #ead2d5; border-left-color: var(--wine); border-radius: 4px; }
+  .pl-foot { background: var(--ink) !important; border-top: 3px solid var(--gold) !important; }
+  @media (max-width: 640px) {
+    .pl-band { height: 200px; } .pl-titlecard { margin: -70px 12px 0; padding: 16px 14px 12px; } .pl-title { font-size: 36px; }
+    .pl-card { padding: 18px 16px; } .pl-h3 { font-size: 24px !important; }
+  }
 </style>
 </head>
 <body>
 <div class="canvas-frame">
 
-<div data-ra-skip style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
-    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
-        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
-        <div>
-            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
-            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
-        </div>
-    </div>
-    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+<div class="pl-hero" data-ra-skip>
+  <div class="pl-band"><div class="pl-brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt=""><span><b>Optima Academy Online</b><small>An Education Experience Company</small></span></div></div>
+  <div class="pl-titlecard">
+    <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 4 &middot; Le temps libre</div>
+    <div class="pl-where">Lesson 4.04 &middot; Day 4 of 8</div>
+    <h1 class="pl-title">Mise en pratique</h1>
+    <div class="pl-sub">Negation &amp; the Verb <em>venir</em> &middot; about 50 minutes</div>
+    <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
+  </div>
+  <div class="pl-caption">Le tableau du module&nbsp;: Georges Seurat, <em>Un dimanche apr&egrave;s-midi &agrave; l&rsquo;&icirc;le de la Grande Jatte</em> (<em>A Sunday Afternoon on the Island of La Grande Jatte</em>), 1884&ndash;86</div>
 </div>
-<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
-
-<div data-ra-skip style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 4</div>
-        <div style="font-size: 12px; color: #666;">Le temps libre</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.04 &middot; Day 4 of 8</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
-        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">N&eacute;gation au pass&eacute; &amp; venir</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
-        <div style="font-size: 16px; color: #0e1c42;">Leisure &amp; the Past</div>
-    </div>
-</div>
-
 <div style="padding: 24px 34px;">
 
-    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.04</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Mise en pratique &mdash; Negation &amp; the Verb <em>venir</em></div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
-    </div>
-
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+    <div class="pl-card">
+        <div class="due-strip" role="note">&#128204; <strong>Module 4 has four graded assessments</strong> to complete before you move on to Module 5: <span class="due-chip" data-key="vocab">Vocabulary Check</span><span class="due-chip" data-key="lea">Langue en action</span><span class="due-chip" data-key="speak">Speaking Task</span><span class="due-chip" data-key="gram">Grammar Quiz</span><span class="due-sub">You take them on Days 6&ndash;8, and you can tick each one off there once it is submitted.</span></div>
+        <div class="pl-kicker">TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You can say what you did. Now: how to say what you <em>didn't</em> do &mdash; and one new present-tense verb to carry into the story.</div>
         <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In the pass&eacute; compos&eacute;, <strong>ne&hellip;pas</strong> wraps around <strong>avoir</strong>, not the participle: <em>je <strong>n'ai pas</strong> regard&eacute;</em>. Then you'll meet <strong>venir</strong> (to come) in the present. Finally you'll choose, write, and listen to a dictation and write down what you hear &mdash; the bridge from hearing French to producing it. You'll close with two short practice rounds that mix avoir, participles and negation.</div>
     </div>
 
-    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+    <div class="pl-card">
+        <div class="pl-kicker">BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> make a pass&eacute; compos&eacute; sentence negative (<em>n'ai pas</em>) and conjugate <em>venir</em> in the present.</div>
@@ -155,8 +249,8 @@
     </div>
 
     <!-- PART 1 · Negation + venir teaching -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129504; PART 1 &middot; LA N&Eacute;GATION &amp; VENIR <span class="pill-time">12 min</span></div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">I</span><span>LA N&Eacute;GATION &amp; VENIR</span><span class="pill-time">12 min</span></div>
         <div class="rule-box"><strong>Negation.</strong> In the pass&eacute; compos&eacute;, <strong>ne</strong> and <strong>pas</strong> wrap around <u>avoir</u> &mdash; the participle stays outside: <em>je <strong>n'ai pas</strong> regard&eacute; la t&eacute;l&eacute;</em>. (Remember: <em>ne</em> becomes <em>n'</em> before <em>ai</em>.) <em>la t&eacute;l&eacute;</em> (TV) is short for <em>la t&eacute;l&eacute;vision</em>.</div>
         <div class="rule-box"><strong>D&eacute;j&agrave; and jamais.</strong> These small words take the same slot as <strong>pas</strong>: right after <u>avoir</u>, before the participle. <em>J'ai <strong>d&eacute;j&agrave;</strong> mang&eacute;</em> (I've already eaten) &middot; <em>Je n'ai <strong>jamais</strong> visit&eacute; Paris</em> (I've never visited Paris). Never at the end: <s>j'ai mang&eacute; d&eacute;j&agrave;</s>.</div>
         <ul class="vocab-list">
@@ -178,8 +272,8 @@
     </div>
 
     <!-- PART 2 · Evaluative widget -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 2 &middot; CHOISIS LA BONNE FORME <span class="pill-time">10 min</span></div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">II</span><span>CHOISIS LA BONNE FORME</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Four sentences. Pick the form that fits. Instant feedback &mdash; practice, not a grade.</p>
 
         <div class="optima-widget ow-eval">
@@ -232,9 +326,9 @@
     </div>
 
     <!-- PART 3 · Self-produce -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 3 &middot; &Agrave; TOI D'&Eacute;CRIRE <span class="pill-time">8 min</span></div>
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write three sentences about your last weekend</h3>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">III</span><span>&Agrave; TOI D'&Eacute;CRIRE</span><span class="pill-time">8 min</span></div>
+        <h3 class="pl-h3">Write three sentences about your last weekend</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In your notebook, write <strong>three</strong> true sentences in the pass&eacute; compos&eacute; about <em>le week-end dernier</em>. Make one of them <strong>negative</strong> (<em>je n'ai pas&hellip;</em>) and use at least one time expression (<em>hier soir, samedi</em>).</p>
         <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
             <strong>Model:</strong> <em>Le week-end dernier, j'ai jou&eacute; aux jeux vid&eacute;o et j'ai &eacute;cout&eacute; de la musique. Samedi, j'ai fait du sport avec mes amis. Je n'ai pas regard&eacute; la t&eacute;l&eacute;&nbsp;!</em>
@@ -243,9 +337,9 @@
     </div>
 
     <!-- PART 4 · Audio dictation -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127911; PART 4 &middot; LA DICT&Eacute;E <span class="pill-time">10 min</span></div>
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Hear it, type it, check it</h3>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>LA DICT&Eacute;E</span><span class="pill-time">10 min</span></div>
+        <h3 class="pl-h3">Hear it, type it, check it</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Play each clip (as many times as you need). Type exactly what you hear &mdash; accents and all &mdash; <em>then</em> press <strong>Check</strong>. Use <strong>Reveal</strong> only after you have tried. Don't reveal early; the struggle is the learning.</p>
 
         <div class="dict-acc" data-ra-skip>Accents: <button type="button">é</button><button type="button">è</button><button type="button">ê</button><button type="button">à</button><button type="button">â</button><button type="button">ç</button><button type="button">ô</button><button type="button">î</button><button type="button">ï</button><button type="button">û</button><button type="button">ù</button><button type="button">ë</button><button type="button">œ</button> <span>&mdash; click a box first, then a letter.</span></div>
@@ -291,10 +385,10 @@
 
     <div class="activity-card">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
-            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <div class="pl-h3" style="margin:0 !important">Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
         </div>
-        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">PASS&Eacute; COMPOS&Eacute; WITH AVOIR <span class="pill-time">12 min</span></div>
+        <div class="pl-kicker">PASS&Eacute; COMPOS&Eacute; WITH AVOIR <span class="pill-time">12 min</span></div>
         <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 4&rsquo;s grammar: building the pass&eacute; compos&eacute; with <em>avoir</em>, and placing the negation.</div>
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
@@ -379,33 +473,36 @@
 
     <div class="activity-card">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
-            <div style="font-size: 20px; color: #0e1c42;">&#9889; D&eacute;fi &eacute;clair</div>
+            <div class="pl-h3" style="margin:0 !important">D&eacute;fi &eacute;clair</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
         </div>
-        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
+        <div class="pl-kicker">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
         <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal the answer.</div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
             <div class="widget-question">Say it in French: <em>Last weekend I watched a film.</em></div>
-            <button class="reveal-btn">Reveal the answer</button>
+            <textarea data-mw-added class="journal-box" id="mw-l4-04-r6" data-mw-gate="l4-04-r6" lang="fr" data-label="Say it in French: Last weekend I watched a film." data-model="Le week-end dernier, j’ai regardé un film" rows="2" placeholder="Write it here in French. The answer unlocks once you have written it." style="display:block;width:100%;max-width:560px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;margin:6px 0 8px"></textarea><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l4-04-r6">Reveal the answer</button>
             <div class="reveal-body"><strong>Le week-end dernier, j&rsquo;ai regard&eacute; un film.</strong><br><span style="font-size:15px;color:#41506b;">avoir + past participle.</span></div>
         </div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
             <div class="widget-question">Make it negative: <em>J&rsquo;ai fait mes devoirs.</em></div>
-            <button class="reveal-btn">Reveal the answer</button>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Make it negative: J’ai fait mes devoirs.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-04-r7" data-answer="Je n’ai pas fait mes devoirs" aria-label="Make it negative: J’ai fait mes devoirs." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l4-04-r7">Reveal the answer</button>
             <div class="reveal-body"><strong>Je n&rsquo;ai pas fait mes devoirs.</strong><br><span style="font-size:15px;color:#41506b;">ne and pas wrap the auxiliary, not the participle.</span></div>
         </div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
             <div class="widget-question">Say it in French: <em>We ate a big pizza.</em></div>
-            <button class="reveal-btn">Reveal the answer</button>
+            <textarea data-mw-added class="journal-box" id="mw-l4-04-r8" data-mw-gate="l4-04-r8" lang="fr" data-label="Say it in French: We ate a big pizza." data-model="Nous avons mangé une grande pizza" rows="2" placeholder="Write it here in French. The answer unlocks once you have written it." style="display:block;width:100%;max-width:560px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;margin:6px 0 8px"></textarea><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l4-04-r8">Reveal the answer</button>
             <div class="reveal-body"><strong>Nous avons mang&eacute; une grande pizza.</strong><br><span style="font-size:15px;color:#41506b;">grande is a BANGS adjective, so it comes before the noun.</span></div>
         </div>
     </div>
 
-    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+    <div class="pl-card">
+        <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
@@ -420,16 +517,16 @@
         <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Keep your three sentences from Part 3 &mdash; they become the backbone of your Speaking Task.</div>
     </div>
 
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; TU PRODUIS DU FRAN&Ccedil;AIS&nbsp;! (You&rsquo;re producing French!)</div>
+    <div class="pl-card">
+        <div class="pl-kicker">TU PRODUIS DU FRAN&Ccedil;AIS&nbsp;! (You&rsquo;re producing French!)</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You didn't just recognize the past today &mdash; you negated it, wrote it, and pulled it out of the air by ear. That's the whole skill in miniature &mdash; and the end of Week 1. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em> (Have a good weekend &mdash; see you Monday!)</p>
     </div>
 
 </div>
 
 <div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
-<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
-    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
+<div class="pl-foot" style="padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #e9d39a;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
     <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.04 &middot; N&eacute;gation au pass&eacute; &amp; venir</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
@@ -487,7 +584,7 @@
 </script>
 <script>
 (function () {
-  var AUDIO_BASE = '../../audio/';
+  var AUDIO_BASE = 'https://optimaondemand.github.io/french1-lessons/audio/';
   var player = new Audio();
   var active = null;
   function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
@@ -634,6 +731,12 @@
   });
 })();
 </script>
-<script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script>/* reminder strip: show which of the four the student has ticked on the assessment days (same device) */
+(function () { var st = {}; try { st = JSON.parse(localStorage.getItem('optima-fr1-s2-m4-due')) || {}; } catch (e) {}
+  [].forEach.call(document.querySelectorAll('.due-chip'), function (c) { c.classList.toggle('on', !!st[c.dataset.key]); }); })();
+</script>
+<!-- mywork -->
+<script src="../../my-work.js"></script>
 </body>
 </html>
