@@ -45,6 +45,43 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
+    .activity-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 14px 0; }
+    .go-btn { display:inline-block; background:#0E1C42; color:#fff; text-decoration:none; border-radius:8px; padding:11px 22px; font-size:16px; margin-top:12px; }
+    .go-btn:hover { background:#1B3A6B; }
+    .practice-badge { display:inline-block; background:#2A9D5C; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; }
+    .fmt { font-size:16px; color:#1a2340; line-height:1.7; }
+    .fmt li { margin-bottom:5px; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    <!-- S2 DRILL CSS -->
+.widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
+    .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
+    .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
 </style>
 </head>
 <body>
@@ -70,7 +107,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,21 +122,32 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.05 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Une journ&eacute;e en ville &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See a whole day in the city told in the past &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Julie narrates a Saturday in town with her sister. Every verb of coming and going is an <em>&ecirc;tre</em> verb, and because Julie is a woman, watch the agreement endings pile up: <em>all&eacute;e, parties, mont&eacute;es, descendues&hellip;</em> Read <em>and</em> listen, then step back to see how one man rebuilt the most famous city in the world.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Julie narrates a Saturday in town with her sister. Every verb of coming and going is an <em>&ecirc;tre</em> verb, and because Julie is a woman, watch the agreement endings pile up: <em>all&eacute;e, parties, mont&eacute;es, descendues&hellip;</em> Read <em>and</em> listen, then step back to see how one man rebuilt the most famous city in the world. You'll finish by writing <strong>your own</strong> trip through the city &mdash; your rehearsal for tomorrow's Langue en action and the Speaking Task &mdash; and a quick vocabulary recall before tomorrow's Vocabulary Check.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words glossed before you read, so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>samedi dernier</b> &mdash; last Saturday</li>
+            <li><b>ma s&oelig;ur</b> &mdash; my sister</li>
+            <li><b>apr&egrave;s</b> &mdash; after / afterward</li>
+            <li><b>pr&egrave;s de</b> &mdash; near</li>
+            <li><b>mes amies</b> &mdash; my (female) friends</li>
+            <li><b>ensemble</b> &mdash; together</li>
+            <li><b>tr&egrave;s tard</b> &mdash; very late</li>
+            <li><b>Quelle belle journ&eacute;e&nbsp;!</b> &mdash; What a lovely day!</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m5-ville-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Samedi dernier, je suis all&eacute;e en ville avec ma s&oelig;ur. Nous sommes parties de la maison &agrave; dix heures.</p></div>
@@ -115,17 +163,6 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every &ecirc;tre verb</strong> and <strong>underline its agreement ending</strong>. You should find seven. Ask yourself <em>why</em> every ending has an extra <em>-e</em> or <em>-es</em> &mdash; who is telling this story?</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words glossed here so the passage reads smoothly:</div>
-        <ul class="gloss">
-            <li><b>samedi dernier</b> &mdash; last Saturday</li>
-            <li><b>ma s&oelig;ur</b> &mdash; my sister</li>
-            <li><b>apr&egrave;s</b> &mdash; after / afterward</li>
-            <li><b>pr&egrave;s de</b> &mdash; near</li>
-            <li><b>mes amies</b> &mdash; my (female) friends</li>
-            <li><b>ensemble</b> &mdash; together</li>
-            <li><b>tr&egrave;s tard</b> &mdash; very late</li>
-            <li><b>Quelle belle journ&eacute;e&nbsp;!</b> &mdash; What a lovely day!</li>
-        </ul>
     </div>
 
     <!-- PART 3 · Culture -->
@@ -145,34 +182,138 @@
             <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question">Avec qui Julie est-elle all&eacute;e en ville&nbsp;?</div>
+                <div class="widget-question"><em>Avec qui</em> (With whom) est-ce que Julie est all&eacute;e en ville&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 1.">Avec son fr&egrave;re</button>
+                    <button data-no="Reread paragraph 1.">Avec son fr&egrave;re</button>
                     <button data-correct="1" data-ok="Oui &mdash; avec sa s&oelig;ur.">Avec sa s&oelig;ur</button>
-                    <button data-no="Ses amies arrivent l'apr&egrave;s-midi, plus tard.">Avec ses amies</button>
+                    <button data-no="Her friends arrive later, in the afternoon.">Avec ses amies</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Comment sont-elles all&eacute;es au centre-ville&nbsp;?</div>
+                <div class="widget-question"><em>Comment</em> (How) est-ce qu'elles sont all&eacute;es au centre-ville&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Elles ne sont pas all&eacute;es &agrave; pied.">&Agrave; pied</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; elles sont mont&eacute;es dans le bus.">En bus</button>
-                    <button data-no="Le train n'est pas mentionn&eacute;.">En train</button>
+                    <button data-no="They did not go on foot.">&Agrave; pied</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (That&rsquo;s it!) &mdash; elles sont mont&eacute;es dans le bus.">En bus</button>
+                    <button data-no="The train is not mentioned.">En train</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">&Agrave; quelle heure Julie est-elle rentr&eacute;e&nbsp;?</div>
+                <div class="widget-question">&Agrave; quelle heure est-ce que Julie est rentr&eacute;e&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Exact &mdash; elle est rentr&eacute;e tr&egrave;s tard.">Tr&egrave;s tard</button>
-                    <button data-no="C'est l'heure du d&eacute;part, pas du retour.">&Agrave; dix heures</button>
-                    <button data-no="Relis la fin du paragraphe 3.">T&ocirc;t le matin</button>
+                    <button data-correct="1" data-ok="Exact (Right!) &mdash; elle est rentr&eacute;e tr&egrave;s tard.">Tr&egrave;s tard</button>
+                    <button data-no="That is when they left, not when Julie came home.">&Agrave; dix heures</button>
+                    <button data-no="Reread the end of paragraph 3.">T&ocirc;t le matin</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; TON TRAJET EN VILLE <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences narrating a trip through a city</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Tell the story in order. Use at least <strong>five &ecirc;tre verbs</strong>, one <strong>negative</strong>, one <strong>transport</strong> word, and one <strong>landmark</strong>. This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; right helper (&ecirc;tre) on every movement verb &nbsp;&#9633; agreement ending matches the subject &nbsp;&#9633; <em>ne&hellip;pas</em> wraps the helper &nbsp;&#9633; a transport word &nbsp;&#9633; a landmark.
+        </div>
+    </div>
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">RECALL + CHOOSE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question"><em>Le centre-ville</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! the city centre.">downtown</button>
+                <button data-no="That&rsquo;s la place.">the square</button>
+                <button data-no="That&rsquo;s le pont.">the bridge</button>
+                <button data-no="That&rsquo;s l&rsquo;arr&ecirc;t.">the bus stop</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Which means <em>on foot</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s by car.">en voiture</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! (Right!) &agrave; pied.">&agrave; pied</button>
+                <button data-no="That&rsquo;s by train.">en train</button>
+                <button data-no="That&rsquo;s by bus.">en bus</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question"><em>L&rsquo;arr&ecirc;t</em> is where you&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Not what the word means.">meet friends</button>
+                <button data-no="That&rsquo;s for le plan.">buy a map</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! l&rsquo;arr&ecirc;t de bus.">wait for the bus</button>
+                <button data-no="That&rsquo;s le pont.">cross the river</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Which verb means <em>to go down / get off</em>?</div>
+            <div class="widget-options">
+                <button data-no="That means to go up or get on.">monter</button>
+                <button data-no="That means to return home.">rentrer</button>
+                <button data-no="That means to stay.">rester</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! descendre.">descendre</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question"><em>Loin de</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! loin de.">far from</button>
+                <button data-no="Not quite &mdash; loin de means far away, not next to.">next to</button>
+                <button data-no="Not quite &mdash; loin de means far away, not in front.">in front of</button>
+                <button data-no="Not quite &mdash; loin de means far away, not behind.">behind</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Which one means <em>the bridge</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s the square.">la place</button>
+                <button data-correct="1" data-ok="Oui ! le pont = the bridge.">le pont</button>
+                <button data-no="That&rsquo;s the (city) map.">le plan</button>
+                <button data-no="That&rsquo;s the tram.">le tramway</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Which verb means <em>to go out</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s to enter.">entrer</button>
+                <button data-no="That&rsquo;s to return home.">rentrer</button>
+                <button data-correct="1" data-ok="Exact ! sortir = to go out.">sortir</button>
+                <button data-no="That&rsquo;s to leave.">partir</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
     </div>
 
@@ -181,20 +322,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 5.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and the &ecirc;tre rules together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 5.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your &ecirc;tre table is solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Julie's day in three sentences of your own, out loud, keeping the feminine agreement? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Julie's day in three sentences of your own, out loud, keeping the feminine agreement? Try it before the Speaking Task on Day 7.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full day in the city and understood it &mdash; every verb was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full day in the city and understood it &mdash; every verb was one you learned in Week 1. That's real reading, not decoding &mdash; and your own trip is ready for the graded work. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -216,7 +357,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -226,16 +379,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -260,7 +422,87 @@
   });
 })();
 </script>
+<script>
+/* S2 spelling checker - STRICT on accents (David 2026-09-28: demands high; the graded quiz keeps its leeway). */
+(function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/[’`´]/g, "'").replace(/ /g, ' ')
+      .replace(/\s+/g, ' ').trim().toLowerCase()
+      .replace(/\s*[.?!]$/, '');  /* a missing final full stop or question mark is not an error */
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
 
+  function judge(got, target) {
+    if (!got) return 'empty';
+    if (got === target) return 'perfect';
+    if (deacc(got) === deacc(target)) return 'accent';
+    if (dropArt(target) !== target && (got === dropArt(target) || deacc(got) === deacc(dropArt(target)))) return 'article';
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return 'hyphen';
+    if (target.indexOf('-') >= 0 && deacc(got.replace(/[-\s]/g, '')) === deacc(target.replace(/[-\s]/g, ''))) return 'hyphen';  /* weekend for week-end */
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return 'apostrophe';
+    return 'no';
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var shown = el.dataset.answer;
+    var v = judge(norm(input.value), norm(shown));
+    var tries = parseInt(el.dataset.tries || '0', 10) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 ? ' <span style="color:#41506b;">The answer: <strong>' + shown + '</strong></span>' : '';
+    if (v === 'empty') { setFb(el, 'fb-warn', 'Type something first.'); return; }
+    if (v === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;!</strong> (Perfect!) ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v === 'accent') {
+      setFb(el, 'fb-no', '<strong>Check the accents.</strong> The letters are right, but an accent is missing or wrong. ' +
+        'The accent is part of the spelling, like a letter &mdash; copy it from the accent strip under the box.' + tail);
+    } else if (v === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Learn the word with its article.' + tail);
+    } else if (v === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong>' + tail);
+    } else if (v === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong>' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Not yet. Try again.' + tail);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var sc = e.target.closest('.ow-spell .spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
+    var rs = e.target.closest('.ow-spell .widget-reset');
+    if (rs) {
+      var w = rs.closest('.optima-widget');
+      var inp = w.querySelector('.spell-input');
+      inp.value = ''; inp.classList.remove('ok', 'no');
+      var fb = w.querySelector('.widget-feedback');
+      fb.className = 'widget-feedback'; fb.innerHTML = '';
+      delete w.dataset.tries;
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
+    }
+  });
+})();
+</script>
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

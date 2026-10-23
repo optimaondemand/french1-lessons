@@ -49,6 +49,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -74,7 +87,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 9.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 9.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -89,15 +102,15 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 9.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 9.05 &middot; Semaine 2 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> &Ecirc;tre fran&ccedil;ais &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A learner reflects on a whole year of French &mdash; and you meet the Republic that stands behind the language.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today's passage answers this module's question: <em>Qu'est-ce qu'&ecirc;tre fran&ccedil;ais&nbsp;?</em> It uses your new words and your synthesis grammar, all at once. Read <em>and</em> listen, then step back to the motto and symbols of France &mdash; and see how a year of French figures maps onto Optima's own seven virtues.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today's passage answers this module's question: <em>Qu'est-ce qu'&ecirc;tre fran&ccedil;ais&nbsp;?</em> It uses your new words and your synthesis grammar, all at once. Read <em>and</em> listen, then step back to the motto and symbols of France &mdash; and see how a year of French figures maps onto Optima's own seven virtues. You'll finish by writing your own reflection on the year &mdash; your rehearsal for tomorrow's graded work, the Speaking Task, and the Final.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
@@ -105,6 +118,17 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; eye and ear together is where fluency lives.</p>
 
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words glossed so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>j'ai appris</b> &mdash; I learned</li>
+            <li><b>au d&eacute;but</b> &mdash; at the start</li>
+            <li><b>tr&egrave;s peu</b> &mdash; very little</li>
+            <li><b>mieux</b> &mdash; better</li>
+            <li><b>un jour</b> &mdash; one day / someday</li>
+            <li><b>retourner</b> &mdash; to return / go back</li>
+            <li><b>les endroits</b> &mdash; the places</li>
+            <li><b>Vive la France&nbsp;!</b> &mdash; Long live France!</li>
+        </ul>
         <button class="play-bar" data-audio="passage/s2m9-identite-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Qu'est-ce que c'est, &ecirc;tre fran&ccedil;ais&nbsp;? Pour moi, c'est la langue, la culture et les traditions. La devise de la France est &laquo;&nbsp;Libert&eacute;, &Eacute;galit&eacute;, Fraternit&eacute;&nbsp;&raquo;.</p></div>
 
@@ -118,17 +142,7 @@
     <!-- PART 2 · Annotate + glossary -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>underline every pass&eacute; compos&eacute;</strong> (<em>j'ai appris, j'ai visit&eacute;, j'ai d&eacute;couvert</em>) and <strong>circle the one imparfait</strong> (<em>je parlais</em>). Then find the <strong>superlative</strong> and the <strong>object pronoun</strong> &mdash; every grammar point of this module is in here.</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words glossed so the passage reads smoothly:</div>
-        <ul class="gloss">
-            <li><b>au d&eacute;but</b> &mdash; at the start</li>
-            <li><b>tr&egrave;s peu</b> &mdash; very little</li>
-            <li><b>mieux</b> &mdash; better</li>
-            <li><b>un jour</b> &mdash; one day / someday</li>
-            <li><b>retourner</b> &mdash; to return / go back</li>
-            <li><b>les endroits</b> &mdash; the places</li>
-            <li><b>Vive la France&nbsp;!</b> &mdash; Long live France!</li>
-        </ul>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>underline every pass&eacute; compos&eacute;</strong> (<em>j'ai appris, j'ai visit&eacute;, j'ai d&eacute;couvert</em>) and <strong>circle the one imparfait</strong> (<em>je parlais</em>). Then find the <strong>superlative</strong> and the <em>voudrais</em> wish &mdash; both of this module's new grammar points are in here.</p>
     </div>
 
     <!-- PART 3 · Culture -->
@@ -167,11 +181,11 @@
             <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question">Selon l'auteure, qu'est-ce qu'&ecirc;tre fran&ccedil;ais&nbsp;?</div>
+                <div class="widget-question"><em>Selon l'auteure</em> (according to the author), qu'est-ce qu'&ecirc;tre fran&ccedil;ais&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 1.">Seulement le drapeau</button>
+                    <button data-no="Read paragraph 1 again.">Seulement le drapeau</button>
                     <button data-correct="1" data-ok="Oui &mdash; la langue, la culture et les traditions.">La langue, la culture et les traditions</button>
-                    <button data-no="La cuisine est une partie, mais pas la r&eacute;ponse compl&egrave;te.">Seulement la cuisine</button>
+                    <button data-no="Food is one part, but not the complete answer.">Seulement la cuisine</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -179,9 +193,9 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Comment l'auteure parlait-elle <em>au d&eacute;but</em> de l'ann&eacute;e&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; &laquo; je parlais tr&egrave;s peu &raquo;.">Elle parlait tr&egrave;s peu</button>
-                    <button data-no="C'est vrai maintenant, pas au d&eacute;but.">Elle parlait tr&egrave;s bien</button>
-                    <button data-no="Le texte dit qu'elle parlait peu, pas qu'elle ne parlait jamais.">Elle ne parlait jamais</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (There you go!) &mdash; &laquo; je parlais tr&egrave;s peu &raquo;.">Elle parlait tr&egrave;s peu</button>
+                    <button data-no="True now &mdash; not at the start.">Elle parlait tr&egrave;s bien</button>
+                    <button data-no="The text says she spoke little &mdash; not that she never spoke.">Elle ne parlait jamais</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -189,12 +203,22 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Qu'est-ce qu'elle voudrait faire un jour&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Elle a d&eacute;j&agrave; visit&eacute; Paris cette ann&eacute;e.">Visiter Paris pour la premi&egrave;re fois</button>
-                    <button data-no="Le texte ne parle pas d'habiter en France.">Habiter en France pour toujours</button>
-                    <button data-correct="1" data-ok="Exact &mdash; retourner en France et voir les plus beaux endroits.">Retourner en France et voir les plus beaux endroits</button>
+                    <button data-no="She already visited Paris this year.">Visiter Paris cette ann&eacute;e</button>
+                    <button data-no="The text doesn't talk about living in France.">Habiter en France pour toujours</button>
+                    <button data-correct="1" data-ok="Exact (Right!) &mdash; retourner en France et voir les plus beaux endroits.">Retourner en France et voir les plus beaux endroits</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; TON ANN&Eacute;E EN FRAN&Ccedil;AIS <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences on what French has meant to you</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Reflect on the year. Use at least one <strong>superlative</strong> (<em>le plus, le meilleur</em>), one <strong>voudrais</strong> wish, one <strong>pass&eacute; compos&eacute;</strong>, and one <strong>imparfait</strong>. This is your rehearsal for both the Speaking Task and the Semester 2 Final &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; a superlative (<em>le plus / le meilleur</em>) &nbsp;&#9633; a <em>voudrais</em> wish &nbsp;&#9633; one pass&eacute; compos&eacute; &nbsp;&#9633; one imparfait &nbsp;&#9633; one identity word (<em>la culture, la devise, le patrimoine&hellip;</em>).
         </div>
     </div>
 
@@ -203,20 +227,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 9.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and both grammar points together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 9.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and the superlative is solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you say, in one sentence of your own, what being French means to the author &mdash; and one virtue you'll carry forward? Try it out loud before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you say, in one sentence of your own, what being French means to the author &mdash; and one virtue you'll carry forward? Try it out loud before tomorrow's assessments.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a whole reflection on French identity and understood it &mdash; grammar, culture, and virtue in one page. That's reading at the top of French 1. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a whole reflection on French identity and understood it &mdash; grammar, culture, and virtue in one page. That's reading at the top of French 1. Tomorrow is an assessment day &mdash; <em>&agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -238,7 +262,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -248,16 +284,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -282,7 +327,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

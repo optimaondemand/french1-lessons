@@ -1,8 +1,7 @@
 ﻿<!--
-  French 1 (0701320) · S2 Module 4 · Lesson 4.08 (Day 8 of 10) — DUE DAY.
-  Phonétique clinic (reuses grammar clips: participle endings + j'ai liaison) + Speaking Task (15 pts, Canvas media recording).
-  The Speaking Task is submitted via the Canvas media-recording assignment; this page briefs + links out.
-  Official Optima template + French accents. Delete .preview-banner before deploy.
+  French 1 (0701320) · S2 Module 4 · Lesson 4.08 (Day 10 of 10) — DUE DAY, module close.
+  Pre-quiz listening warm-up (reuses passage + grammar clips) + Grammar Quiz (30 pts, Canvas-native, 2 attempts, ~15 pts past-tense listening) + close.
+  Grammar Quiz is a Canvas-native quiz; replace placeholder link at import. Delete .preview-banner before deploy.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,15 +14,24 @@
     .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
     .preview-banner strong { color: #0e1c42; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .vocab-list { list-style: none; margin: 14px 0 0 0; padding: 0; }
-    .vocab-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #F4F9FC; border: 1px solid #D0D9E8; border-radius: 6px; margin-bottom: 8px; }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
     .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
     .say:hover { background: #1B3A6B; }
     .say.playing { background: #C7922C; }
     .say.err { background: #C0392B; }
-    .v-fr { font-weight: 600; color: #0E1C42; min-width: 220px; font-size: 17px; }
-    .v-en { color: #6b7a99; font-size: 15px; }
-    .clinic { background: #F4F9FC; border: 1px solid #D0D9E8; border-left: 4px solid #55C8E8; border-radius: 6px; padding: 14px 18px; margin: 10px 0; font-size: 17px; color: #1a2340; line-height: 1.65; }
+    .play-bar { display: inline-flex; align-items: center; gap: 8px; background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; margin: 2px 0 8px; }
+    .play-bar:hover { background: #1B3A6B; }
+    .play-bar.playing { background: #C7922C; }
+    .play-bar.err { background: #C0392B; }
     .assess-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #7A1C28; border-radius: 8px; padding: 20px 24px; margin: 14px 0; }
     .assess-head { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
     .assess-title { font-size: 20px; color: #0e1c42; }
@@ -32,15 +40,12 @@
     .go-btn:hover { background:#1B3A6B; }
     .fmt { font-size:15px; color:#1a2340; line-height:1.65; }
     .fmt li { margin-bottom:4px; }
-    .rubric { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 15px; }
-    .rubric th, .rubric td { border: 1px solid #D0D9E8; padding: 7px 11px; text-align: left; }
-    .rubric th { background: #EEF1F8; color: #0e1c42; }
-    .checklist { background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.9; }
-    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
-    .opt-strip { background: #FDF7E9; border: 1px dashed #C7922C; border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
-    .opt-strip .lbl { font-size: 11px; color: #9a7b1e; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .duebar { background:#F4E8EA; border:1px solid #E0BEC4; border-left:5px solid #7A1C28; border-radius:8px; padding:14px 18px; margin-bottom:18px; color:#5a1a22; font-size:16px; line-height:1.6; }
+    .can-do { background:#EAF6EE; border:1px solid #BFE3CC; border-radius:8px; padding:16px 20px; }
+    .can-do li { font-size:16px; color:#1a2340; line-height:1.8; }
     .markdone { background: #EAF6EE; border: 1px solid #2A9D5C; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
     .markdone .lbl { font-size: 11px; color: #1A6B3D; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .pill-time { display: inline-block; background: #C7922C; color: #fff; font-size: 12px; border-radius: 12px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; }
     .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
@@ -70,11 +75,11 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.08 &middot; Day 8 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.08 &middot; Day 8 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
-        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Phon&eacute;tique &amp; expression orale</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Grammar Quiz &amp; cl&ocirc;ture</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
@@ -84,97 +89,86 @@
 
 <div style="padding: 24px 34px;">
 
-    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.08</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Phon&eacute;tique &amp; Speaking Task</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+    <div style="background: #EEF1F8; border-left: 5px solid #7A1C28; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A1C28; margin-bottom: 6px;">Lesson 4.08 &middot; Dernier jour du module</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Grammar Quiz &amp; Module Close</div>
+        <div style="font-size: 16px; color: #666;">Assessment day &middot; about 50 minutes</div>
     </div>
 
+    <div class="duebar"><strong>All of this module&rsquo;s graded items should be completed by the end of the module.</strong> Warm up your ear first &mdash; the quiz includes <strong>past-tense listening</strong> questions &mdash; then take it in Canvas. Two attempts are allowed.</div>
+
+    <!-- PART 1 · pre-quiz listening warm-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Sharpen the sound, then speak &mdash; your own weekend, out loud, on the record.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">First a quick clinic on the sounds at the heart of the pass&eacute; compos&eacute;: the <strong>j'ai</strong> that glides into the next word, and the <strong>-&eacute;</strong> ending that sounds just like the infinitive. Then you'll record your <strong>Speaking Task</strong> &mdash; the weekend you've been building all week.</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127911; PART 1 &middot; &Eacute;CHAUFFEMENT D'&Eacute;COUTE <span class="pill-time">5 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Get your ear tuned. First, replay a familiar passage &mdash; Paul&rsquo;s paragraph 2 from Lesson 4.05 &mdash; and just listen. Then answer one question on a separate clip: a single sentence you first heard on Day 4. This is a warm-up, not the quiz.</p>
+
+        <button class="play-bar" data-audio="passage/s2m4-loisirs-02.mp3">&#9654; &Eacute;couter &middot; Paul, paragraphe 2</button>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="grammar/s2m4-neg-pc.mp3" aria-label="&Eacute;couter">&#128266;</button> Listen to this new clip. What does the speaker say?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; &laquo; je n'ai pas regard&eacute; la t&eacute;l&eacute; &raquo; = I didn't watch TV.">I didn&rsquo;t watch TV</button>
+                <button data-no="Listen again for the n'ai pas &mdash; it's a negative sentence.">I watched TV</button>
+                <button data-no="The sentence is about the TV, not sports.">I did sports</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
     </div>
 
-    <!-- PART 1 · Phonétique -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127908; PART 1 &middot; PHON&Eacute;TIQUE <span class="pill-time">13 min</span></div>
-        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">The <em>j'ai</em> glide and the <em>-&eacute;</em> ending</h3>
-        <div class="clinic"><strong>The glide.</strong> <em>j'ai</em> is one smooth sound &mdash; &ldquo;zhay&rdquo; &mdash; and it links straight into the participle: <em>j'ai&#8288;_mang&eacute;</em>, <em>j'ai&#8288;_fait</em>. Don't put a pause between them; the whole past verb rides in one breath.</div>
-        <ul class="vocab-list">
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m4-jai-mange.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">j'ai mang&eacute;</span><span class="v-en">glide + -&eacute; ending</span></li>
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m4-jai-fait.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">j'ai fait</span><span class="v-en">glide + irregular (silent t)</span></li>
-        </ul>
-        <div class="clinic"><strong>The <em>-&eacute;</em> trap.</strong> The participle <em>-&eacute;</em> sounds exactly like the infinitive <em>-er</em> (both &ldquo;ay&rdquo;). What tells a listener it's the past is the <strong>little avoir word in front</strong> &mdash; <em>a</em>, <em>as</em>, <em>ont</em>. Say the avoir clearly and the past becomes unmistakable.</div>
-        <ul class="vocab-list">
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m4-il-a-joue.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">il a jou&eacute;</span><span class="v-en">hear the a before jou&eacute;</span></li>
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m4-neg-pc.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">je n'ai pas regard&eacute;</span><span class="v-en">negative: n'ai pas around avoir</span></li>
-        </ul>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 10px 0 0 0;"><strong>Shadow it:</strong> play each clip, pause, and copy the exact rhythm three times. Aim to match the glide, not just the words.</p>
-    </div>
-
-    <!-- PART 2 · Speaking Task -->
+    <!-- PART 2 · Grammar Quiz -->
     <div class="assess-card">
         <div class="assess-head">
-            <div class="assess-title">&#127908; Speaking Task &middot; Mon week-end dernier</div>
-            <span class="pts">15 pts &middot; 1 submission</span>
+            <div class="assess-title">Grammar Quiz &middot; Le pass&eacute; compos&eacute;</div>
+            <span class="pts">30 pts &middot; 2 attempts</span>
         </div>
-        <div style="font-size:11px;color:#c7922c;margin-bottom:8px;">SUBMITTED IN CANVAS &middot; MEDIA RECORDING <span class="pill-time">15 min</span></div>
+        <div style="font-size:16px;font-weight:700;color:#8c2f39;margin-bottom:10px;line-height:1.5;">COMPLETED IN CANVAS &middot; AUTO-GRADED &middot; <em>should be submitted by the end of the module</em> <span class="pill-time">30 min</span></div>
         <ul class="fmt">
-            <li><strong>Record 6&ndash;8 sentences</strong> describing what you did last weekend, in order &mdash; all in the pass&eacute; compos&eacute;.</li>
-            <li>Use at least <strong>five verbs in the past</strong>, one <strong>irregular participle</strong> (<em>fait, vu, pris</em>), one <strong>negative</strong> sentence (<em>je n'ai pas&hellip;</em>), and one <strong>time expression</strong> (<em>hier soir, samedi</em>).</li>
-            <li>Speak from notes, not a script read word-for-word &mdash; natural delivery counts.</li>
-            <li>This is your Day 4 / Day 6 writing, spoken aloud. You've already built it.</li>
+            <li><strong>Past-tense listening items (~15 pts):</strong> hear a past-tense sentence, then answer &mdash; identify the subject, the participle, whether it's affirmative or negative, or the meaning. Headphones recommended; you can replay each clip.</li>
+            <li><strong>Grammar items (~15 pts):</strong> choose or supply the correct form of avoir, the right past participle (-&eacute; / -i / irregular), and place negation (<em>n'ai pas</em>); plus the present of <em>venir</em>.</li>
+            <li><strong>Two attempts</strong> &mdash; your higher score counts. Review any misses before your second try.</li>
         </ul>
-        <p style="font-size:15px;color:#1a2340;margin:12px 0 6px;"><strong>How it's scored (15 pts):</strong></p>
-        <table class="rubric">
-            <thead><tr><th>Criterion</th><th>Pts</th><th>What earns full marks</th></tr></thead>
-            <tbody>
-                <tr><td>Task Completion</td><td>5</td><td>6&ndash;8 sentences, in order, with the required elements</td></tr>
-                <tr><td>Language Accuracy</td><td>5</td><td>Correct avoir + participle; negation handled; right participle endings</td></tr>
-                <tr><td>Pronunciation &amp; Fluency</td><td>5</td><td>Clear <em>j'ai</em> glide, smooth links, steady pace</td></tr>
-            </tbody>
-        </table>
-        <div style="background:#F0F2F8;border-left:4px solid #0E1C42;border-radius:6px;padding:12px 18px;font-size:15px;color:#1a2340;margin-top:14px;line-height:1.6;"><strong>&#9654; To record your Speaking Task:</strong> return to <strong>Module 4</strong> in Canvas and open the <strong>Speaking Task</strong> &mdash; it is in the module&rsquo;s item list, below the ten le&ccedil;ons.</div>
+        <div style="background:#F0F2F8;border-left:4px solid #0E1C42;border-radius:6px;padding:12px 18px;font-size:15px;color:#1a2340;margin-top:14px;line-height:1.6;"><strong>&#9654; To take the quiz:</strong> return to <strong>Module 4</strong> in Canvas and open the <strong>Grammar Quiz</strong> &mdash; it is in the module&rsquo;s item list, below the eight le&ccedil;ons.</div>
     </div>
 
-    <!-- PART 3 · Self-review before submit -->
+    <!-- PART 3 · review errors -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9989; PART 3 &middot; AVANT D'ENVOYER <span class="pill-time">12 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Record once, listen back, and check yourself against this list. You may re-record before you submit &mdash; use that buffer.</p>
-        <div class="checklist">
-            &#9633; I said <strong>6&ndash;8</strong> sentences, all in the past.<br>
-            &#9633; Every past verb has <strong>avoir + a participle</strong>.<br>
-            &#9633; My participle <strong>endings</strong> are right (-&eacute; / -i / <em>fait, vu, pris</em>).<br>
-            &#9633; My <strong>negative</strong> sentence wraps avoir (<em>je n'ai pas&hellip;</em>).<br>
-            &#9633; I used an <strong>irregular participle</strong> and a <strong>time expression</strong>.<br>
-            &#9633; I can hear my own words clearly on playback.
-        </div>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play Paul's paragraph 1 from Lesson 4.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitation of a native model is the fastest route to a French accent.</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128270; PART 2 &middot; R&Eacute;VISE TES ERREURS <span class="pill-time">5 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">After your first attempt, look at what you missed. Most Module 4 errors fall into three buckets: <strong>wrong form of avoir</strong> for the subject, <strong>wrong participle ending</strong> (-&eacute; vs -i vs irregular), or <strong>misplaced negation</strong>. Name which one caught you, fix that one thing, and take your second attempt.</p>
+    </div>
+
+    <!-- Module close: can-do -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127937; CL&Ocirc;TURE DU MODULE 4 &mdash; CE QUE TU SAIS FAIRE</div>
+        <div class="can-do">
+            <ul style="margin:0;padding-left:20px;">
+                <li>I can name and understand <strong>20 leisure and past-time words</strong> by ear.</li>
+                <li>I can form the <strong>pass&eacute; compos&eacute;</strong> with avoir + a past participle.</li>
+                <li>I can build participles: <strong>-&eacute;</strong> (<em>-er</em>), <strong>-i</strong> (<em>-ir</em>), and the irregulars <em>fait, vu, pris</em>.</li>
+                <li>I can make a past sentence <strong>negative</strong> (<em>je n'ai pas&hellip;</em>) and conjugate <strong>venir</strong>.</li>
+                <li>I can <strong>tell the story of my weekend</strong> in the past, in writing and out loud.</li>
+            </ul>
         </div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
-            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 4.09</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow is lighter and more exploratory: the <em>Carte de France</em> practice map &mdash; ungraded, and fun.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Module 5 &mdash; La ville (City Life)</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Next you'll navigate a French city &mdash; and learn the <em>other</em> half of the past tense: the pass&eacute; compos&eacute; with <strong>&ecirc;tre</strong> (<em>je suis all&eacute;&hellip;</em> (I went&hellip;)). Everything you built this module carries right over.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Once your Speaking Task is submitted in Canvas, click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Once your Grammar Quiz is submitted in Canvas, click <strong>&ldquo;Mark as Done&rdquo;</strong> to close out Module 4.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; TU AS PARL&Eacute; AU PASS&Eacute;&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Speaking is the scariest step and the one that moves you fastest. You just told the story of your weekend in French, out loud, in a brand-new tense. That's a milestone &mdash; <em>bravo&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; MODULE 4 TERMIN&Eacute;&nbsp;! (Module 4 complete!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Two weeks ago, everything you could say lived in the present. Now you can talk about the past &mdash; the single most useful new tool of the semester. That's real progress &mdash; carry it into Module 5. <em>F&eacute;licitations&nbsp;!</em> (Congratulations!)</p>
     </div>
 
 </div>
@@ -182,12 +176,61 @@
 <div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.08 &middot; Phon&eacute;tique &amp; expression orale</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.08 &middot; Grammar Quiz &amp; cl&ocirc;ture</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
 </div>
 
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
+  });
+})();
+</script>
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -212,7 +255,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

@@ -45,6 +45,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -70,7 +83,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 7.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 7.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,21 +98,34 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.05 &middot; Semaine 2 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Une journ&eacute;e de shopping &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word and pronoun from this week living inside one real shopping trip &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Julie is shopping for a party dress. Her afternoon uses your vocabulary, your pronouns, and <em>voir</em> &mdash; all at once. Read <em>and</em> listen, then step back to see why Paris is the world's fashion capital, and meet a woman whose courage rewrote how the whole world dresses.</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word and pronoun from Week 1 living inside one real shopping trip &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Julie is shopping for a party dress. Her afternoon uses your vocabulary, your pronouns, and <em>voir</em> &mdash; all at once. Read <em>and</em> listen, then step back to see why Paris is the world's fashion capital, and meet a woman whose courage rewrote how the whole world dresses. You'll finish by writing a shopping story of your own &mdash; your rehearsal for tomorrow's graded work and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words to help the passage read smoothly &mdash; look them over before you read:</div>
+        <ul class="gloss">
+            <li><b>faire du shopping</b> &mdash; to go shopping</li>
+            <li><b>chercher</b> &mdash; to look for</li>
+            <li><b>pour</b> &mdash; for</li>
+            <li><b>une f&ecirc;te</b> &mdash; a party</li>
+            <li><b>bleue</b> &mdash; blue (f.)</li>
+            <li><b>parfaite</b> &mdash; perfect (f.)</li>
+            <li><b>rouge</b> &mdash; red</li>
+            <li><b>alors</b> &mdash; so / therefore</li>
+            <li><b>adorer</b> &mdash; to love / adore</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m7-mode-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>J&rsquo;adore faire du shopping. Aujourd&rsquo;hui, je cherche une robe pour une f&ecirc;te.</p></div>
@@ -115,23 +141,13 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every direct object pronoun</strong> (<em>le, la, l', les</em>) and <strong>draw an arrow</strong> to the noun each one replaces. You should find four. Notice the negative one &mdash; <em>je ne <u>l'</u>ach&egrave;te pas</em> &mdash; and how the pronoun still sits right before the verb, inside the <em>ne&hellip;pas</em>.</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words to help the passage read smoothly:</div>
-        <ul class="gloss">
-            <li><b>faire du shopping</b> &mdash; to go shopping</li>
-            <li><b>chercher</b> &mdash; to look for</li>
-            <li><b>une f&ecirc;te</b> &mdash; a party</li>
-            <li><b>bleue</b> &mdash; blue (f.)</li>
-            <li><b>parfaite</b> &mdash; perfect (f.)</li>
-            <li><b>alors</b> &mdash; so / therefore</li>
-            <li><b>adorer</b> &mdash; to love / adore</li>
-        </ul>
     </div>
 
     <!-- PART 3 · Culture -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127467;&#127479; PART 3 &middot; PARIS, CAPITALE DE LA MODE <span class="pill-time">12 min</span></div>
         <div class="culture">
-            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">Paris is one of the world's great <strong>fashion capitals</strong>. In the 1920s, <strong>Coco Chanel</strong> freed women from the stiff, corseted styles of the past &mdash; she used soft jersey fabric and gave the world <em>la petite robe noire</em>, the little black dress that never goes out of style. In 1947, <strong>Christian Dior</strong>'s &ldquo;New Look&rdquo; revived French <em>haute couture</em> with sweeping, elegant lines after the hardship of war.</p>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">Paris is one of the world's great <strong>fashion capitals</strong>. In the 1920s, <strong>Coco Chanel</strong> freed women from the stiff, corseted styles of the past &mdash; she used soft jersey fabric and gave the world <em>la petite robe noire</em>, the little black dress that never goes out of style. In 1947, <strong>Christian Dior</strong>'s &ldquo;New Look&rdquo; revived French <em>haute couture</em> (high fashion) with sweeping, elegant lines after the hardship of war.</p>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0;">Twice a year, <strong>la Semaine de la mode</strong> (Paris Fashion Week) still draws designers, buyers, and photographers from every continent. When you learn the vocabulary of <em>la mode</em>, you're stepping into a conversation France has led for a hundred years.</p>
         </div>
     </div>
@@ -150,21 +166,21 @@
             <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question">Que cherche Julie aujourd'hui&nbsp;?</div>
+                <div class="widget-question">Qu'est-ce que Julie cherche aujourd'hui&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 1.">Un pull rouge</button>
-                    <button data-correct="1" data-ok="Oui &mdash; une robe pour une f&ecirc;te.">Une robe pour une f&ecirc;te</button>
-                    <button data-no="Elle les ach&egrave;te &agrave; la fin, mais ce n'est pas ce qu'elle cherche.">Des chaussures</button>
+                    <button data-no="Reread paragraph 1.">Un pull rouge</button>
+                    <button data-correct="1" data-ok="Yes &mdash; a dress for a party.">Une robe pour une f&ecirc;te</button>
+                    <button data-no="She buys them at the end, but that's not what she's looking for.">Des chaussures</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Pourquoi Julie n'ach&egrave;te-t-elle pas le pull rouge&nbsp;?</div>
+                <div class="widget-question">Pourquoi est-ce que Julie n'ach&egrave;te pas le pull rouge&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="La taille est un probl&egrave;me pour la robe, pas pour le pull.">La taille n'est pas bonne</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; le pull rouge est tr&egrave;s cher.">Il est tr&egrave;s cher</button>
-                    <button data-no="Au contraire &mdash; le probl&egrave;me, c'est le prix.">Elle n'aime pas la couleur</button>
+                    <button data-no="No &mdash; the passage says nothing about the sweater's size. Reread paragraph 3.">La taille n'est pas parfaite</button>
+                    <button data-correct="1" data-ok="Right &mdash; the red sweater is very expensive.">Il est tr&egrave;s cher</button>
+                    <button data-no="No &mdash; the problem is the price, not the color.">Elle n'aime pas la couleur</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -172,12 +188,22 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Qu'est-ce que Julie ach&egrave;te &agrave; la fin&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Exact &mdash; &laquo; je les adore, et je les ach&egrave;te &raquo;.">Les chaussures</button>
-                    <button data-no="Elle ne l'ach&egrave;te pas &mdash; il est tr&egrave;s cher.">Le pull rouge</button>
-                    <button data-no="Elle l'essaie, mais la r&eacute;ponse finale, ce sont les chaussures.">Seulement la robe</button>
+                    <button data-correct="1" data-ok="Right &mdash; she loves the shoes, and she buys them.">Les chaussures</button>
+                    <button data-no="She doesn't buy it &mdash; it's very expensive.">Le pull rouge</button>
+                    <button data-no="She tries the dress on, but what she buys in the end is the shoes.">Seulement la robe</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; TON PROPRE SHOPPING <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences about a shopping trip</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Tell the story of a real or imagined shopping trip. Use at least <strong>five clothing/shopping words</strong>, at least <strong>three direct object pronouns</strong> (<em>le, la, l', les</em>), one <strong>negative</strong> (<em>je ne l'ach&egrave;te pas</em>), and one sentence in the <strong>past</strong> (<em>je l'ai achet&eacute;e</em>). This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; a pronoun matches its noun's gender/number &nbsp;&#9633; the pronoun sits before the verb &nbsp;&#9633; elision before a vowel (<em>je l'essaie</em>) &nbsp;&#9633; a past sentence with participle agreement &nbsp;&#9633; a price word (<em>cher / bon march&eacute;</em>).
         </div>
     </div>
 
@@ -186,20 +212,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 7.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and both pronoun rules together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 7.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your pronouns are solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Julie's shopping trip in three sentences of your own, out loud? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Julie's shopping trip in three sentences of your own, out loud? Try it before tomorrow's assessments.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full shopping trip and understood it &mdash; every pronoun pointed back to a noun you knew. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full shopping trip and understood it &mdash; every pronoun pointed back to a noun you knew. That's real reading, not decoding. Tomorrow is an assessment day &mdash; <em>&agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -221,7 +247,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -231,16 +269,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -265,7 +312,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

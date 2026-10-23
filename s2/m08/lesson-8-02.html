@@ -58,6 +58,30 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .activity-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 14px 0; }
+    .go-btn { display:inline-block; background:#0E1C42; color:#fff; text-decoration:none; border-radius:8px; padding:11px 22px; font-size:16px; margin-top:12px; }
+    .go-btn:hover { background:#1B3A6B; }
+    .practice-badge { display:inline-block; background:#2A9D5C; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; }
+    .fmt { font-size:16px; color:#1a2340; line-height:1.7; }
+    .fmt li { margin-bottom:5px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    <!-- S2 DRILL CSS -->
+.widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
+    .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
+    .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
 </style>
 </head>
 <body>
@@ -85,7 +109,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.02 &middot; Day 2 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.02 &middot; Day 2 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -104,14 +128,14 @@
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.02</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Les instruments &amp; la r&egrave;gle n&deg;1 &mdash; Indirect Object Pronouns</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Yesterday you named the party. Today you finish the vocabulary &mdash; and learn how to say <em>to whom</em> you give and speak.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You'll pick up the instruments and the comparison words, then meet Rule&nbsp;1 of this module: the <strong>indirect object pronouns</strong> <em>lui</em> (to him / to her) and <em>leur</em> (to them). They replace <strong>&agrave; + a person</strong> &mdash; so instead of <em>je parle &agrave; Marc</em>, you say <em>je <u>lui</u> parle</em>. The pronoun goes <strong>before the verb</strong>.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You'll pick up the instruments and the comparison words, then meet Rule&nbsp;1 of this module: the <strong>indirect object pronouns</strong> <em>lui</em> (to him / to her) and <em>leur</em> (to them). They replace <strong>&agrave; + a person</strong> &mdash; so instead of <em>je parle &agrave; Marc</em>, you say <em>je <u>lui</u> parle</em>. The pronoun goes <strong>before the verb</strong>. You'll close with a quick recall check on the module's words and your first try at <strong>typing</strong> them, accents and articles included.</div>
     </div>
 
     <!-- Objectives -->
@@ -125,13 +149,17 @@
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> replace &laquo;&nbsp;&agrave; + a person&nbsp;&raquo; with <em>lui</em> or <em>leur</em> and place it correctly before the verb.</div>
         </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-top: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> spell this module's key words with their articles and accents.</div>
+        </div>
     </div>
 
     <!-- ===== PART 1 · Vocab set B ===== -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; LES INSTRUMENTS &amp; LA COMPARAISON <span class="pill-time">13 min</span></div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Ten more words &mdash; listen, then repeat</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Three instruments and five words that let you <strong>compare</strong>. The last five &mdash; <em>mieux, meilleur, plus&hellip;que, moins&hellip;que, aussi&hellip;que</em> &mdash; are the heart of this module's second rule (Day 3). Click the <strong>&#128266;</strong> and say each one back.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Two party verbs, three instruments, and five words that let you <strong>compare</strong>. The last five &mdash; <em>mieux, meilleur, plus&hellip;que, moins&hellip;que, aussi&hellip;que</em> &mdash; are the heart of this module's second rule (Day 3). Click the <strong>&#128266;</strong> and say each one back.</p>
         <ul class="vocab-list">
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m8-inviter.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">inviter</span><span class="v-en">to invite</span></li>
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m8-celebrer.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">c&eacute;l&eacute;brer</span><span class="v-en">to celebrate</span></li>
@@ -154,13 +182,21 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129504; PART 2 &middot; LA GRAMMAIRE &mdash; LUI &amp; LEUR <span class="pill-time">17 min</span></div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Saying &ldquo;to him,&rdquo; &ldquo;to her,&rdquo; &ldquo;to them&rdquo;</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When a verb points at a person with <strong>&agrave;</strong> &mdash; <em>parler <u>&agrave;</u> quelqu'un</em>, <em>offrir un cadeau <u>&agrave;</u> quelqu'un</em>, <em>t&eacute;l&eacute;phoner <u>&agrave;</u> quelqu'un</em> &mdash; you can replace that whole phrase with one word. That word is an <strong>indirect object pronoun</strong>, and <span style="border-bottom:2px solid #C7922C;">it comes before the verb</span>.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When a verb points at a person with <strong>&agrave;</strong> &mdash; <em>parler <u>&agrave;</u> quelqu'un</em>, <em>offrir un cadeau <u>&agrave;</u> quelqu'un</em>, <em>t&eacute;l&eacute;phoner &agrave; quelqu'un</em> (to phone someone) &mdash; you can replace that whole phrase with one word. That word is an <strong>indirect object pronoun</strong>, and <span style="border-bottom:2px solid #C7922C;">it comes before the verb</span>.</p>
 
         <table class="gtable">
             <thead><tr><th>Replaces</th><th>Pronoun</th><th>Example</th></tr></thead>
             <tbody>
                 <tr><td>&agrave; + one person (m. or f.)</td><td><span class="pron">lui</span></td><td>je parle &agrave; Marie &rarr; je <strong>lui</strong> parle</td></tr>
                 <tr><td>&agrave; + more than one person</td><td><span class="pron">leur</span></td><td>je parle &agrave; mes amis &rarr; je <strong>leur</strong> parle</td></tr>
+                <tr><td>a thing + a person (both pronouns)</td><td><span class="pron">le / la / les</span> first, then <span class="pron">lui / leur</span></td><td>Le cadeau ? Je <strong>le lui</strong> offre.</td></tr>
+            </tbody>
+        </table>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 10px 0 6px 0;">One more thing about <strong>offrir</strong> (to give, to offer): it ends in <em>-ir</em> but takes <strong>-er</strong> endings.</p>
+        <table class="gtable">
+            <tbody>
+                <tr><td>j'offre</td><td>tu offres</td><td>il / elle offre</td></tr>
+                <tr><td>nous offrons</td><td>vous offrez</td><td>ils / elles offrent</td></tr>
             </tbody>
         </table>
         <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 6px 0 10px 0;">Notice that <em>lui</em> covers <strong>both</strong> &ldquo;to him&rdquo; and &ldquo;to her&rdquo; &mdash; French doesn't change it for gender here. And in the <strong>pass&eacute; compos&eacute;</strong>, the pronoun still goes first, right before the helping verb: <em>je <u>lui</u> ai t&eacute;l&eacute;phon&eacute;</em>.</p>
@@ -192,10 +228,10 @@
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 2</div>
-            <div class="widget-question">Nous offrons un cadeau &agrave; nos grands-parents. &rarr; Nous ______ offrons un cadeau.</div>
+            <div class="widget-question">Nous offrons un cadeau &agrave; <em>nos</em> (our) grands-parents. &rarr; Nous ______ offrons un cadeau.</div>
             <div class="widget-options">
                 <button data-no="Close &mdash; but grandparents are more than one person.">lui</button>
-                <button data-correct="1" data-ok="Exact ! More than one person &rarr; leur.">leur</button>
+                <button data-correct="1" data-ok="Exact ! (Right!) More than one person &rarr; leur.">leur</button>
                 <button data-no="That replaces a thing, not &ldquo;to people.&rdquo;">les</button>
             </div>
             <div class="widget-feedback"></div>
@@ -207,9 +243,222 @@
             <div class="widget-question">Where does the pronoun go? &laquo;&nbsp;J'ai t&eacute;l&eacute;phon&eacute; &agrave; Paul.&nbsp;&raquo;</div>
             <div class="widget-options">
                 <button data-no="Not quite &mdash; the pronoun goes before the helping verb (ai), not after.">J'ai lui t&eacute;l&eacute;phon&eacute;</button>
-                <button data-correct="1" data-ok="Voil&agrave; ! In the pass&eacute; compos&eacute;, lui sits before ai.">Je lui ai t&eacute;l&eacute;phon&eacute;</button>
+                <button data-correct="1" data-ok="Voil&agrave; ! (That's it!) In the pass&eacute; compos&eacute;, lui sits before ai.">Je lui ai t&eacute;l&eacute;phon&eacute;</button>
                 <button data-no="Almost &mdash; but lui must come before the verb, not at the end.">J'ai t&eacute;l&eacute;phon&eacute; lui</button>
             </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+    <!-- PART 2 · Vocabulaire — rappel -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128218; Vocabulaire &mdash; rappel</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">RECALL + CHOOSE <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Six quick checks on this module&rsquo;s words. Wrong answers show you the right one &mdash; nothing is recorded.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">Which word is the <strong>female</strong> singer?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! chanteur &rarr; chanteuse.">la chanteuse</button>
+                <button data-no="That is the male singer.">le chanteur</button>
+                <button data-no="That is the concert.">le concert</button>
+                <button data-no="That is the song.">la chanson</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question"><em>Offrir</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s c&eacute;l&eacute;brer.">to celebrate</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! offrir un cadeau.">to give (a gift)</button>
+                <button data-no="That&rsquo;s danser.">to dance</button>
+                <button data-no="That&rsquo;s inviter.">to invite</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Which is an instrument you <strong>hit</strong>?</div>
+            <div class="widget-options">
+                <button data-no="You pluck that one.">la guitare</button>
+                <button data-no="That is a song.">la chanson</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! the drums.">la batterie</button>
+                <button data-no="You press its keys.">le piano</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question"><em>L&rsquo;anniversaire</em> means&hellip;</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s la f&ecirc;te.">the party</button>
+                <button data-no="That&rsquo;s le cadeau.">the gift</button>
+                <button data-no="That&rsquo;s la chanson.">the song</button>
+                <button data-correct="1" data-ok="Exact&nbsp;!">the birthday</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Which word is an <strong>adverb</strong> meaning <em>better</em>?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! mieux modifies a verb: il chante mieux.">mieux</button>
+                <button data-no="That is the adjective: un meilleur chanteur.">meilleur</button>
+                <button data-no="That just means more.">plus</button>
+                <button data-no="That means as / also.">aussi</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Which verb means <em>to sing</em>?</div>
+            <div class="widget-options">
+                <button data-no="That&rsquo;s to dance.">danser</button>
+                <button data-correct="1" data-ok="Oui ! chanter = to sing.">chanter</button>
+                <button data-no="That&rsquo;s to invite.">inviter</button>
+                <button data-no="That&rsquo;s to celebrate.">c&eacute;l&eacute;brer</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3s &middot; &Eacute;cris-le &mdash; orthographe -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9997;&#65039; &Eacute;cris-le &mdash; orthographe</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LES MOTS TAP&Eacute;S DU VOCABULARY CHECK <span class="pill-time">8 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Your quiz asks you to <strong>type</strong> these, not just recognise them. Type each one and press <strong>Check</strong>. <strong>Here the accents count:</strong> a missing accent is marked wrong, and so is a missing article. The feedback names exactly what is missing. Copy an accent from the strip under each box if your keyboard will not make it. Nothing is recorded.</div>
+        <div class="optima-widget ow-spell" data-answer="le chanteur">
+            <div class="widget-kicker">&#9998; MOT 1</div>
+            <div class="widget-question">the singer (m.)</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the male singer">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la chanteuse">
+            <div class="widget-kicker">&#9998; MOT 2</div>
+            <div class="widget-question">the singer (f.)</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the female singer">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="l&rsquo;anniversaire">
+            <div class="widget-kicker">&#9998; MOT 3</div>
+            <div class="widget-question">the birthday</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the birthday">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; l&rsquo;; double n</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="chanter">
+            <div class="widget-kicker">&#9998; MOT 4</div>
+            <div class="widget-question">to sing</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="to sing">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; one word</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="c&eacute;l&eacute;brer">
+            <div class="widget-kicker">&#9998; MOT 5</div>
+            <div class="widget-question">to celebrate</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="to celebrate">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; two accents, pointing opposite ways</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le piano">
+            <div class="widget-kicker">&#9998; MOT 6</div>
+            <div class="widget-question">the piano</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the piano">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="meilleur">
+            <div class="widget-kicker">&#9998; MOT 7</div>
+            <div class="widget-question">better / best (adjective)</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="better, adjective">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; double l</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la chanson">
+            <div class="widget-kicker">&#9998; MOT 8</div>
+            <div class="widget-question">the song</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the song">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; include the article</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="le cadeau">
+            <div class="widget-kicker">&#9998; MOT 9</div>
+            <div class="widget-question">the gift</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the gift">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; -eau at the end</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-spell" data-answer="la guitare">
+            <div class="widget-kicker">&#9998; MOT 10</div>
+            <div class="widget-question">the guitar</div>
+            <div class="spell-row">
+                <input class="spell-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="type it in French&hellip;" aria-label="the guitar">
+                <button class="spell-check">Check</button>
+            </div>
+            <div class="spell-trap">&#9755; gu, then -are</div>
+            <div class="accent-strip"><span class="as-label">Use these accents as necessary.</span><span class="as-glyphs">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;</span><span class="as-glyphs">&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
@@ -235,8 +484,8 @@
 
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute;&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have all twenty words and the pronoun that lets you point at people: <em>lui</em> and <em>leur</em>, always before the verb. Hold onto that &mdash; tomorrow you compare. <em>&Agrave; demain&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute;&nbsp;! (Well done!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have all twenty words and the pronoun that lets you point at people: <em>lui</em> and <em>leur</em>, always before the verb. Hold onto that &mdash; tomorrow you compare. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -252,6 +501,10 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (house superset: reflect + eval + reveal) ===== -->
+
+
+<!-- ===== AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
+
 <script>
 (function () {
   document.addEventListener('click', function (e) {
@@ -301,8 +554,6 @@
   });
 })();
 </script>
-
-<!-- ===== AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
@@ -327,7 +578,87 @@
   });
 })();
 </script>
+<script>
+/* S2 spelling checker - STRICT on accents (David 2026-09-28: demands high; the graded quiz keeps its leeway). */
+(function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/[’`´]/g, "'").replace(/ /g, ' ')
+      .replace(/\s+/g, ' ').trim().toLowerCase()
+      .replace(/\s*[.?!]$/, '');  /* a missing final full stop or question mark is not an error */
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
 
+  function judge(got, target) {
+    if (!got) return 'empty';
+    if (got === target) return 'perfect';
+    if (deacc(got) === deacc(target)) return 'accent';
+    if (dropArt(target) !== target && (got === dropArt(target) || deacc(got) === deacc(dropArt(target)))) return 'article';
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return 'hyphen';
+    if (target.indexOf('-') >= 0 && deacc(got.replace(/[-\s]/g, '')) === deacc(target.replace(/[-\s]/g, ''))) return 'hyphen';  /* weekend for week-end */
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return 'apostrophe';
+    return 'no';
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var shown = el.dataset.answer;
+    var v = judge(norm(input.value), norm(shown));
+    var tries = parseInt(el.dataset.tries || '0', 10) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 ? ' <span style="color:#41506b;">The answer: <strong>' + shown + '</strong></span>' : '';
+    if (v === 'empty') { setFb(el, 'fb-warn', 'Type something first.'); return; }
+    if (v === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;! (Perfect!)</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v === 'accent') {
+      setFb(el, 'fb-no', '<strong>Check the accents.</strong> The letters are right, but an accent is missing or wrong. ' +
+        'The accent is part of the spelling, like a letter &mdash; copy it from the accent strip under the box.' + tail);
+    } else if (v === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Learn the word with its article.' + tail);
+    } else if (v === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong>' + tail);
+    } else if (v === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong>' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Not yet. Try again.' + tail);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var sc = e.target.closest('.ow-spell .spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
+    var rs = e.target.closest('.ow-spell .widget-reset');
+    if (rs) {
+      var w = rs.closest('.optima-widget');
+      var inp = w.querySelector('.spell-input');
+      inp.value = ''; inp.classList.remove('ok', 'no');
+      var fb = w.querySelector('.widget-feedback');
+      fb.className = 'widget-feedback'; fb.innerHTML = '';
+      delete w.dataset.tries;
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
+    }
+  });
+})();
+</script>
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

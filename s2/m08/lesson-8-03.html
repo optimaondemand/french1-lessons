@@ -53,6 +53,28 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .activity-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 14px 0; }
+    .go-btn { display:inline-block; background:#0E1C42; color:#fff; text-decoration:none; border-radius:8px; padding:11px 22px; font-size:16px; margin-top:12px; }
+    .go-btn:hover { background:#1B3A6B; }
+    .practice-badge { display:inline-block; background:#2A9D5C; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; }
+    .fmt { font-size:16px; color:#1a2340; line-height:1.7; }
+    .fmt li { margin-bottom:5px; }
+    <!-- S2 DRILL CSS -->
+.widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
+    .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
+    .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
 </style>
 </head>
 <body>
@@ -78,7 +100,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.03 &middot; Day 3 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.03 &middot; Day 3 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -95,13 +117,13 @@
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.03</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Les comparatifs &mdash; More, Less, As&hellip; and the Two &ldquo;Betters&rdquo;</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">One pattern lets you compare almost anything &mdash; and two little words trip up nearly every learner. Today you master both.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Rule&nbsp;1 was <em>lui</em> and <em>leur</em>. Today: the <strong>comparative</strong>. <em>plus&hellip;que</em> (more than), <em>moins&hellip;que</em> (less than), <em>aussi&hellip;que</em> (as&hellip;as). Then the pair that everyone confuses: <strong>mieux</strong> (better, an adverb &mdash; for <em>how</em> you do something) and <strong>meilleur</strong> (better, an adjective &mdash; for <em>a noun</em>).</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Rule&nbsp;1 was <em>lui</em> and <em>leur</em>. Today: the <strong>comparative</strong>. <em>plus&hellip;que</em> (more than), <em>moins&hellip;que</em> (less than), <em>aussi&hellip;que</em> (as&hellip;as). Then the pair that everyone confuses: <strong>mieux</strong> (better, an adverb &mdash; for <em>how</em> you do something) and <strong>meilleur</strong> (better, an adjective &mdash; for <em>a noun</em>). You'll finish with seven quick practice items that mix <em>lui / leur</em> with the new comparisons.</div>
     </div>
 
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -114,18 +136,22 @@
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose between <em>mieux</em> (adverb) and <em>meilleur</em> (adjective) correctly.</div>
         </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-top: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use <em>lui / leur</em> and build comparisons in short practice items.</div>
+        </div>
     </div>
 
     <!-- PART 1 · Rule 2 comparative pattern -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 1 &middot; PLUS, MOINS, AUSSI&hellip; QUE <span class="pill-time">12 min</span></div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">The comparison sandwich</h3>
-        <div class="rule-box"><strong>The pattern:</strong> <strong>plus / moins / aussi</strong> + adjective + <strong>que</strong>. Put the describing word in the middle and <em>que</em> (than / as) before the second thing. <em>Cette chanson est <strong>plus</strong> belle <strong>que</strong> l'autre.</em></div>
+        <div class="rule-box"><strong>The pattern:</strong> <strong>plus / moins / aussi</strong> + adjective + <strong>que</strong> (an adverb can take the place of the adjective). Put the describing word in the middle and <em>que</em> (than / as) before the second thing. <em>Cette chanson est <strong>plus</strong> belle <strong>que</strong> l'autre.</em> (This song is more beautiful than the other one.) Two new words in the examples: <em>l'autre</em> (the other one) and the adverb <em>bien</em> (well) &mdash; <em>aussi bien que</em> (as well as).</div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 6px 0;">Listen &mdash; the adjective agrees with its noun, but the frame never changes:</p>
         <ul class="vocab-list">
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-plus.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Cette chanson est plus belle que l'autre.</span><span class="v-en">more&hellip; than</span></li>
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-moins.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Ce concert est moins cher que le concert de samedi.</span><span class="v-en">less&hellip; than</span></li>
-            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-aussi.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Elle chante aussi bien que son fr&egrave;re.</span><span class="v-en">as&hellip; as</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-plus.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Cette chanson est plus belle que l'autre.</span><span class="v-en">This song is more beautiful than the other one.</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-moins.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Ce concert est moins cher que le concert de samedi.</span><span class="v-en">This concert is less expensive than Saturday's concert.</span></li>
+            <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-comp-aussi.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Elle chante aussi bien que son fr&egrave;re.</span><span class="v-en">She sings as well as her brother.</span></li>
         </ul>
     </div>
 
@@ -133,7 +159,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#11088; PART 2 &middot; MIEUX vs MEILLEUR <span class="pill-time">10 min</span></div>
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Two words that both mean &ldquo;better&rdquo;</h3>
-        <div class="rule-box"><strong>The rule.</strong> <strong>mieux</strong> is an <em>adverb</em> &mdash; it describes a <u>verb</u> (how well you <em>do</em> something): <em>il chante <strong>mieux</strong></em>. <strong>meilleur</strong> is an <em>adjective</em> &mdash; it describes a <u>noun</u>: <em>une <strong>meilleure</strong> chanson</em>. English uses &ldquo;better&rdquo; for both; French keeps them apart.</div>
+        <div class="rule-box"><strong>The rule.</strong> <strong>mieux</strong> is an <em>adverb</em> &mdash; it describes a <u>verb</u> (how well you <em>do</em> something): <em>il chante <strong>mieux</strong></em>. <strong>meilleur</strong> is an <em>adjective</em> &mdash; it describes a <u>noun</u>: <em>une <strong>meilleure</strong> chanson</em>. English uses &ldquo;better&rdquo; for both; French keeps them apart. Put <em>le</em> or <em>la</em> in front and it means &ldquo;the best&rdquo;: <em>le meilleur</em> (the best) concert, <em>la meilleure</em> (the best) chanson.</div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 6px 0;">Listen to <em>mieux</em> describing <em>how</em> he plays &mdash; it attaches to the verb <em>jouer</em>:</p>
         <ul class="vocab-list">
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m8-mieux.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Il joue de la guitare mieux que moi.</span><span class="v-en">He plays guitar better than me.</span></li>
@@ -154,7 +180,7 @@
             <tbody>
                 <tr><td>more&hellip; than</td><td><span class="pron">plus</span> + adj + que</td><td>plus belle que l'autre</td></tr>
                 <tr><td>less&hellip; than</td><td><span class="pron">moins</span> + adj + que</td><td>moins cher que samedi</td></tr>
-                <tr><td>as&hellip; as</td><td><span class="pron">aussi</span> + adj + que</td><td>aussi bien que son fr&egrave;re</td></tr>
+                <tr><td>as&hellip; as</td><td><span class="pron">aussi</span> + adj + que</td><td>aussi bien que son fr&egrave;re (adverb) &middot; aussi grand que moi (adjective)</td></tr>
                 <tr><td>better (verb)</td><td><span class="pron">mieux</span> (adverb)</td><td>il joue mieux que moi</td></tr>
                 <tr><td>better / best (noun)</td><td><span class="pron">meilleur(e)</span> (adjective)</td><td>une meilleure chanson</td></tr>
             </tbody>
@@ -173,12 +199,100 @@
                 <table class="gtable" style="margin-top:0;">
                     <tbody>
                         <tr><td>Ana est <span class="pron">plus</span> c&eacute;l&egrave;bre <span class="pron">que</span> Louis.</td><td>Ana is more famous than Louis.</td></tr>
-                        <tr><td>Louis est <span class="pron">moins</span> populaire <span class="pron">que</span> Ana.</td><td>Louis is less popular than Ana.</td></tr>
+                        <tr><td>Louis est <span class="pron">moins</span> populaire <span class="pron">qu'</span>Ana.</td><td>Louis is less popular than Ana.</td></tr>
                         <tr><td>Ana chante <span class="pron">mieux que</span> Louis.</td><td>Ana sings better than Louis.</td></tr>
                     </tbody>
                 </table>
                 <div style="font-size:15px;color:#1a6b3d;margin-top:8px;">Notice the last one uses <em>mieux</em> (next to the verb <em>chante</em>), not <em>meilleur</em>. If you kept that straight, you've got today's hardest point.</div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 3 · Accord & conjugaison -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">LUI / LEUR + COMPARISONS <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 8&rsquo;s grammar: the indirect object pronouns, and building comparisons with <em>plus / moins / aussi&hellip; que</em>.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">J&rsquo;offre un cadeau <em>&agrave; ma s&oelig;ur</em>. &rarr; Je ______ offre un cadeau.</div>
+            <div class="widget-options">
+                <button data-no="That is for more than one person.">leur</button>
+                <button data-no="That is a direct object pronoun.">la</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! lui for one person, male or female.">lui</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">Je parle <em>&agrave; mes amis</em>. &rarr; Je ______ parle.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! (Right!) leur for several people.">leur</button>
+                <button data-no="That is for one person.">lui</button>
+                <button data-no="That is a direct object pronoun.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">Cette f&ecirc;te est ______ amusante ______ la f&ecirc;te de samedi.</div>
+            <div class="widget-options">
+                <button data-no="Comparisons use que, not de.">plus&hellip; de</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! plus &hellip; que = more &hellip; than.">plus&hellip; que</button>
+                <button data-no="French uses aussi &hellip; que.">aussi&hellip; comme</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Mon fr&egrave;re est ______ grand ______ moi. <em>(less tall)</em></div>
+            <div class="widget-options">
+                <button data-no="That means as &hellip; as.">aussi&hellip; que</button>
+                <button data-no="That means more.">plus&hellip; que</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! moins &hellip; que = less &hellip; than.">moins&hellip; que</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Elle chante ______ bien ______ sa s&oelig;ur. <em>(equally)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! aussi &hellip; que = as &hellip; as.">aussi&hellip; que</button>
+                <button data-no="That means less.">moins&hellip; que</button>
+                <button data-no="That means more.">plus&hellip; que</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Il joue du piano ______ que moi. <em>(better — modifying a verb)</em></div>
+            <div class="widget-options">
+                <button data-no="Not a French form.">plus bien</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! a verb takes mieux.">mieux</button>
+                <button data-no="meilleur is an adjective.">meilleur</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">C&rsquo;est un ______ chanteur que son fr&egrave;re. <em>(better — modifying a noun)</em></div>
+            <div class="widget-options">
+                <button data-no="French uses meilleur instead.">plus bon</button>
+                <button data-no="mieux is an adverb.">mieux</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! a noun takes meilleur.">meilleur</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
         </div>
     </div>
 
@@ -188,7 +302,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 8.04</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you put it all to work: compare songs, concerts, and performers; use <em>lui</em> and <em>leur</em> in real sentences; and take your first <em>audio dictation</em> of the module.</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you put it all to work: compare songs, concerts, and performers; use <em>lui</em> and <em>leur</em> in real sentences; and listen to your first dictation of the module and write down what you hear.</div>
             </div>
         </div>
     </div>
@@ -199,8 +313,8 @@
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; DEUX R&Egrave;GLES, C'EST TOUT&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Point at people with <em>lui / leur</em>; compare with <em>plus / moins / aussi&hellip;que</em> and the two &ldquo;betters.&rdquo; Those two rules run this whole module &mdash; and you now have both. <em>&Agrave; demain&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; DEUX R&Egrave;GLES, C'EST TOUT&nbsp;! (Two rules, that's all!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Point at people with <em>lui / leur</em>; compare with <em>plus / moins / aussi&hellip;que</em> and the two &ldquo;betters.&rdquo; Those two rules run this whole module &mdash; and you now have both. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -244,7 +358,9 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
@@ -261,7 +377,6 @@
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -286,7 +401,87 @@
   });
 })();
 </script>
+<script>
+/* S2 spelling checker - STRICT on accents (David 2026-09-28: demands high; the graded quiz keeps its leeway). */
+(function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/[’`´]/g, "'").replace(/ /g, ' ')
+      .replace(/\s+/g, ' ').trim().toLowerCase()
+      .replace(/\s*[.?!]$/, '');  /* a missing final full stop or question mark is not an error */
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
 
+  function judge(got, target) {
+    if (!got) return 'empty';
+    if (got === target) return 'perfect';
+    if (deacc(got) === deacc(target)) return 'accent';
+    if (dropArt(target) !== target && (got === dropArt(target) || deacc(got) === deacc(dropArt(target)))) return 'article';
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return 'hyphen';
+    if (target.indexOf('-') >= 0 && deacc(got.replace(/[-\s]/g, '')) === deacc(target.replace(/[-\s]/g, ''))) return 'hyphen';  /* weekend for week-end */
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return 'apostrophe';
+    return 'no';
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var shown = el.dataset.answer;
+    var v = judge(norm(input.value), norm(shown));
+    var tries = parseInt(el.dataset.tries || '0', 10) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 ? ' <span style="color:#41506b;">The answer: <strong>' + shown + '</strong></span>' : '';
+    if (v === 'empty') { setFb(el, 'fb-warn', 'Type something first.'); return; }
+    if (v === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;! (Perfect!)</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v === 'accent') {
+      setFb(el, 'fb-no', '<strong>Check the accents.</strong> The letters are right, but an accent is missing or wrong. ' +
+        'The accent is part of the spelling, like a letter &mdash; copy it from the accent strip under the box.' + tail);
+    } else if (v === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Learn the word with its article.' + tail);
+    } else if (v === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong>' + tail);
+    } else if (v === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong>' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Not yet. Try again.' + tail);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var sc = e.target.closest('.ow-spell .spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
+    var rs = e.target.closest('.ow-spell .widget-reset');
+    if (rs) {
+      var w = rs.closest('.optima-widget');
+      var inp = w.querySelector('.spell-input');
+      inp.value = ''; inp.classList.remove('ok', 'no');
+      var fb = w.querySelector('.widget-feedback');
+      fb.className = 'widget-feedback'; fb.innerHTML = '';
+      delete w.dataset.tries;
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
+    }
+  });
+})();
+</script>
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

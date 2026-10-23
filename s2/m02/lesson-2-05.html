@@ -45,6 +45,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -70,7 +83,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,21 +98,32 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.05 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Un tour des r&eacute;gions &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word and rule from this week living inside one short tour of France &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A traveler crosses four famous regions in three short paragraphs, using your vocabulary, your demonstratives, and your prepositions all at once. Read <em>and</em> listen, then step back to see why France feels like many countries in one &mdash; and why its people hold so tightly to where they're from.</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word and rule from Week 1 living inside one short tour of France &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A traveler crosses four famous regions in three short paragraphs, using your vocabulary, your demonstratives, and your prepositions all at once. Read <em>and</em> listen, then step back to see why France feels like many countries in one &mdash; and why its people hold so tightly to where they're from. You'll finish by writing <strong>your own</strong> five-sentence description of a region &mdash; your rehearsal for tomorrow's Langue en action and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>beaucoup de</b> &mdash; a lot of</li>
+            <li><b>diff&eacute;rentes</b> &mdash; different</li>
+            <li><b>cette ann&eacute;e</b> &mdash; this year</li>
+            <li><b>je visite</b> &mdash; I visit / I'm visiting</li>
+            <li><b>il fait chaud</b> &mdash; it's hot (weather)</li>
+            <li><b>historique</b> &mdash; historic</li>
+            <li><b>j&rsquo;adore</b> &mdash; I love</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m2-regions-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>La France a beaucoup de r&eacute;gions diff&eacute;rentes. Cette ann&eacute;e, je visite quatre r&eacute;gions c&eacute;l&egrave;bres.</p></div>
@@ -115,16 +139,6 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every preposition of place</strong> (<em>en, &agrave; l&rsquo;, dans le, au</em>) and <strong>underline every demonstrative</strong> (<em>cette, ces</em>). Then match each region to its compass direction &mdash; west, east, south, north. Four regions, four corners of France.</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
-        <ul class="gloss">
-            <li><b>beaucoup de</b> &mdash; a lot of</li>
-            <li><b>diff&eacute;rentes</b> &mdash; different</li>
-            <li><b>cette ann&eacute;e</b> &mdash; this year</li>
-            <li><b>je visite</b> &mdash; I visit / I'm visiting</li>
-            <li><b>il fait chaud</b> &mdash; it's hot (weather)</li>
-            <li><b>historique</b> &mdash; historic</li>
-            <li><b>j&rsquo;adore</b> &mdash; I love</li>
-        </ul>
     </div>
 
     <!-- PART 3 · Culture spotlight -->
@@ -135,7 +149,7 @@
             <ul style="font-size:17px;color:#1a2340;line-height:1.75;margin:0 0 8px 0;padding-left:20px;">
                 <li><strong>La Bretagne</strong> has <strong>Celtic roots</strong> and its own regional language, <em>le breton</em>, still taught and spoken today &mdash; closer to Welsh than to French.</li>
                 <li><strong>La Normandie</strong> is home to <strong>Mont-Saint-Michel</strong>, the island abbey rising from the tidal flats of the north coast.</li>
-                <li><strong>L&rsquo;Alsace</strong>, on the German border in the east, shows <strong>German-influenced architecture and cuisine</strong> &mdash; timber-framed houses, <em>choucroute</em>, and a dialect all its own.</li>
+                <li><strong>L&rsquo;Alsace</strong>, on the German border in the east, shows <strong>German-influenced architecture and cuisine</strong> &mdash; timber-framed houses, <em>choucroute</em> (sauerkraut), and a dialect all its own.</li>
                 <li><strong>La Provence</strong>, in the sunny south, is known for its <strong>lavender fields</strong> and a <strong>Mediterranean climate</strong> &mdash; <em>chaud et ensoleill&eacute;</em>.</li>
             </ul>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0;">This is the module's essential question in one sentence: <em>the land shapes the people.</em> A coast makes fishers and sailors; a border makes a blended culture; a warm south makes a slower, sun-lit way of life.</p>
@@ -153,14 +167,14 @@
 
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min &middot; comprehension check</div>
-            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.<br><strong>Glossaire :</strong> <em>O&ugrave;</em> (where) &middot; <em>Comment est&hellip; ?</em> (What is &hellip; like?) &middot; <em>Quelle</em> (which)</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
                 <div class="widget-question">O&ugrave; se trouve la Bretagne&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Oui &mdash; en Bretagne, &agrave; l&rsquo;ouest.">&Agrave; l&rsquo;ouest</button>
-                    <button data-no="Relis le paragraphe 2 &mdash; l&rsquo;Alsace est &agrave; l&rsquo;est.">&Agrave; l&rsquo;est</button>
-                    <button data-no="Non &mdash; c&rsquo;est la Provence qui est dans le sud.">Dans le sud</button>
+                    <button data-correct="1" data-ok="Oui &mdash; paragraph 2: Brittany is in the west.">&Agrave; l&rsquo;ouest</button>
+                    <button data-no="Not quite &mdash; paragraph 2 says Alsace is the one in the east.">&Agrave; l&rsquo;est</button>
+                    <button data-no="Not quite &mdash; Provence is the one in the south.">Dans le sud</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -168,9 +182,9 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Comment est le climat en Provence&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Non &mdash; la mer est en Bretagne et en Normandie.">Il y a la mer partout</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; il fait chaud et ensoleill&eacute;.">Il fait chaud et ensoleill&eacute;</button>
-                    <button data-no="Non &mdash; l&rsquo;Alsace est &agrave; l&rsquo;est, pas la Provence.">Il fait froid &agrave; l&rsquo;est</button>
+                    <button data-no="Not quite &mdash; paragraph 3 says Provence is hot and sunny.">Il fait froid et il pleut</button>
+                    <button data-correct="1" data-ok="Voil&agrave;&nbsp;! (That's it!) Paragraph 3: hot and sunny.">Il fait chaud et ensoleill&eacute;</button>
+                    <button data-no="Not quite &mdash; that&rsquo;s the east; Provence is in the south.">Il fait froid &agrave; l&rsquo;est</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -178,12 +192,22 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Quelle r&eacute;gion a une c&ocirc;te historique au nord&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Non &mdash; la Bretagne est &agrave; l&rsquo;ouest.">La Bretagne</button>
-                    <button data-no="Non &mdash; la Provence est dans le sud.">La Provence</button>
-                    <button data-correct="1" data-ok="Exact &mdash; la Normandie, au nord, a une c&ocirc;te historique.">La Normandie</button>
+                    <button data-no="Not quite &mdash; Brittany is in the west.">La Bretagne</button>
+                    <button data-no="Not quite &mdash; Provence is in the south.">La Provence</button>
+                    <button data-correct="1" data-ok="Exact&nbsp;! (Right!) Paragraph 3: Normandy, in the north, has a historic coast.">La Normandie</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; D&Eacute;CRIS UNE R&Eacute;GION <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences about a region you'd visit</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Pick a region and describe it. Use at least <strong>five different place-words</strong>, one <strong>demonstrative</strong> (<em>cette r&eacute;gion, ces plages</em>), one <strong>preposition of place</strong> (<em>en, dans le sud de</em>), and one <strong>adjective from Module 1</strong>. This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; a demonstrative that matches its noun &nbsp;&#9633; <em>en</em> / <em>au</em> for &ldquo;to&rdquo; a place &nbsp;&#9633; a compass locating phrase &nbsp;&#9633; a landscape word &nbsp;&#9633; an adjective describing the region.
         </div>
     </div>
 
@@ -192,20 +216,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and three rules together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your preposition table is solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you name all four regions and their compass directions from memory, out loud? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you name all four regions and their compass directions from memory, out loud? Try it before tomorrow's assessments.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a tour of France and understood it &mdash; every place-word and preposition was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a tour of France and understood it &mdash; every place-word and preposition was one you learned in Week 1. That's real reading, not decoding &mdash; and your own region description is ready for the graded work. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -227,7 +251,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -237,16 +273,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -271,7 +316,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

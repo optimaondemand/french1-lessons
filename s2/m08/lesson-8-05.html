@@ -45,6 +45,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -70,7 +83,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 8.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,21 +98,31 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.05 &middot; Semaine 2 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Une f&ecirc;te d'anniversaire &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See this week's words and rules living inside one real celebration &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Paul is planning his sister's birthday party. His story uses your vocabulary, <em>lui</em>, and a comparative &mdash; all at once. Read <em>and</em> listen, then step into the biggest music celebration in France, and meet the voice that still defines French song.</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See Week 1's words and rules living inside one real celebration &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Paul is planning his sister's birthday party. His story uses your vocabulary, <em>lui</em>, and a comparative &mdash; all at once. Read <em>and</em> listen, then step into the biggest music celebration in France, and meet the voice that still defines French song. You'll finish by writing about a celebration of your own &mdash; your rehearsal for tomorrow's graded work and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:6px;">A few words glossed before you read, so the passage reads smoothly:</div>
+        <ul class="gloss" style="margin-bottom: 14px;">
+            <li><b>organiser</b> &mdash; to organize</li>
+            <li><b>tous nos amis</b> &mdash; all our friends</li>
+            <li><b>sp&eacute;cial</b> &mdash; special</li>
+            <li><b>adorer</b> &mdash; to love / adore</li>
+            <li><b>jouer du piano</b> &mdash; to play the piano</li>
+            <li><b>amusante</b> &mdash; fun</li>
+            <li><b>l'ann&eacute;e derni&egrave;re</b> &mdash; last year</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m8-fete-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Samedi, c'est l'anniversaire de ma s&oelig;ur. Nous organisons une grande f&ecirc;te et nous invitons tous nos amis.</p></div>
@@ -115,16 +138,6 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle the pronoun <em>lui</em></strong> and <strong>underline the two comparatives</strong> (<em>mieux que</em>, <em>plus&hellip;que</em>). Ask yourself: who does <em>lui</em> point to? And is <em>mieux</em> describing a verb or a noun here?</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words glossed here so the passage reads smoothly:</div>
-        <ul class="gloss">
-            <li><b>organiser</b> &mdash; to organize</li>
-            <li><b>tous nos amis</b> &mdash; all our friends</li>
-            <li><b>sp&eacute;cial</b> &mdash; special</li>
-            <li><b>adorer</b> &mdash; to love / adore</li>
-            <li><b>jouer du piano</b> &mdash; to play the piano</li>
-            <li><b>amusante</b> &mdash; fun</li>
-            <li><b>l'ann&eacute;e derni&egrave;re</b> &mdash; last year</li>
-        </ul>
     </div>
 
     <!-- PART 3 · Culture -->
@@ -142,7 +155,7 @@
         <div class="virtue">
             <div class="tag">LE SERVICE &middot; SERVICE</div>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;"><strong>&Eacute;dith Piaf</strong> (1915&ndash;1963) rose from singing on the streets of Paris to the greatest stages in the world &mdash; but she never forgot where she came from. During the Second World War she quietly used her fame to help others, and throughout her life she gave openings and support to younger singers so <em>they</em> could rise too.</p>
-            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">A celebration is never only about ourselves &mdash; the best ones are gifts we give to others. When you offer someone a song, an invitation, or a present, you are practicing the same generosity. <em>&laquo;&nbsp;Je ne regrette rien.&nbsp;&raquo;</em></p>
+            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">A celebration is never only about ourselves &mdash; the best ones are gifts we give to others. When you offer someone a song, an invitation, or a present, you are practicing the same generosity. <em>&laquo;&nbsp;Je ne regrette rien.&nbsp;&raquo;</em> (I regret nothing.)</p>
         </div>
 
         <div class="opt-strip">
@@ -152,32 +165,42 @@
             <div class="optima-widget ow-eval" style="margin-top:10px;">
                 <div class="widget-question">Qu'est-ce que Paul offre &agrave; sa s&oelig;ur&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 2.">un piano</button>
+                    <button data-no="Not quite &mdash; reread paragraph 2.">un piano</button>
                     <button data-correct="1" data-ok="Oui &mdash; il lui offre une guitare.">une guitare</button>
-                    <button data-no="La batterie n'est pas mentionn&eacute;e.">une batterie</button>
+                    <button data-no="The drums aren't in the passage &mdash; reread paragraph 2.">une batterie</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Qui joue mieux du piano&nbsp;?</div>
+                <div class="widget-question"><em>Qui</em> (who) joue mieux du piano&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Paul dit &laquo; il joue mieux que moi &raquo;.">Paul</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; le cousin joue mieux que Paul.">Le cousin</button>
-                    <button data-no="La s&oelig;ur chante, elle ne joue pas du piano.">La s&oelig;ur</button>
+                    <button data-no="Not quite &mdash; Paul says &laquo; il joue mieux que moi &raquo;: his cousin plays better than he does.">Paul</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (That's it!) &mdash; le cousin joue mieux que Paul.">Le cousin</button>
+                    <button data-no="Not quite &mdash; the sister sings; she doesn't play the piano.">La s&oelig;ur</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Comment est cette f&ecirc;te compar&eacute;e &agrave; celle de l'ann&eacute;e derni&egrave;re&nbsp;?</div>
+                <div class="widget-question">Comment est cette f&ecirc;te, <em>compar&eacute;e &agrave;</em> (compared to) la f&ecirc;te de l'ann&eacute;e derni&egrave;re&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Exact &mdash; elle est plus amusante que l'ann&eacute;e derni&egrave;re.">Elle est plus amusante</button>
-                    <button data-no="Relis la derni&egrave;re phrase &mdash; c'est le contraire.">Elle est moins amusante</button>
-                    <button data-no="Non &mdash; Paul dit qu'elle est plus amusante.">Elle est aussi amusante</button>
+                    <button data-correct="1" data-ok="Exact (Right!) &mdash; elle est plus amusante que l'ann&eacute;e derni&egrave;re.">Elle est plus amusante</button>
+                    <button data-no="Reread the last sentence &mdash; it says the opposite.">Elle est moins amusante</button>
+                    <button data-no="No &mdash; Paul says it is more fun (plus amusante).">Elle est aussi amusante</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; TA F&Ecirc;TE ID&Eacute;ALE <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences about a celebration</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Describe a real or ideal party. Use at least <strong>five module words</strong>, one <strong>lui</strong> or <strong>leur</strong> (who do you give a gift to, or speak to?), and one <strong>comparison</strong> (<em>plus / moins / aussi&hellip;que</em> or <em>mieux</em>). This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; five module words &nbsp;&#9633; <em>lui</em> or <em>leur</em> before the verb &nbsp;&#9633; a comparison (<em>plus&hellip;que</em>) &nbsp;&#9633; <em>mieux</em> or <em>meilleur</em> used correctly &nbsp;&#9633; a music or party detail.
         </div>
     </div>
 
@@ -186,20 +209,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 8.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and both rules together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 8.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your comparatives are solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Paul's plan in three sentences of your own, out loud &mdash; using <em>lui</em> once? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Paul's plan in three sentences of your own, out loud &mdash; using <em>lui</em> once? Try it before tomorrow's assessments.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full French celebration and understood it &mdash; every word was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full French celebration and understood it &mdash; every word was one you learned last week. That's real reading, not decoding. Tomorrow is an assessment day &mdash; <em>&agrave; demain&nbsp;!</em> (see you tomorrow!)</p>
     </div>
 
 </div>
@@ -221,7 +244,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -231,16 +266,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -265,7 +309,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

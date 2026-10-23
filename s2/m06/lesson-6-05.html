@@ -45,6 +45,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -70,7 +83,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 6.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 6.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,21 +98,33 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.05 &middot; Semaine 2 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Une visite au mus&eacute;e &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See both past tenses at work inside one real memory &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A woman remembers the museum she used to visit with her grandmother &mdash; the description and the habit come in the <em>imparfait</em>, and yesterday&rsquo;s return comes in the <em>pass&eacute; compos&eacute;</em>. Read <em>and</em> listen, then step into the story of how a single painting gave a whole art movement its name.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A woman remembers the museum she used to visit with her grandmother &mdash; the description and the habit come in the <em>imparfait</em>, and yesterday&rsquo;s return comes in the <em>pass&eacute; compos&eacute;</em>. Read <em>and</em> listen, then step into the story of how a single painting gave a whole art movement its name. You&rsquo;ll finish by writing a memory of your own in both past tenses &mdash; your rehearsal for tomorrow&rsquo;s graded work and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words to keep the passage smooth (read these first):</div>
+        <ul class="gloss">
+            <li><b>quand j&rsquo;&eacute;tais petite</b> &mdash; when I was little</li>
+            <li><b>adorait</b> &mdash; loved / adored</li>
+            <li><b>que j&rsquo;admirais</b> &mdash; that I admired</li>
+            <li><b>les couleurs</b> &mdash; the colors</li>
+            <li><b>je suis retourn&eacute;e</b> &mdash; I went back</li>
+            <li><b>j&rsquo;ai revu</b> &mdash; I saw again</li>
+            <li><b>j&rsquo;ai pens&eacute; &agrave;</b> &mdash; I thought about</li>
+            <li><b>un moment</b> &mdash; a moment</li>
+            <li><b>tr&egrave;s sp&eacute;cial</b> &mdash; very special</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m6-musee-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Quand j&rsquo;&eacute;tais petite, j&rsquo;allais souvent au mus&eacute;e avec ma grand-m&egrave;re. Elle adorait la peinture.</p></div>
@@ -115,17 +140,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every imparfait verb in blue</strong> and <strong>every pass&eacute; compos&eacute; verb in red</strong>. Then answer the key question: <em>why</em> are paragraphs 1&ndash;2 almost all imparfait, but paragraph 3 switches to the pass&eacute; compos&eacute;? (Hint: memory &amp; habit vs. one thing that happened yesterday.)</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words to keep the passage smooth:</div>
-        <ul class="gloss">
-            <li><b>quand j&rsquo;&eacute;tais petite</b> &mdash; when I was little</li>
-            <li><b>adorait</b> &mdash; loved / adored</li>
-            <li><b>que j&rsquo;admirais</b> &mdash; that I admired</li>
-            <li><b>les couleurs</b> &mdash; the colors</li>
-            <li><b>je suis retourn&eacute;e</b> &mdash; I went back</li>
-            <li><b>j&rsquo;ai revu</b> &mdash; I saw again</li>
-            <li><b>j&rsquo;ai pens&eacute; &agrave;</b> &mdash; I thought about</li>
-        </ul>
-    </div>
+            </div>
 
     <!-- PART 3 · Culture -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -151,11 +166,11 @@
             <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question">Avec qui la narratrice allait-elle au mus&eacute;e quand elle &eacute;tait petite&nbsp;?</div>
+                <div class="widget-question">Avec <em>qui</em> (whom) <em>la narratrice</em> (the narrator) allait-elle au mus&eacute;e quand elle &eacute;tait petite&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 1.">Avec un ami</button>
-                    <button data-correct="1" data-ok="Oui &mdash; avec sa grand-m&egrave;re.">Avec sa grand-m&egrave;re</button>
-                    <button data-no="Elle allait au mus&eacute;e, pas seule au cin&eacute;ma.">Toute seule</button>
+                    <button data-no="Not a friend &mdash; reread paragraph 1.">Avec un ami</button>
+                    <button data-correct="1" data-ok="Yes &mdash; she went with her grandmother (paragraph 1).">Avec sa grand-m&egrave;re</button>
+                    <button data-no="Not her sister &mdash; reread paragraph 1.">Avec sa s&oelig;ur</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -163,9 +178,9 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Comment &eacute;tait la salle du grand tableau&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Le tableau &eacute;tait impressionnant, mais la salle&hellip;?">Bruyante</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; la salle &eacute;tait calme (imparfait, description).">Calme</button>
-                    <button data-no="Relis&nbsp;: les couleurs &eacute;taient magnifiques, la salle &eacute;tait calme.">Petite</button>
+                    <button data-no="The painting was big (un grand tableau), but the room&hellip;? Reread paragraph 2.">Grande</button>
+                    <button data-correct="1" data-ok="Right &mdash; the room was calm: la salle &eacute;tait calme (imparfait, description).">Calme</button>
+                    <button data-no="Reread paragraph 2: the colors were magnificent and the room was calm.">Petite</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -173,12 +188,22 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Qu&rsquo;a-t-elle fait <em>hier</em> (pass&eacute; compos&eacute;)&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Exact &mdash; elle est retourn&eacute;e au mus&eacute;e et a revu le tableau.">Elle est retourn&eacute;e au mus&eacute;e</button>
-                    <button data-no="&Ccedil;a, c&rsquo;&eacute;tait quand elle &eacute;tait petite (imparfait).">Elle allait au mus&eacute;e chaque dimanche</button>
-                    <button data-no="Sa grand-m&egrave;re adorait la peinture &mdash; mais ce n&rsquo;est pas &laquo;&nbsp;hier&nbsp;&raquo;.">Elle a appris &agrave; peindre</button>
+                    <button data-correct="1" data-ok="Right &mdash; yesterday she went back to the museum and saw the painting again (paragraph 3).">Elle est retourn&eacute;e au mus&eacute;e</button>
+                    <button data-no="That was a habit from when she was little (imparfait), not yesterday.">Elle allait au mus&eacute;e chaque dimanche</button>
+                    <button data-no="The passage never says she drew a painting. Reread paragraph 3.">Elle a dessin&eacute; un tableau</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production (spirals passé composé) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; TON PROPRE SOUVENIR (your own memory) <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences about a real memory</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Describe a place you used to go &mdash; a museum, a park, a grandparent&rsquo;s house &mdash; and one thing that happened there. Use at least <strong>three imparfait verbs</strong> (description / habit) and at least <strong>two pass&eacute; compos&eacute; verbs</strong> (events). This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; a description in the imparfait (<em>c&rsquo;&eacute;tait&hellip;, il y avait&hellip;</em>) &nbsp;&#9633; a habit in the imparfait (<em>j&rsquo;allais&hellip;</em>) &nbsp;&#9633; an event in the pass&eacute; compos&eacute; (<em>un jour</em> (one day)<em>, j&rsquo;ai&hellip;</em>) &nbsp;&#9633; a time word (<em>autrefois, d&rsquo;habitude, un jour</em>) &nbsp;&#9633; one Module 6 art word.
         </div>
     </div>
 
@@ -187,20 +212,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 6.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and both past tenses together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 6.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your tenses are solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell this memory in three sentences of your own, out loud &mdash; two in the imparfait, one in the pass&eacute; compos&eacute;? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell this memory in three sentences of your own, out loud &mdash; two in the imparfait, one in the pass&eacute; compos&eacute;? Try it before tomorrow&rsquo;s assessments.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a real memory in French and understood <em>why</em> each tense was chosen &mdash; that&rsquo;s the whole module in one passage. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a real memory in French and understood <em>why</em> each tense was chosen &mdash; that&rsquo;s the whole module in one passage. Tomorrow is an assessment day &mdash; <em>&agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -222,7 +247,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -232,16 +269,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -266,7 +312,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

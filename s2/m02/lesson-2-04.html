@@ -56,6 +56,28 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .activity-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 14px 0; }
+    .go-btn { display:inline-block; background:#0E1C42; color:#fff; text-decoration:none; border-radius:8px; padding:11px 22px; font-size:16px; margin-top:12px; }
+    .go-btn:hover { background:#1B3A6B; }
+    .practice-badge { display:inline-block; background:#2A9D5C; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; }
+    .fmt { font-size:16px; color:#1a2340; line-height:1.7; }
+    .fmt li { margin-bottom:5px; }
+    <!-- S2 DRILL CSS -->
+.widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
+    .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
+    .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
 </style>
 </head>
 <body>
@@ -81,7 +103,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.04 &middot; Day 4 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.04 &middot; Day 4 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -98,13 +120,13 @@
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.04</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Mise en pratique &mdash; Describe a Region</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You know the words and the rules. Today you <em>use</em> them &mdash; choosing, writing, and (for the first time) writing down what you hear.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Three moves, each harder than the last: pick the right demonstrative or preposition, write your own description of a region, then take an <strong>audio dictation</strong>. Dictation is the bridge between hearing French and producing it &mdash; exactly what your listening-based Vocabulary Check rewards.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Three moves, each harder than the last: pick the right demonstrative or preposition, write your own description of a region, then listen to a dictation and write down what you hear. Dictation is the bridge between hearing French and producing it &mdash; exactly what your listening-based Vocabulary Check rewards. A short practice round on <em>ce / cet / cette / ces</em> and the prepositions of place closes the day.</div>
     </div>
 
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -117,6 +139,10 @@
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> understand a spoken sentence about geography well enough to write it down.</div>
         </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-top: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose the right demonstrative and preposition of place across seven mixed items.</div>
+        </div>
     </div>
 
     <!-- PART 1 · Evaluative widget -->
@@ -126,7 +152,7 @@
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
-            <div class="widget-question">______ c&ocirc;te est magnifique en &eacute;t&eacute;. &nbsp;<span style="color:#6b7a99;font-size:14px;">(c&ocirc;te = feminine)</span></div>
+            <div class="widget-question">______ c&ocirc;te est magnifique. &nbsp;<span style="color:#6b7a99;font-size:14px;">(c&ocirc;te = feminine)</span></div>
             <div class="widget-options">
                 <button data-no="Not quite &mdash; ce is masculine.">Ce</button>
                 <button data-correct="1" data-ok="Oui&nbsp;! c&ocirc;te is feminine &rarr; cette.">Cette</button>
@@ -142,7 +168,7 @@
             <div class="widget-options">
                 <button data-no="Not quite &mdash; au is for masculine countries.">au</button>
                 <button data-no="Close &mdash; dans le needs a compass point + de.">dans le</button>
-                <button data-correct="1" data-ok="Exact&nbsp;! A feminine region takes en.">en</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! (Right!) A feminine region takes en.">en</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
@@ -152,7 +178,7 @@
             <div class="widget-kicker">&#9998; ITEM 3</div>
             <div class="widget-question">La Provence se trouve ______ sud de la France. &nbsp;<span style="color:#6b7a99;font-size:14px;">(le sud)</span></div>
             <div class="widget-options">
-                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! le sud &rarr; dans le sud de.">dans le</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! (That's it!) le sud &rarr; dans le sud de.">dans le</button>
                 <button data-no="Not quite &mdash; en is for going to a region.">en</button>
                 <button data-no="Close &mdash; &agrave; l&rsquo; goes with l&rsquo;est / l&rsquo;ouest.">&agrave; l&rsquo;</button>
             </div>
@@ -166,7 +192,7 @@
             <div class="widget-options">
                 <button data-no="Not quite &mdash; ce is singular.">Ce</button>
                 <button data-no="Not quite &mdash; cette is singular feminine.">Cette</button>
-                <button data-correct="1" data-ok="Parfait&nbsp;! Any plural takes ces.">Ces</button>
+                <button data-correct="1" data-ok="Parfait&nbsp;! (Perfect!) Any plural takes ces.">Ces</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
@@ -179,9 +205,9 @@
         <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write three sentences describing a French region</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In your notebook, choose one region (Bretagne, Alsace, Provence, or Normandie) and write <strong>three</strong> sentences: <em>where</em> it is (compass), <em>what landscape</em> it has, and <em>what it's like</em> (an adjective from Module 1). Use at least one <strong>demonstrative</strong> (<em>cette r&eacute;gion&hellip;</em>).</p>
         <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
-            <strong>Model:</strong> <em>Cette r&eacute;gion se trouve dans le sud de la France. Il y a la mer, des plages et un climat ensoleill&eacute;. La Provence est vraiment belle&nbsp;!</em>
+            <strong>Model:</strong> <em>Cette r&eacute;gion se trouve dans le sud de la France. Il y a la mer, des plages et un climat ensoleill&eacute;. La Provence est tr&egrave;s belle&nbsp;!</em>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;">Keep these &mdash; you'll reuse them for your Speaking Task on Day 8. Check each sentence against the three rules before you move on.</p>
+        <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;">Keep these &mdash; you'll reuse them for your Speaking Task on Day 7. Check each sentence against the three rules before you move on.</p>
     </div>
 
     <!-- PART 3 · Audio dictation -->
@@ -229,13 +255,101 @@
         </div>
     </div>
 
+    <!-- PART 3 · Accord & conjugaison -->
+
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#9999;&#65039; Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">DEMONSTRATIVES + PLACE <span class="pill-time">12 min</span></div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 2&rsquo;s grammar: choosing <em>ce / cet / cette / ces</em>, and saying where a place is.</div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">______ r&eacute;gion est magnifique. <em>(f.)</em></div>
+            <div class="widget-options">
+                <button data-no="Ces is plural.">Ces</button>
+                <button data-no="Ce is masculine.">Ce</button>
+                <button data-correct="1" data-ok="Yes! r&eacute;gion is feminine.">Cette</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">______ village est tr&egrave;s joli. <em>(m.)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Right! village is masculine.">Ce</button>
+                <button data-no="Cet is for a masculine word starting with a vowel.">Cet</button>
+                <button data-no="Cette is feminine.">Cette</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">______ endroit est vieux. <em>(m., starts with a vowel)</em></div>
+            <div class="widget-options">
+                <button data-no="Cette is feminine.">Cette</button>
+                <button data-correct="1" data-ok="Yes! Before a vowel, ce becomes cet.">Cet</button>
+                <button data-no="Before a vowel it becomes cet.">Ce</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">______ montagnes sont magnifiques. <em>(pl.)</em></div>
+            <div class="widget-options">
+                <button data-no="That is feminine singular.">Cette</button>
+                <button data-no="That is masculine singular.">Ce</button>
+                <button data-correct="1" data-ok="Right! ces for any plural.">Ces</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">La Bretagne se trouve ______ l&rsquo;ouest de la France.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Yes! &agrave; l&rsquo;ouest / &agrave; l&rsquo;est.">&agrave;</button>
+                <button data-no="en goes with a region name, not a direction.">en</button>
+                <button data-no="sur means on top of.">sur</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Cet &eacute;t&eacute;, je vais ______ Provence.</div>
+            <div class="widget-options">
+                <button data-no="&agrave; is for towns: &agrave; Paris.">&agrave;</button>
+                <button data-correct="1" data-ok="Right! en + a feminine region.">en</button>
+                <button data-no="dans is for enclosed spaces.">dans</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Il y a un beau village ______ la c&ocirc;te.</div>
+            <div class="widget-options">
+                <button data-no="en does not work with la c&ocirc;te.">en</button>
+                <button data-no="&agrave; la c&ocirc;te is not idiomatic.">&agrave;</button>
+                <button data-correct="1" data-ok="Yes! sur la c&ocirc;te.">sur</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2.05</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take a tour of four regions with audio &mdash; then meet <em>l'identit&eacute; r&eacute;gionale</em>: Celtic Brittany, Alsatian villages, Proven&ccedil;al lavender, and the Normandy coast.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2.05 &mdash; Week 2 begins</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">That's the end of Week 1. Next week opens with a tour of four regions with audio &mdash; then you meet <em>l'identit&eacute; r&eacute;gionale</em>: Celtic Brittany, Alsatian villages, Proven&ccedil;al lavender, and the Normandy coast.</div>
             </div>
         </div>
     </div>
@@ -246,8 +360,8 @@
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; TU PRODUIS DU FRAN&Ccedil;AIS&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You didn't just recognize French today &mdash; you chose it, wrote it, and pulled it out of the air by ear. That's the whole skill in miniature. <em>&Agrave; demain&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; TU PRODUIS DU FRAN&Ccedil;AIS&nbsp;! (You're producing French!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You didn't just recognize French today &mdash; you chose it, wrote it, and pulled it out of the air by ear. That's the whole skill in miniature &mdash; and the end of Week 1. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em> (Have a good weekend — see you Monday!)</p>
     </div>
 
 </div>
@@ -291,7 +405,9 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
@@ -308,7 +424,6 @@
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -333,7 +448,6 @@
   });
 })();
 </script>
-
 <script>
 (function () {
   var last = null;
@@ -374,6 +488,86 @@
       if (missing) tips.push(missing + ' word' + (missing > 1 ? 's are' : ' is') + ' missing');
       if (acc) tips.push('<span class="o">underlined</span> = right word, check the accent');
       fb.innerHTML = '<strong>Not quite &mdash; play it again.</strong> <span class="g">Green</span> words are right; ' + tips.join('; ') + '.<br>' + shown;
+    }
+  });
+})();
+</script>
+<script>
+/* S2 spelling checker - STRICT on accents (David 2026-09-28: demands high; the graded quiz keeps its leeway). */
+(function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/[’`´]/g, "'").replace(/ /g, ' ')
+      .replace(/\s+/g, ' ').trim().toLowerCase()
+      .replace(/\s*[.?!]$/, '');  /* a missing final full stop or question mark is not an error */
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
+
+  function judge(got, target) {
+    if (!got) return 'empty';
+    if (got === target) return 'perfect';
+    if (deacc(got) === deacc(target)) return 'accent';
+    if (dropArt(target) !== target && (got === dropArt(target) || deacc(got) === deacc(dropArt(target)))) return 'article';
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return 'hyphen';
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return 'apostrophe';
+    return 'no';
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var shown = el.dataset.answer;
+    var v = judge(norm(input.value), norm(shown));
+    var tries = parseInt(el.dataset.tries || '0', 10) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 ? ' <span style="color:#41506b;">The answer: <strong>' + shown + '</strong></span>' : '';
+    if (v === 'empty') { setFb(el, 'fb-warn', 'Type something first.'); return; }
+    if (v === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Perfect!</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v === 'accent') {
+      setFb(el, 'fb-no', '<strong>Check the accents.</strong> The letters are right, but an accent is missing or wrong. ' +
+        'The accent is part of the spelling, like a letter &mdash; copy it from the accent strip under the box.' + tail);
+    } else if (v === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Learn the word with its article.' + tail);
+    } else if (v === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong>' + tail);
+    } else if (v === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong>' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Not yet. Try again.' + tail);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var sc = e.target.closest('.ow-spell .spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
+    var rs = e.target.closest('.ow-spell .widget-reset');
+    if (rs) {
+      var w = rs.closest('.optima-widget');
+      var inp = w.querySelector('.spell-input');
+      inp.value = ''; inp.classList.remove('ok', 'no');
+      var fb = w.querySelector('.widget-feedback');
+      fb.className = 'widget-feedback'; fb.innerHTML = '';
+      delete w.dataset.tries;
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
     }
   });
 })();

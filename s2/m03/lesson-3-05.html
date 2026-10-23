@@ -45,6 +45,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -70,7 +83,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,15 +98,15 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.05 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Un d&icirc;ner au restaurant &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word from this week living inside one real French meal &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A short evening at a restaurant, told course by course. It uses your vocabulary, your <em>prendre</em>, and your partitives &mdash; all at once. Read <em>and</em> listen, then step back to see why UNESCO decided the French meal itself is a treasure worth protecting.</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word from Week 1 living inside one real French meal &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A short evening at a restaurant, told course by course. It uses your vocabulary, your <em>prendre</em>, and your partitives &mdash; all at once. Read <em>and</em> listen, then step back to see why UNESCO decided the French meal itself is a treasure worth protecting. You'll finish by writing <strong>your own</strong> five-line restaurant order &mdash; your rehearsal for tomorrow's Langue en action and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
@@ -101,6 +114,17 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
 
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">Before you read: a few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>ce soir</b> &mdash; tonight</li>
+            <li><b>nous d&icirc;nons</b> &mdash; we're having dinner</li>
+            <li><b>apporte</b> &mdash; brings</li>
+            <li><b>le poisson</b> &mdash; the fish</li>
+            <li><b>les l&eacute;gumes</b> &mdash; the vegetables</li>
+            <li><b>&agrave; la fin</b> &mdash; at the end</li>
+            <li><b>tout</b> &mdash; everything</li>
+            <li><b>d&eacute;licieux</b> &mdash; delicious</li>
+        </ul>
         <button class="play-bar" data-audio="passage/s2m3-table-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Ce soir, nous d&icirc;nons au restaurant. Le serveur apporte la carte et nous regardons le menu.</p></div>
 
@@ -115,23 +139,13 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every partitive</strong> (<em>du, des</em>) and <strong>underline the one quantity expression</strong> (<em>une tranche de</em>). Notice how <em>de la</em> would appear before a feminine food &mdash; and ask yourself why <em>g&acirc;teau</em> takes <em>de</em>, not <em>du</em>, here.</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
-        <ul class="gloss">
-            <li><b>ce soir</b> &mdash; tonight</li>
-            <li><b>nous d&icirc;nons</b> &mdash; we're having dinner</li>
-            <li><b>apporte</b> &mdash; brings</li>
-            <li><b>le poisson</b> &mdash; the fish</li>
-            <li><b>les l&eacute;gumes</b> &mdash; the vegetables</li>
-            <li><b>&agrave; la fin</b> &mdash; at the end</li>
-            <li><b>d&eacute;licieux</b> &mdash; delicious</li>
-        </ul>
     </div>
 
     <!-- PART 3 · Culture -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127467;&#127479; PART 3 &middot; LE REPAS GASTRONOMIQUE DES FRAN&Ccedil;AIS <span class="pill-time">12 min</span></div>
         <div class="culture">
-            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">In 2010, UNESCO added <strong>le repas gastronomique des Fran&ccedil;ais</strong> &mdash; the French gastronomic meal &mdash; to its <em>Representative List of the Intangible Cultural Heritage of Humanity</em>. Not a single dish, but the whole <strong>ritual</strong>: a structured meal in a fixed order &mdash; <em>l'entr&eacute;e</em>, <em>le plat principal</em>, <em>le fromage</em>, <em>le dessert</em> &mdash; shared slowly with family and friends. That's the order you just read.</p>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">In 2010, UNESCO added <strong>le repas gastronomique des Fran&ccedil;ais</strong> &mdash; the French gastronomic meal &mdash; to its <em>Representative List of the Intangible Cultural Heritage of Humanity</em>. Not a single dish, but the whole <strong>ritual</strong>: a structured meal in a fixed order &mdash; <em>l'entr&eacute;e</em>, <em>le plat principal</em>, <em>le fromage</em>, <em>le dessert</em> &mdash; shared slowly with family and friends. The dinner you just read follows that same order (it simply skips the cheese course).</p>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0;">The point of the honor was <strong>conviviality</strong>: the meal as a moment to be together, to talk, to take your time. In 2022, UNESCO added a second French entry &mdash; the <strong>craftsmanship of the baguette</strong>, and the daily culture around it. When you order in order and linger over <em>l'addition</em>, you are taking part in something a global body decided is worth protecting.</p>
         </div>
     </div>
@@ -142,19 +156,19 @@
         <div class="virtue">
             <div class="tag">LA COURTOISIE &middot; COURTESY</div>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">Notice how the diner speaks: <em>je voudrais</em>, <em>s'il vous pla&icirc;t</em> &mdash; never a blunt demand. French table culture treats the meal as a shared act, and the language of ordering is built on <strong>courtesy</strong>. To be served well, you greet, you soften your requests, you thank.</p>
-            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">Courtesy isn't decoration &mdash; it's how a shared table stays pleasant for everyone at it. The small politeness of <em>s'il vous pla&icirc;t</em> is the whole convivial meal in miniature. <em>&laquo;&nbsp;La politesse est &agrave; l'esprit ce que la gr&acirc;ce est au visage.&nbsp;&raquo;</em></p>
+            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">Courtesy isn't decoration &mdash; it's how a shared table stays pleasant for everyone at it. The small politeness of <em>s'il vous pla&icirc;t</em> is the whole convivial meal in miniature. <em>&laquo;&nbsp;La politesse est &agrave; l'esprit ce que la gr&acirc;ce est au visage.&nbsp;&raquo;</em> (Politeness is to the mind what grace is to the face.)</p>
         </div>
 
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min &middot; comprehension check</div>
-            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback. <strong>Glossaire :</strong> <em>qui</em> (who) &middot; <em>que</em> (what) &middot; <em>le client</em> (the customer)</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
                 <div class="widget-question">Qui apporte la carte&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 1.">Le chef</button>
+                    <button data-no="Re-read paragraph 1 &mdash; the waiter brings the menu.">Ma s&oelig;ur</button>
                     <button data-correct="1" data-ok="Oui &mdash; le serveur apporte la carte.">Le serveur</button>
-                    <button data-no="Le client regarde le menu, il ne l'apporte pas.">Le client</button>
+                    <button data-no="The customer looks at the menu &mdash; he doesn't bring it.">Le client</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -162,9 +176,9 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Que prend le client comme plat principal&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="La salade, c'est l'entr&eacute;e.">Une salade</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; du poisson avec des l&eacute;gumes.">Du poisson avec des l&eacute;gumes</button>
-                    <button data-no="Le g&acirc;teau, c'est le dessert.">Une tranche de g&acirc;teau</button>
+                    <button data-no="The salad is the starter.">Une salade</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (There you go!) &mdash; du poisson avec des l&eacute;gumes.">Du poisson avec des l&eacute;gumes</button>
+                    <button data-no="The cake is the dessert.">Une tranche de g&acirc;teau</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -173,11 +187,21 @@
                 <div class="widget-question">Qu'est-ce que le serveur apporte &agrave; la fin&nbsp;?</div>
                 <div class="widget-options">
                     <button data-correct="1" data-ok="Exact &mdash; &agrave; la fin, il apporte l'addition.">L'addition</button>
-                    <button data-no="La carte arrive au d&eacute;but, pas &agrave; la fin.">La carte</button>
-                    <button data-no="L'entr&eacute;e vient en premier, pas &agrave; la fin.">L'entr&eacute;e</button>
+                    <button data-no="The menu comes at the start, not at the end.">La carte</button>
+                    <button data-no="The starter comes first, not at the end.">L'entr&eacute;e</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; TON PROPRE D&Icirc;NER <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write a five-line restaurant order</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Order a full meal, in order. Use <strong>prendre</strong> at least twice, at least <strong>one partitive</strong> (<em>du/de la/des</em>), and at least <strong>one quantity expression</strong> (<em>une tranche de, un verre de&hellip;</em>). This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; <em>Je voudrais commander</em> to open &nbsp;&#9633; an entr&eacute;e &nbsp;&#9633; a plat principal with a partitive &nbsp;&#9633; a boisson with a quantity (<em>une bouteille de&hellip;</em>) &nbsp;&#9633; <em>L'addition, s'il vous pla&icirc;t</em> to close.
         </div>
     </div>
 
@@ -186,20 +210,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words, <em>prendre</em>, and the partitive together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your <em>prendre</em> table is solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell the meal in three sentences of your own, out loud, in the right order? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell the meal in three sentences of your own, out loud, in the right order? Use today's order, and try it before the Speaking Task on Day 7.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full French meal and understood it &mdash; every word was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;!</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full French meal and understood it &mdash; every word was one you learned in Week 1. That's real reading, not decoding &mdash; and your own order is ready for the graded work. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -221,7 +245,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -231,16 +267,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -265,7 +310,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

@@ -45,6 +45,19 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
 </style>
 </head>
 <body>
@@ -70,7 +83,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.05 &middot; Day 5 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.05 &middot; Day 5 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -85,21 +98,30 @@
 <div style="padding: 24px 34px;">
 
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.05</div>
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.05 &middot; Week 2 begins</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Le week-end de Paul &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every past-tense form from this week living inside one real story &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Paul tells you about his weekend &mdash; entirely in the pass&eacute; compos&eacute;. His story uses your vocabulary, your participles, and even a negation. Read <em>and</em> listen, then step back to a French summer institution: <em>le Tour de France</em>.</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every past-tense form from Week 1 living inside one real story &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Paul tells you about his weekend &mdash; entirely in the pass&eacute; compos&eacute;. His story uses your vocabulary, your participles, and even a negation. Read <em>and</em> listen, then step back to a French summer institution: <em>le Tour de France</em>. You'll finish by writing <strong>your own</strong> last weekend in the past &mdash; your rehearsal for tomorrow's Langue en action and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">Before you read: a few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
+        <ul class="gloss">
+            <li><b>j'ai pass&eacute; beaucoup de temps</b> &mdash; I spent a lot of time</li>
+            <li><b>au parc</b> &mdash; at the park</li>
+            <li><b>le soir</b> &mdash; in the evening</li>
+            <li><b>mes cousins</b> &mdash; my cousins</li>
+            <li><b>grande</b> &mdash; big</li>
+            <li><b>Quel week-end&nbsp;!</b> &mdash; What a weekend!</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m4-loisirs-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Le week-end dernier, j&rsquo;ai pass&eacute; beaucoup de temps avec mes amis. Samedi, nous avons jou&eacute; au basket au parc.</p></div>
@@ -115,16 +137,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every form of avoir</strong> (<em>ai, avons, ont</em>) and <strong>underline the participle</strong> right after it. You should find six or more. Find the <strong>negative</strong> sentence &mdash; <em>je n'ai pas fait</em> &mdash; and notice how <em>ne&hellip;pas</em> wraps only avoir.</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words you haven't formally studied, glossed here so the passage reads smoothly:</div>
-        <ul class="gloss">
-            <li><b>j'ai pass&eacute; du temps</b> &mdash; I spent time</li>
-            <li><b>au parc</b> &mdash; at the park</li>
-            <li><b>le soir</b> &mdash; in the evening</li>
-            <li><b>mes cousins</b> &mdash; my cousins</li>
-            <li><b>grande</b> &mdash; big</li>
-            <li><b>Quel week-end&nbsp;!</b> &mdash; What a weekend!</li>
-        </ul>
-    </div>
+            </div>
 
     <!-- PART 3 · Culture -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -149,11 +162,11 @@
             <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question">O&ugrave; Paul et ses amis ont-ils jou&eacute; au basket&nbsp;?</div>
+                <div class="widget-question"><em>O&ugrave;</em> (Where) Paul et ses amis ont-ils jou&eacute; au basket&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Relis le paragraphe 1.">&Agrave; la maison</button>
+                    <button data-no="Reread paragraph 1.">&Agrave; la maison</button>
                     <button data-correct="1" data-ok="Oui &mdash; au parc, samedi.">Au parc</button>
-                    <button data-no="Ils ont mang&eacute; une pizza, mais pas jou&eacute; au basket l&agrave;.">Au restaurant</button>
+                    <button data-no="Not there &mdash; reread paragraph 1 to see where they played.">Au restaurant</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
@@ -161,22 +174,32 @@
             <div class="optima-widget ow-eval">
                 <div class="widget-question">Qu'est-ce que Paul <em>n'a pas</em> fait&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-no="Il a bien regard&eacute; un film le soir.">Regarder un film</button>
-                    <button data-no="Il a &eacute;cout&eacute; de la musique.">&Eacute;couter de la musique</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; &laquo; je n'ai pas fait mes devoirs&nbsp;! &raquo;">Ses devoirs</button>
+                    <button data-no="He did watch a film &mdash; in the evening.">Regarder un film</button>
+                    <button data-no="He did listen to music.">&Eacute;couter de la musique</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (There you go!) &mdash; &laquo; je n'ai pas fait mes devoirs&nbsp;! &raquo;">Ses devoirs</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Qui a rencontr&eacute; les amis de Paul dimanche&nbsp;?</div>
+                <div class="widget-question"><em>Qui</em> (Who) a rencontr&eacute; <em>les amis de Paul</em> (Paul's friends) dimanche&nbsp;?</div>
                 <div class="widget-options">
-                    <button data-correct="1" data-ok="Exact &mdash; &laquo; mes cousins ont rencontr&eacute; mes amis &raquo;.">Ses cousins</button>
-                    <button data-no="Ses parents ne sont pas dans le texte.">Ses parents</button>
-                    <button data-no="Relis le paragraphe 3.">Ses professeurs</button>
+                    <button data-correct="1" data-ok="Exact (Right!) &mdash; &laquo; mes cousins ont rencontr&eacute; mes amis &raquo;.">Ses cousins</button>
+                    <button data-no="His parents aren't in the text.">Ses parents</button>
+                    <button data-no="Reread paragraph 3.">Ses professeurs</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- PART 2 · production -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 5 &middot; TON PROPRE WEEK-END <span class="pill-time">15 min</span></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Write five sentences about your real last weekend</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Tell the story of <em>le week-end dernier</em> in the pass&eacute; compos&eacute;. Use at least <strong>five different verbs</strong>, one <strong>negative</strong> (<em>je n'ai pas&hellip;</em>), one <strong>irregular participle</strong> (<em>fait, vu, pris</em>), and one <strong>time expression</strong>. This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it.</p>
+        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
+            <strong>Checklist before you stop:</strong> &nbsp;&#9633; avoir + participle on every verb &nbsp;&#9633; right participle ending (-&eacute; / -i / irregular) &nbsp;&#9633; <em>ne&hellip;pas</em> wraps avoir &nbsp;&#9633; an irregular participle &nbsp;&#9633; a time expression (<em>hier, samedi</em>).
         </div>
     </div>
 
@@ -185,20 +208,20 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 4.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words and the pass&eacute; compos&eacute; together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 4.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your table is solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Paul's weekend in three sentences of your own, out loud, in the past? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you retell Paul's weekend in three sentences of your own, out loud, in the past? Use today's writing, and try it before the Speaking Task on Day 7.</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a whole weekend told in the past &mdash; and understood it. Every avoir + participle was one you built this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a whole weekend told in the past &mdash; and understood it. Every avoir + participle was one you built in Week 1. That's real reading, not decoding &mdash; and your own weekend is ready for the graded work. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -220,7 +243,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -230,16 +265,25 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';
@@ -264,7 +308,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

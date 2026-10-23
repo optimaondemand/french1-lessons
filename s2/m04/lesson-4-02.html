@@ -65,6 +65,10 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
 </style>
 </head>
 <body>
@@ -92,7 +96,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.02 &middot; Day 2 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.02 &middot; Day 2 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -111,14 +115,14 @@
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.02</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Le pass&eacute; compos&eacute; &mdash; avoir + Regular <em>-er</em> Verbs</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Yesterday you got the words. Today you build the machine that puts them in the past &mdash; the <em>pass&eacute; compos&eacute;</em>.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">First, ten more leisure words. Then the big idea: to talk about the past, French uses <strong>two pieces</strong> &mdash; the verb <strong>avoir</strong> (to have) plus a <strong>past participle</strong>. For <em>-er</em> verbs, the participle is easy: swap <em>-er</em> for <strong>-&eacute;</strong>. <em>manger &rarr; mang&eacute;</em>, <em>regarder &rarr; regard&eacute;</em>.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">First, ten more leisure words. Then the big idea: to talk about the past, French uses <strong>two pieces</strong> &mdash; the verb <strong>avoir</strong> (to have) plus a <strong>past participle</strong>. For <em>-er</em> verbs, the participle is easy: swap <em>-er</em> for <strong>-&eacute;</strong>. <em>manger &rarr; mang&eacute;</em>, <em>regarder &rarr; regard&eacute;</em>. You'll finish with a short <strong>ear-quiz</strong> &mdash; hear a word, choose its meaning &mdash; the exact skill your Vocabulary Check rewards.</div>
     </div>
 
     <!-- Objectives -->
@@ -131,6 +135,10 @@
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> form the pass&eacute; compos&eacute; of a regular <em>-er</em> verb using avoir + the <em>-&eacute;</em> participle.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-top: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize this module's words by sound alone and choose their meaning.</div>
         </div>
     </div>
 
@@ -207,7 +215,7 @@
             <div class="widget-options">
                 <button data-no="That's the infinitive &mdash; the participle drops -er.">regarder</button>
                 <button data-no="Almost &mdash; but -er verbs take -&eacute;, not -i.">regardi</button>
-                <button data-correct="1" data-ok="Exact ! -er &rarr; -&eacute;: regard&eacute;.">regard&eacute;</button>
+                <button data-correct="1" data-ok="Exact ! (Right!) -er &rarr; -&eacute;: regard&eacute;.">regard&eacute;</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
@@ -215,15 +223,52 @@
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 3</div>
-            <div class="widget-question">Nous ______ mang&eacute; une pizza.</div>
+            <div class="widget-question">Nous ______ mang&eacute; une <em>pizza</em> (a pizza).</div>
             <div class="widget-options">
                 <button data-no="Not quite &mdash; a goes with il/elle/on.">a</button>
-                <button data-correct="1" data-ok="Voil&agrave; ! nous takes avons &mdash; nous avons mang&eacute;.">avons</button>
+                <button data-correct="1" data-ok="Voil&agrave; ! (There you go!) nous takes avons &mdash; nous avons mang&eacute;.">avons</button>
                 <button data-no="Almost &mdash; avez goes with vous.">avez</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- PART 1 · by-ear self-quiz -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127911; PART 4 &middot; QUIZ &Agrave; L'OREILLE <span class="pill-time">12 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m4-faire-du-sport.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; faire du sport, to do/play sports.">to do / play sports</button>
+                <button data-no="That's regarder un film.">to watch a movie</button>
+                <button data-no="That's voyager.">to travel</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m4-voyager.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this mean?</div>
+            <div class="widget-options">
+                <button data-no="That's rester.">to stay</button>
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; voyager, to travel.">to travel</button>
+                <button data-no="That's rencontrer.">to meet</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m4-la-fete.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this mean?</div>
+            <div class="widget-options">
+                <button data-no="That's le concert.">the concert</button>
+                <button data-no="That's le match.">the game / match</button>
+                <button data-correct="1" data-ok="Exact &mdash; la f&ecirc;te, the party.">the party</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <strong>Module 4 Vocabulaire</strong> page and drill all twenty by ear.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -233,7 +278,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 4.03</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow: participles that <em>don't</em> follow the easy rule &mdash; <em>-ir</em> verbs (<em>fini</em>) and the irregulars you'll use most (<em>fait, vu, pris</em>) &mdash; plus the full past-tense table.</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow: participles that <em>don't</em> follow the easy rule &mdash; <em>-ir</em> verbs (verbs whose infinitive ends in -ir: <em>fini</em> (finished)) and the irregulars you'll use most (<em>fait</em> (done), <em>vu</em> (seen), <em>pris</em> (taken)) &mdash; plus the full past-tense table.</div>
             </div>
         </div>
     </div>
@@ -246,8 +291,8 @@
 
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute;&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have all twenty words and the formula that powers the whole module: <strong>avoir + past participle</strong>. Hold onto <em>ai, as, a, avons, avez, ont</em> &mdash; everything this week is built on it. <em>&Agrave; demain&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BIEN JOU&Eacute;&nbsp;! (Well done!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have all twenty words and the formula that powers the whole module: <strong>avoir + past participle</strong>. Hold onto <em>ai, as, a, avons, avez, ont</em> &mdash; everything this week is built on it. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -263,6 +308,10 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (house superset: reflect + eval + reveal) ===== -->
+
+
+<!-- ===== AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
+
 <script>
 (function () {
   document.addEventListener('click', function (e) {
@@ -312,8 +361,6 @@
   });
 })();
 </script>
-
-<!-- ===== AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
@@ -338,7 +385,6 @@
   });
 })();
 </script>
-
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

@@ -51,6 +51,39 @@
     .tricolore .w { background: #FFFFFF; }    /* blanc */
     .tricolore .r { background: #EF4135; }    /* rouge */
     .fdl { color: #C7922C; font-style: normal; }   /* fleur-de-lis in house gold */
+    /* merged from folded lessons */
+    .activity-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 14px 0; }
+    .go-btn { display:inline-block; background:#0E1C42; color:#fff; text-decoration:none; border-radius:8px; padding:11px 22px; font-size:16px; margin-top:12px; }
+    .go-btn:hover { background:#1B3A6B; }
+    .practice-badge { display:inline-block; background:#2A9D5C; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; }
+    .fmt { font-size:16px; color:#1a2340; line-height:1.7; }
+    .fmt li { margin-bottom:5px; }
+    .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+    .tricolore .w { background: #FFFFFF; }
+    .tricolore .r { background: #EF4135; }
+    .fdl { color: #C7922C; font-style: normal; }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-options button.correct { background: #2A9D5C; color: #FFFFFF; border-color: #2A9D5C; }
+    .widget-options button.incorrect { background: #C0392B; color: #FFFFFF; border-color: #C0392B; }
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    <!-- S2 DRILL CSS -->
+.widget-feedback.fb-ok { border-left-color: #2A9D5C; }
+    .widget-feedback.fb-warn { border-left-color: #C7922C; }
+    .widget-feedback.fb-no { border-left-color: #C0392B; }
+    .spell-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .spell-input { flex: 1 1 240px; min-width: 200px; font-family: inherit; font-size: 17px; color: #0E1C42; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 13px; }
+    .spell-input:focus { outline: none; border-color: #2196D0; box-shadow: 0 0 0 3px rgba(33,150,208,0.15); }
+    .spell-input.ok { border-color: #2A9D5C; background: #F2FBF6; }
+    .spell-input.no { border-color: #C0392B; background: #FDF4F3; }
+    .spell-check { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .spell-check:hover { background: #1B3A6B; }
+    .spell-trap { font-size: 13px; color: #8a6d2f; margin-top: 8px; font-style: italic; }
+    .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
+    .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
+    .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
 </style>
 </head>
 <body>
@@ -80,7 +113,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.01 &middot; Day 1 of 10</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.01 &middot; Day 1 of 8</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
@@ -99,14 +132,14 @@
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.01</div>
         <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Au restaurant &mdash; Restaurant Basics</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
+        <div style="font-size: 16px; color: #666;">Lesson &middot; about 50 minutes</div>
     </div>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In France, a meal is never just food. What does the French table say about how the French live?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This module takes you inside a French restaurant. Today you meet the ten words you need to sit down, read a menu, and follow a meal from start to finish &mdash; from <em>l'entr&eacute;e</em> to <em>l'addition</em>. You will <strong>hear each one spoken</strong> before you try it, because a menu you can hear is a menu you can read.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This module takes you inside a French restaurant. Today you meet the ten words you need to sit down, read a menu, and follow a meal from start to finish &mdash; from <em>l'entr&eacute;e</em> (the starter) to <em>l'addition</em> (the bill). You will <strong>hear each one spoken</strong> before you try it, because a menu you can hear is a menu you can read. To finish, you'll open the <em>Carte de France</em> and start learning the regions &mdash; each one famous for its own dishes.</div>
     </div>
 
     <!-- Objectives -->
@@ -114,11 +147,15 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and pronounce ten core restaurant words, from <em>la carte</em> to <em>l'addition</em>.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize and pronounce ten core restaurant words, from <em>la carte</em> (the menu) to <em>l'addition</em> (the bill).</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the courses of a French meal in order by ear.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-top: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> find France's 13 metropolitan regions on the interactive map.</div>
         </div>
     </div>
 
@@ -145,9 +182,9 @@
             <div class="widget-kicker">&#128173; QUICK CHECK-IN &middot; no wrong answer</div>
             <div class="widget-question">When you eat out, which part of the meal matters most to you?</div>
             <div class="widget-options">
-                <button data-response="Un gourmand&nbsp;! In France that first course, l'entr&eacute;e, sets the tone for the whole meal &mdash; you'll learn to order one today.">The starter</button>
+                <button data-response="A real food lover! In France that first course, l'entr&eacute;e, sets the tone for the whole meal &mdash; you'll learn to order one today.">The starter</button>
                 <button data-response="The heart of the meal &mdash; le plat principal. French menus are built around it, and you'll name yours today.">The main course</button>
-                <button data-response="Un bec sucr&eacute;&nbsp;! Le dessert closes a French meal &mdash; and yes, cheese often comes just before it. Both are on today's list.">The dessert</button>
+                <button data-response="A sweet tooth! Le dessert closes a French meal &mdash; and yes, cheese often comes just before it. Both are on today's list.">The dessert</button>
             </div>
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
@@ -188,6 +225,22 @@
         <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own paper or digital cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
     </div>
 
+    <!-- PART 1 · Carte de France -->
+    <div class="activity-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <div style="font-size: 20px; color: #0e1c42;">&#128506;&#65039; La Carte de France</div>
+            <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
+        </div>
+        <div style="font-size:11px;color:#c7922c;margin-bottom:10px;">EXPLORER + QUIZ MODES <span class="pill-time">13 min</span></div>
+        <ul class="fmt">
+            <li><strong>Explorer mode:</strong> hover and click to learn the <strong>13 metropolitan regions</strong> &mdash; &Icirc;le-de-France, Auvergne-Rh&ocirc;ne-Alpes, Nouvelle-Aquitaine, and the rest.</li>
+            <li><strong>Quiz mode:</strong> timed click-to-find. Your score, errors, and time are shown &mdash; restart as often as you like.</li>
+            <li><strong>Tie it to this module:</strong> France's regions are famous for their <em>sp&eacute;cialit&eacute;s</em> (specialty dishes) &mdash; the cassoulet of the Southwest, the crêpes of Brittany, the bouillabaisse of Provence. As you place each region, name one dish you'd like to taste there.</li>
+            <li>Mastering all 13 feeds the <strong>once-per-semester Carte extra-credit challenge</strong> in the capstone module.</li>
+        </ul>
+        <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
+    </div>
+
     <!-- What You'll Do Next -->
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
@@ -195,7 +248,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3.02</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow: ten more words (quantities and the table) and your first grammar of the module &mdash; the essential verb <em>prendre</em> (to have / to take) plus a review of the partitive. No graded work this week until Day 7 &mdash; this week is for listening and practicing.</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow: ten more words (quantities and the table) and your first grammar of the module &mdash; the essential verb <em>prendre</em> (to have / to take) plus a review of the partitive. No graded work until Day 6 &mdash; this week is for listening and practicing.</div>
             </div>
         </div>
     </div>
@@ -208,8 +261,8 @@
 
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BON APP&Eacute;TIT&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have the ten words that carry a French meal from the door to the door. Say one of them out loud right now, from memory, with the audio in your ear. That&rsquo;s how vocabulary becomes second nature &mdash; <em>&agrave; demain&nbsp;!</em></p>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BON APP&Eacute;TIT&nbsp;! (Enjoy your meal!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have the ten words that carry a French meal from the door to the door. Say one of them out loud right now, from memory, with the audio in your ear. That&rsquo;s how vocabulary becomes second nature &mdash; <em>&agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
@@ -225,14 +278,21 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (house) ===== -->
+
+
+<!-- ===== VOCAB AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
+
 <script>
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
-      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
+      delete w.dataset.answered;
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');
@@ -243,12 +303,34 @@
       var fb = rw.querySelector('.widget-feedback');
       fb.textContent = rBtn.dataset.response || '';
       fb.classList.add('show');
+      return;
+    }
+    var eBtn = e.target.closest('.ow-eval .widget-options button');
+    if (eBtn) {
+      var ew = eBtn.closest('.optima-widget');
+      if (ew.dataset.answered === '1') return;
+      ew.dataset.answered = '1';
+      var ok = eBtn.dataset.correct === '1';
+      eBtn.classList.add(ok ? 'correct' : 'incorrect');
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
+      var efb = ew.querySelector('.widget-feedback');
+      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.add('show');
+      return;
+    }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
     }
   });
 })();
 </script>
-
-<!-- ===== VOCAB AUDIO RUNTIME (one shared player; repoint AUDIO_BASE for GitHub Pages) ===== -->
 <script>
 (function () {
   var AUDIO_BASE = '../../audio/';   // dev path: 03_Development/audio/ ; repoint to the GitHub Pages URL at deploy
@@ -273,7 +355,86 @@
   });
 })();
 </script>
+<script>
+/* S2 spelling checker - STRICT on accents (David 2026-09-28: demands high; the graded quiz keeps its leeway). */
+(function () {
+  function norm(s) {
+    return (s || '').normalize('NFC').replace(/[’`´]/g, "'").replace(/ /g, ' ')
+      .replace(/\s+/g, ' ').trim().toLowerCase()
+      .replace(/\s*[.?!]$/, '');  /* a missing final full stop or question mark is not an error */
+  }
+  function deacc(s) {
+    return s.replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  var dropArt = function (t) { return t.replace(/^(le |la |les |l'|un |une |des |du |de la |de l')/, ''); };
+  var dropHyp = function (t) { return t.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(); };
+  var dropApo = function (t) { return t.replace(/'/g, ''); };
 
+  function judge(got, target) {
+    if (!got) return 'empty';
+    if (got === target) return 'perfect';
+    if (deacc(got) === deacc(target)) return 'accent';
+    if (dropArt(target) !== target && (got === dropArt(target) || deacc(got) === deacc(dropArt(target)))) return 'article';
+    if (deacc(dropHyp(got)) === deacc(dropHyp(target))) return 'hyphen';
+    if (deacc(dropApo(got)) === deacc(dropApo(target))) return 'apostrophe';
+    return 'no';
+  }
+
+  function setFb(el, cls, html) {
+    var fb = el.querySelector('.widget-feedback');
+    fb.className = 'widget-feedback show ' + cls;
+    fb.innerHTML = html;
+  }
+
+  function checkSpell(el) {
+    var input = el.querySelector('.spell-input');
+    var shown = el.dataset.answer;
+    var v = judge(norm(input.value), norm(shown));
+    var tries = parseInt(el.dataset.tries || '0', 10) + 1;
+    el.dataset.tries = tries;
+    var tail = tries >= 2 ? ' <span style="color:#41506b;">The answer: <strong>' + shown + '</strong></span>' : '';
+    if (v === 'empty') { setFb(el, 'fb-warn', 'Type something first.'); return; }
+    if (v === 'perfect') {
+      setFb(el, 'fb-ok', '<strong>Parfait&nbsp;! (Perfect!)</strong> ' + shown + ' &mdash; every mark in place.');
+      input.classList.add('ok'); input.classList.remove('no');
+      return;
+    }
+    input.classList.remove('ok'); input.classList.add('no');
+    if (v === 'accent') {
+      setFb(el, 'fb-no', '<strong>Check the accents.</strong> The letters are right, but an accent is missing or wrong. ' +
+        'The accent is part of the spelling, like a letter &mdash; copy it from the accent strip under the box.' + tail);
+    } else if (v === 'article') {
+      setFb(el, 'fb-no', '<strong>The article is missing.</strong> Learn the word with its article.' + tail);
+    } else if (v === 'hyphen') {
+      setFb(el, 'fb-no', '<strong>Mind the hyphen.</strong>' + tail);
+    } else if (v === 'apostrophe') {
+      setFb(el, 'fb-no', '<strong>Mind the apostrophe.</strong>' + tail);
+    } else {
+      setFb(el, 'fb-no', 'Not yet. Try again.' + tail);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var sc = e.target.closest('.ow-spell .spell-check');
+    if (sc) { checkSpell(sc.closest('.optima-widget')); return; }
+    var rs = e.target.closest('.ow-spell .widget-reset');
+    if (rs) {
+      var w = rs.closest('.optima-widget');
+      var inp = w.querySelector('.spell-input');
+      inp.value = ''; inp.classList.remove('ok', 'no');
+      var fb = w.querySelector('.widget-feedback');
+      fb.className = 'widget-feedback'; fb.innerHTML = '';
+      delete w.dataset.tries;
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('spell-input')) {
+      e.preventDefault();
+      checkSpell(e.target.closest('.optima-widget'));
+    }
+  });
+})();
+</script>
 <script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
 </body>
 </html>

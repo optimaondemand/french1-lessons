@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   French 1 (0701320) · S2 Module 1 · Lesson 1.05 (Day 5 of 10)
   Reading + culture + virtue. Passage "Voici ma famille" with per-paragraph audio play-bars (reuses passage clips).
   Official Optima template + French accents. Delete .preview-banner before deploy.
@@ -45,61 +45,170 @@
     .tricolore i { flex: 1; display: block; }
     .tricolore .b { background: #0055A4; } .tricolore .w { background: #FFFFFF; } .tricolore .r { background: #EF4135; }
     .fdl { color: #C7922C; font-style: normal; }
+    /* merged from folded lessons */
+    .reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .reveal-btn:hover { background: #1B3A6B; }
+    .reveal-body { display: none; margin-top: 12px; }
+    .reveal-body.show { display: block; }
+    .say { background: #0E1C42; color: #fff; border: none; border-radius: 6px; min-width: 40px; height: 34px; font-size: 16px; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+    .say:hover { background: #1B3A6B; }
+    .say.playing { background: #C7922C; }
+    .say.err { background: #C0392B; }
+    .gtable { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 16px; }
+    .gtable th, .gtable td { border: 1px solid #D0D9E8; padding: 8px 12px; text-align: left; }
+    .gtable td .pron { color: #C7922C; font-weight: 700; }
+    .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Renoir skin (Module 1 · Le Déjeuner des canotiers) ---- */
+  :root { --ink:#1d2a44; --gold:#b8892e; --gold-lt:#e9d39a; --cream:#fbf6ea; --paper:#f3ece0; --rule:#e2d6bb; --muted:#5e5a52; --wine:#8c2f39; }
+  body { background: var(--paper); }
+  .canvas-frame { background: #fffdf8; box-shadow: 0 4px 24px rgba(60,40,10,.12); }
+  .pl-serif, .pl-h3, .pl-title, .pl-tlabel { font-family: 'Cormorant Garamond', Garamond, Georgia, serif; }
+  /* hero */
+  .pl-hero { position: relative; }
+  .pl-band { height: 300px; background: url(img/m1-hero.jpg) center 35% / cover; position: relative; }
+  .pl-band::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,24,40,.55) 0%, rgba(20,24,40,0) 38%, rgba(255,253,248,0) 70%, #fffdf8 100%); }
+  .pl-brand { position: absolute; z-index: 1; top: 16px; left: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; letter-spacing: .04em; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .pl-brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; padding: 3px; box-sizing: border-box; }
+  .pl-brand b { font-weight: 600; display: block; }
+  .pl-brand small { display: block; font-size: 11.5px; letter-spacing: .06em; opacity: .9; }
+  .pl-where { display: inline-block; margin: 8px 0 0; padding: 3px 14px; border: 1px solid var(--rule); border-radius: 999px; background: var(--cream); font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--ink); }
+  .pl-titlecard { position: relative; z-index: 2; max-width: 720px; margin: -120px auto 0; background: #fffdf8; border: 1px solid var(--rule); outline: 1px solid var(--gold-lt); outline-offset: -7px; padding: 22px 28px 16px; text-align: center; box-shadow: 0 8px 22px rgba(60,40,10,.18); }
+  .pl-kick { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+  .pl-title { font-size: 50px; line-height: 1.05; font-weight: 600; font-style: normal; letter-spacing: .01em; color: var(--ink); margin: 6px 0 2px; }
+  .pl-sub { font-size: 17px; color: var(--muted); }
+  .pl-flourish { display: block; margin: 10px auto 2px; width: 340px; max-width: 80%; height: auto; }
+  .pl-caption { text-align: center; font-size: 13px; color: var(--muted); padding: 10px 16px 0; font-style: italic; }
+  .pl-tric { display: flex; width: 90px; height: 3px; margin: 10px auto 0; } .pl-tric i { flex: 1; } .pl-tric .b { background: #2b4c8c; } .pl-tric .w { background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); } .pl-tric .r { background: #a83232; }
+  /* cards */
+  .pl-card { position: relative; background: #fff; border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin: 0 0 34px; box-shadow: 0 1px 3px rgba(60,40,10,.06); }
+  .pl-card + .pl-card::before { content: ''; position: absolute; top: -26px; left: 50%; width: 90px; height: 16px; transform: translateX(-50%);
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 16' fill='none' stroke='%23b8892e' stroke-width='1.3' stroke-linecap='round'%3E%3Cpath d='M38 8 C 28 8, 18 3, 6 8'/%3E%3Cpath d='M52 8 C 62 8, 72 3, 84 8'/%3E%3Cpath d='M45 2 L50 8 L45 14 L40 8 Z' fill='%23b8892e' stroke='none'/%3E%3Ccircle cx='4' cy='8.5' r='1.6' fill='%23b8892e' stroke='none'/%3E%3Ccircle cx='86' cy='8.5' r='1.6' fill='%23b8892e' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .mw-check { background: var(--ink) !important; border-radius: 999px !important; border-bottom: 3px solid var(--gold) !important; }
+  /* "All Your Work" card (my-work.js sets inline styles, so these need !important). Renoir look, same function (David 2026-10-23). */
+  .mw-save { position: relative; background: var(--cream) !important; border: 1px solid var(--rule) !important; border-top: 3px solid var(--gold) !important; border-radius: 4px !important;
+      outline: 1px solid var(--gold-lt); outline-offset: -7px; padding: 26px 30px 22px !important; box-shadow: 0 4px 16px rgba(60,40,10,.10) !important; }
+  .mw-save > div[style*="font-size:22px"] { font-family: 'Cormorant Garamond', Garamond, Georgia, serif; font-size: 30px !important; font-weight: 600 !important; letter-spacing: .01em !important; color: var(--ink) !important; }
+  .mw-save > div[style*="font-size:22px"]::after { content: ''; display: block; width: 120px; height: 12px; margin: 6px 0 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' fill='none' stroke='%23b8892e' stroke-width='1.2'%3E%3Cpath d='M52 6 C42 6 30 2 8 6'/%3E%3Cpath d='M68 6 C78 6 90 2 112 6'/%3E%3Cpath d='M60 1 L64 6 L60 11 L56 6 Z' fill='%23b8892e' stroke='none'/%3E%3C/svg%3E") left center / contain no-repeat; }
+  .mw-save p { color: var(--muted) !important; }
+  .mw-save .mw-name { border: 1.5px solid var(--rule) !important; border-bottom: 2px solid var(--gold) !important; border-radius: 4px !important; background: #fffdf8 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px !important; color: var(--ink); }
+  .mw-save .mw-copy { background: #fff !important; color: var(--ink) !important; border: 1.5px solid var(--ink) !important; border-radius: 999px !important; }
+  .mw-save .mw-pdf { background: var(--ink) !important; border-radius: 999px !important; border-bottom: 3px solid var(--gold) !important; box-shadow: 0 3px 10px rgba(29,42,68,.25) !important; }
+  .mw-save .mw-copy:hover { background: var(--cream) !important; } .mw-save .mw-pdf:hover { background: #2a3b5e !important; }
+  .pl-kicker { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .pl-part { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .pl-num { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--gold); outline: 1px solid var(--gold-lt); outline-offset: 2px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: 0; color: var(--ink); background: var(--cream); }
+  .pl-h3 { font-size: 28px !important; font-weight: 600; color: var(--ink) !important; margin: 4px 0 10px !important; line-height: 1.15; }
+  .pill-time { background: transparent; color: var(--gold); border: 1px solid var(--gold); letter-spacing: .05em; text-transform: none; }
+  .rule-box { background: var(--cream); border: 1px solid var(--rule); border-left: 4px solid var(--gold); border-radius: 3px; }
+  .bangs, .gtable { border: 1px solid var(--rule); }
+  .bangs th, .gtable th { background: var(--cream); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 600; border-color: var(--rule); }
+  .bangs td, .gtable td { border-color: var(--rule); }
+  .bangs td .pron { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; color: var(--gold); }
+  .bangs tbody tr:nth-child(even), .gtable tbody tr:nth-child(even) { background: #fdfaf3; }
+  .vocab-item { background: var(--cream); border-color: var(--rule); }
+  .say { background: var(--ink); border-radius: 50%; min-width: 40px; width: 40px; height: 40px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--gold-lt); }
+  .say:hover { background: #2b3d63; } .say.playing { background: var(--gold); }
+  .reveal-btn, .spell-check, .go-btn { background: var(--ink); border-radius: 999px; border-bottom: 3px solid var(--gold); padding: 9px 20px; }
+  .reveal-btn:hover, .spell-check:hover, .go-btn:hover { background: #2b3d63; }
+  .optima-widget { background: #fff; border: 1px solid var(--rule); border-left: 4px solid #2b4c8c; border-radius: 4px; }
+  .widget-kicker { color: #2b4c8c; letter-spacing: .14em; text-transform: uppercase; font-size: 11.5px; }
+  .widget-options button { border-color: var(--rule); border-radius: 999px; }
+  .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
+  .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
+  .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
+  .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
+  /* Dans le tableau */
+  .pl-tableau { margin: 18px 0 6px; padding: 18px 20px 14px; background: linear-gradient(180deg, var(--cream), #fff); border: 1px solid var(--rule); border-radius: 4px; }
+  .pl-tlabel { font-size: 24px; font-style: italic; font-weight: 600; color: var(--ink); text-align: center; }
+  .pl-tlabel small { display: block; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+  .pl-tableau p { font-size: 17px; color: #1a2340; line-height: 1.6; margin: 8px 0 12px; text-align: center; }
+  .pl-vigs { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+  .pl-vig { flex: 0 1 200px; margin: 0; text-align: center; }
+  .pl-oval { position: relative; width: 170px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 5px solid var(--gold); outline: 2px solid #3b2a1a; outline-offset: 0; box-shadow: 0 0 0 7px var(--gold-lt), 0 6px 14px rgba(40,25,10,.35); }
+  .pl-oval img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .pl-vig:hover .pl-oval img { transform: scale(1.12); }
+  .pl-letter { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin: -18px auto 0; position: relative; z-index: 1; border-radius: 50%; background: var(--ink); color: var(--gold-lt); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; border: 2px solid var(--gold); }
+  .pl-phrase { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; color: var(--ink); margin-top: 4px; }
+  .pl-phrase b { color: var(--wine); }
+  .pl-gloss { font-size: 14px; color: var(--muted); }
+  .pl-say { margin-top: 10px; }
+  .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
+  .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
+  .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
+  .pl-opts button { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 600; color: var(--ink); background: #fff; border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+  .pl-opts button:hover { border-color: var(--gold); background: var(--cream); }
+  .pl-opts button.on, .pl-opts button.right { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .pl-opts button.wrong { border-color: var(--wine); color: var(--wine); text-decoration: line-through; }
+  .pl-fb { min-height: 20px; font-size: 14.5px; line-height: 1.45; margin-top: 6px; }
+  .pl-fb.ok { color: #2f6b4f; font-weight: 600; } .pl-fb.no { color: var(--wine); }
+  .pl-wide { max-width: 760px; margin: 0 auto; background: #3b2a1a; padding: 7px; border-radius: 3px; box-shadow: 0 5px 14px rgba(40,25,10,.3); line-height: 0; }
+  .pl-wide img { width: 100%; height: auto; border: 4px solid var(--gold); box-sizing: border-box; }
+  .pl-model { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; justify-content: center; }
+  .pl-model .pl-oval { margin: 0; flex: 0 0 auto; }
+  .pl-mtext { flex: 1 1 360px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; line-height: 1.6; color: var(--ink); }
+  .pl-mtext mark { background: none; padding: 0 2px; border-bottom: 3px solid; font-weight: 600; color: inherit; }
+  .m-irr { border-color: var(--gold) !important; } .m-bangs { border-color: var(--wine) !important; } .m-agr { border-color: #2b4c8c !important; } .m-faire { border-color: #2f6b4f !important; }
+  .pl-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+  .pl-legend span { border-bottom: 3px solid; padding-bottom: 1px; }
+  .pl-card .pc-head .pc-kick, .pl-card .ts-head .ts-kick { display: none; }
+  .pl-look { margin: 16px auto 2px; max-width: 620px; background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 10px 16px; font-size: 16px; color: #1a2340; }
+  .pl-look summary { cursor: pointer; color: #2b4c8c; font-weight: 600; margin-top: 6px; }
+  .pl-look summary::marker { color: var(--gold); }
+  .assess-card { background: #fff; border: 1px solid var(--rule); border-top: 4px solid var(--wine); border-radius: 4px; box-shadow: 0 1px 3px rgba(60,40,10,.06); }
+  .assess-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 27px !important; font-weight: 600; color: var(--ink); }
+  .activity-card { border-color: var(--rule); border-top-color: var(--gold); border-radius: 4px; }
+  .duebar { background: #fbf3f3; border-color: #ead2d5; border-left-color: var(--wine); border-radius: 4px; }
+  .pl-foot { background: var(--ink) !important; border-top: 3px solid var(--gold) !important; }
+  @media (max-width: 640px) {
+    .pl-band { height: 200px; } .pl-titlecard { margin: -70px 12px 0; padding: 16px 14px 12px; } .pl-title { font-size: 36px; }
+    .pl-card { padding: 18px 16px; } .pl-h3 { font-size: 24px !important; }
+  }
 </style>
 </head>
 <body>
 <div class="canvas-frame">
 
-<div data-ra-skip style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
-    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
-        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
-        <div>
-            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
-            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
-        </div>
-    </div>
-    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">FRENCH 1 <span style="font-size:22px;">&#127467;&#127479;</span></div>
+<div class="pl-hero" data-ra-skip>
+  <div class="pl-band"><div class="pl-brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt=""><span><b>Optima Academy Online</b><small>An Education Experience Company</small></span></div></div>
+  <div class="pl-titlecard">
+    <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 1 &middot; La famille en d&eacute;tail</div>
+    <div class="pl-where">Lesson 1.05 &middot; Day 5 of 8</div>
+    <h1 class="pl-title">Voici ma famille</h1>
+    <div class="pl-sub">Reading &amp; Culture &middot; about 50 minutes</div>
+    <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
+  </div>
+  <div class="pl-caption">Le tableau du module&nbsp;: Pierre-Auguste Renoir, <em>Le D&eacute;jeuner des canotiers</em> (<em>Luncheon of the Boating Party</em>), 1880&ndash;81</div>
 </div>
-<div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
-
-<div data-ra-skip style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
-        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 1</div>
-        <div style="font-size: 12px; color: #666;">La famille en d&eacute;tail &middot; Family &amp; Character</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
-        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.05 &middot; Day 5 of 10</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
-        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Lecture &amp; culture</div>
-    </div>
-    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
-        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
-        <div style="font-size: 16px; color: #0e1c42;">Family &amp; Character</div>
-    </div>
-</div>
-
 <div style="padding: 24px 34px;">
 
-    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.05</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;"><span class="fdl">&#9884;</span> Voici ma famille &mdash; Reading &amp; Culture</div>
-        <div style="font-size: 16px; color: #666;">Lesson &middot; about 40 minutes</div>
-    </div>
-
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
-        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word from this week living inside one family portrait &mdash; and hear it read aloud.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A young French speaker introduces her family: the eldest, the youngest, the parents, and what they're all like. Her words are your words &mdash; your adjectives, your BANGS placement, your <em>faire</em>. Read <em>and</em> listen, then meet a warm French custom that binds families together: <em>la bise</em>.</div>
+    <div class="pl-card">
+        <div class="pl-kicker">TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">See every word from Week 1 living inside one family portrait &mdash; and hear it read aloud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A young French speaker introduces her family: the eldest, the youngest, the parents, and what they're all like. Her words are your words &mdash; your adjectives, your BANGS placement, your <em>faire</em>. Read <em>and</em> listen, then meet a warm French custom that binds families together: <em>la bise</em>. You'll finish by writing <strong>your own</strong> family portrait &mdash; your rehearsal for tomorrow's Langue en action and the Speaking Task.</div>
     </div>
 
     <!-- PART 1 · Reading passage -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LA LECTURE <span class="pill-time">15 min</span></div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">I</span><span>LA LECTURE</span><span class="pill-time">15 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read each paragraph, then press <strong>&#9654; &Eacute;couter</strong> and follow along with your eyes. Read it a second time <em>with the audio playing</em> &mdash; that pairing of eye and ear is where fluency starts.</p>
+
+        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">Before you read, a few words to help the passage read smoothly:</div>
+        <ul class="gloss">
+            <li><b>voici</b> &mdash; here is / this is</li>
+            <li><b>un peu</b> &mdash; a little</li>
+            <li><b>aussi</b> &mdash; also</li>
+            <li><b>souvent</b> &mdash; often</li>
+            <li><b>tous ensemble</b> &mdash; all together</li>
+            <li><b>j&rsquo;adore</b> &mdash; I love / adore</li>
+        </ul>
 
         <button class="play-bar" data-audio="passage/s2m1-famille-01.mp3">&#9654; &Eacute;couter &middot; paragraphe 1</button>
         <div class="passage"><p>Voici ma famille. Mon grand fr&egrave;re est l&rsquo;a&icirc;n&eacute;&nbsp;: il est s&eacute;rieux et tr&egrave;s travailleur.</p></div>
@@ -112,23 +221,15 @@
     </div>
 
     <!-- PART 2 · Annotate + glossary -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128396;&#65039; PART 2 &middot; ANNOTE LE TEXTE <span class="pill-time">8 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">On a printout or in your notes, <strong>circle every adjective</strong> and <strong>draw an arrow to the noun it describes</strong>. Then mark whether each one is <em>masculine</em> or <em>feminine</em> &mdash; notice how <em>travailleur</em> becomes <em>paresseuse</em>, <em>curieuse</em> for the sister. Find the one BANGS adjective placed before its noun (<em>grande promenade</em>).</p>
-        <div style="font-size:15px;color:#6b7a99;margin-bottom:10px;">A few words to help the passage read smoothly:</div>
-        <ul class="gloss">
-            <li><b>voici</b> &mdash; here is / this is</li>
-            <li><b>un peu</b> &mdash; a little</li>
-            <li><b>aussi</b> &mdash; also</li>
-            <li><b>souvent</b> &mdash; often</li>
-            <li><b>tous ensemble</b> &mdash; all together</li>
-            <li><b>j&rsquo;adore</b> &mdash; I love / adore</li>
-        </ul>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">II</span><span>ANNOTE LE TEXTE</span><span class="pill-time">8 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Annotate the passage right here. <strong>Tap an adjective</strong> to circle it, then <strong>tap the noun it describes</strong> to draw the link. Then say whether it is <em>masculine</em> or <em>feminine</em> &mdash; notice that the brother&rsquo;s adjectives stay masculine (<em>s&eacute;rieux</em>, <em>travailleur</em>), while the sister&rsquo;s take the feminine ending: <em>paresseux</em> &rarr; <em>paresseuse</em>, <em>curieux</em> &rarr; <em>curieuse</em>. Last, find the three BANGS adjectives placed before their nouns.</p>
+        <div class="annote" data-config='{"id": "fr1m01voici", "title": "Annote le texte", "paras": [[{"t": "Voici", "hint": "<em>Voici</em> means <em>here is</em>. Not an adjective."}, " ", {"t": "ma", "hint": "<em>ma</em> means <em>my</em>: a possessive, not an adjective that describes."}, " ", {"t": "famille", "id": "famille1"}, ". ", {"t": "Mon", "hint": "<em>Mon</em> means <em>my</em>: a possessive, not an adjective that describes."}, " ", {"t": "grand", "adj": 1, "to": ["frere"], "g": "m", "why": "<em>grand</em> describes <em>frère</em>, a masculine noun.", "bangs": 1}, " ", {"t": "frère", "id": "frere"}, " ", {"t": "est", "hint": "<em>est</em> is a verb (être). Adjectives describe what a person or thing is <strong>like</strong>."}, " l’", {"t": "aîné", "id": "aine"}, " : ", {"t": "il", "id": "il1"}, " ", {"t": "est", "hint": "<em>est</em> is a verb (être). Adjectives describe what a person or thing is <strong>like</strong>."}, " ", {"t": "sérieux", "adj": 1, "to": ["frere", "aine", "il1"], "g": "m", "why": "It describes the brother (<em>il</em>), so it is masculine: <em>sérieux</em>, not <em>sérieuse</em>."}, " et ", {"t": "très", "hint": "<em>très</em> (very) is an adverb: it changes how strong the adjective is. Tap the adjective itself."}, " ", {"t": "travailleur", "adj": 1, "to": ["frere", "aine", "il1"], "g": "m", "why": "It describes the brother: masculine <em>travailleur</em> (the feminine would be <em>travailleuse</em>)."}, "."], [{"t": "Ma", "hint": "<em>Ma</em> means <em>my</em>: a possessive, not an adjective that describes."}, " ", {"t": "petite", "adj": 1, "to": ["soeur"], "g": "f", "why": "<em>petite</em> describes <em>sœur</em>, a feminine noun: <em>petit</em> + <em>e</em>.", "bangs": 1}, " ", {"t": "sœur", "id": "soeur"}, ", la ", {"t": "benjamine", "id": "benj"}, ", ", {"t": "est", "hint": "<em>est</em> is a verb (être). Adjectives describe what a person or thing is <strong>like</strong>."}, " ", {"t": "drôle", "adj": 1, "to": ["soeur", "benj"], "g": "f", "why": "<em>drôle</em> looks the same for both, but here it describes <em>la sœur</em>, so it is feminine."}, " ", {"t": "mais", "hint": "<em>mais</em> means <em>but</em>: it joins two ideas. Not an adjective."}, " ", {"t": "un peu", "hint": "<em>un peu</em> (a little) is an adverb: it changes how strong the adjective is. Tap the adjective itself."}, " ", {"t": "paresseuse", "adj": 1, "to": ["soeur", "benj"], "g": "f", "why": "<em>-euse</em> is the feminine ending: it describes the sister."}, ". ", {"t": "Elle", "id": "elle1"}, " ", {"t": "est", "hint": "<em>est</em> is a verb (être). Adjectives describe what a person or thing is <strong>like</strong>."}, " ", {"t": "aussi", "hint": "<em>aussi</em> (also) is an adverb: it changes how strong the adjective is. Tap the adjective itself."}, " ", {"t": "très", "hint": "<em>très</em> (very) is an adverb: it changes how strong the adjective is. Tap the adjective itself."}, " ", {"t": "curieuse", "adj": 1, "to": ["soeur", "benj", "elle1"], "g": "f", "why": "<em>curieuse</em>, with <em>-euse</em>, describes <em>elle</em>, the sister: feminine."}, "."], [{"t": "Mes", "hint": "<em>Mes</em> means <em>my</em>: a possessive, not an adjective that describes."}, " ", {"t": "parents", "id": "parents"}, " ", {"t": "sont", "hint": "<em>sont</em> is a verb (être). Adjectives describe what a person or thing is <strong>like</strong>."}, " ", {"t": "gentils", "adj": 1, "to": ["parents"], "g": "m", "why": "<em>gentils</em> describes <em>mes parents</em>: masculine plural (a mixed group takes the masculine)."}, " et ", {"t": "généreux", "adj": 1, "to": ["parents"], "g": "m", "why": "<em>généreux</em> describes the parents: masculine plural (<em>-eux</em> stays the same in the plural)."}, ". Le ", {"t": "week-end", "id": "weekend"}, ", nous ", {"t": "faisons", "hint": "<em>faisons</em> is a verb (faire). Adjectives describe what a person or thing is <strong>like</strong>."}, " ", {"t": "souvent", "hint": "<em>souvent</em> (often) is an adverb: it changes how strong the adjective is. Tap the adjective itself."}, " une ", {"t": "grande", "adj": 1, "to": ["promenade"], "g": "f", "why": "<em>grande</em> describes <em>promenade</em>, a feminine noun: <em>grand</em> + <em>e</em>.", "bangs": 1}, " ", {"t": "promenade", "id": "promenade"}, " ", {"t": "tous", "hint": "<em>tous ensemble</em> means <em>all together</em>. Not a describing adjective here."}, " ensemble. J’", {"t": "adore", "hint": "<em>adore</em> is a verb (adorer). Adjectives describe what a person or thing is <strong>like</strong>."}, " ", {"t": "ma", "hint": "<em>ma</em> means <em>my</em>: a possessive, not an adjective that describes."}, " ", {"t": "famille", "id": "famille2"}, " !"]]}'></div>
     </div>
 
     <!-- PART 3 · Culture -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127467;&#127479; PART 3 &middot; LA BISE &mdash; LE BAISER FRAN&Ccedil;AIS <span class="pill-time">12 min</span></div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">III</span><span>LA BISE &mdash; LE BAISER FRAN&Ccedil;AIS (THE FRENCH CHEEK-KISS)</span><span class="pill-time">12 min</span></div>
         <div class="culture">
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;">When French family and friends greet each other, they often exchange <strong>la bise</strong> &mdash; a light kiss on each cheek. It's not romantic; it's the everyday warmth of hello and goodbye. The number of kisses <strong>varies by region</strong>: two is most common, but you'll find three or even four in parts of the south and the north. Ask a French person &ldquo;<em>combien de bises&nbsp;?</em>&rdquo; and you'll get a friendly local answer.</p>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0;">La bise is woven into family life &mdash; especially at <strong>le repas dominical</strong>, the Sunday family lunch. Relatives arrive, exchange <em>la bise</em> around the table, and settle in for a long, unhurried meal. It's the moment the whole family &mdash; l'a&icirc;n&eacute;, le benjamin, les parents &mdash; comes together, exactly like the <em>grande promenade</em> in today's reading.</p>
@@ -136,12 +237,17 @@
     </div>
 
     <!-- PART 4 · Virtue -->
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9884; PART 4 &middot; UNE VERTU FRAN&Ccedil;AISE <span class="pill-time">5 min</span></div>
+    <!-- PANEL · Dans le tableau -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">1 min</span></div>
+        <div class="pl-tableau"><div class="pl-tlabel">Un long d&eacute;jeuner chez Renoir</div><p>Renoir painted his friends at a long lunch by the river Seine in 1880&ndash;81: glasses, grapes, a little dog and hours of conversation. It is the same kind of long, unhurried meal as <em>le repas dominical</em> you just read about. When these friends arrived, they greeted each other with <em>la bise</em>.</p><div class="pl-wide"><img src="img/m1-hero.jpg" alt="Renoir, Le D&eacute;jeuner des canotiers: friends at a long lunch by the river"></div><details class="pl-look"><summary>Look closely: find two guests who are leaning in close to talk. <span style="font-weight:400;color:#5e5a52">(click for a hint)</span></summary><div style="margin-top:6px">Try the girl at the table in blue and the man leaning over her, on the right. That closeness, at the table and in <em>la bise</em>, is part of the French way of sharing a meal.</div></details></div>
+    </div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>UNE VERTU FRAN&Ccedil;AISE</span><span class="pill-time">5 min</span></div>
         <div class="virtue">
             <div class="tag">LA COURTOISIE &middot; COURTESY</div>
             <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 8px 0;"><strong>La bise</strong> is courtesy made visible &mdash; a small, daily act that says <em>you matter to me</em>. Greeting every person in the room individually, rather than waving at the group, is a point of good manners in France, and children learn it early.</p>
-            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">Courtesy isn't grand gestures &mdash; it's the ordinary attention we pay one another. A family that greets each member by name and by cheek is a family practicing courtesy every single day. <em>&laquo;&nbsp;La politesse est le parfum de l&rsquo;&acirc;me.&nbsp;&raquo;</em></p>
+            <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">Courtesy isn't grand gestures &mdash; it's the ordinary attention we pay one another. A family that greets each member by name and by cheek is a family practicing courtesy every single day. <em>&laquo;&nbsp;La politesse est le parfum de l&rsquo;&acirc;me.&nbsp;&raquo;</em> (Politeness is the perfume of the soul.)</p>
         </div>
 
         <div class="opt-strip">
@@ -149,63 +255,77 @@
             <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
 
             <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question">Qui est l&rsquo;a&icirc;n&eacute; dans la famille&nbsp;?</div>
+                <div class="widget-question">Qui est l&rsquo;a&icirc;n&eacute; dans la famille&nbsp;? &nbsp;<span style="color:#6b7a99;font-size:14px;">(Who is the eldest in the family?)</span></div>
                 <div class="widget-options">
                     <button data-correct="1" data-ok="Oui &mdash; le grand fr&egrave;re est l'a&icirc;n&eacute;.">Le grand fr&egrave;re</button>
-                    <button data-no="Non &mdash; la petite s&oelig;ur est la benjamine (la plus jeune).">La petite s&oelig;ur</button>
-                    <button data-no="Relis le paragraphe 1.">Les parents</button>
+                    <button data-no="No &mdash; the little sister is la benjamine, the youngest.">La petite s&oelig;ur</button>
+                    <button data-no="Re-read paragraph 1.">Les parents</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Comment est la petite s&oelig;ur&nbsp;?</div>
+                <div class="widget-question">Comment est la petite s&oelig;ur&nbsp;? &nbsp;<span style="color:#6b7a99;font-size:14px;">(What is the little sister like?)</span></div>
                 <div class="widget-options">
-                    <button data-no="C'est le grand fr&egrave;re qui est s&eacute;rieux et travailleur.">S&eacute;rieuse et travailleuse</button>
-                    <button data-correct="1" data-ok="Voil&agrave; &mdash; dr&ocirc;le, un peu paresseuse, et curieuse.">Dr&ocirc;le et curieuse</button>
-                    <button data-no="Ce sont les parents qui sont g&eacute;n&eacute;reux.">M&eacute;chante et &eacute;go&iuml;ste</button>
+                    <button data-no="No &mdash; it&rsquo;s the big brother who is s&eacute;rieux et travailleur.">S&eacute;rieuse et travailleuse</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (There you go!) &mdash; dr&ocirc;le, un peu paresseuse, et curieuse.">Dr&ocirc;le et curieuse</button>
+                    <button data-no="No &mdash; it&rsquo;s the parents who are g&eacute;n&eacute;reux.">M&eacute;chante et &eacute;go&iuml;ste</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
 
             <div class="optima-widget ow-eval">
-                <div class="widget-question">Que fait la famille le week-end&nbsp;?</div>
+                <div class="widget-question">Que fait la famille le week-end&nbsp;? &nbsp;<span style="color:#6b7a99;font-size:14px;">(What does the family do at the weekend?)</span></div>
                 <div class="widget-options">
-                    <button data-no="Le passage parle d'une promenade, pas des devoirs.">Elle fait les devoirs</button>
-                    <button data-no="Ce n'est pas mentionn&eacute; dans le texte.">Elle fait la cuisine</button>
-                    <button data-correct="1" data-ok="Exact &mdash; une grande promenade tous ensemble.">Elle fait une grande promenade ensemble</button>
+                    <button data-no="The passage talks about a walk, not homework.">Elle fait les devoirs</button>
+                    <button data-no="That&rsquo;s not mentioned in the text.">Elle fait la cuisine</button>
+                    <button data-correct="1" data-ok="Exact (Right!) &mdash; une grande promenade tous ensemble.">Elle fait une grande promenade ensemble</button>
                 </div>
                 <div class="widget-feedback"></div>
             </div>
         </div>
     </div>
 
-    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+    <!-- PART 2 · production -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>TON PORTRAIT DE FAMILLE</span><span class="pill-time">15 min</span></div>
+        <h3 class="pl-h3">Write five sentences about your real family</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Introduce at least three people and say what each is like. Use <strong>five different adjectives</strong>, at least one <strong>irregular</strong> (<em>beau / nouveau / vieux</em>), one correctly placed <strong>BANGS</strong> adjective, and the verb <strong>faire</strong> once. This is your rehearsal for both the Speaking Task and Langue en action &mdash; write it well and reuse it. <strong>Tip:</strong> you can also click any word in the word bank on the right (below, on a phone), or a green &ldquo;thing to do&rdquo; in sentence 5, to insert it into your sentence.</p>
+        <div class="portrait" data-config='{"model": "Voici ma mère. Elle est gentille et très généreuse. Mon grand-père a un vieux chien. J’ai un petit frère drôle. Le week-end, nous faisons une promenade ensemble.", "accents": ["à", "â", "ç", "é", "è", "ê", "ë", "î", "ï", "ô", "œ", "ù", "û", "ü", "À", "Ç", "É", "È", "Ê", "Î", "Ô", "Ù"], "words": {"family": ["père", "mère", "frère", "sœur", "frères", "sœurs", "parents", "grand-père", "grand-mère", "grands-parents", "oncle", "tante", "oncles", "tantes", "cousin", "cousine", "cousins", "cousines", "fils", "fille", "filles", "enfant", "enfants", "aîné", "aînée", "benjamin", "benjamine", "demi-frère", "demi-sœur", "beau-père", "belle-mère", "papa", "maman", "bébé"], "adjectives": [{"forms": ["gentil", "gentille", "gentils", "gentilles"], "masc": ["gentil", "gentils"], "fem": ["gentille", "gentilles"]}, {"forms": ["méchant", "méchante", "méchants", "méchantes"], "masc": ["méchant", "méchants"], "fem": ["méchante", "méchantes"]}, {"forms": ["timide", "timides"]}, {"forms": ["sympathique", "sympathiques", "sympa", "sympas"]}, {"forms": ["drôle", "drôles"]}, {"forms": ["égoïste", "égoïstes"]}, {"forms": ["sérieux", "sérieuse", "sérieuses"], "masc": ["sérieux"], "fem": ["sérieuse", "sérieuses"]}, {"forms": ["paresseux", "paresseuse", "paresseuses"], "masc": ["paresseux"], "fem": ["paresseuse", "paresseuses"]}, {"forms": ["travailleur", "travailleuse", "travailleurs", "travailleuses"], "masc": ["travailleur", "travailleurs"], "fem": ["travailleuse", "travailleuses"]}, {"forms": ["intelligent", "intelligente", "intelligents", "intelligentes"], "masc": ["intelligent", "intelligents"], "fem": ["intelligente", "intelligentes"]}, {"forms": ["généreux", "généreuse", "généreuses"], "masc": ["généreux"], "fem": ["généreuse", "généreuses"]}, {"forms": ["curieux", "curieuse", "curieuses"], "masc": ["curieux"], "fem": ["curieuse", "curieuses"]}, {"forms": ["beau", "bel", "belle", "beaux", "belles"], "masc": ["beau", "bel", "beaux"], "fem": ["belle", "belles"], "irregular": 1, "bangs": 1}, {"forms": ["nouveau", "nouvel", "nouvelle", "nouveaux", "nouvelles"], "masc": ["nouveau", "nouvel", "nouveaux"], "fem": ["nouvelle", "nouvelles"], "irregular": 1, "bangs": 1}, {"forms": ["vieux", "vieil", "vieille", "vieilles"], "masc": ["vieux", "vieil"], "fem": ["vieille", "vieilles"], "irregular": 1, "bangs": 1}, {"forms": ["jeune", "jeunes"], "bangs": 1}, {"forms": ["grand", "grande", "grands", "grandes"], "masc": ["grand", "grands"], "fem": ["grande", "grandes"], "bangs": 1}, {"forms": ["petit", "petite", "petits", "petites"], "masc": ["petit", "petits"], "fem": ["petite", "petites"], "bangs": 1}, {"forms": ["gros", "grosse", "grosses"], "masc": ["gros"], "fem": ["grosse", "grosses"], "bangs": 1}, {"forms": ["bon", "bonne", "bons", "bonnes"], "masc": ["bon", "bons"], "fem": ["bonne", "bonnes"], "bangs": 1}, {"forms": ["mauvais", "mauvaise", "mauvaises"], "masc": ["mauvais"], "fem": ["mauvaise", "mauvaises"], "bangs": 1}, {"forms": ["joli", "jolie", "jolis", "jolies"], "masc": ["joli", "jolis"], "fem": ["jolie", "jolies"], "bangs": 1}], "faire": ["fais", "fait", "faisons", "faites", "font", "faire"], "determiners": ["un", "une", "le", "la", "les", "des", "mon", "ma", "mes", "ton", "ta", "tes", "son", "sa", "ses", "notre", "nos", "votre", "vos", "leur", "leurs", "ce", "cet", "cette", "ces"]}, "steps": [{"prompt": "<strong>Introduce</strong> someone in your family.", "starters": ["Voici mon", "Voici ma", "J’ai un", "J’ai une"], "needs": ["family"]}, {"prompt": "Say what that person is <strong>like</strong>: use <strong>two adjectives</strong>, and watch the ending.", "starters": ["Il est", "Elle est", "Il est très", "Elle est un peu"], "needs": ["adj2"]}, {"prompt": "Introduce a <strong>second person</strong> and use an <strong>irregular adjective</strong>: <em>beau / belle</em>, <em>nouveau / nouvelle</em> or <em>vieux / vieille</em>.", "starters": ["Mon grand-père est", "Ma sœur est", "Mon oncle a un"], "needs": ["family", "irregular"]}, {"prompt": "A <strong>third person</strong>, with a <strong>BANGS adjective in front of a noun</strong>.", "starters": ["J’ai un petit", "J’ai une grande", "C’est un bon", "C’est une jeune"], "needs": ["family", "bangs"]}, {"prompt": "What does your family <strong>do</strong>? Use the verb <em>faire</em>.", "starters": ["Le week-end, nous faisons", "Ma mère fait", "Mes parents font"], "needs": ["faire"], "extras": {"label": "Things to do:", "items": [["une promenade", "a walk"], ["la cuisine", "the cooking"], ["un gâteau", "a cake"], ["les devoirs", "homework"], ["du vélo", "cycling"], ["les magasins", "shopping"]]}}], "bank": [{"title": "Le caractère &amp;middot; personality", "items": [["gentil", "gentille", "kind"], ["méchant", "méchante", "mean"], ["timide", "", "shy"], ["sympathique", "", "friendly"], ["sérieux", "sérieuse", "serious"], ["drôle", "", "funny"], ["paresseux", "paresseuse", "lazy"], ["travailleur", "travailleuse", "hard-working"], ["intelligent", "intelligente", "intelligent"], ["généreux", "généreuse", "generous"], ["égoïste", "", "selfish"], ["curieux", "curieuse", "curious"]]}, {"title": "Irréguliers &amp;middot; irregular", "note": "bel, nouvel, vieil go before a vowel sound: un bel homme", "items": [["beau", "belle", "handsome / beautiful"], ["nouveau", "nouvelle", "new"], ["vieux", "vieille", "old"]]}, {"title": "BANGS &amp;middot; before the noun", "items": [["jeune", "", "young"], ["grand", "grande", "big / tall"], ["petit", "petite", "small"], ["bon", "bonne", "good"], ["joli", "jolie", "pretty"], ["mauvais", "mauvaise", "bad"], ["gros", "grosse", "big / fat"]]}, {"title": "Faire&amp;hellip; &amp;middot; things to do", "note": "nous faisons une promenade, ma mère fait la cuisine", "items": [["une promenade", "", "a walk"], ["la cuisine", "", "the cooking"], ["un gâteau", "", "a cake"], ["les devoirs", "", "homework"], ["du vélo", "", "cycling"], ["les magasins", "", "shopping"]]}], "bankTitle": "Mots du module &amp;middot; word bank"}'>
+            <textarea class="journal-box" rows="2" data-section="Ton portrait de famille" data-label="Portrait 1 · introduce someone" data-model="Voici ma mère." aria-label="Portrait 1 · introduce someone"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Ton portrait de famille" data-label="Portrait 2 · what they are like" data-model="Elle est gentille et très généreuse." aria-label="Portrait 2 · what they are like"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Ton portrait de famille" data-label="Portrait 3 · an irregular adjective" data-model="Mon grand-père a un vieux chien." aria-label="Portrait 3 · an irregular adjective"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Ton portrait de famille" data-label="Portrait 4 · a BANGS adjective" data-model="J’ai un petit frère drôle." aria-label="Portrait 4 · a BANGS adjective"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Ton portrait de famille" data-label="Portrait 5 · the verb faire" data-model="Le week-end, nous faisons une promenade ensemble." aria-label="Portrait 5 · the verb faire"></textarea>
+        </div>
+    </div>
+
+    <div class="pl-card">
+        <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 1.06</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 1 ends here. Tomorrow is active review &mdash; pulling all twenty words, the irregular adjectives, and BANGS together before the graded work opens in Week 2.</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 1.06 &mdash; assessment day</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Tomorrow you take your <strong>Vocabulary Check (25 pts)</strong> and <strong>Langue en action (20 pts)</strong> in Canvas. Make sure your ear is sharp and your <em>faire</em> table is solid tonight.</div>
             </div>
         </div>
     </div>
 
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you introduce your own family in three sentences of your own, out loud? Try it before Day 6.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> in Canvas. Can you introduce your own family in three sentences of your own, out loud? Use today's portrait, and try it before the Speaking Task on Day 7.</div>
     </div>
 
-    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; FIN DE LA SEMAINE 1&nbsp;!</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full family portrait and understood it &mdash; every word was one you learned this week. That's real reading, not decoding. <em>Bon week-end &mdash; &agrave; lundi&nbsp;!</em></p>
+    <div class="pl-card">
+        <div class="pl-kicker">PR&Ecirc;T(E) POUR DEMAIN&nbsp;! (Ready for tomorrow!)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You read a full family portrait and understood it &mdash; every word was one you learned in Week 1. That's real reading, not decoding &mdash; and your own portrait is ready for the graded work. <em>&Agrave; demain&nbsp;!</em> (See you tomorrow!)</p>
     </div>
 
 </div>
 
 <div class="tricolore" aria-hidden="true"><i class="b"></i><i class="w"></i><i class="r"></i></div>
-<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
-    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
+<div class="pl-foot" style="padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #e9d39a;">Optima Academy Online</span> &middot; FRENCH 1 &#127467;&#127479; &middot; Quarter 3 &middot; Student Lesson Page</div>
     <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.05 &middot; Voici ma famille</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
@@ -220,7 +340,19 @@
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.reveal-body').forEach(function (rb) { rb.classList.remove('show'); });
+      w.querySelectorAll('.reveal-btn').forEach(function (rb) { rb.style.display = ''; });
       delete w.dataset.answered;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
       return;
     }
     var eBtn = e.target.closest('.ow-eval .widget-options button');
@@ -230,19 +362,28 @@
       ew.dataset.answered = '1';
       var ok = eBtn.dataset.correct === '1';
       eBtn.classList.add(ok ? 'correct' : 'incorrect');
-      if (!ok) { ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); }); }
+      if (!ok) {
+        ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
+      }
       var efb = ew.querySelector('.widget-feedback');
       efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
       efb.classList.add('show');
       return;
     }
+    var rv = e.target.closest('.reveal-btn');
+    if (rv) {
+      var host = rv.closest('.optima-widget') || rv.parentElement;
+      var body = host.querySelector('.reveal-body');
+      if (body) body.classList.add('show');
+      rv.style.display = 'none';
+      return;
+    }
   });
 })();
 </script>
-
 <script>
 (function () {
-  var AUDIO_BASE = '../../audio/';
+  var AUDIO_BASE = 'https://optimaondemand.github.io/french1-lessons/audio/';
   var player = new Audio();
   var active = null;
   function clearActive() { if (active) { active.classList.remove('playing'); active = null; } }
@@ -264,7 +405,26 @@
   });
 })();
 </script>
-
-<script defer src="../../shared/read-aloud/read-aloud.js?target=fr"></script>
+<script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="../../annotate.js"></script>
+<script src="../../portrait.js"></script>
+<!-- mywork -->
+<script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@
                      "Julie",
                      "Paul"
                  ],
-    "count":  334,
+    "count":  650,
     "clips":  [
                   {
                       "id":  "alphabet/a",
@@ -154,7 +154,7 @@
                   },
                   {
                       "id":  "alphabet/s",
-                      "text":  "èsse",
+                      "text":  "esse",
                       "gloss":  "the letter S",
                       "type":  "alphabet",
                       "voice":  "Paul",
@@ -2679,6 +2679,2534 @@
                       "type":  "passage",
                       "voice":  "Julie",
                       "file":  "audio/passage/m08-paris-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-le-caractere",
+                      "text":  "le caractère",
+                      "gloss":  "character / personality",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-le-caractere.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-gentil",
+                      "text":  "gentil",
+                      "gloss":  "kind (m.) / gentille (f.)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-gentil.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-mechant",
+                      "text":  "méchant",
+                      "gloss":  "mean / nasty",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-mechant.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-timide",
+                      "text":  "timide",
+                      "gloss":  "shy",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-timide.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-sympa",
+                      "text":  "sympathique",
+                      "gloss":  "nice / friendly",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-sympa.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-serieux",
+                      "text":  "sérieux",
+                      "gloss":  "serious",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-serieux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-drole",
+                      "text":  "drôle",
+                      "gloss":  "funny",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-drole.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-paresseux",
+                      "text":  "paresseux",
+                      "gloss":  "lazy",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-paresseux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-travailleur",
+                      "text":  "travailleur",
+                      "gloss":  "hard-working",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-travailleur.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-intelligent",
+                      "text":  "intelligent",
+                      "gloss":  "intelligent",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-intelligent.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-genereux",
+                      "text":  "généreux",
+                      "gloss":  "generous",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-genereux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-egoiste",
+                      "text":  "égoïste",
+                      "gloss":  "selfish",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-egoiste.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-curieux",
+                      "text":  "curieux",
+                      "gloss":  "curious",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-curieux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-beau",
+                      "text":  "beau",
+                      "gloss":  "handsome / beautiful (irregular)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-beau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-nouveau",
+                      "text":  "nouveau",
+                      "gloss":  "new (irregular)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-nouveau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-vieux",
+                      "text":  "vieux",
+                      "gloss":  "old (irregular)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-vieux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-jeune",
+                      "text":  "jeune",
+                      "gloss":  "young",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-jeune.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-aine",
+                      "text":  "l\u0027aîné",
+                      "gloss":  "the eldest child",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-aine.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-benjamin",
+                      "text":  "le benjamin",
+                      "gloss":  "the youngest child",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-benjamin.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-faire",
+                      "text":  "faire",
+                      "gloss":  "to do / to make",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-faire.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-belle",
+                      "text":  "Ma sœur est belle et gentille.",
+                      "gloss":  "My sister is beautiful and kind. (beau → belle)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-belle.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-nouvel",
+                      "text":  "Nous avons un nouvel appartement.",
+                      "gloss":  "We have a new apartment. (nouveau → nouvel before a vowel)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-nouvel.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-vieille",
+                      "text":  "C\u0027est une vieille maison.",
+                      "gloss":  "It\u0027s an old house. (vieux → vieille)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-vieille.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-bangs",
+                      "text":  "J\u0027ai un bon frère et une grande famille.",
+                      "gloss":  "I have a good brother and a big family. (BANGS adjectives before the noun)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m1-bangs.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-position",
+                      "text":  "C\u0027est une famille sympathique.",
+                      "gloss":  "It\u0027s a friendly family. (most adjectives after the noun)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-position.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-jolie-fille",
+                      "text":  "une jolie fille",
+                      "gloss":  "a pretty girl (BANGS: Beauty, before the noun; Renoir portrait, Lesson 1.03)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-jolie-fille.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-jeune-homme",
+                      "text":  "un jeune homme",
+                      "gloss":  "a young man (BANGS: Age, before the noun; Renoir portrait, Lesson 1.03)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m1-jeune-homme.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-petit-chien",
+                      "text":  "un petit chien",
+                      "gloss":  "a little dog (BANGS: Size, before the noun; Renoir portrait, Lesson 1.03)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m1-petit-chien.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-fournaise",
+                      "text":  "un homme travailleur",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the tall man in the straw hat, standing",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m1-pc-fournaise.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-aline",
+                      "text":  "une fille gentille",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the girl with flowers on her hat",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pc-aline.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-alphonsine",
+                      "text":  "une fille curieuse",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the girl leaning on the railing",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pc-alphonsine.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-barbier",
+                      "text":  "un homme sérieux",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the man with his back to us",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-pc-barbier.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-ellen",
+                      "text":  "une belle fille",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the girl drinking from her glass",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m1-pc-ellen.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-ephrussi",
+                      "text":  "un vieil homme",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the man in the top hat",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-pc-ephrussi.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-angele",
+                      "text":  "une fille drôle",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the girl at the table, listening",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pc-angele.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-maggiolo",
+                      "text":  "un garçon sympathique",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the man leaning over the table",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-pc-maggiolo.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-caillebotte",
+                      "text":  "un beau garçon",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the rower sitting backwards on his chair",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pc-caillebotte.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pc-samary",
+                      "text":  "une jeune fille",
+                      "gloss":  "Les cartons de table (Lesson 1.03 BANGS game): the girl with her hands near her ears",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pc-samary.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-bel-homme",
+                      "text":  "un bel homme",
+                      "gloss":  "a handsome man (bel before a vowel; Renoir panel, Lesson 1.02)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m1-bel-homme.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-vieux-chien",
+                      "text":  "un vieux chien",
+                      "gloss":  "an old dog (Renoir panel, Lesson 1.02)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-vieux-chien.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-faire-alphonse",
+                      "text":  "Alphonse fait la cuisine.",
+                      "gloss":  "Alphonse does the cooking. (Renoir panel, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-faire-alphonse.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-faire-garcons",
+                      "text":  "Les deux garçons font une promenade.",
+                      "gloss":  "The two boys go for a walk. (Renoir panel, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-faire-garcons.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-faire-nous",
+                      "text":  "Nous faisons une promenade avec le chien !",
+                      "gloss":  "We\u0027re going for a walk with the dog! (Renoir panel, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-faire-nous.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-faire-je",
+                      "text":  "Je fais un gâteau pour la famille.",
+                      "gloss":  "I\u0027m making a cake for the family. (Renoir panel, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-faire-je.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m1-modele-aline",
+                      "text":  "Voici Aline. C\u0027est une belle fille, très gentille et un peu timide. Elle a un petit chien. Il est drôle ! Le dimanche, Aline fait une promenade avec le chien.",
+                      "gloss":  "Model portrait before the Speaking Task (Renoir panel, Lesson 1.07)",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m1-modele-aline.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-belle",
+                      "text":  "belle",
+                      "gloss":  "feminine of beau (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-f-belle.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-vieille",
+                      "text":  "vieille",
+                      "gloss":  "feminine of vieux (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-f-vieille.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-nouvelle",
+                      "text":  "nouvelle",
+                      "gloss":  "feminine of nouveau (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-f-nouvelle.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-gentille",
+                      "text":  "gentille",
+                      "gloss":  "feminine of gentil (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-f-gentille.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-serieuse",
+                      "text":  "sérieuse",
+                      "gloss":  "feminine of sérieux (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-f-serieuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-genereuse",
+                      "text":  "généreuse",
+                      "gloss":  "feminine of généreux (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-f-genereuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-curieuse",
+                      "text":  "curieuse",
+                      "gloss":  "feminine of curieux (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-f-curieuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-paresseuse",
+                      "text":  "paresseuse",
+                      "gloss":  "feminine of paresseux (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m1-f-paresseuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-travailleuse",
+                      "text":  "travailleuse",
+                      "gloss":  "feminine of travailleur (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-f-travailleuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-f-intelligente",
+                      "text":  "intelligente",
+                      "gloss":  "feminine of intelligent (La Tour scintille, Lesson 1.02)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m1-f-intelligente.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-alphonse",
+                      "text":  "Alphonse",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-alphonse.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-deux-garcons",
+                      "text":  "Les deux garçons",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-deux-garcons.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-nous",
+                      "text":  "Nous",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-nous.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-je",
+                      "text":  "Je",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-je.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-vous",
+                      "text":  "Vous",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-vous.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-fais",
+                      "text":  "fais",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-fais.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-fait",
+                      "text":  "fait",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-fait.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-faisons",
+                      "text":  "faisons",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-faisons.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-faites",
+                      "text":  "faites",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-faites.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-font",
+                      "text":  "font",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-font.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-la-cuisine",
+                      "text":  "la cuisine",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-la-cuisine.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-une-promenade",
+                      "text":  "une promenade",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-une-promenade.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-avec-le-chien",
+                      "text":  "avec le chien !",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-avec-le-chien.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-un-gateau",
+                      "text":  "un gâteau",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-un-gateau.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-pz-pour-la-famille",
+                      "text":  "pour la famille",
+                      "gloss":  "sentence-builder block (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-pz-pour-la-famille.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-faire-vous",
+                      "text":  "Vous faites une promenade ?",
+                      "gloss":  "Are you going for a walk? (Construis, Lesson 1.04)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-faire-vous.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-fais",
+                      "text":  "Je fais mes devoirs le soir.",
+                      "gloss":  "I do my homework in the evening. (faire)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-fais.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-faisons",
+                      "text":  "Nous faisons une promenade ensemble.",
+                      "gloss":  "We take a walk together. (faire, nous)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m1-faisons.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m1-famille-01",
+                      "text":  "Voici ma famille. Mon grand frère est l\u0027aîné : il est sérieux et très travailleur.",
+                      "gloss":  "My family\u0027s character, 1",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m1-famille-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m1-famille-02",
+                      "text":  "Ma petite sœur, la benjamine, est drôle mais un peu paresseuse. Elle est aussi très curieuse.",
+                      "gloss":  "My family\u0027s character, 2",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m1-famille-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m1-famille-03",
+                      "text":  "Mes parents sont gentils et généreux. Le week-end, nous faisons souvent une grande promenade tous ensemble. J\u0027adore ma famille !",
+                      "gloss":  "My family\u0027s character, 3",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m1-famille-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-region",
+                      "text":  "la région",
+                      "gloss":  "the region",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-la-region.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-bretagne",
+                      "text":  "la Bretagne",
+                      "gloss":  "Brittany",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-la-bretagne.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-l-alsace",
+                      "text":  "l\u0027Alsace",
+                      "gloss":  "Alsace",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m2-l-alsace.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-provence",
+                      "text":  "la Provence",
+                      "gloss":  "Provence",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-la-provence.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-normandie",
+                      "text":  "la Normandie",
+                      "gloss":  "Normandy",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-la-normandie.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-montagne",
+                      "text":  "la montagne",
+                      "gloss":  "the mountain",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-la-montagne.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-mer",
+                      "text":  "la mer",
+                      "gloss":  "the sea",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-la-mer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-plage",
+                      "text":  "la plage",
+                      "gloss":  "the beach",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-la-plage.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-campagne",
+                      "text":  "la campagne",
+                      "gloss":  "the countryside",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-la-campagne.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-foret",
+                      "text":  "la forêt",
+                      "gloss":  "the forest",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m2-la-foret.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-le-fleuve",
+                      "text":  "le fleuve",
+                      "gloss":  "the (large) river",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-le-fleuve.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-cote",
+                      "text":  "la côte",
+                      "gloss":  "the coast",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m2-la-cote.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-le-village",
+                      "text":  "le village",
+                      "gloss":  "the village",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-le-village.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-le-climat",
+                      "text":  "le climat",
+                      "gloss":  "the climate",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-le-climat.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-le-nord",
+                      "text":  "le nord",
+                      "gloss":  "the north",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m2-le-nord.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-le-sud",
+                      "text":  "le sud",
+                      "gloss":  "the south",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m2-le-sud.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-l-est",
+                      "text":  "l\u0027est",
+                      "gloss":  "the east",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m2-l-est.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-l-ouest",
+                      "text":  "l\u0027ouest",
+                      "gloss":  "the west",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m2-l-ouest.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-ensoleille",
+                      "text":  "ensoleillé",
+                      "gloss":  "sunny",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-ensoleille.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m2-la-frontiere",
+                      "text":  "la frontière",
+                      "gloss":  "the border",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m2-la-frontiere.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-ce",
+                      "text":  "Ce village est très joli.",
+                      "gloss":  "This village is very pretty. (ce + masc. noun)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m2-ce.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-cet",
+                      "text":  "Cet endroit est célèbre.",
+                      "gloss":  "This place is famous. (cet before a vowel)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m2-cet.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-cette",
+                      "text":  "Cette région est au sud.",
+                      "gloss":  "This region is in the south. (cette + fem. noun)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m2-cette.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-ces",
+                      "text":  "Ces montagnes sont magnifiques.",
+                      "gloss":  "These mountains are magnificent. (ces + plural)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m2-ces.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-en-region",
+                      "text":  "Cet été, je vais en Bretagne.",
+                      "gloss":  "This summer, I\u0027m going to Brittany. (en + region)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m2-en-region.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-il-y-a",
+                      "text":  "Il y a de belles plages en Normandie.",
+                      "gloss":  "There are beautiful beaches in Normandy.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m2-il-y-a.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m2-se-trouve",
+                      "text":  "Cette région se trouve dans le sud de la France.",
+                      "gloss":  "This region is located in the south of France.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m2-se-trouve.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m2-regions-01",
+                      "text":  "La France a beaucoup de régions différentes. Cette année, je visite quatre régions célèbres.",
+                      "gloss":  "The regions of France, 1",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m2-regions-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m2-regions-02",
+                      "text":  "En Bretagne, à l\u0027ouest, il y a la mer et de belles côtes. En Alsace, à l\u0027est, les villages sont très jolis.",
+                      "gloss":  "The regions of France, 2",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m2-regions-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m2-regions-03",
+                      "text":  "En Provence, dans le sud, il fait chaud et ensoleillé. La Normandie, au nord, a une côte historique. J\u0027adore ces régions !",
+                      "gloss":  "The regions of France, 3",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m2-regions-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-le-restaurant",
+                      "text":  "le restaurant",
+                      "gloss":  "the restaurant",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-le-restaurant.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-le-menu",
+                      "text":  "le menu",
+                      "gloss":  "the set menu",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-le-menu.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-la-carte",
+                      "text":  "la carte",
+                      "gloss":  "the menu (à la carte)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m3-la-carte.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-l-entree",
+                      "text":  "l\u0027entrée",
+                      "gloss":  "the starter / appetizer",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-l-entree.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-le-plat-principal",
+                      "text":  "le plat principal",
+                      "gloss":  "the main course",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-le-plat-principal.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-le-dessert",
+                      "text":  "le dessert",
+                      "gloss":  "the dessert",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-le-dessert.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-la-boisson",
+                      "text":  "la boisson",
+                      "gloss":  "the drink / beverage",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-la-boisson.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-le-serveur",
+                      "text":  "le serveur",
+                      "gloss":  "the waiter",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-le-serveur.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-l-addition",
+                      "text":  "l\u0027addition",
+                      "gloss":  "the check / bill",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-l-addition.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-commander",
+                      "text":  "commander",
+                      "gloss":  "to order",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-commander.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-prendre",
+                      "text":  "prendre",
+                      "gloss":  "to take / to have (food)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-prendre.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-une-tranche-de",
+                      "text":  "une tranche de",
+                      "gloss":  "a slice of",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-une-tranche-de.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-un-morceau-de",
+                      "text":  "un morceau de",
+                      "gloss":  "a piece of",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m3-un-morceau-de.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-une-bouteille-de",
+                      "text":  "une bouteille de",
+                      "gloss":  "a bottle of",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m3-une-bouteille-de.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-un-verre-de",
+                      "text":  "un verre de",
+                      "gloss":  "a glass of",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-un-verre-de.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-assez-de",
+                      "text":  "assez de",
+                      "gloss":  "enough of",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-assez-de.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-la-specialite",
+                      "text":  "la spécialité",
+                      "gloss":  "the specialty",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-la-specialite.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-l-assiette",
+                      "text":  "l\u0027assiette",
+                      "gloss":  "the plate",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-l-assiette.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-gouter",
+                      "text":  "goûter",
+                      "gloss":  "to taste",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m3-gouter.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m3-avoir-faim",
+                      "text":  "avoir faim",
+                      "gloss":  "to be hungry",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m3-avoir-faim.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-prends",
+                      "text":  "Je prends une entrée et un plat principal.",
+                      "gloss":  "I\u0027ll have a starter and a main course. (prendre)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m3-prends.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-prend",
+                      "text":  "Elle prend de la soupe.",
+                      "gloss":  "She\u0027s having some soup. (prendre + partitive)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m3-prend.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-prenons",
+                      "text":  "Nous prenons le menu à vingt euros.",
+                      "gloss":  "We\u0027ll take the twenty-euro set menu. (prendre, nous)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m3-prenons.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-partitif",
+                      "text":  "Je voudrais du fromage et de la salade.",
+                      "gloss":  "I would like some cheese and some salad. (partitive review)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m3-partitif.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-quantite",
+                      "text":  "Une bouteille d\u0027eau, s\u0027il vous plaît.",
+                      "gloss":  "A bottle of water, please. (expression of quantity + de)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m3-quantite.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-assez",
+                      "text":  "Merci, j\u0027ai assez mangé.",
+                      "gloss":  "Thank you, I\u0027ve eaten enough.",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m3-assez.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m3-commander",
+                      "text":  "Je voudrais commander, s\u0027il vous plaît.",
+                      "gloss":  "I would like to order, please.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m3-commander.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m3-table-01",
+                      "text":  "Ce soir, nous dînons au restaurant. Le serveur apporte la carte et nous regardons le menu.",
+                      "gloss":  "At the restaurant, 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m3-table-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m3-table-02",
+                      "text":  "Comme entrée, je prends une salade. Comme plat principal, je prends du poisson avec des légumes.",
+                      "gloss":  "At the restaurant, 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m3-table-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m3-table-03",
+                      "text":  "Comme dessert, je voudrais une tranche de gâteau. À la fin, le serveur apporte l\u0027addition. Tout est délicieux !",
+                      "gloss":  "At the restaurant, 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m3-table-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-le-passe",
+                      "text":  "le passé",
+                      "gloss":  "the past",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-le-passe.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-hier",
+                      "text":  "hier",
+                      "gloss":  "yesterday",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-hier.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-hier-soir",
+                      "text":  "hier soir",
+                      "gloss":  "last night",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-hier-soir.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-le-week-end-dernier",
+                      "text":  "le week-end dernier",
+                      "gloss":  "last weekend",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-le-week-end-dernier.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-la-semaine-derniere",
+                      "text":  "la semaine dernière",
+                      "gloss":  "last week",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-la-semaine-derniere.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-venir",
+                      "text":  "venir",
+                      "gloss":  "to come",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-venir.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-regarder-un-film",
+                      "text":  "regarder un film",
+                      "gloss":  "to watch a movie",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-regarder-un-film.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-ecouter-de-la-musique",
+                      "text":  "écouter de la musique",
+                      "gloss":  "to listen to music",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-ecouter-de-la-musique.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-jouer-aux-jeux-video",
+                      "text":  "jouer aux jeux vidéo",
+                      "gloss":  "to play video games",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-jouer-aux-jeux-video.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-faire-du-sport",
+                      "text":  "faire du sport",
+                      "gloss":  "to do / play sports",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-faire-du-sport.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-rencontrer",
+                      "text":  "rencontrer",
+                      "gloss":  "to meet",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-rencontrer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-rester",
+                      "text":  "rester",
+                      "gloss":  "to stay",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-rester.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-gagner",
+                      "text":  "gagner",
+                      "gloss":  "to win / earn",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-gagner.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-voyager",
+                      "text":  "voyager",
+                      "gloss":  "to travel",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m4-voyager.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-deja",
+                      "text":  "déjà",
+                      "gloss":  "already",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-deja.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-ne-jamais",
+                      "text":  "ne... jamais",
+                      "gloss":  "never",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m4-ne-jamais.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-le-concert",
+                      "text":  "le concert",
+                      "gloss":  "the concert",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-le-concert.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-la-fete",
+                      "text":  "la fête",
+                      "gloss":  "the party",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m4-la-fete.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-le-match",
+                      "text":  "le match",
+                      "gloss":  "the game / match",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-le-match.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m4-amusant",
+                      "text":  "amusant",
+                      "gloss":  "fun / amusing",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m4-amusant.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-jai-mange",
+                      "text":  "J\u0027ai mangé au restaurant hier soir.",
+                      "gloss":  "I ate at the restaurant last night. (passé composé, avoir)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m4-jai-mange.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-tu-as-regarde",
+                      "text":  "Tu as regardé le match ?",
+                      "gloss":  "Did you watch the game?",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m4-tu-as-regarde.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-il-a-joue",
+                      "text":  "Il a joué au football samedi.",
+                      "gloss":  "He played soccer on Saturday.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m4-il-a-joue.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-nous-avons-fini",
+                      "text":  "Nous avons fini nos devoirs.",
+                      "gloss":  "We finished our homework. (-ir past participle)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m4-nous-avons-fini.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-jai-fait",
+                      "text":  "J\u0027ai fait du sport ce week-end.",
+                      "gloss":  "I did sports this weekend. (irregular participle: fait)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m4-jai-fait.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-neg-pc",
+                      "text":  "Je n\u0027ai pas regardé la télé hier.",
+                      "gloss":  "I didn\u0027t watch TV yesterday. (negation in the passé composé)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m4-neg-pc.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m4-viennent",
+                      "text":  "Mes amis viennent chez moi ce soir.",
+                      "gloss":  "My friends are coming to my place tonight. (venir)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m4-viennent.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m4-loisirs-01",
+                      "text":  "Le week-end dernier, j\u0027ai passé beaucoup de temps avec mes amis. Samedi, nous avons joué au basket au parc.",
+                      "gloss":  "What I did last weekend, 1",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m4-loisirs-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m4-loisirs-02",
+                      "text":  "Le soir, j\u0027ai regardé un film et j\u0027ai écouté de la musique. Je n\u0027ai pas fait mes devoirs !",
+                      "gloss":  "What I did last weekend, 2",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m4-loisirs-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m4-loisirs-03",
+                      "text":  "Dimanche, mes cousins ont rencontré mes amis et nous avons mangé une grande pizza. Quel week-end amusant !",
+                      "gloss":  "What I did last weekend, 3",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m4-loisirs-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-la-ville",
+                      "text":  "la ville",
+                      "gloss":  "the city",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-la-ville.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-le-centre-ville",
+                      "text":  "le centre-ville",
+                      "gloss":  "downtown / city center",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-le-centre-ville.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-le-bus",
+                      "text":  "le bus",
+                      "gloss":  "the bus",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-le-bus.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-le-tramway",
+                      "text":  "le tramway",
+                      "gloss":  "the tram",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-le-tramway.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-le-train",
+                      "text":  "le train",
+                      "gloss":  "the train",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-le-train.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-la-voiture",
+                      "text":  "la voiture",
+                      "gloss":  "the car",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m5-la-voiture.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-a-pied",
+                      "text":  "à pied",
+                      "gloss":  "on foot",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-a-pied.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-arriver",
+                      "text":  "arriver",
+                      "gloss":  "to arrive",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-arriver.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-partir",
+                      "text":  "partir",
+                      "gloss":  "to leave",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-partir.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-sortir",
+                      "text":  "sortir",
+                      "gloss":  "to go out",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m5-sortir.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-entrer",
+                      "text":  "entrer",
+                      "gloss":  "to enter",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-entrer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-monter",
+                      "text":  "monter",
+                      "gloss":  "to go up / get on",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-monter.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-descendre",
+                      "text":  "descendre",
+                      "gloss":  "to go down / get off",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-descendre.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-rentrer",
+                      "text":  "rentrer",
+                      "gloss":  "to return home",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-rentrer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-tomber",
+                      "text":  "tomber",
+                      "gloss":  "to fall",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-tomber.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-le-plan",
+                      "text":  "le plan",
+                      "gloss":  "the (city) map",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m5-le-plan.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-la-place",
+                      "text":  "la place",
+                      "gloss":  "the square",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-la-place.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-le-pont",
+                      "text":  "le pont",
+                      "gloss":  "the bridge",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m5-le-pont.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-l-arret",
+                      "text":  "l\u0027arrêt",
+                      "gloss":  "the (bus) stop",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-l-arret.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m5-loin-de",
+                      "text":  "loin de",
+                      "gloss":  "far from",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m5-loin-de.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-suis-alle",
+                      "text":  "Je suis allé au centre-ville.",
+                      "gloss":  "I went downtown. (passé composé with être, masc.)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m5-suis-alle.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-suis-allee",
+                      "text":  "Je suis allée au musée.",
+                      "gloss":  "I went to the museum. (feminine agreement: allée)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m5-suis-allee.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-est-arrive",
+                      "text":  "Le train est arrivé à l\u0027heure.",
+                      "gloss":  "The train arrived on time.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m5-est-arrive.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-est-partie",
+                      "text":  "Elle est partie à huit heures.",
+                      "gloss":  "She left at eight o\u0027clock. (feminine agreement)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m5-est-partie.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-sommes-sortis",
+                      "text":  "Nous sommes sortis en ville.",
+                      "gloss":  "We went out in town. (plural agreement)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m5-sommes-sortis.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-est-reste",
+                      "text":  "Il est resté à la maison.",
+                      "gloss":  "He stayed home.",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m5-est-reste.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m5-neg-etre",
+                      "text":  "Je ne suis pas sorti hier soir.",
+                      "gloss":  "I didn\u0027t go out last night. (negation, être passé composé)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m5-neg-etre.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m5-ville-01",
+                      "text":  "Samedi dernier, je suis allée en ville avec ma sœur. Nous sommes parties de la maison à dix heures.",
+                      "gloss":  "A day in the city, 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m5-ville-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m5-ville-02",
+                      "text":  "Nous sommes montées dans le bus au centre-ville. Après, nous sommes descendues près de la grande place.",
+                      "gloss":  "A day in the city, 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m5-ville-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m5-ville-03",
+                      "text":  "L\u0027après-midi, mes amies sont arrivées et nous sommes sorties ensemble. Je suis rentrée à la maison très tard. Quelle belle journée !",
+                      "gloss":  "A day in the city, 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m5-ville-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-le-tableau",
+                      "text":  "le tableau",
+                      "gloss":  "the painting",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m6-le-tableau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-la-peinture",
+                      "text":  "la peinture",
+                      "gloss":  "painting (the art form)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m6-la-peinture.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-le-peintre",
+                      "text":  "le peintre",
+                      "gloss":  "the painter",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-le-peintre.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-l-artiste",
+                      "text":  "l\u0027artiste",
+                      "gloss":  "the artist",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-l-artiste.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-la-sculpture",
+                      "text":  "la sculpture",
+                      "gloss":  "the sculpture",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m6-la-sculpture.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-l-exposition",
+                      "text":  "l\u0027exposition",
+                      "gloss":  "the exhibition",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-l-exposition.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-le-chef-doeuvre",
+                      "text":  "le chef-d\u0027œuvre",
+                      "gloss":  "the masterpiece",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m6-le-chef-doeuvre.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-le-film",
+                      "text":  "le film",
+                      "gloss":  "the film",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m6-le-film.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-l-acteur",
+                      "text":  "l\u0027acteur",
+                      "gloss":  "the actor",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-l-acteur.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-l-actrice",
+                      "text":  "l\u0027actrice",
+                      "gloss":  "the actress",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-l-actrice.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-admirer",
+                      "text":  "admirer",
+                      "gloss":  "to admire",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-admirer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-dessiner",
+                      "text":  "dessiner",
+                      "gloss":  "to draw",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m6-dessiner.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-impressionnant",
+                      "text":  "impressionnant",
+                      "gloss":  "impressive",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m6-impressionnant.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-autrefois",
+                      "text":  "autrefois",
+                      "gloss":  "in the past / formerly",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m6-autrefois.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-d-habitude",
+                      "text":  "d\u0027habitude",
+                      "gloss":  "usually",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-d-habitude.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-pendant",
+                      "text":  "pendant",
+                      "gloss":  "during",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-pendant.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-calme",
+                      "text":  "calme",
+                      "gloss":  "calm / quiet",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m6-calme.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-magnifique",
+                      "text":  "magnifique",
+                      "gloss":  "magnificent",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m6-magnifique.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-le-billet",
+                      "text":  "le billet",
+                      "gloss":  "the ticket",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-le-billet.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m6-la-salle",
+                      "text":  "la salle",
+                      "gloss":  "the room / gallery",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m6-la-salle.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-etait",
+                      "text":  "Le musée était calme et magnifique.",
+                      "gloss":  "The museum was calm and magnificent. (imparfait: était)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-etait.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-il-y-avait",
+                      "text":  "Il y avait beaucoup de tableaux.",
+                      "gloss":  "There were many paintings. (il y avait)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m6-il-y-avait.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-habitude",
+                      "text":  "Quand j\u0027étais petit, je dessinais souvent.",
+                      "gloss":  "When I was little, I used to draw often. (habitual imparfait)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-habitude.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-allions",
+                      "text":  "Nous allions au musée chaque dimanche.",
+                      "gloss":  "We used to go to the museum every Sunday. (imparfait, nous)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-allions.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-contraste",
+                      "text":  "Je regardais un tableau quand mon ami est arrivé.",
+                      "gloss":  "I was looking at a painting when my friend arrived. (imparfait + passé composé)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-contraste.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-description",
+                      "text":  "Il faisait beau et les rues étaient calmes.",
+                      "gloss":  "The weather was nice and the streets were quiet. (imparfait description)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m6-description.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-pc-vs-imp",
+                      "text":  "Hier, j\u0027ai visité le Louvre ; c\u0027était magnifique.",
+                      "gloss":  "Yesterday I visited the Louvre; it was magnificent. (passé composé action + imparfait state)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m6-pc-vs-imp.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m6-musee-01",
+                      "text":  "Quand j\u0027étais petite, j\u0027allais souvent au musée avec ma grand-mère. Elle adorait la peinture.",
+                      "gloss":  "A museum memory, 1",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m6-musee-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m6-musee-02",
+                      "text":  "Il y avait un grand tableau que j\u0027admirais toujours. Les couleurs étaient magnifiques et la salle était calme.",
+                      "gloss":  "A museum memory, 2",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m6-musee-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m6-musee-03",
+                      "text":  "Hier, je suis retournée à ce musée. J\u0027ai revu le tableau, et j\u0027ai pensé à ma grand-mère. C\u0027était un moment très spécial.",
+                      "gloss":  "A museum memory, 3",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m6-musee-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-les-vetements",
+                      "text":  "les vêtements",
+                      "gloss":  "clothes",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-les-vetements.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-la-chemise",
+                      "text":  "la chemise",
+                      "gloss":  "the shirt",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-la-chemise.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-le-pantalon",
+                      "text":  "le pantalon",
+                      "gloss":  "the pants",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-le-pantalon.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-la-robe",
+                      "text":  "la robe",
+                      "gloss":  "the dress",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-la-robe.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-la-jupe",
+                      "text":  "la jupe",
+                      "gloss":  "the skirt",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-la-jupe.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-le-manteau",
+                      "text":  "le manteau",
+                      "gloss":  "the coat",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-le-manteau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-les-chaussures",
+                      "text":  "les chaussures",
+                      "gloss":  "the shoes",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-les-chaussures.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-le-chapeau",
+                      "text":  "le chapeau",
+                      "gloss":  "the hat",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-le-chapeau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-le-pull",
+                      "text":  "le pull",
+                      "gloss":  "the sweater",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-le-pull.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-le-jean",
+                      "text":  "le jean",
+                      "gloss":  "the jeans",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-le-jean.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-porter",
+                      "text":  "porter",
+                      "gloss":  "to wear",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-porter.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-acheter",
+                      "text":  "acheter",
+                      "gloss":  "to buy",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-acheter.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-essayer",
+                      "text":  "essayer",
+                      "gloss":  "to try on",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-essayer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-le-magasin",
+                      "text":  "le magasin",
+                      "gloss":  "the store",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-le-magasin.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-la-taille",
+                      "text":  "la taille",
+                      "gloss":  "the size",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-la-taille.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-la-couleur",
+                      "text":  "la couleur",
+                      "gloss":  "the color",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m7-la-couleur.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-cher",
+                      "text":  "cher",
+                      "gloss":  "expensive",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m7-cher.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-bon-marche",
+                      "text":  "bon marché",
+                      "gloss":  "cheap / inexpensive",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m7-bon-marche.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-voir",
+                      "text":  "voir",
+                      "gloss":  "to see",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m7-voir.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m7-la-vitrine",
+                      "text":  "la vitrine",
+                      "gloss":  "the shop window",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m7-la-vitrine.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-dop-le",
+                      "text":  "J\u0027aime ce pull. Je le porte souvent.",
+                      "gloss":  "I like this sweater. I wear it often. (direct object pronoun: le)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m7-dop-le.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-dop-la",
+                      "text":  "Cette robe ? Je la trouve jolie.",
+                      "gloss":  "This dress? I find it pretty. (la)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m7-dop-la.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-dop-les",
+                      "text":  "Ces chaussures ? Je les achète.",
+                      "gloss":  "These shoes? I\u0027m buying them. (les)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m7-dop-les.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-dop-l",
+                      "text":  "Ce manteau, je l\u0027essaie.",
+                      "gloss":  "This coat, I\u0027m trying it on. (l\u0027)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m7-dop-l.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-dop-pc",
+                      "text":  "J\u0027ai vu la jupe et je l\u0027ai achetée.",
+                      "gloss":  "I saw the skirt and I bought it. (object pronoun + past participle agreement)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m7-dop-pc.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-vois",
+                      "text":  "Je vois une belle vitrine.",
+                      "gloss":  "I see a beautiful shop window. (voir)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m7-vois.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m7-voyons",
+                      "text":  "Nous voyons beaucoup de vêtements dans ce magasin.",
+                      "gloss":  "We see a lot of clothes in this store. (voir, nous)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m7-voyons.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m7-mode-01",
+                      "text":  "J\u0027adore faire du shopping. Aujourd\u0027hui, je cherche une robe pour une fête.",
+                      "gloss":  "Shopping trip, 1",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m7-mode-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m7-mode-02",
+                      "text":  "Je vois une belle robe bleue dans la vitrine. Je l\u0027essaie : la taille est parfaite !",
+                      "gloss":  "Shopping trip, 2",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m7-mode-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m7-mode-03",
+                      "text":  "Le pull rouge est très cher, alors je ne l\u0027achète pas. Mais les chaussures ? Je les adore, et je les achète !",
+                      "gloss":  "Shopping trip, 3",
+                      "type":  "passage",
+                      "voice":  "Julie",
+                      "file":  "audio/passage/s2m7-mode-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-la-chanson",
+                      "text":  "la chanson",
+                      "gloss":  "the song",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-la-chanson.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-le-chanteur",
+                      "text":  "le chanteur",
+                      "gloss":  "the singer (m.)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m8-le-chanteur.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-la-chanteuse",
+                      "text":  "la chanteuse",
+                      "gloss":  "the singer (f.)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-la-chanteuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-le-concert",
+                      "text":  "le concert",
+                      "gloss":  "the concert",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m8-le-concert.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-la-fete",
+                      "text":  "la fête",
+                      "gloss":  "the party / celebration",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-la-fete.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-l-anniversaire",
+                      "text":  "l\u0027anniversaire",
+                      "gloss":  "the birthday",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-l-anniversaire.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-le-cadeau",
+                      "text":  "le cadeau",
+                      "gloss":  "the gift",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-le-cadeau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-danser",
+                      "text":  "danser",
+                      "gloss":  "to dance",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-danser.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-chanter",
+                      "text":  "chanter",
+                      "gloss":  "to sing",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-chanter.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-offrir",
+                      "text":  "offrir",
+                      "gloss":  "to give (a gift)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-offrir.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-inviter",
+                      "text":  "inviter",
+                      "gloss":  "to invite",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-inviter.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-celebrer",
+                      "text":  "célébrer",
+                      "gloss":  "to celebrate",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m8-celebrer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-la-guitare",
+                      "text":  "la guitare",
+                      "gloss":  "the guitar",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-la-guitare.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-le-piano",
+                      "text":  "le piano",
+                      "gloss":  "the piano",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-le-piano.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-la-batterie",
+                      "text":  "la batterie",
+                      "gloss":  "the drums",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-la-batterie.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-mieux",
+                      "text":  "mieux",
+                      "gloss":  "better (adverb)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-mieux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-meilleur",
+                      "text":  "meilleur",
+                      "gloss":  "better / best (adjective)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m8-meilleur.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-plus-que",
+                      "text":  "plus... que",
+                      "gloss":  "more... than",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m8-plus-que.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-moins-que",
+                      "text":  "moins... que",
+                      "gloss":  "less... than",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m8-moins-que.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m8-aussi-que",
+                      "text":  "aussi... que",
+                      "gloss":  "as... as",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m8-aussi-que.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-iop-lui",
+                      "text":  "J\u0027offre un cadeau à ma sœur : je lui offre un cadeau.",
+                      "gloss":  "I give a gift to my sister: I give her a gift. (indirect object pronoun: lui)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m8-iop-lui.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-iop-leur",
+                      "text":  "Je parle à mes amis : je leur parle.",
+                      "gloss":  "I talk to my friends: I talk to them. (leur)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m8-iop-leur.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-iop-pc",
+                      "text":  "J\u0027ai téléphoné à Marc ; je lui ai téléphoné hier.",
+                      "gloss":  "I phoned Marc; I phoned him yesterday. (indirect object pronoun + passé composé)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m8-iop-pc.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-comp-plus",
+                      "text":  "Cette chanson est plus belle que l\u0027autre.",
+                      "gloss":  "This song is more beautiful than the other. (plus... que)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m8-comp-plus.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-comp-moins",
+                      "text":  "Ce concert est moins cher que le concert de samedi.",
+                      "gloss":  "This concert is less expensive than Saturday\u0027s concert. (moins... que)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m8-comp-moins.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-comp-aussi",
+                      "text":  "Elle chante aussi bien que son frère.",
+                      "gloss":  "She sings as well as her brother. (aussi... que)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m8-comp-aussi.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m8-mieux",
+                      "text":  "Il joue de la guitare mieux que moi.",
+                      "gloss":  "He plays guitar better than me. (mieux)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m8-mieux.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m8-fete-01",
+                      "text":  "Samedi, c\u0027est l\u0027anniversaire de ma sœur. Nous organisons une grande fête et nous invitons tous nos amis.",
+                      "gloss":  "A birthday party, 1",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m8-fete-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m8-fete-02",
+                      "text":  "Je lui offre un cadeau spécial : une guitare ! Elle adore la musique et elle chante très bien.",
+                      "gloss":  "A birthday party, 2",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m8-fete-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m8-fete-03",
+                      "text":  "À la fête, mon cousin joue du piano. Il joue mieux que moi ! Nous dansons et nous chantons. Cette fête est plus amusante que la fête de l\u0027année dernière.",
+                      "gloss":  "A birthday party, 3",
+                      "type":  "passage",
+                      "voice":  "Paul",
+                      "file":  "audio/passage/s2m8-fete-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-etre-francais",
+                      "text":  "être français",
+                      "gloss":  "to be French",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-etre-francais.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-l-identite",
+                      "text":  "l\u0027identité",
+                      "gloss":  "identity",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-l-identite.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-culture",
+                      "text":  "la culture",
+                      "gloss":  "culture",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-la-culture.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-langue",
+                      "text":  "la langue",
+                      "gloss":  "language",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m9-la-langue.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-tradition",
+                      "text":  "la tradition",
+                      "gloss":  "tradition",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m9-la-tradition.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-liberte",
+                      "text":  "la liberté",
+                      "gloss":  "liberty",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m9-la-liberte.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-l-egalite",
+                      "text":  "l\u0027égalité",
+                      "gloss":  "equality",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-l-egalite.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-fraternite",
+                      "text":  "la fraternité",
+                      "gloss":  "fraternity / brotherhood",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m9-la-fraternite.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-devise",
+                      "text":  "la devise",
+                      "gloss":  "the motto",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-la-devise.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-le-drapeau",
+                      "text":  "le drapeau",
+                      "gloss":  "the flag",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-le-drapeau.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-fier",
+                      "text":  "fier",
+                      "gloss":  "proud (m.) / fière (f.)",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-fier.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-le-pays",
+                      "text":  "le pays",
+                      "gloss":  "the country",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m9-le-pays.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-le-citoyen",
+                      "text":  "le citoyen",
+                      "gloss":  "the citizen",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m9-le-citoyen.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-la-fete-nationale",
+                      "text":  "la fête nationale",
+                      "gloss":  "the national holiday",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-la-fete-nationale.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-le-patrimoine",
+                      "text":  "le patrimoine",
+                      "gloss":  "heritage",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-le-patrimoine.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-le-plus",
+                      "text":  "le plus",
+                      "gloss":  "the most (superlative)",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m9-le-plus.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-le-moins",
+                      "text":  "le moins",
+                      "gloss":  "the least (superlative)",
+                      "type":  "vocab",
+                      "voice":  "Julie",
+                      "file":  "audio/vocab/s2m9-le-moins.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-voudrais",
+                      "text":  "je voudrais",
+                      "gloss":  "I would like",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m9-voudrais.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-representer",
+                      "text":  "représenter",
+                      "gloss":  "to represent",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m9-representer.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m9-decouvrir",
+                      "text":  "découvrir",
+                      "gloss":  "to discover",
+                      "type":  "vocab",
+                      "voice":  "Paul",
+                      "file":  "audio/vocab/s2m9-decouvrir.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-sup-plus",
+                      "text":  "Paris est la plus grande ville de France.",
+                      "gloss":  "Paris is the largest city in France. (superlative +)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m9-sup-plus.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-sup-moins",
+                      "text":  "C\u0027est le musée le moins cher de la ville.",
+                      "gloss":  "It\u0027s the least expensive museum in the city. (superlative -)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m9-sup-moins.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-sup-meilleur",
+                      "text":  "C\u0027est le meilleur restaurant du quartier.",
+                      "gloss":  "It\u0027s the best restaurant in the neighborhood. (meilleur)",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m9-sup-meilleur.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-voudrais-inf",
+                      "text":  "Je voudrais visiter toute la France un jour.",
+                      "gloss":  "I would like to visit all of France one day. (voudrais + infinitive)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m9-voudrais-inf.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-voudrais-poli",
+                      "text":  "Je voudrais un café, s\u0027il vous plaît.",
+                      "gloss":  "I would like a coffee, please. (polite request)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m9-voudrais-poli.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-synth-passe",
+                      "text":  "L\u0027année dernière, j\u0027ai commencé le français et j\u0027étais nerveuse.",
+                      "gloss":  "Last year I started French and I was nervous. (passé composé + imparfait synthesis; feminine to match the female voice, 2026-09-28)",
+                      "type":  "grammar",
+                      "voice":  "Julie",
+                      "file":  "audio/grammar/s2m9-synth-passe.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m9-synth-pronom",
+                      "text":  "J\u0027aime la culture française et je la comprends mieux maintenant.",
+                      "gloss":  "I love French culture and I understand it better now. (object pronoun + comparative synthesis)",
+                      "type":  "grammar",
+                      "voice":  "Paul",
+                      "file":  "audio/grammar/s2m9-synth-pronom.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m9-identite-01",
+                      "text":  "Qu\u0027est-ce que c\u0027est, être français ? Pour moi, c\u0027est la langue, la culture et les traditions. La devise de la France est « Liberté, Égalité, Fraternité ».",
+                      "gloss":  "Being French, 1",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m9-identite-01.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m9-identite-02",
+                      "text":  "Cette année, j\u0027ai beaucoup appris. Au début, je parlais très peu, mais maintenant je comprends mieux la culture française. J\u0027ai visité Paris, les régions, et j\u0027ai découvert la cuisine.",
+                      "gloss":  "Being French, 2",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m9-identite-02.mp3"
+                  },
+                  {
+                      "id":  "passage/s2m9-identite-03",
+                      "text":  "Je suis fière de parler français. Un jour, je voudrais retourner en France et voir les plus beaux endroits du pays. Vive la France !",
+                      "gloss":  "Being French, 3",
+                      "type":  "passage",
+                      "voice":  "Hortense",
+                      "file":  "audio/passage/s2m9-identite-03.mp3"
                   }
               ]
 }
