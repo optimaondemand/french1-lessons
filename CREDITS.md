@@ -33,3 +33,23 @@ silence trimmed, loudness evened, converted to 64 kbps mono MP3. CC BY-SA 4.0 fi
 | intelligente | Sartus85 | CC BY-SA 4.0 | `vocab/s2m1-ll-intelligente.mp3` | https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-intelligente.wav |
 
 All other audio: Optima Academy Online (text-to-speech).
+
+## Photos (Carte de France, `carte-de-france-M05.html`)
+
+Landscape photos shown when a region is revealed, from Wikimedia Commons, added 2026-10-23; resized (Nouvelle-Aquitaine cropped to the valley side). CC BY-SA files stay under CC BY-SA. Region-name clips `audio/carte/*.mp3` are generated speech (Azure, voice Hortense).
+
+| Region | Photo | Author | Licence | Course file | Source |
+|---|---|---|---|---|---|
+| Île-de-France | Seine Pont Royal Louvre Paris | Wolfgang Moroder | CC BY-SA 3.0 | `img/carte/ile-de-france.jpg` | https://commons.wikimedia.org/wiki/File:Seine_Pont_Royal_Louvre_Paris.jpg |
+| Centre-Val de Loire | Amboise Loire Panorama - July 2011 | Diliff | CC BY-SA 3.0 | `img/carte/centre-val-de-loire.jpg` | https://commons.wikimedia.org/wiki/File:Amboise_Loire_Panorama_-_July_2011.jpg |
+| Bourgogne-Franche-Comté | Chassagne-Montrachet - Vignoble - 1 | Benjamin Smith | CC BY-SA 4.0 | `img/carte/bourgogne-franche-comte.jpg` | https://commons.wikimedia.org/wiki/File:Chassagne-Montrachet_-_Vignoble_-_1.jpg |
+| Normandie | La chapelle Notre-Dame-de-la-Garde et les falaises d'Etretat | Jörg Braukmann | CC BY-SA 4.0 | `img/carte/normandie.jpg` | https://commons.wikimedia.org/wiki/File:La_chapelle_Notre-Dame-de-la-Garde_et_les_falaises_d%27Etretat.jpg |
+| Hauts-de-France | Vue du Cap Blanc-Nez | Jörg Braukmann | CC BY-SA 4.0 | `img/carte/hauts-de-france.jpg` | https://commons.wikimedia.org/wiki/File:Vue_du_Cap_Blanc-Nez.jpg |
+| Grand Est | View on Riquewihr | Yzen2023 | CC BY 4.0 | `img/carte/grand-est.jpg` | https://commons.wikimedia.org/wiki/File:View_on_Riquewihr.jpg |
+| Pays de la Loire | Guérande Marais Salants 04 | Ruyblas13 | CC BY-SA 4.0 | `img/carte/pays-de-la-loire.jpg` | https://commons.wikimedia.org/wiki/File:Gu%C3%A9rande_Marais_Salants_04.jpg |
+| Bretagne | Phare de Ploumanac'h 04 | Stephan Sprinz | CC BY 4.0 | `img/carte/bretagne.jpg` | https://commons.wikimedia.org/wiki/File:Phare_de_Ploumanac%27h_04.jpg |
+| Nouvelle-Aquitaine | Château de Beynac Chapelle Dordogne 10 | Jebulon | CC0 | `img/carte/nouvelle-aquitaine.jpg` | https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Beynac_Chapelle_Dordogne_10.jpg |
+| Occitanie | WLE - 2018 - Parc national des Pyrenees - Cirque de Gavarnie - 2 | Moahim | CC BY-SA 4.0 | `img/carte/occitanie.jpg` | https://commons.wikimedia.org/wiki/File:WLE_-_2018_-_Parc_national_des_Pyrenees_-_Cirque_de_Gavarnie_-_2.jpg |
+| Auvergne-Rhône-Alpes | Chamonix valley from la Flégère,2010 07 | Ximonic, Simo Räsänen | CC BY-SA 3.0 | `img/carte/auvergne-rhone-alpes.jpg` | https://commons.wikimedia.org/wiki/File:Chamonix_valley_from_la_Fl%C3%A9g%C3%A8re,2010_07.JPG |
+| Provence-Alpes-Côte d'Azur | Champ de lavande à Valensole (2) | Espirat | CC BY-SA 4.0 | `img/carte/provence-alpes-cote-dazur.jpg` | https://commons.wikimedia.org/wiki/File:Champ_de_lavande_%C3%A0_Valensole_(2).jpg |
+| Corse | 04 Calanche Piana | Myrabella | CC BY-SA 3.0 | `img/carte/corse.jpg` | https://commons.wikimedia.org/wiki/File:04_Calanche_Piana.jpg |
