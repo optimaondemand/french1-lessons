@@ -53,7 +53,7 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
 .pt-card h4{margin:0;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-weight:600;font-style:italic}\
 .pt-card .pt-orn{display:block;margin:4px auto 8px;width:120px;height:12px}\
 .pt-text{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;line-height:1.5;min-height:90px;color:var(--ink)}\
-.pt-text:empty::before{content:"Your portrait appears here as you write.";color:#a59c8c;font-style:italic;font-size:16px}\
+.pt-text:empty::before{content:attr(data-empty);color:#a59c8c;font-style:italic;font-size:16px}\
 .pt-list{list-style:none;padding:0;margin:12px 0 0;font-size:14px;line-height:1.4}\
 .pt-list li{padding:3px 0 3px 24px;position:relative;color:var(--muted)}\
 .pt-list li::before{content:"\\25A1";position:absolute;left:2px;top:2px;font-size:16px;color:#b9ae98}\
@@ -78,6 +78,10 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
 .pt-guests button{background:none;border:0;padding:0;cursor:pointer;text-align:center;width:118px;font:13px/1.3 "Segoe UI",Arial,sans-serif;color:var(--muted)}\
 .pt-guests img{display:block;width:104px;height:128px;object-fit:cover;border-radius:50%;margin:0 auto 6px;border:3px solid var(--gold-lt);box-shadow:0 0 0 1px var(--gold);transition:transform .15s}\
 .pt-guests button:hover img{transform:scale(1.04)}\
+.pt-guests.pt-sq button{width:252px;cursor:default}\
+.pt-guests.pt-sq img{width:224px;height:224px;border-radius:2px;border:6px solid #b8892e;box-shadow:0 0 0 8px #3b2a1a,0 6px 14px 8px rgba(40,25,10,.25);margin:8px auto 14px}\
+.pt-guests.pt-sq button:hover img{transform:none}\
+.pt-guests.pt-sq button.on img{border-color:#b8892e;box-shadow:0 0 0 8px #3b2a1a,0 6px 14px 8px rgba(40,25,10,.25)}\
 .pt-guests button.on img{border-color:var(--gold);box-shadow:0 0 0 3px var(--ink)}.pt-guests button.on{color:var(--ink);font-weight:600}\
 .pt-gpick{font-size:16px;margin:0 0 8px}\
 .pt-gwrap{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;margin:0 0 14px}.pt-gwrap .pt-guests{flex:0 1 260px;margin:0}\
@@ -130,7 +134,7 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
     main.appendChild(acc);
     if (cfg.guests) {   // choose who to describe: a guest from the module painting
       var gk = 'pt-guest:' + location.pathname, gp = el('div', 'pt-gpick', cfg.pickText || '<strong>Choose a guest</strong> from the painting:'), gs = el('div', 'pt-guests');
-      if (cfg.wide) gs.className = 'pt-guests pt-gcards';
+      if (cfg.wide) gs.className = 'pt-guests pt-gcards'; else if (cfg.pickFrame === 'square') gs.className = 'pt-guests pt-sq';   // one painting in a square gilt frame
       this.gbtn = cfg.guests.map(function (g, i) { var b = el('button', cfg.wide ? 'pt-gpk' : null); b.type = 'button';
         b.innerHTML = '<img src="' + g.img + '" alt="">' + (cfg.wide ? '<b>' + g.label + '</b>' : g.label) + (g.caption ? '<small>' + g.caption + '</small>' : ''); b.setAttribute('aria-label', 'Choose ' + g.alt);
         b.addEventListener('click', function () { self.pick(i); try { localStorage.setItem(gk, String(i)); } catch (e) {} });
@@ -149,7 +153,7 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
       this.fiche = el('div', 'pt-fiche'); this.fiche.hidden = true; main.insertBefore(this.fiche, acc);
       }
       var saved = null; try { saved = localStorage.getItem(gk); } catch (e) {}
-      this.pendingGuest = saved != null && cfg.guests[+saved] ? +saved : null;
+      this.pendingGuest = saved != null && cfg.guests[+saved] ? +saved : cfg.guests.length === 1 ? 0 : null;   // one painting = chosen already
     }
     this.steps = cfg.steps.map(function (st, i) {
       var box = boxes[i], card = el('div', 'pt-step'), head = el('div', 'pt-head');
@@ -174,7 +178,7 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
     var c = el('div', 'pt-card');
     c.innerHTML = '<h4>' + (cfg.cardTitle || 'Mon portrait de famille') + '</h4><svg class="pt-orn" viewBox="0 0 120 12" fill="none" stroke="#b8892e" stroke-width="1.2"><path d="M52 6 C42 6 30 2 8 6"/><path d="M68 6 C78 6 90 2 112 6"/><path d="M60 1 L64 6 L60 11 L56 6 Z" fill="#b8892e" stroke="none"/></svg>';
     if (cfg.guests) { this.gimg = el('img', 'pt-gimg'); this.gimg.hidden = true; this.gimg.alt = ''; c.appendChild(this.gimg); }
-    this.text = el('div', 'pt-text'); this.text.lang = 'fr'; c.appendChild(this.text);
+    this.text = el('div', 'pt-text'); this.text.lang = 'fr'; this.text.setAttribute('data-empty', cfg.emptyText || 'Your portrait appears here as you write.'); c.appendChild(this.text);
     this.list = el('ul', 'pt-list'); c.appendChild(this.list); this.ready = el('div', 'pt-ready'); c.appendChild(this.ready);
     if (cfg.bank) {   // the module's adjectives: click a word to put it in the sentence you are writing
       var bk = el('details', 'pt-bank'); bk.open = true; bk.innerHTML = '<summary>' + (cfg.bankTitle || 'Les adjectifs du module') + '</summary><div class="pt-bhelp">Click a word to add it to your sentence. <span class="pt-mf">m.</span> / <span class="pt-mf f">f.</span></div>';

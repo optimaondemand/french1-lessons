@@ -188,6 +188,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -230,7 +233,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 2 &middot; Les r&eacute;gions</div>
     <div class="pl-where">Lesson 2.07 &middot; Day 7 of 8</div>
     <h1 class="pl-title">Phon&eacute;tique &amp; Speaking Task</h1>
-    <div class="pl-sub">about 50 minutes</div>
+    <div class="pl-sub">about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Claude Monet, <em>Promenade sur la falaise, Pourville</em> (<em>The Cliff Walk at Pourville</em>), 1882</div>
@@ -263,6 +266,11 @@
         <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 10px 0 0 0;"><strong>Shadow it:</strong> play each clip, pause, and copy the exact sound three times. Aim to match the nasal glide and the melted <em>gn</em>, not just the words.</p>
     </div>
 
+    <!-- PANEL · Dans le tableau -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">3 min</span></div>
+        <div class="pl-tableau"><div class="pl-tlabel">Un mod&egrave;le chez Monet &middot; <em>A model description</em></div><p>Before you record, listen to a short description of Normandy, the region of Monet&rsquo;s painting. It uses everything the Speaking Task asks for. Your own description is about <strong>the region you chose</strong>.</p><div class="pl-model"><div class="pl-oval"><img src="img/vig-pourville.jpg" alt="Detail from Renoir&rsquo;s painting: two girls on the clifftop at Pourville, Normandy"></div><div class="pl-mtext"><button class="say" type="button" data-audio="passage/s2m2-modele-normandie.mp3" aria-label="&Eacute;couter le mod&egrave;le">&#128266;</button> Voici la Normandie. <mark class="m-bangs">Cette</mark> r&eacute;gion se trouve <mark class="m-irr">dans le nord de</mark> la France. <mark class="m-faire">En</mark> Normandie, il y a <mark class="m-agr">la mer</mark>, <mark class="m-agr">des plages</mark> et <mark class="m-agr">la campagne</mark>. Il y a aussi de jolis <mark class="m-agr">villages</mark>. Le climat n&rsquo;est pas tr&egrave;s ensoleill&eacute;, mais la c&ocirc;te est tr&egrave;s belle. Monet adore <mark class="m-bangs">cette</mark> r&eacute;gion&nbsp;!<div class="pl-legend"><span class="m-irr">where it is (a compass phrase)</span><span class="m-agr">landscape words</span><span class="m-bangs">demonstratives</span><span class="m-faire">the preposition <em>en</em></span></div></div></div></div>
+    </div>
     <!-- PART 2 · Speaking Task -->
     <div class="assess-card">
         <div class="assess-head">
@@ -308,16 +316,10 @@
 
     <!-- PART 3 · table review -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>LE TABLEAU, ENCORE UNE FOIS</span><span class="pill-time">13 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>LE TABLEAU, ENCORE UNE FOIS</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">From memory, fill in the right preposition for each place. Commit first &mdash; then reveal.</p>
         <div class="optima-widget">
             <div class="widget-kicker">&#129504; COMPLETE &middot; en / au / dans le&hellip;de / &agrave; l&rsquo;&hellip;de</div>
-            <ol style="font-size:16px;color:#1a2340;line-height:1.9;margin:0 0 6px 18px;">
-                <li>Je vais ______ Normandie.</li>
-                <li>Ils habitent ______ Japon.</li>
-                <li>Nice se trouve ______ sud de la France.</li>
-                <li>Strasbourg est ______ est de la France.</li>
-            </ol>
             <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Je vais ______ Normandie.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r1" data-answer="en" aria-label="Je vais ______ Normandie." placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Ils habitent ______ Japon.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r1" data-answer="au" aria-label="Ils habitent ______ Japon." placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Nice se trouve ______ sud de la France.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r1" data-answer="dans le" aria-label="Nice se trouve ______ sud de la France." placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Strasbourg est ______ est de la France.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r1" data-answer="à l’" aria-label="Strasbourg est ______ est de la France." placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
             <button class="reveal-btn" data-mw-gate="l2-07-r1">Reveal the answer</button>
             <div class="reveal-body">
@@ -334,8 +336,24 @@
         </div>
 
         <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min &middot; cumulative spiral</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 2 with earlier work: write four sentences that each combine a region + an <strong>irregular adjective from Module 1</strong> + a demonstrative &mdash; <em>ce vieux village, cette belle c&ocirc;te, ce nouveau quartier</em>. Interleaving old and new is what makes review actually stick.</div>
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +5 min &middot; cumulative spiral</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 2 with Module 1: put a <strong>demonstrative</strong> and an <strong>irregular adjective from Module 1</strong> (<em>beau, nouveau, vieux</em>) in front of a Module 2 place-word. Both must match the noun. Type each phrase in French, then press Check. Interleaving old and new is what makes review actually stick.</div>
+            <div class="optima-widget">
+                <div class="widget-kicker">&#129504; MODULE 1 + MODULE 2 &middot; ce / cette / ces + beau / nouveau / vieux</div>
+                <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">this beautiful coast</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r2" data-answer="cette belle côte" aria-label="this beautiful coast" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">this old village</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r2" data-answer="ce vieux village" aria-label="this old village" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">these beautiful beaches</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r2" data-answer="ces belles plages" aria-label="these beautiful beaches" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">this new region</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l2-07-r2" data-answer="cette nouvelle région" aria-label="this new region" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l2-07-r2">Reveal the answer</button>
+                <div class="reveal-body">
+                    <table class="gtable" style="margin-top:0;">
+                        <tbody>
+                        <tr><td>1. cette belle c&ocirc;te</td><td>this beautiful coast</td></tr>
+                        <tr><td>2. ce vieux village</td><td>this old village</td></tr>
+                        <tr><td>3. ces belles plages</td><td>these beautiful beaches</td></tr>
+                        <tr><td>4. cette nouvelle r&eacute;gion</td><td>this new region</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:15px;color:#1a2340;margin:8px 0 0 0;">The demonstrative and the adjective both agree with the noun: <em>la c&ocirc;te</em> &rarr; <em>cette belle</em>; <em>les plages</em> &rarr; <em>ces belles</em>. <em>Beau, nouveau, vieux</em> go <strong>before</strong> the noun (BANGS).</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -550,5 +568,21 @@
 </script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>

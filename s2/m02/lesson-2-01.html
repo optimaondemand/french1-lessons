@@ -173,6 +173,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -308,11 +311,16 @@
     </div>
 
     <!-- ===== PART 3 · Flashcards ===== -->
+    <!-- PANEL · Dans le tableau -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
+        <div class="pl-tableau"><div class="pl-tlabel">Qu&rsquo;est-ce que c&rsquo;est&nbsp;?</div><p>Three details from Monet&rsquo;s painting, which was painted in a town called Pourville. What does each one show? Choose the word: when you are right, you hear it. <strong><u>For the third, find Pourville on the map below to see where it is.</u></strong></p><div class="pl-vigs big"><figure class="pl-vig" data-mode="choose" data-hint="Water and boats: which word means <em>the sea</em>?"><div class="pl-oval"><img src="img/vig-mer.jpg" alt="Detail from Renoir&rsquo;s painting: the water with white sailboats"></div><div class="pl-phrase">C&rsquo;est la <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is the &hellip;)</div><div class="pl-opts"><button type="button">for&ecirc;t</button><button type="button" data-right>mer</button><button type="button">montagne</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m2-la-mer.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="Grass and flowers, not sand or water: <em>the countryside</em>."><div class="pl-oval"><img src="img/vig-campagne.jpg" alt="Detail from Renoir&rsquo;s painting: grass and wild flowers on the clifftop"></div><div class="pl-phrase">C&rsquo;est la <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is the &hellip;)</div><div class="pl-opts"><button type="button">plage</button><button type="button">mer</button><button type="button" data-right>campagne</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m2-la-campagne.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="Find the dark dot on the map: Pourville is inside one of the coloured regions. Which one?"><div class="pl-oval"><img src="img/vig-pourville.jpg" alt="Detail from Renoir&rsquo;s painting: two girls on the clifftop at Pourville"></div><div class="pl-phrase">C&rsquo;est la <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;: which region? Look at the map.)</div><div class="pl-opts"><button type="button">Provence</button><button type="button" data-right>Normandie</button><button type="button">Bretagne</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m2-la-normandie.mp3" aria-label="&Eacute;couter">&#128266;</button></figure></div><figure class="pl-map"><img src="img/carte-pourville.svg" alt="Map of France with the four regions of the module; a dark dot marks Pourville, on the north coast, inside Normandy"><figcaption>&#9673; <strong>Pourville</strong>: the clifftop where Monet painted this picture. Which region is it in?</figcaption></figure></div>
+    </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Drill the words with the Vocabulaire page</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <strong>Module 2 Vocabulaire</strong> study page (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own paper or digital cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own digital flash cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
     </div>
 
     <!-- PART 1 · Carte de France -->
@@ -531,5 +539,21 @@
 </script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>
