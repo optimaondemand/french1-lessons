@@ -138,6 +138,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -157,6 +160,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -209,7 +215,7 @@
     <div class="pl-card">
         <div class="pl-kicker">TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">One rule sets &ecirc;tre verbs apart from avoir verbs &mdash; and today you master it, then conjugate one all the way through, on your own.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">With <em>avoir</em>, the past participle never changed. With <strong>&ecirc;tre</strong>, it does: it <strong>agrees with the subject</strong> in gender and number, just like an adjective. A woman writes <em>je suis all<u>ée</u></em>; a group writes <em>nous sommes all<u>és</u></em>. You already know how adjective agreement works &mdash; this is the same four endings. You'll close with two short practice rounds: choosing the helper and the ending, then building whole sentences in your head.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">With <em>avoir</em>, the past participle never changed. With <strong>&ecirc;tre</strong>, it does: it <strong>agrees with the subject</strong> in gender and number, just like an adjective. A woman writes <em>je suis all<u>ée</u></em>; a group writes <em>nous sommes all<u>és</u></em>. You already know how adjective agreement works &mdash; this is the same four endings. You'll close with two short practice rounds: choosing the helper and the ending, then building whole sentences of your own.</div>
     </div>
 
     <div class="pl-card">
@@ -238,6 +244,7 @@
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m5-suis-alle.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je suis all&eacute; au centre-ville.</span><span class="v-en">masculine &rarr; all&eacute;</span></li>
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m5-suis-allee.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Je suis all&eacute;e au mus&eacute;e.</span><span class="v-en">feminine &rarr; all&eacute;e</span></li>
         </ul>
+        <div style="background:#FBF6EA;border:1px solid #E5D3A8;border-left:5px solid #C7922C;border-radius:6px;padding:12px 16px;margin:12px 0 0;font-size:16px;color:#1a2340;line-height:1.6;"><strong>M&ecirc;me son &middot; Same sound, four spellings.</strong> <mark style="background:#FFE58A;padding:1px 4px;border-radius:3px;"><strong><em>all&eacute;</em>, <em>all&eacute;e</em>, <em>all&eacute;s</em> and <em>all&eacute;es</em> all sound exactly the same</strong></mark>: the <em>-e</em> and the <em>-s</em> are silent, so say them all the same way. You can&rsquo;t hear the ending, so listen for <strong>who</strong> (<em>il, elle, ils, elles</em>), then write the ending that matches.</div>
     </div>
 
     <!-- PART 2 · The four endings -->
@@ -260,7 +267,23 @@
         </ul>
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Connect it to what you know: adjective agreement (Module 1) works exactly the same way &mdash; <em>grand, grande, grands, grandes</em>. The &ecirc;tre participle is just an adjective in disguise. Write the four forms of <em>arriv&eacute;</em> and notice they match <em>grand</em> ending-for-ending.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Connect it to what you know: adjective agreement (Module 1) works exactly the same way &mdash; <em>grand, grande, grands, grandes</em>. The &ecirc;tre participle is just an adjective in disguise. Type the four forms of <em>arriv&eacute;</em>, then press <strong>Check</strong>, and notice they match <em>grand</em> ending-for-ending.</div>
+            <div class="optima-widget">
+                <div class="widget-kicker">&#129504; THE FOUR FORMS OF ARRIV&Eacute;</div>
+                <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">he arrived</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r1" data-answer="Il est arrivé" aria-label="he arrived" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">she arrived</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r1" data-answer="Elle est arrivée" aria-label="she arrived" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">they (m.) arrived</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r1" data-answer="Ils sont arrivés" aria-label="they (m.) arrived" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">they (f.) arrived</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r1" data-answer="Elles sont arrivées" aria-label="they (f.) arrived" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l5-03-r1">Reveal the answer</button>
+                <div class="reveal-body">
+                    <table class="gtable" style="margin-top:0;">
+                        <tbody>
+                        <tr><td>1. il est arriv&eacute;</td><td>he arrived</td></tr>
+                        <tr><td>2. elle est arriv&eacute;e</td><td>she arrived</td></tr>
+                        <tr><td>3. ils sont arriv&eacute;s</td><td>they (m.) arrived</td></tr>
+                        <tr><td>4. elles sont arriv&eacute;es</td><td>they (f.) arrived</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:15px;color:#1a2340;margin:8px 0 0 0;">-&eacute; / -&eacute;e / -&eacute;s / -&eacute;es: the same four endings as <em>grand / grande / grands / grandes</em>.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -285,16 +308,16 @@
     <!-- PART 4 · commit-then-reveal -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">IV</span><span>&Agrave; TON TOUR</span><span class="pill-time">8 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Now conjugate <strong>partir</strong> (to leave) in the pass&eacute; compos&eacute;, with agreement, through all six persons &mdash; on paper or in your head. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Now conjugate <strong>partir</strong> (to leave) in the pass&eacute; compos&eacute;, with agreement, through all six persons: type each form and press <strong>Check</strong>. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
         <div class="optima-widget">
             <div class="widget-kicker">&#129504; CONJUGATE &middot; partir (pass&eacute; compos&eacute;)</div>
             <div class="widget-question">Write all six forms of <em>partir</em> with &ecirc;tre + agreement, then reveal.</div>
-            <textarea data-mw-added class="journal-box" id="mw-l5-03-r1" data-mw-gate="l5-03-r1" lang="fr" data-label="partir in the passé composé: all six forms, with agreement" data-model="je suis parti(e) · tu es parti(e) · il est parti / elle est partie · nous sommes parti(e)s · vous êtes parti(e)(s) · ils sont partis / elles sont parties" rows="2" placeholder="Write it here in French. The answer unlocks once you have written it." style="display:block;width:100%;max-width:560px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;margin:6px 0 8px"></textarea><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
-            <button class="reveal-btn" data-mw-gate="l5-03-r1">Reveal the answer</button>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">je</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r2" data-answer="suis parti || suis partie || je suis parti || je suis partie" aria-label="je" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">tu</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r2" data-answer="es parti || es partie || tu es parti || tu es partie" aria-label="tu" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">il / elle / on</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r2" data-answer="est parti || est partie || il est parti || elle est partie || on est parti || on est partis" aria-label="il / elle / on" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">nous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r2" data-answer="sommes partis || sommes parties || nous sommes partis || nous sommes parties" aria-label="nous" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">vous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r2" data-answer="êtes parti || êtes partie || êtes partis || êtes parties || vous êtes parti || vous êtes partie || vous êtes partis || vous êtes parties" aria-label="vous" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">ils / elles</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r2" data-answer="sont partis || sont parties || ils sont partis || elles sont parties" aria-label="ils / elles" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l5-03-r2">Reveal the answer</button>
             <div class="reveal-body">
                 <table class="gtable" style="margin-top:0;">
                     <tbody>
-                        <tr><td>je suis part<span class="pron">i(e)</span></td><td>nous sommes part<span class="pron">i(e)s</span></td></tr>
+                        <tr><td>je suis part<span class="pron">i(e)</span></td><td>nous sommes part<span class="pron">is</span> / part<span class="pron">ies</span></td></tr>
                         <tr><td>tu es part<span class="pron">i(e)</span></td><td>vous &ecirc;tes part<span class="pron">i(e)(s)</span></td></tr>
                         <tr><td>il est part<span class="pron">i</span> / elle est part<span class="pron">ie</span></td><td>ils sont part<span class="pron">is</span> / elles sont part<span class="pron">ies</span></td></tr>
                     </tbody>
@@ -304,6 +327,12 @@
         </div>
     </div>
 
+    <!-- CONJUGUE · partir -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Now with agreement: <em>partir</em>, all six persons. Write as yourself (<em>je suis parti</em> or <em>partie</em>), then press <strong>Enter</strong>. Use the <strong>Verb</strong> menu to try another &ecirc;tre verb from this module: <em>arriver, monter, descendre&hellip;</em></p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm05%2Fpractice-m05.json&amp;verb=partir&amp;tense=passe_compose&amp;embed=1" title="Conjugation practice: partir" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    </div>
     <!-- PART 3 · Accord & conjugaison -->
 
     <div class="activity-card">
@@ -312,7 +341,7 @@
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
         </div>
         <div class="pl-kicker">&Ecirc;TRE VERBS + AGREEMENT <span class="pill-time">12 min</span></div>
-        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Seven items on Module 5&rsquo;s grammar: the verbs that take <em>&ecirc;tre</em> in the pass&eacute; compos&eacute;, and making the participle agree.</div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Eight items on Module 5&rsquo;s grammar: the verbs that take <em>&ecirc;tre</em> in the pass&eacute; compos&eacute;, and making the participle agree.</div>
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
             <div class="widget-question">Elle ______ all&eacute;e en ville.</div>
@@ -390,6 +419,17 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Paul et Marie sont ______. <em>(sortir)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! A mixed group takes the masculine plural: sortis.">sortis</button>
+                <button data-no="Paul is in the group: a mixed group takes -s, not -es.">sorties</button>
+                <button data-no="Two people: the participle is plural.">sorti</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 4 · Défi éclair -->
@@ -400,26 +440,27 @@
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
         </div>
         <div class="pl-kicker">BUILD IT YOURSELF <span class="pill-time">5 min</span></div>
-        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Build each one in your head &mdash; or out loud &mdash; before you reveal the answer.</div>
+        <div style="font-size:16px;color:#1a2340;line-height:1.6;margin-bottom:12px;">Type each answer in its box and press <strong>Check</strong>; the answer unlocks after you have tried.</div>
+        <div class="vkey" data-config='{"title": "Mots utiles · Word key", "groups": [{"title": "Vocabulaire · Module 5", "items": [["la ville", "the city"], ["le centre-ville", "downtown / city center"], ["le bus", "the bus"], ["le tramway", "the tram"], ["le train", "the train"], ["la voiture", "the car"], ["à pied", "on foot"], ["arriver", "to arrive"], ["partir", "to leave"], ["sortir", "to go out"], ["entrer", "to enter"], ["monter", "to go up / get on"], ["descendre", "to go down / get off"], ["rentrer", "to return home"], ["tomber", "to fall"], ["le plan", "the (city) map"], ["la place", "the square"], ["le pont", "the bridge"], ["l’arrêt", "the (bus) stop"], ["loin de", "far from"]]}, {"title": "Être + participe", "items": [["je suis", "I am"], ["tu es", "you are"], ["il / elle est", "he / she is"], ["nous sommes", "we are"], ["vous êtes", "you are"], ["ils / elles sont", "they are"]]}, {"title": "L’accord", "note": "the participle agrees with the subject", "items": [["allé · allée", "went (m. / f.)"], ["allés · allées", "went (m. pl. / f. pl.)"], ["sorti · sortie", "went out"], ["monté · montée", "got on / went up"]]}]}'></div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 1</div>
             <div class="widget-question">Say it in French: <em>I (f.) went into town with my sister.</em></div>
-            <textarea data-mw-added class="journal-box" id="mw-l5-03-r2" data-mw-gate="l5-03-r2" lang="fr" data-label="Say it in French: I (f.) went into town with my sister." data-model="Je suis allée en ville avec ma sœur" rows="2" placeholder="Write it here in French. The answer unlocks once you have written it." style="display:block;width:100%;max-width:560px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;margin:6px 0 8px"></textarea><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
-            <button class="reveal-btn" data-mw-gate="l5-03-r2">Reveal the answer</button>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Say it in French: I (f.) went into town with my sister.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r3" data-answer="Je suis allée en ville avec ma sœur" aria-label="Say it in French: I (f.) went into town with my sister." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l5-03-r3">Reveal the answer</button>
             <div class="reveal-body"><strong>Je suis all&eacute;e en ville avec ma s&oelig;ur.</strong><br><span style="font-size:15px;color:#41506b;">aller takes &ecirc;tre, and the participle agrees: all&eacute;e.</span></div>
         </div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 2</div>
             <div class="widget-question">Say it in French: <em>We got on the bus downtown.</em></div>
-            <textarea data-mw-added class="journal-box" id="mw-l5-03-r3" data-mw-gate="l5-03-r3" lang="fr" data-label="Say it in French: We got on the bus downtown." data-model="Nous sommes montés dans le bus au centre-ville" rows="2" placeholder="Write it here in French. The answer unlocks once you have written it." style="display:block;width:100%;max-width:560px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;margin:6px 0 8px"></textarea>
-            <button class="reveal-btn" data-mw-gate="l5-03-r3">Reveal the answer</button>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Say it in French: We got on the bus downtown.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r4" data-answer="Nous sommes montés dans le bus au centre-ville || Nous sommes montées dans le bus au centre-ville" aria-label="Say it in French: We got on the bus downtown." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div>
+            <button class="reveal-btn" data-mw-gate="l5-03-r4">Reveal the answer</button>
             <div class="reveal-body"><strong>Nous sommes mont&eacute;s dans le bus au centre-ville.</strong><br><span style="font-size:15px;color:#41506b;">monter is an &ecirc;tre verb.</span></div>
         </div>
         <div class="optima-widget">
             <div class="widget-kicker">&#9889; D&Eacute;FI 3</div>
             <div class="widget-question">Make it feminine plural: <em>Ils sont sortis ensemble.</em></div>
-            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Make it feminine plural: Ils sont sortis ensemble.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r4" data-answer="Elles sont sorties ensemble" aria-label="Make it feminine plural: Ils sont sortis ensemble." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
-            <button class="reveal-btn" data-mw-gate="l5-03-r4">Reveal the answer</button>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Make it feminine plural: Ils sont sortis ensemble.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-03-r5" data-answer="Elles sont sorties ensemble" aria-label="Make it feminine plural: Ils sont sortis ensemble." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div>
+            <button class="reveal-btn" data-mw-gate="l5-03-r5">Reveal the answer</button>
             <div class="reveal-body"><strong>Elles sont sorties ensemble.</strong><br><span style="font-size:15px;color:#41506b;">&ecirc;tre verbs agree with the subject: sorties.</span></div>
         </div>
     </div>
@@ -490,7 +531,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -611,7 +656,22 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="../../vocabkey.js"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
+</script>
 </body>
 </html>

@@ -271,6 +271,12 @@
         </ul>
     </div>
 
+    <!-- CONJUGUE · faire -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Practise <em>faire</em>, all six persons: type each form and press <strong>Enter</strong>. The drill names any slip (the wrong person, a missing letter&hellip;). Then try <em>avoir</em> from the <strong>Verb</strong> menu.</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm01%2Fpractice-m01.json&amp;verb=faire&amp;tense=present&amp;embed=1" title="Conjugation practice: faire" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    </div>
     <!-- PART 1 · Evaluative widget -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">I</span><span>CHOISIS LA BONNE FORME</span><span class="pill-time">12 min</span></div>
@@ -770,6 +776,20 @@ document.addEventListener('click', function (e) {
     var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
   } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
 });
+</script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
 </script>
 </body>
 </html>

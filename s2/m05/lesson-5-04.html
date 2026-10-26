@@ -149,6 +149,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -168,6 +171,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -254,7 +260,7 @@
     <!-- PART 2 · Evaluative widget -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">II</span><span>CHOISIS LA BONNE FORME</span><span class="pill-time">12 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Four sentences. Pick the form that fits &mdash; the helper, the agreement, or the negation. Instant feedback; practice, not a grade.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Eight sentences. Pick the form that fits &mdash; the helper, the agreement, or the negation. Instant feedback; practice, not a grade.</p>
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
@@ -303,17 +309,64 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Nous ______ mont&eacute;s dans le tramway.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! monter takes &ecirc;tre: nous sommes mont&eacute;s.">sommes</button>
+                <button data-no="avons is avoir; monter is an &ecirc;tre verb.">avons</button>
+                <button data-no="Not quite &mdash; sont goes with ils / elles.">sont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Elles sont ______ &agrave; huit heures. <em>(partir)</em></div>
+            <div class="widget-options">
+                <button data-no="elles is feminine plural: -es.">partis</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! feminine plural &rarr; parties.">parties</button>
+                <button data-no="That is feminine singular; elles is plural.">partie</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Make it negative: <em>Il est rentr&eacute;</em> &rarr; Il ______ rentr&eacute;.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! ne&hellip;pas wraps est: il n&rsquo;est pas rentr&eacute;.">n&rsquo;est pas</button>
+                <button data-no="ne goes before est, pas after it: n&rsquo;est pas.">est ne pas</button>
+                <button data-no="Before a vowel, ne becomes n&rsquo;: n&rsquo;est pas.">ne est pas</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Which one takes <em>avoir</em>, not &ecirc;tre?</div>
+            <div class="widget-options">
+                <button data-no="aller takes &ecirc;tre: je suis all&eacute;.">aller en ville</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! prendre takes avoir: j&rsquo;ai pris le bus (Module 4).">prendre le bus</button>
+                <button data-no="arriver takes &ecirc;tre: je suis arriv&eacute;.">arriver &agrave; l&rsquo;heure</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 3 · Self-produce -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>RACONTE TON TRAJET</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Write four sentences narrating a trip through a city</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In your notebook, narrate a real or imagined trip through a city in the past, using <strong>four</strong> &ecirc;tre verbs. Make one of them <strong>negative</strong> (<em>ne&hellip;pas</em>) and use at least one <strong>transport</strong> word and one <strong>landmark</strong>.</p>
-        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
-            <strong>Model:</strong> <em>Je suis all&eacute; au centre-ville en tramway. Je suis mont&eacute; sur le pont </em><em>pour voir</em> (to see) <em>la place. Je ne suis pas rentr&eacute; &agrave; pied &mdash; j'ai pris le bus. Je suis arriv&eacute; &agrave; la maison &agrave; six heures.</em>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Narrate a real or imagined trip through a city in the past, one sentence in each box, using <strong>four</strong> &ecirc;tre verbs. Make one of them <strong>negative</strong> (<em>ne&hellip;pas</em>) and use at least one <strong>transport</strong> word and one <strong>landmark</strong>. Click a word in the word bank to add it. Writing as a girl or woman? Add <em>-e</em>: <em>je suis all&eacute;e</em>.</p>
+        <div class="portrait" data-config='{"model": "Je suis allé au centre-ville en tramway. Je suis monté sur le pont à pied. Je ne suis pas rentré en voiture — j’ai pris le bus. Je suis arrivé à la maison à six heures.", "cardTitle": "Mon trajet en ville", "emptyText": "Your trip appears here as you write.", "readyText": "Bravo&nbsp;! Your trip is saved in All Your Work: you will reuse it on Day 5 and for your Speaking Task.", "features": {"etre": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(suis|es|est|sommes|êtes|sont) (pas )?(allé|parti|sorti|arrivé|entré|monté|descendu|rentré|tombé|resté|venu)(e|s|es)?(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "être + a participle", "hint": "Put a verb of movement in the past: <em>&ecirc;tre</em> + a participle (<em>je suis all&eacute;(e), nous sommes partis</em>).", "check": "être + a participle"}, "neg": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(ne (suis|sommes|sont)|n&#39;(es|est|êtes)) pas(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "a negative (ne suis pas…)", "hint": "Make one sentence negative: <em>ne&hellip;pas</em> around &ecirc;tre (<em>je ne suis pas sorti(e)</em>).", "check": "a negative sentence"}, "transport": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(en bus|en tramway|en train|en voiture|à pied|du bus|du train|du tramway|le bus|le train|le tramway|la voiture)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "a transport word", "hint": "Say <strong>how</strong> you went: <em>en bus, en tramway, en train, en voiture, &agrave; pied</em>.", "check": "a transport word"}, "place": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(centre-ville|la place|le pont|l&#39;arrêt|en ville|la ville)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "a place in the city", "hint": "Name a place in the city: <em>au centre-ville, la place, le pont, l&rsquo;arr&ecirc;t</em>.", "check": "a place in the city (a landmark)"}, "verbs": {"lemmas": [["allé", "allé(e|s|es)?"], ["parti", "parti(e|s|es)?"], ["sorti", "sorti(e|s|es)?"], ["arrivé", "arrivé(e|s|es)?"], ["entré", "entré(e|s|es)?"], ["monté", "monté(e|s|es)?"], ["descendu", "descendu(e|s|es)?"], ["rentré", "rentré(e|s|es)?"], ["tombé", "tombé(e|s|es)?"], ["resté", "resté(e|s|es)?"], ["venu", "venu(e|s|es)?"]], "count": 4, "label": "an être verb", "hint": "Use another &ecirc;tre verb: <em>partir, monter, descendre, arriver, rentrer&hellip;</em>", "check": "four different être verbs"}}, "rules": [{"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(ai|as|a|avons|avez|ont) (pas )?(allé|parti|sorti|arrivé|entré|monté|descendu|rentré|tombé|resté|venu)", "hint": "Verbs of movement take <strong>&ecirc;tre</strong>, not avoir: <em>je suis all&eacute;(e)</em>, not <em>j&rsquo;ai all&eacute;</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))je (es|est|sommes|sont)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>je</em>: <em>je suis</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))tu (suis|est|sont)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>tu</em>: <em>tu es</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(il|elle|on) (suis|es|sont|sommes)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>il / elle / on</em>: <em>est</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))nous (suis|es|est|sont|êtes)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>nous</em>: <em>nous sommes</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))vous (suis|es|est|sont|sommes)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>vous</em>: <em>vous &ecirc;tes</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(ils|elles) (suis|es|est|sommes|êtes)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>ils / elles</em>: <em>sont</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(suis|es|est|sommes|êtes|sont) (pas )?(aller|partir|sortir|arriver|entrer|monter|descendre|rentrer|tomber|rester|venir)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "After &ecirc;tre, not the infinitive: the participle (<em>all&eacute;, parti, descendu</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(suis|es|est|sommes|êtes|sont) (pas )?(alle|arrive|entre|monte|rentre|tombe|reste)(e|s|es)?(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "The participle needs its accent: <em>-&eacute;</em> (<em>all&eacute;, arriv&eacute;</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))descend(é|i|ue?s?)?(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(?<!descendu)(?<!descendue)(?<!descendus)(?<!descendues)(?<!descend)", "hint": "<em>descendre</em> &rarr; <em>descendu</em> (-re verbs take <em>-u</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))elle est (pas )?(allé|parti|sorti|arrivé|entré|monté|descendu|rentré|tombé|resté|venu)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>elle</em> is feminine: add <em>-e</em> (<em>elle est all&eacute;e</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(nous sommes|ils sont|vous êtes) (pas )?(allé|parti|sorti|arrivé|entré|monté|descendu|rentré|tombé|resté|venu)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "A plural subject: add <em>-s</em> (<em>nous sommes partis, ils sont all&eacute;s</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))elles sont (pas )?(allé|parti|sorti|arrivé|entré|monté|descendu|rentré|tombé|resté|venu)e?(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>elles</em> is feminine plural: add <em>-es</em> (<em>elles sont all&eacute;es</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(suis|es|est|sommes|êtes|sont) ne pas(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))|(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(suis|es|est|sommes|êtes|sont) (allé|parti|sorti|arrivé|entré|monté|descendu|rentré|tombé|resté|venu)(e|s|es)? pas(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>ne&hellip;pas</em> wraps <strong>&ecirc;tre</strong>: <em>je ne suis pas sorti(e)</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))ne (es|est|êtes)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "Before a vowel, <em>ne</em> becomes <em>n&rsquo;</em>: <em>il n&rsquo;est pas</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(je|tu|il|elle|on|nous|vous|ils|elles) (suis|es|est|sommes|êtes|sont) pas(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "Put <em>ne</em> before &ecirc;tre too: <em>je ne suis pas&hellip;</em>"}], "steps": [{"prompt": "Where did you go, and <strong>how</strong>? An &ecirc;tre verb + a transport word.", "starters": ["Samedi, je suis", "Hier, je suis"], "needs": ["etre", "transport"]}, {"prompt": "A <strong>place</strong> in the city: another &ecirc;tre verb + a landmark.", "starters": ["Je suis", "Après, je suis"], "needs": ["etre", "place"]}, {"prompt": "Something you <strong>did not</strong> do: <em>ne&hellip;pas</em> around &ecirc;tre.", "starters": ["Je ne suis pas"], "needs": ["neg"]}, {"prompt": "How did it end? One more &ecirc;tre verb.", "starters": ["Je suis", "Le soir, je suis"], "needs": ["etre"]}], "checks": ["f:verbs", "f:transport", "f:place", "f:neg", "clean"], "bankTitle": "Mots du module · word bank", "bank": [{"title": "Quand&nbsp;? &middot; when", "items": [["hier", "", "yesterday"], ["hier soir", "", "last night"], ["samedi", "", "Saturday"], ["le week-end dernier", "", "last weekend"], ["à dix heures", "", "at ten o’clock"]]}, {"title": "&Ecirc;tre", "note": "then the participle", "items": [["je suis", "", "I"], ["tu es", "", "you"], ["il est", "elle est", "he / she"], ["nous sommes", "", "we"], ["vous êtes", "", "you"], ["ils sont", "elles sont", "they"]]}, {"title": "Participes &middot; with -e, -s, -es as needed", "items": [["allé", "allée", "went"], ["parti", "partie", "left"], ["sorti", "sortie", "went out"], ["arrivé", "arrivée", "arrived"], ["monté", "montée", "went up / got on"], ["descendu", "descendue", "went down / got off"], ["rentré", "rentrée", "came home"], ["resté", "restée", "stayed"], ["entré", "entrée", "went in"]]}, {"title": "Négation", "note": "ne…pas wraps être", "items": [["je ne suis pas", "", "I did not"], ["il n’est pas", "elle n’est pas", "he / she did not"], ["nous ne sommes pas", "", "we did not"]]}, {"title": "Comment&nbsp;? &middot; how", "items": [["en bus", "", "by bus"], ["en tramway", "", "by tram"], ["en train", "", "by train"], ["en voiture", "", "by car"], ["à pied", "", "on foot"]]}, {"title": "En ville &middot; places", "items": [["au centre-ville", "", "downtown"], ["en ville", "", "into town"], ["la place", "", "the square"], ["le pont", "", "the bridge"], ["l’arrêt", "", "the (bus) stop"], ["à la maison", "", "home"]]}], "words": {"family": ["père", "mère", "frère", "sœur", "frères", "sœurs", "parents", "grand-père", "grand-mère", "grands-parents", "oncle", "tante", "oncles", "tantes", "cousin", "cousine", "cousins", "cousines", "fils", "fille", "filles", "enfant", "enfants", "aîné", "aînée", "benjamin", "benjamine", "demi-frère", "demi-sœur", "beau-père", "belle-mère", "papa", "maman", "bébé"], "adjectives": [{"forms": ["gentil", "gentille", "gentils", "gentilles"], "masc": ["gentil", "gentils"], "fem": ["gentille", "gentilles"]}, {"forms": ["méchant", "méchante", "méchants", "méchantes"], "masc": ["méchant", "méchants"], "fem": ["méchante", "méchantes"]}, {"forms": ["timide", "timides"]}, {"forms": ["sympathique", "sympathiques", "sympa", "sympas"]}, {"forms": ["drôle", "drôles"]}, {"forms": ["égoïste", "égoïstes"]}, {"forms": ["sérieux", "sérieuse", "sérieuses"], "masc": ["sérieux"], "fem": ["sérieuse", "sérieuses"]}, {"forms": ["paresseux", "paresseuse", "paresseuses"], "masc": ["paresseux"], "fem": ["paresseuse", "paresseuses"]}, {"forms": ["travailleur", "travailleuse", "travailleurs", "travailleuses"], "masc": ["travailleur", "travailleurs"], "fem": ["travailleuse", "travailleuses"]}, {"forms": ["intelligent", "intelligente", "intelligents", "intelligentes"], "masc": ["intelligent", "intelligents"], "fem": ["intelligente", "intelligentes"]}, {"forms": ["généreux", "généreuse", "généreuses"], "masc": ["généreux"], "fem": ["généreuse", "généreuses"]}, {"forms": ["curieux", "curieuse", "curieuses"], "masc": ["curieux"], "fem": ["curieuse", "curieuses"]}, {"forms": ["beau", "bel", "belle", "beaux", "belles"], "masc": ["beau", "bel", "beaux"], "fem": ["belle", "belles"], "irregular": 1, "bangs": 1}, {"forms": ["nouveau", "nouvel", "nouvelle", "nouveaux", "nouvelles"], "masc": ["nouveau", "nouvel", "nouveaux"], "fem": ["nouvelle", "nouvelles"], "irregular": 1, "bangs": 1}, {"forms": ["vieux", "vieil", "vieille", "vieilles"], "masc": ["vieux", "vieil"], "fem": ["vieille", "vieilles"], "irregular": 1, "bangs": 1}, {"forms": ["jeune", "jeunes"], "bangs": 1}, {"forms": ["grand", "grande", "grands", "grandes"], "masc": ["grand", "grands"], "fem": ["grande", "grandes"], "bangs": 1}, {"forms": ["petit", "petite", "petits", "petites"], "masc": ["petit", "petits"], "fem": ["petite", "petites"], "bangs": 1}, {"forms": ["gros", "grosse", "grosses"], "masc": ["gros"], "fem": ["grosse", "grosses"], "bangs": 1}, {"forms": ["bon", "bonne", "bons", "bonnes"], "masc": ["bon", "bons"], "fem": ["bonne", "bonnes"], "bangs": 1}, {"forms": ["mauvais", "mauvaise", "mauvaises"], "masc": ["mauvais"], "fem": ["mauvaise", "mauvaises"], "bangs": 1}, {"forms": ["joli", "jolie", "jolis", "jolies"], "masc": ["joli", "jolis"], "fem": ["jolie", "jolies"], "bangs": 1}, {"forms": ["ensoleillé", "ensoleillée", "ensoleillés", "ensoleillées"]}], "faire": ["fais", "fait", "faisons", "faites", "font", "faire"], "determiners": ["un", "une", "le", "la", "les", "des", "mon", "ma", "mes", "ton", "ta", "tes", "son", "sa", "ses", "notre", "nos", "votre", "vos", "leur", "leurs", "ce", "cet", "cette", "ces"]}, "accents": ["à", "â", "ç", "é", "è", "ê", "ë", "î", "ï", "ô", "œ", "ù", "û", "ü", "À", "Ç", "É", "È", "Ê", "Î", "Ô", "Ù"]}'>
+            <textarea class="journal-box" rows="2" data-section="Mon trajet" data-label="Mon trajet 1 · where I went, and how" data-model="Je suis allé au centre-ville en tramway." aria-label="Mon trajet 1 · where I went, and how"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Mon trajet" data-label="Mon trajet 2 · a place in the city" data-model="Je suis monté sur le pont à pied." aria-label="Mon trajet 2 · a place in the city"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Mon trajet" data-label="Mon trajet 3 · something I did not do" data-model="Je ne suis pas rentré en voiture." aria-label="Mon trajet 3 · something I did not do"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Mon trajet" data-label="Mon trajet 4 · how it ended" data-model="Je suis arrivé à la maison à six heures." aria-label="Mon trajet 4 · how it ended"></textarea>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;">Keep these &mdash; you'll reuse them for your Speaking Task on Day 7. Check each verb: right helper? right agreement? negation wrapping &ecirc;tre?</p>
+        <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;">The coach ticks each rule as you write and suggests a fix when the helper, the agreement or the negation looks wrong. Keep these sentences: you will reuse them for your Speaking Task on Day 7.</p>
     </div>
 
     <!-- PART 4 · Audio dictation -->
@@ -357,7 +410,23 @@
 
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Spiral to Module 4 (avoir): rewrite two of your trip sentences using an <em>avoir</em> verb instead (<em>j'ai vu la place, j'ai pris le bus</em>). Notice the participle does <strong>not</strong> agree with the subject there &mdash; that contrast is the single most common slip. Practice it now.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Spiral to Module 4 (avoir): two &ecirc;tre sentences and two avoir sentences. Type each line in French, then press <strong>Check</strong>. Notice the participle does <strong>not</strong> agree with the subject after avoir &mdash; that contrast is the single most common slip.</div>
+            <div class="optima-widget">
+                <div class="widget-kicker">&#129504; &Ecirc;TRE OR AVOIR&nbsp;?</div>
+                <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">I went downtown. (a boy speaking)</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-04-r6" data-answer="Je suis allé au centre-ville" aria-label="I went downtown. (a boy speaking)" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">I took the bus.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-04-r6" data-answer="J&#x27;ai pris le bus" aria-label="I took the bus." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">She arrived late.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-04-r6" data-answer="Elle est arrivée tard" aria-label="She arrived late." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">We saw the bridge.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l5-04-r6" data-answer="Nous avons vu le pont" aria-label="We saw the bridge." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l5-04-r6">Reveal the answer</button>
+                <div class="reveal-body">
+                    <table class="gtable" style="margin-top:0;">
+                        <tbody>
+                        <tr><td>1. Je suis all&eacute; au centre-ville.</td><td>I went downtown. (a boy speaking)</td></tr>
+                        <tr><td>2. J&rsquo;ai pris le bus.</td><td>I took the bus.</td></tr>
+                        <tr><td>3. Elle est arriv&eacute;e tard.</td><td>She arrived late.</td></tr>
+                        <tr><td>4. Nous avons vu le pont.</td><td>We saw the bridge.</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:15px;color:#1a2340;margin:8px 0 0 0;">Movement verbs take &ecirc;tre and agree (<em>all&eacute;, arriv&eacute;e</em>); <em>prendre</em> and <em>voir</em> take avoir, and <em>pris, vu</em> never change.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -558,7 +627,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -723,6 +796,7 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="../../portrait.js"></script>
 <script>/* reminder strip: show which of the four the student has ticked on the assessment days (same device) */
 (function () { var st = {}; try { st = JSON.parse(localStorage.getItem('optima-fr1-s2-m5-due')) || {}; } catch (e) {}
   [].forEach.call(document.querySelectorAll('.due-chip'), function (c) { c.classList.toggle('on', !!st[c.dataset.key]); }); })();

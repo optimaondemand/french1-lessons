@@ -283,6 +283,12 @@
     </div>
 
     <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
+    <!-- CONJUGUE · regarder -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Two pieces every time: <em>avoir</em> + the participle. Practise <em>regarder</em> in the pass&eacute; compos&eacute;: type each form and press <strong>Enter</strong>.</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm04%2Fpractice-m04.json&amp;verb=regarder&amp;tense=passe_compose&amp;embed=1" title="Conjugation practice: regarder" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the correct form of avoir, or the correct participle. You get instant feedback &mdash; this is practice, not a grade.</p>
@@ -586,5 +592,19 @@
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
+</script>
 </body>
 </html>

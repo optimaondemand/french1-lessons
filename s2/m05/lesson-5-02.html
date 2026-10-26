@@ -133,6 +133,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -152,6 +155,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -195,7 +201,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 5 &middot; La ville</div>
     <div class="pl-where">Lesson 5.02 &middot; Day 2 of 8</div>
     <h1 class="pl-title">Le pass&eacute; compos&eacute; avec &ecirc;tre</h1>
-    <div class="pl-sub">The Verbs of Movement &middot; about 50 minutes</div>
+    <div class="pl-sub">The Verbs of Movement &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Gustave Caillebotte, <em>Rue de Paris, temps de pluie</em> (<em>Paris Street; Rainy Day</em>), 1877</div>
@@ -247,13 +253,13 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;">One phrase to go with <em>descendre</em>: <em>descendre du bus</em> (to get off the bus).</p>
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <strong>Module 5 Vocabulaire</strong> page and mix yesterday's transport words with today's verbs and landmarks. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m05.html" target="_blank" rel="noopener"><strong>Module 5 Vocabulaire</strong> page</a> and mix yesterday's transport words with today's verbs and landmarks. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
         </div>
     </div>
 
     <!-- ===== PART 2 · Grammar Rule 1 ===== -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>LA GRAMMAIRE &mdash; LE PASS&Eacute; COMPOS&Eacute; AVEC &Ecirc;TRE</span><span class="pill-time">17 min</span></div>
+        <div class="pl-part"><span class="pl-num">II</span><span>LA GRAMMAIRE &mdash; LE PASS&Eacute; COMPOS&Eacute; AVEC &Ecirc;TRE</span><span class="pill-time">15 min</span></div>
         <h3 class="pl-h3">A different helper for verbs of coming and going</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Module 4 you built the past with <em>avoir</em>: <em>j'ai mang&eacute;</em>. But a small, important group of verbs &mdash; almost all describing <strong>movement or a change of state</strong> &mdash; uses <strong>&ecirc;tre</strong> as the helper instead: <em>je <strong>suis</strong> all&eacute;</em> (I went), not <em>j'ai all&eacute;</em>. To remember which verbs, learn the name <span style="border-bottom:2px solid #C7922C;">DR MRS VANDERTRAMP</span>.</p>
 
@@ -302,9 +308,15 @@
     </div>
 
     <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
+    <!-- CONJUGUE · aller -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Your first &ecirc;tre verb, all six persons: <em>aller</em> in the pass&eacute; compos&eacute;. Type each form and press <strong>Enter</strong>; the drill tells you what went wrong (the helper, the ending&hellip;). The <strong>(e)</strong> and <strong>(s)</strong> endings are tomorrow&rsquo;s lesson: for now, just use the form of &ecirc;tre.</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm05%2Fpractice-m05.json&amp;verb=aller&amp;tense=passe_compose&amp;embed=1" title="Conjugation practice: aller" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the form of <em>&ecirc;tre</em> that matches the subject. You get instant feedback &mdash; this is practice, not a grade.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Eight sentences. Pick the form of <em>&ecirc;tre</em> that matches the subject. You get instant feedback &mdash; this is practice, not a grade.</p>
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
@@ -341,11 +353,71 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Je ______ rest&eacute; &agrave; la maison.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! je suis rest&eacute;.">suis</button>
+                <button data-no="Not quite &mdash; es goes with tu.">es</button>
+                <button data-no="Not quite &mdash; est goes with il / elle / on.">est</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Tu ______ sorti hier soir&nbsp;?</div>
+            <div class="widget-options">
+                <button data-no="as is avoir. sortir is an &ecirc;tre verb: tu es sorti.">as</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! tu es sorti.">es</button>
+                <button data-no="Close &mdash; est goes with il / elle; tu takes es.">est</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Ils ______ partis &agrave; dix heures.</div>
+            <div class="widget-options">
+                <button data-no="ont is avoir. partir takes &ecirc;tre: ils sont partis.">ont</button>
+                <button data-no="Not quite &mdash; sommes goes with nous.">sommes</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! ils sont partis.">sont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Vous ______ arriv&eacute;s en train.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! vous &ecirc;tes arriv&eacute;s.">&ecirc;tes</button>
+                <button data-no="avez is avoir. arriver takes &ecirc;tre: vous &ecirc;tes.">avez</button>
+                <button data-no="Not quite &mdash; sont goes with ils / elles.">sont</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Which verb forms its past with <em>&ecirc;tre</em>?</div>
+            <div class="widget-options">
+                <button data-no="regarder takes avoir: j&rsquo;ai regard&eacute;.">regarder (to watch)</button>
+                <button data-no="jouer takes avoir: j&rsquo;ai jou&eacute;.">jouer (to play)</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! monter is in DR MRS VANDERTRAMP: je suis mont&eacute;.">monter (to go up)</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 1 · by-ear self-quiz -->
+    <!-- GAME · Dans les rues de Paris -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
+        <div data-naturemorte='{"title": "Dans les rues de Paris", "kicker": "Joue &amp;middot; Practice game, not graded", "audioBase": "../../audio/", "intro": "Three paintings of Paris in black and white. Press &amp;#128266;, listen to a word from this module, then tap it in the painting: each one you find comes back into colour. Look closely: in the 1870s and 1890s, the buses and cars of Paris were pulled by horses!", "text": {"ask": "&amp;Eacute;coute et trouve-le dans le tableau.", "askEn": "Listen, then tap it in the painting.", "unit": "mots", "unitEn": "words", "end": "Bravo&amp;nbsp;!", "again": "Click a word to hear it again.", "notThere": "Not there. Press &amp;#128266; to hear the word again, then look at the painting.", "other": "That one is <b lang=\"fr\">{fr}</b> ({en}). Listen again: you are looking for something else.", "right": "<b lang=\"fr\">{fr}</b>: {en}."}, "rounds": [{"img": "img/ev-place.jpg", "painter": "Camille Pissarro", "life": "1830–1903", "title": "La Place du Théâtre-Français", "title_en": "The Place du Théâtre-Français", "meta": "1898 · huile sur toile · Los Angeles County Museum of Art", "alt": "Camille Pissarro, La Place du Théâtre-Français: a Paris square seen from above in winter, horse-drawn buses and cabs, people walking, a fountain at the top", "items": [{"id": "voiture", "fr": "la voiture", "en": "the car (in 1898, pulled by a horse)", "audio": "vocab/s2m5-la-voiture.mp3", "shapes": [[430, 493, 32, 42], [67, 573, 42, 48], [515, 248, 32, 28]], "tag": [430, 430]}, {"id": "pied", "fr": "à pied", "en": "on foot", "audio": "vocab/s2m5-a-pied.mp3", "shapes": [[121, 923, 28, 52], [315, 955, 27, 75], [883, 763, 40, 62], [285, 815, 24, 48]], "tag": [315, 860]}, {"id": "bus", "fr": "le bus", "en": "the bus (in 1898, pulled by horses)", "audio": "vocab/s2m5-le-bus.mp3", "shapes": [[710, 897, 125, 105], [650, 567, 105, 75], [147, 373, 38, 48]], "tag": [710, 770]}, {"id": "place", "fr": "la place", "en": "the square", "audio": "vocab/s2m5-la-place.mp3", "shapes": [[513, 127, 165, 85], [390, 255, 60, 40]], "tag": [513, 60]}], "w": 1280, "h": 1013}, {"img": "img/ev-pont.jpg", "painter": "Gustave Caillebotte", "life": "1848–1894", "title": "Le Pont de l’Europe", "title_en": "The Europe Bridge", "meta": "vers 1876 · huile sur toile", "alt": "Gustave Caillebotte, Le Pont de l’Europe: an iron bridge over the railway in Paris, a couple walking, a man leaning on the railing, buildings behind", "items": [{"id": "pied2", "fr": "à pied", "en": "on foot", "audio": "vocab/s2m5-a-pied.mp3", "shapes": [[275, 480, 110, 206], [834, 571, 78, 212]], "tag": [275, 250]}, {"id": "ville", "fr": "la ville", "en": "the city", "audio": "vocab/s2m5-la-ville.mp3", "shapes": [[101, 300, 101, 85]], "tag": [101, 215]}, {"id": "pont", "fr": "le pont", "en": "the bridge", "audio": "vocab/s2m5-le-pont.mp3", "shapes": [[961, 360, 330, 330], [1110, 760, 175, 165], [530, 300, 150, 190]], "tag": [961, 120]}], "w": 1280, "h": 943}, {"img": "img/ev-gare.jpg", "painter": "Claude Monet", "life": "1840–1926", "title": "La Gare Saint-Lazare", "title_en": "The Saint-Lazare Station", "meta": "1877 · huile sur toile · Musée d’Orsay, Paris", "alt": "Claude Monet, La Gare Saint-Lazare: inside a Paris railway station under a glass roof, a steam train in clouds of smoke, a few people on the platform", "items": [{"id": "pied3", "fr": "à pied", "en": "on foot", "audio": "vocab/s2m5-a-pied.mp3", "shapes": [[937, 823, 28, 85], [1055, 800, 62, 45]], "tag": [1000, 700]}, {"id": "train", "fr": "le train", "en": "the train", "audio": "vocab/s2m5-le-train.mp3", "shapes": [[620, 657, 55, 85], [330, 690, 92, 118], [750, 750, 42, 30]], "tag": [620, 545]}], "w": 1280, "h": 952}]}'></div>
+    </div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
 
         <div class="optima-widget ow-eval">
@@ -377,7 +449,56 @@
             </div>
             <div class="widget-feedback"></div>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <strong>Module 5 Vocabulaire</strong> page and drill all twenty by ear.</p>
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m5-la-place.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-no="That's le pont.">the bridge</button>
+                <button data-correct="1" data-ok="Oui &mdash; la place, the square.">the square</button>
+                <button data-no="That's le plan.">the (city) map</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m5-a-pied.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this phrase mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact &mdash; &agrave; pied, on foot.">on foot</button>
+                <button data-no="That's en voiture.">by car</button>
+                <button data-no="That's en train.">by train</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m5-rentrer.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this verb mean?</div>
+            <div class="widget-options">
+                <button data-no="That's entrer.">to enter</button>
+                <button data-no="That's rester.">to stay</button>
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; rentrer, to return home.">to return home</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m5-l-arret.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; l&rsquo;arr&ecirc;t, the bus stop.">the (bus) stop</button>
+                <button data-no="That's la place.">the square</button>
+                <button data-no="That's le centre-ville.">downtown</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m5-loin-de.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this phrase mean?</div>
+            <div class="widget-options">
+                <button data-no="That's le centre-ville.">downtown</button>
+                <button data-no="That's le plan.">the (city) map</button>
+                <button data-correct="1" data-ok="Exact &mdash; loin de, far from.">far from</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <a href="vocabulaire-m05.html" target="_blank" rel="noopener"><strong>Module 5 Vocabulaire</strong> page</a> and drill all twenty by ear.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -455,7 +576,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -495,7 +620,38 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="naturemorte.js?v=7de1aceb"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
+</script>
 </body>
 </html>

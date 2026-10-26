@@ -25,6 +25,18 @@ All public domain, via Wikimedia Commons. Files in `s2/m04/img/`.
 | Pierre-Auguste Renoir, *Bal du moulin de la Galette* (Dance at Le Moulin de la Galette), 1876, Musée d’Orsay | `tl-moulin.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg |
 | Georges Seurat, *Un dimanche après-midi à l’île de la Grande Jatte* (A Sunday on La Grande Jatte), 1884–1886, The Art Institute of Chicago | `tl-grande-jatte.jpg` | https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg |
 
+## Paintings (Semester 2, Module 5 · game *Dans les rues de Paris*, Lesson 5.02; picture questions, Lesson 5.05; model trip, Lesson 5.07)
+
+All public domain, via Wikimedia Commons. Files in `s2/m05/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Camille Pissarro, *La Place du Théâtre-Français*, 1898, Los Angeles County Museum of Art | `ev-place.jpg` | https://commons.wikimedia.org/wiki/File:Camille_Pissarro_-_La_Place_due_Th%C3%A9%C3%A2tre_Fran%C3%A7ais_-_Google_Art_Project.jpg |
+| Gustave Caillebotte, *Le Pont de l’Europe*, c. 1876 (photograph from ordrupgaard.dk; Berhaut 1994 no. 45) | `ev-pont.jpg` | https://commons.wikimedia.org/wiki/File:G._Caillebotte_-_Le_pont_de_l%27Europe.jpg |
+| Claude Monet, *La Gare Saint-Lazare*, 1877, Musée d’Orsay | `ev-gare.jpg` | https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Saint-Lazare_Station_-_Google_Art_Project.jpg |
+| Pierre-Auguste Renoir, *Pont-Neuf, Paris*, 1872, National Gallery of Art, Washington (details) | `ev-q-pont.jpg`, `ev-q-bus.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Pont_Neuf,_Paris_-_Google_Art_Project.jpg |
+| Gustave Caillebotte, *Rue de Paris, temps de pluie*, 1877, The Art Institute of Chicago (details; the Module 5 painting) | `ev-q-place.jpg`, `ev-q-pied.jpg`, `ev-m-couple.jpg` | https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg |
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;
