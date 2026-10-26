@@ -6,7 +6,15 @@
              <textarea class="journal-box" data-label="..." data-model="..."></textarea> x5 ... </div>
    needs (per step): family | adj2 | irregular | bangs | faire. French 1 S2 Module 1 word lists live in the config.
    Optional (2026-10-23, Lesson 1.08 "Au revoir, Renoir"): cardTitle, readyText, checks (keys: fam3 adj5 adj2 irr bangs faire clean;
-   default = the family-portrait six), guests [{img, alt, label}] = a picker whose choice shows on the card (kept on this device). */
+   default = the family-portrait six), guests [{img, alt, label}] = a picker whose choice shows on the card (kept on this device).
+   Optional (2026-10-23, Lesson 2.04 "Ma région"): guests[].caption (who painted it), guests[].fiche [[label, [[fr, en], ...]], ...]
+   = facts shown once picked (each French phrase clickable), map {img, alt} = a locator map beside the picker.
+   wide: true = the picker is a full-width band above the writing (large paintings + "See it larger", map beside the fiche).
+   Optional (2026-10-23, Lesson 2.05): features[k].lemmas [[word, regex], ...] + count N = N DIFFERENT words across all boxes
+   (the checklist shows which were found); checks key adj1 = an adjective from Module 1.
+   guests[].geo {rel: {ref: [directions]}, facts: {ref: html}, rules}: compass phrases checked against the chosen region
+   ("à l'est de la Normandie"); pickRequired = hint until a region is chosen; checks key pick.
+   guests[].gender 'f' | 'm' (+ who, e.g. 'a girl'): "Check the painting" when il / elle or homme / fille does not match. */
 (function () {
   'use strict';
   var CSS = '\
@@ -72,8 +80,36 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
 .pt-guests button:hover img{transform:scale(1.04)}\
 .pt-guests button.on img{border-color:var(--gold);box-shadow:0 0 0 3px var(--ink)}.pt-guests button.on{color:var(--ink);font-weight:600}\
 .pt-gpick{font-size:16px;margin:0 0 8px}\
-.pt-gimg{display:block;width:120px;height:148px;object-fit:cover;border-radius:50%;margin:4px auto 8px;border:3px solid var(--gold-lt);box-shadow:0 0 0 1px var(--gold)}\
+.pt-gwrap{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;margin:0 0 14px}.pt-gwrap .pt-guests{flex:0 1 260px;margin:0}\
+.pt-guests button small{display:block;font-size:11.5px;color:var(--muted);font-weight:400;margin-top:2px}\
+.pt-map{flex:1 1 340px;max-width:400px;margin:0}.pt-map img{display:block;width:100%;border:1px solid var(--gold-lt);border-radius:6px}\
+.pt-map figcaption{font-size:12px;color:var(--muted);margin-top:4px;text-align:center}\
+.pt-fiche{background:var(--cream);border:1px solid var(--gold-lt);border-left:4px solid var(--gold);border-radius:6px;padding:10px 14px;margin:0 0 14px}\
+.pt-top{margin:0 0 18px}.pt-gcards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 14px}\
+.pt-gc{display:flex;flex-direction:column;align-items:center;min-width:0}\
+.pt-gcards .pt-gc>button.pt-gpk{width:100%;font-size:14px}\
+.pt-gcards img{width:100%;height:170px;border-radius:3px;border:5px solid #e9d9b0;box-shadow:0 0 0 1px var(--gold),0 2px 6px rgba(0,0,0,.15)}\
+.pt-gcards button.on img{border-color:var(--gold);box-shadow:0 0 0 3px var(--ink)}\
+.pt-gcards .pt-gpk b{display:block;font-size:17px;color:var(--ink);margin-top:4px}\
+.pt-gcards button.pt-gz{width:auto;font-size:13px;color:var(--blue);text-decoration:underline;margin-top:5px}\
+.pt-trow{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;align-items:start}.pt-trow .pt-map{max-width:none}.pt-trow .pt-fiche{margin:0}\
+.pt-fimg{margin:0 0 8px;cursor:zoom-in}.pt-fimg img{display:block;width:100%;max-height:250px;object-fit:cover;border:5px solid #e9d9b0;border-radius:3px}\
+.pt-fimg figcaption{font-size:12.5px;color:var(--muted);margin-top:3px}.pt-fempty{color:var(--muted);font-style:italic;font-size:15px;margin:6px 0}\
+.pt-lb{position:fixed;inset:0;z-index:9999;background:rgba(20,16,10,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}\
+.pt-lb img{max-width:92vw;max-height:80vh;border:8px solid #e9d9b0;box-shadow:0 6px 30px rgba(0,0,0,.5)}\
+.pt-lb div{color:#f6ecd2;font:15px/1.4 Georgia,serif;margin-top:12px;text-align:center}.pt-lb button{margin-top:10px;font:14px "Segoe UI",Arial,sans-serif;padding:6px 16px;border-radius:999px;border:1px solid #e9d9b0;background:#f6ecd2;cursor:pointer}\
+.pt-fiche h5{font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;color:var(--ink);margin:0 0 6px}\
+.pt-frow{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;margin:3px 0;font-size:14px}.pt-frow>span{min-width:120px;color:var(--muted)}\
+.pt-frow button{font:inherit;font-size:15px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--gold-lt);border-radius:999px;padding:2px 10px;cursor:pointer}\
+.pt-frow button small{font-weight:400;color:var(--muted)}.pt-frow button:hover{background:var(--cream);border-color:var(--gold)}\
+.pt-gimg[hidden]{display:none}.pt-gimg{display:block;width:120px;height:148px;object-fit:cover;border-radius:50%;margin:4px auto 8px;border:3px solid var(--gold-lt);box-shadow:0 0 0 1px var(--gold)}\
 ';
+  function zoom(src, alt, cap) {   // full-size painting over the page; click, Close or Esc to return
+    var o = el('div', 'pt-lb'), im = el('img'); im.src = src; im.alt = alt || ''; o.appendChild(im); if (cap) o.appendChild(el('div', null, cap));
+    var x = el('button', null, 'Close'); x.type = 'button'; o.appendChild(x); o.setAttribute('role', 'dialog'); o.setAttribute('aria-label', alt || 'Painting');
+    function done() { o.remove(); document.removeEventListener('keydown', key); } function key(e) { if (e.key === 'Escape') done(); }
+    o.addEventListener('click', done); document.addEventListener('keydown', key); document.body.appendChild(o); x.focus();
+  }
   function el(t, c, h) { var e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; return e; }
   function norm(s) { return s.toLowerCase().replace(/[\u2019']/g, "'").replace(/\u0153/g, 'oe'); }
   function words(s) { return norm(s).replace(/\b(l|d|j|m|t|s|n|c|qu)'/g, ' ').split(/[^a-z\u00e0-\u00ff'-]+/).filter(Boolean); }  // l'a\u00een\u00e9 -> a\u00een\u00e9
@@ -93,10 +129,25 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
     (cfg.accents || []).forEach(function (ch) { var b = el('button', null, ch); b.type = 'button'; b.addEventListener('mousedown', function (e) { e.preventDefault(); }); b.addEventListener('click', function () { self.insert(ch); }); acc.appendChild(b); });
     main.appendChild(acc);
     if (cfg.guests) {   // choose who to describe: a guest from the module painting
-      var gk = 'pt-guest:' + location.pathname, gp = el('div', 'pt-gpick', '<strong>Choose a guest</strong> from the painting:'), gs = el('div', 'pt-guests');
-      this.gbtn = cfg.guests.map(function (g, i) { var b = el('button'); b.type = 'button'; b.innerHTML = '<img src="' + g.img + '" alt="">' + g.label; b.setAttribute('aria-label', 'Choose ' + g.alt);
-        b.addEventListener('click', function () { self.pick(i); try { localStorage.setItem(gk, String(i)); } catch (e) {} }); gs.appendChild(b); return b; });
-      main.insertBefore(gp, acc); main.insertBefore(gs, acc);
+      var gk = 'pt-guest:' + location.pathname, gp = el('div', 'pt-gpick', cfg.pickText || '<strong>Choose a guest</strong> from the painting:'), gs = el('div', 'pt-guests');
+      if (cfg.wide) gs.className = 'pt-guests pt-gcards';
+      this.gbtn = cfg.guests.map(function (g, i) { var b = el('button', cfg.wide ? 'pt-gpk' : null); b.type = 'button';
+        b.innerHTML = '<img src="' + g.img + '" alt="">' + (cfg.wide ? '<b>' + g.label + '</b>' : g.label) + (g.caption ? '<small>' + g.caption + '</small>' : ''); b.setAttribute('aria-label', 'Choose ' + g.alt);
+        b.addEventListener('click', function () { self.pick(i); try { localStorage.setItem(gk, String(i)); } catch (e) {} });
+        if (cfg.wide) { var w = el('div', 'pt-gc'), z = el('button', 'pt-gz', '&#10530; See it larger'); z.type = 'button'; z.setAttribute('aria-label', 'See larger: ' + g.alt);
+          z.addEventListener('click', function () { zoom(g.full || g.img, g.alt, g.caption); }); w.appendChild(b); w.appendChild(z); gs.appendChild(w); } else gs.appendChild(b);
+        return b; });
+      if (cfg.wide) {   // full-width band above the writing: paintings, then the map beside the fiche
+        var top = el('div', 'pt-top'), tr = el('div', 'pt-trow'); top.appendChild(gp); top.appendChild(gs);
+        if (cfg.map) tr.appendChild(el('figure', 'pt-map', '<img src="' + cfg.map.img + '" alt="' + cfg.map.alt + '">' + (cfg.map.caption ? '<figcaption>' + cfg.map.caption + '</figcaption>' : '')));
+        this.fiche = el('div', 'pt-fiche', '<div class="pt-fempty">' + (cfg.ficheEmpty || 'Choose a region above: its painting and its fact card appear here.') + '</div>');
+        tr.appendChild(this.fiche); top.appendChild(tr); this.top = top;
+      } else {
+      main.insertBefore(gp, acc);
+      if (cfg.map) { var gw = el('div', 'pt-gwrap'), mf = el('figure', 'pt-map', '<img src="' + cfg.map.img + '" alt="' + cfg.map.alt + '">' + (cfg.map.caption ? '<figcaption>' + cfg.map.caption + '</figcaption>' : ''));
+        gw.appendChild(gs); gw.appendChild(mf); main.insertBefore(gw, acc); } else main.insertBefore(gs, acc);
+      this.fiche = el('div', 'pt-fiche'); this.fiche.hidden = true; main.insertBefore(this.fiche, acc);
+      }
       var saved = null; try { saved = localStorage.getItem(gk); } catch (e) {}
       this.pendingGuest = saved != null && cfg.guests[+saved] ? +saved : null;
     }
@@ -144,13 +195,23 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
     }
     c.appendChild(el('div', 'pt-note', 'The ticks and hints are a coach, not a grade: read your sentences again yourself too.'));
     this.cardEl = c; side.appendChild(c);
-    grid.appendChild(main); grid.appendChild(side); root.appendChild(grid);
+    grid.appendChild(main); grid.appendChild(side); if (this.top) root.appendChild(this.top); root.appendChild(grid);
     if (this.pendingGuest != null) this.pick(this.pendingGuest);
     this.run(); setTimeout(function () { self.run(); }, 400); setTimeout(function () { self.run(); }, 1500);   // after my-work restores saved text
   }
   Portrait.prototype.pick = function (i) {
+    this.cur = i; if (this.steps) setTimeout(this.run.bind(this), 0);   // re-check the sentences against the new choice
     var g = this.cfg.guests[i]; this.gbtn.forEach(function (b, k) { b.classList.toggle('on', k === i); b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
     this.gimg.src = g.img; this.gimg.alt = 'Detail from the painting: ' + g.alt; this.gimg.hidden = false;
+    var self = this, f = this.fiche; if (!f) return; f.innerHTML = ''; f.hidden = !g.fiche; if (!g.fiche) return;
+    f.appendChild(el('h5', null, 'Fiche &middot; ' + g.label)); f.lang = 'fr';
+    if (this.cfg.wide) { var fi = el('figure', 'pt-fimg', '<img src="' + (g.full || g.img) + '" alt="' + g.alt + '">' + (g.caption ? '<figcaption lang="en">' + g.caption + ' &middot; click to see it larger</figcaption>' : ''));
+      fi.addEventListener('click', function () { zoom(g.full || g.img, g.alt, g.caption); }); f.appendChild(fi); }
+    g.fiche.forEach(function (row) { var r = el('div', 'pt-frow'); r.appendChild(el('span', null, row[0]));
+      row[1].forEach(function (w) { var b = el('button', null, w[0] + (w[1] ? ' <small>' + w[1] + '</small>' : '')); b.type = 'button';
+        b.addEventListener('mousedown', function (e) { e.preventDefault(); }); b.addEventListener('click', function () { self.addWord(w[0]); }); r.appendChild(b); });
+      f.appendChild(r); });
+    f.appendChild(el('div', 'pt-bhelp', 'Click a phrase to add it to the sentence you are writing.'));
   };
   Portrait.prototype.addWord = function (w) {   // a whole word: add the spaces it needs around it
     var b = this.last; if (!b) return; var s = b.selectionStart != null ? b.selectionStart : b.value.length, before = b.value.slice(0, s);
@@ -177,18 +238,45 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
       }
       if (self.faire[w]) r.faire = true;
     });
+    // configurable features and hint rules (2026-10-23, Lesson 2.04): {"features": {"where": {"re": "...", "label", "hint", "check"}}, "rules": [{"re", "hint"}]}
+    var nt = norm(text); r.feat = {};
+    Object.keys(this.cfg.features || {}).forEach(function (k) { var F = self.cfg.features[k];
+      if (F.lemmas) { (r.fl = r.fl || {})[k] = F.lemmas.filter(function (L) { return new RegExp('(^|[^a-z\u00e0-\u00ff])(' + L[1] + ')(?![a-z\u00e0-\u00ff])', 'i').test(nt); })
+        .map(function (L) { return L[0]; }); r.feat[k] = r.fl[k].length > 0; }
+      else r.feat[k] = new RegExp(F.re, 'i').test(nt); });
+    (this.cfg.rules || []).forEach(function (ru) { if (new RegExp(ru.re, 'i').test(nt)) r.hints.push(ru.hint); });
+    var g = this.cfg.guests && this.cur != null ? this.cfg.guests[this.cur] : null;
+    if (g && g.geo && text) this.geoCheck(nt, g.geo).forEach(function (h) { if (r.hints.indexOf(h) < 0) r.hints.push(h); });
+    if (g && g.gender && text) {   // does the sentence fit the guest in the painting?
+      var f = g.gender === 'f', wrong = f ? /\bil (est|a|fait|aime|adore)\b|\b(un|le|ce|mon) ([a-z\u00e0-\u00ff]+ )?(homme|gar\u00e7on|monsieur)\b/
+                                       : /\belle (est|a|fait|aime|adore)\b|\b(une|la|cette|ma) ([a-z\u00e0-\u00ff]+ )?(femme|fille|dame)\b/;
+      if (wrong.test(nt)) r.hints.push('Check the painting: your guest is ' + (g.who || (f ? 'a girl' : 'a man')) + '. Use <em>' + (f ? 'elle' : 'il') + '</em> and ' + (f ? 'feminine' : 'masculine') + ' forms.');
+    }
     return r;
+  };
+  Portrait.prototype.geoCheck = function (nt, G) {   // is each compass phrase true of the chosen region?
+    var out = [], re = /(dans le|au|(?:\u00e0|a|dans) l')\s?(nord|sud|est|ouest)(?:\s+(?:de la|de l'|du|de)\s*(france|bretagne|normandie|alsace|provence))?/g, m;
+    while ((m = re.exec(nt))) { var ref = m[3] || 'france', ok = G.rel[ref];
+      if (ok && ok.indexOf(m[2]) < 0) out.push('Check the map: ' + (G.facts[ref] || G.facts.france)); }
+    (G.rules || []).forEach(function (ru) { if (new RegExp(ru.re, 'i').test(nt)) out.push(ru.hint); });
+    return out;
   };
   Portrait.prototype.run = function () {
     var self = this, all = { fam: [], adj: [], irr: false, bangs: false, faire: false }, texts = [];
     this.steps.forEach(function (S) {
-      var t = S.box.value.trim(), r = self.analyse(t), need = S.st.needs || [], marks = [], hints = r.hints.slice();
+      var t = S.box.value.trim(), r = self.analyse(t), need = S.st.needs || [], marks = [];
+      if (t && self.cfg.pickRequired && self.cur == null && !texts.length) r.hints.unshift(self.cfg.pickRequired);   // first sentence written
+      var hints = r.hints.slice();
       if (t) texts.push(t.replace(/</g, '&lt;'));
       r.fam.forEach(function (f) { if (all.fam.indexOf(f) < 0) all.fam.push(f); }); r.adj.forEach(function (a) { if (all.adj.indexOf(a) < 0) all.adj.push(a); });
       if (r.irr) all.irr = true; if (r.bangs) all.bangs = true; if (r.faire) all.faire = true;
+      Object.keys(r.fl || {}).forEach(function (k) { var A = (all.fl = all.fl || {})[k] = all.fl[k] || []; r.fl[k].forEach(function (x) { if (A.indexOf(x) < 0) A.push(x); }); });
       var label = { family: ['a family member', r.fam.length > 0], adj2: ['two adjectives', r.adj.length >= 2], adj1: ['an adjective', r.adj.length >= 1],
         irregular: ['an irregular adjective (beau / nouveau / vieux)', r.irr], bangs: ['a BANGS adjective before a noun', r.bangs], faire: ['a form of faire', r.faire] };
+      var FT = self.cfg.features || {};
+      Object.keys(FT).forEach(function (k) { label[k] = [FT[k].label, r.feat[k]]; if (r.feat[k]) (all.feat = all.feat || {})[k] = true; });
       need.forEach(function (n) { marks.push('<span class="' + (label[n][1] ? 'on' : '') + '">' + label[n][0] + '</span>'); });
+      if (t) need.forEach(function (n) { if (FT[n] && !r.feat[n] && FT[n].hint) hints.push(FT[n].hint); });
       if (t) {
         if (!/^[A-ZÀ-ÖØ-Þ«]/.test(t)) hints.push('Start the sentence with a capital letter.');
         if (!/[.!?]$/.test(t)) hints.push('End with a full stop (.), or ! or ?');
@@ -204,9 +292,14 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
     var famCount = all.fam.filter(function (f) { return f !== 'famille'; }).length;
     var n = this.steps.length, C = {
       fam3: ['at least three family members named (' + Math.min(famCount, 3) + '/3)', famCount >= 3], adj5: ['five different adjectives (' + Math.min(all.adj.length, 5) + '/5)', all.adj.length >= 5],
-      adj2: ['two different adjectives (' + Math.min(all.adj.length, 2) + '/2)', all.adj.length >= 2],
+      adj2: ['two different adjectives (' + Math.min(all.adj.length, 2) + '/2)', all.adj.length >= 2], adj1: ['an adjective from Module 1', all.adj.length >= 1],
       irr: ['an irregular adjective (beau / nouveau / vieux)', all.irr], bangs: ['a BANGS word placed before the noun', all.bangs], faire: ['the verb faire in a full sentence', all.faire],
+      pick: ['a region chosen above', this.cur != null],
       clean: ['endings checked: no hints left', !this.steps.some(function (S) { return S.hint.textContent; }) && texts.length === n] };
+    var FT2 = this.cfg.features || {};
+    Object.keys(FT2).forEach(function (k) { var F = FT2[k], got = (all.fl && all.fl[k]) || [];
+      C['f:' + k] = F.count ? [(F.check || F.label) + ' (' + Math.min(got.length, F.count) + '/' + F.count + ')' + (got.length ? ': <em lang="fr">' + got.join(', ') + '</em>' : ''), got.length >= F.count]
+        : [F.check || F.label, !!(all.feat && all.feat[k])]; });
     var checks = (this.cfg.checks || ['fam3', 'adj5', 'irr', 'bangs', 'faire', 'clean']).map(function (k) { return C[k]; });
     this.list.innerHTML = checks.map(function (c) { return '<li class="' + (c[1] ? 'on' : '') + '">' + c[0] + '</li>'; }).join('');
     var ok = checks.every(function (c) { return c[1]; });

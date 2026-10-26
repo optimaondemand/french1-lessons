@@ -86,7 +86,7 @@
       var prev = state.items[id] || {};
       var it = { kind: journal ? 'journal' : 'typed', q: prompt, part: inp.getAttribute('data-section') || partOf(inp), value: inp.value,
                  checks: prev.checks || 0, gotIt: prev.gotIt || false, model: inp.getAttribute('data-model') || undefined };
-      if (key) { it.answer = key; it.correct = norm(inp.value) === norm(key); }
+      if (key) { var alts = key.split(' || '); it.answer = alts[0]; it.correct = alts.some(function (k) { return norm(inp.value) === norm(k); }); }   // A || B = either is right
       state.items[id] = it; save(); gather(); if (typeof updateLocks === 'function') updateLocks();
     }
     if (state.items[id] && state.items[id].value && !inp.value) inp.value = state.items[id].value;   // restore
