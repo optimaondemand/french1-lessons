@@ -154,6 +154,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -173,6 +176,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -311,8 +317,8 @@
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Drill the words with the Vocabulaire page</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <strong>Module 4 Vocabulaire</strong> study page (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own paper or digital cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <a href="vocabulaire-m04.html" target="_blank" rel="noopener"><strong>Module 4 Vocabulaire</strong> study page</a> (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own digital flash cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
     </div>
 
     <!-- PART 1 · Carte de France -->
@@ -326,7 +332,7 @@
             <li><strong>Explorer mode:</strong> hover and click to learn the <strong>13 metropolitan regions</strong> &mdash; &Icirc;le-de-France, Auvergne-Rh&ocirc;ne-Alpes, Nouvelle-Aquitaine, and the rest.</li>
             <li><strong>Quiz mode:</strong> timed click-to-find. Your score, errors, and time are shown &mdash; restart as often as you like.</li>
             <li><strong>Tie-in:</strong> trace a possible <em>Tour de France</em> route across the regions you've learned &mdash; the mountains of the Alps and Pyrenees are where the race is really won.</li>
-            <li>Mastering all 13 feeds the <strong>once-per-semester Carte extra-credit challenge</strong> in the capstone module.</li>
+            <li>Mastering all 13 prepares you for the <strong>Carte de France extra-credit challenge</strong> in Module 10, the final review.</li>
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
@@ -406,7 +412,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }

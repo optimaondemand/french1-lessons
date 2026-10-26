@@ -15,6 +15,16 @@ All public domain, via Wikimedia Commons. Files in `s2/m03/img/`.
 | Pierre-Auguste Renoir, *Fruits du Midi* (Fruits of the Midi), 1881, The Art Institute of Chicago | `nm-fruits-midi.jpg` | https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Fruits_of_the_Midi_-_1933.1176_-_Art_Institute_of_Chicago.jpg |
 | Paul Cézanne, *Pommes et oranges* (Still Life with Apples and Oranges), c. 1899, Musée d'Orsay | `nm-pommes-oranges.jpg` (also `m3-large.jpg`) | the Module 3 painting (see the module opener) |
 
+## Paintings (Semester 2, Module 4 · game *Qu’est-ce qu’ils ont fait ?*, Lesson 4.03)
+
+All public domain, via Wikimedia Commons. Files in `s2/m04/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Georges Seurat, *Une baignade, Asnières* (Bathers at Asnières), 1884, The National Gallery, London | `tl-baignade.jpg` | https://commons.wikimedia.org/wiki/File:Baigneurs_a_Asnieres.jpg |
+| Pierre-Auguste Renoir, *Bal du moulin de la Galette* (Dance at Le Moulin de la Galette), 1876, Musée d’Orsay | `tl-moulin.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg |
+| Georges Seurat, *Un dimanche après-midi à l’île de la Grande Jatte* (A Sunday on La Grande Jatte), 1884–1886, The Art Institute of Chicago | `tl-grande-jatte.jpg` | https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg |
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;

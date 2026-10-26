@@ -138,6 +138,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -157,6 +160,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -199,7 +205,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 4 &middot; Le temps libre</div>
     <div class="pl-where">Lesson 4.03 &middot; Day 3 of 8</div>
     <h1 class="pl-title">Les participes</h1>
-    <div class="pl-sub"><em>-ir</em> Verbs &amp; the Irregulars &middot; about 50 minutes</div>
+    <div class="pl-sub"><em>-ir</em> Verbs &amp; the Irregulars &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Georges Seurat, <em>Un dimanche apr&egrave;s-midi &agrave; l&rsquo;&icirc;le de la Grande Jatte</em> (<em>A Sunday Afternoon on the Island of La Grande Jatte</em>), 1884&ndash;86</div>
@@ -230,7 +236,7 @@
 
     <!-- PART 1 · -ir participles -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">I</span><span>LES VERBES EN -IR</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">I</span><span>LES VERBES EN -IR</span><span class="pill-time">8 min</span></div>
         <h3 class="pl-h3">Regular <em>-ir</em> verbs take <em>-i</em></h3>
         <div class="rule-box"><strong>Rule.</strong> A regular <em>-ir</em> verb drops <em>-ir</em> and adds <strong>-i</strong>: <em>finir &rarr; fini</em>, <em>choisir</em> (to choose) &rarr; <em>choisi</em>. The helping verb is still avoir: <em>nous avons fini</em> = we finished. <em>nos</em> (our, plural): <em>nos devoirs</em> = our homework.</div>
         <ul class="vocab-list">
@@ -254,11 +260,100 @@
         <ul class="vocab-list">
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m4-jai-fait.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">J'ai fait du sport ce week-end.</span><span class="v-en">I did sports this weekend.</span></li>
         </ul>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 6px 0;"><strong>Quel participe&nbsp;?</strong> -&eacute;, -i, or one of the three you just memorized? Instant feedback &mdash; practice, not a grade.</p>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 1</div>
+            <div class="widget-question">The past participle of <em>choisir</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! -ir &rarr; -i: choisi.">choisi</button>
+                <button data-no="Not quite &mdash; -&eacute; is for -er verbs; choisir is an -ir verb.">choisé</button>
+                <button data-no="That is the infinitive.">choisir</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 2</div>
+            <div class="widget-question">The past participle of <em>voir</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="voir is irregular: vu.">voi</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! voir &rarr; vu.">vu</button>
+                <button data-no="voir is irregular: vu.">voy&eacute;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 3</div>
+            <div class="widget-question">The past participle of <em>prendre</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="prendre is irregular: pris.">prendu</button>
+                <button data-no="prendre is irregular: pris.">prend&eacute;</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! prendre &rarr; pris.">pris</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">The past participle of <em>faire</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! faire &rarr; fait (the t is silent).">fait</button>
+                <button data-no="faire is irregular: fait.">fair&eacute;</button>
+                <button data-no="Close &mdash; it is fait, with a silent t.">fai</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">The past participle of <em>finir</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; finir is an -ir verb: fini.">fin&eacute;</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! -ir &rarr; -i.">fini</button>
+                <button data-no="Not quite &mdash; finir &rarr; fini.">finu</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">The past participle of <em>jouer</em> is&hellip;</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; jouer is an -er verb: jou&eacute;.">joui</button>
+                <button data-no="That is the infinitive.">jouer</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! -er &rarr; -&eacute;.">jou&eacute;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Hier soir, j&rsquo;ai ______ un film. (voir)</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! j&rsquo;ai vu un film.">vu</button>
+                <button data-no="After avoir, use the participle: vu.">voir</button>
+                <button data-no="voir is irregular: vu.">voy&eacute;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Nous avons ______ le bus. (prendre)</div>
+            <div class="widget-options">
+                <button data-no="After avoir, use the participle: pris.">prendre</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! nous avons pris le bus.">pris</button>
+                <button data-no="prendre is irregular: pris.">prendu</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 3 · Full table -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>LE TABLEAU COMPLET &mdash; JOUER</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>LE TABLEAU COMPLET &mdash; JOUER</span><span class="pill-time">8 min</span></div>
         <h3 class="pl-h3">All six persons, one verb</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 4px 0;">This is the model for every verb in the pass&eacute; compos&eacute;: only the <strong>avoir</strong> part moves; the participle stays fixed. Read each row aloud.</p>
         <table class="gtable">
@@ -275,13 +370,19 @@
     </div>
 
     <!-- PART 4 · commit-then-reveal -->
+    <!-- GAME · Qu’est-ce qu’ils ont fait ? -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
+        <div data-naturemorte='{"title": "Qu’est-ce qu’ils ont fait&amp;nbsp;?", "kicker": "Joue &amp;middot; Practice game, not graded", "audioBase": "../../audio/", "intro": "Three French paintings of <em>le temps libre</em>, in black and white. Listen to what the people <strong>did</strong>, in the passé composé, and tap who did it. Listen for <em>il a / elle a</em> (one person) or <em>ils ont</em> (a group).", "text": {"ask": "&amp;Eacute;coute&amp;nbsp;: qui a fait &amp;ccedil;a&amp;nbsp;?", "askEn": "Listen, then tap who did it. <em>il a / elle a</em> = one person; <em>ils ont</em> = a group.", "show": "Show me the sentence", "find": "Qui&amp;nbsp;?", "shown": "The sentence is shown above.", "notThere": "Not there. Press &amp;#128266; to hear the sentence again: one person or a group?", "unit": "phrases", "unitEn": "sentences", "end": "Bravo&amp;nbsp;!", "again": "Click a sentence to hear it again.", "other": "Not them: there, <b lang=\"fr\">{fr}</b> <em>{en}</em> Listen again: one person or a group?", "right": "<b lang=\"fr\">{fr}</b> <em>{en}</em>"}, "rounds": [{"img": "img/tl-baignade.jpg", "painter": "Georges Seurat", "life": "1859–1891", "title": "Une baignade, Asnières", "title_en": "Bathers at Asnières", "meta": "1884 · huile sur toile · The National Gallery, London", "alt": "Georges Seurat, Une baignade, Asnières: young men resting on a grassy riverbank, two boys swimming in the Seine, a rowing boat behind", "items": [{"id": "sport", "fr": "Ils ont fait du sport.", "en": "They did sports.", "audio": "grammar/s2m4-tl-ils-ont-fait-du-sport.mp3", "shapes": [[1015, 355, 100, 28], [1245, 350, 45, 18]], "tag": [1010, 300]}, {"id": "nage", "fr": "Ils ont nagé.", "en": "They swam.", "audio": "grammar/s2m4-tl-ils-ont-nage.mp3", "shapes": [[885, 500, 62, 62], [1165, 600, 92, 140]], "tag": [1010, 720]}, {"id": "regarde", "fr": "Un homme a regardé l’eau.", "en": "A man looked at the water.", "audio": "grammar/s2m4-tl-homme-regarde-eau.mp3", "shapes": [[715, 470, 115, 190], [175, 395, 110, 120]], "tag": [700, 250]}], "w": 1280, "h": 849}, {"img": "img/tl-moulin.jpg", "painter": "Pierre-Auguste Renoir", "life": "1841–1919", "title": "Bal du moulin de la Galette", "title_en": "Dance at Le Moulin de la Galette", "meta": "1876 · huile sur toile · Musée d’Orsay, Paris", "alt": "Pierre-Auguste Renoir, Bal du moulin de la Galette: a crowded open-air dance in Paris, couples dancing on the left, friends talking at tables in the front", "items": [{"id": "danse", "fr": "Ils ont dansé.", "en": "They danced.", "audio": "grammar/s2m4-tl-ils-ont-danse.mp3", "shapes": [[235, 490, 120, 240], [430, 380, 75, 170], [75, 380, 60, 150]], "tag": [235, 215]}, {"id": "parle", "fr": "Ils ont parlé.", "en": "They talked.", "audio": "grammar/s2m4-tl-ils-ont-parle.mp3", "shapes": [[640, 560, 170, 190], [1160, 480, 120, 150]], "tag": [990, 870]}], "w": 1280, "h": 951}, {"img": "img/tl-grande-jatte.jpg", "painter": "Georges Seurat", "life": "1859–1891", "title": "Un dimanche après-midi à l’île de la Grande Jatte", "title_en": "A Sunday on La Grande Jatte", "meta": "1884–1886 · huile sur toile · The Art Institute of Chicago", "alt": "Georges Seurat, A Sunday on La Grande Jatte: Parisians on a sunny riverbank, a girl running, a little dog, rowers on the Seine", "items": [{"id": "sport2", "fr": "Ils ont fait du sport.", "en": "They did sports.", "audio": "grammar/s2m4-tl-ils-ont-fait-du-sport.mp3", "shapes": [[300, 240, 95, 20]], "tag": [300, 200]}, {"id": "fille", "fr": "Une fille a joué.", "en": "A girl played.", "audio": "grammar/s2m4-tl-fille-a-joue.mp3", "shapes": [[910, 300, 40, 60]], "tag": [910, 225]}, {"id": "chien", "fr": "Un petit chien a joué.", "en": "A little dog played.", "audio": "grammar/s2m4-tl-chien-a-joue.mp3", "shapes": [[850, 742, 62, 40]], "tag": [850, 680]}], "w": 1280, "h": 852}]}'></div>
+    </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">IV</span><span>&Agrave; TON TOUR</span><span class="pill-time">8 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Now conjugate <strong>faire</strong> (participle <em>fait</em>) in the pass&eacute; compos&eacute;, through all six persons &mdash; on paper or in your head. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Now conjugate <strong>faire</strong> (participle <em>fait</em>) in the pass&eacute; compos&eacute;, through all six persons: type each form and press <strong>Check</strong>. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
+        <div style="background:#FBF6EA;border:1px solid #E5D3A8;border-left:5px solid #C7922C;border-radius:6px;padding:12px 16px;margin:4px 0 12px;font-size:16px;color:#1a2340;line-height:1.6;"><strong>Remember: two pieces every time.</strong> The right form of <strong>avoir</strong> + the participle <strong><em>fait</em></strong>.<br><span style="font-size:17px;">j&rsquo;ai &middot; tu as &middot; il / elle / on a &middot; nous avons &middot; vous avez &middot; ils / elles ont</span><br>So next to <em>je</em>, type <em>ai fait</em> (or the whole form, <em>j&rsquo;ai fait</em>); next to <em>nous</em>, type <em>avons fait</em>.</div>
         <div class="optima-widget">
             <div class="widget-kicker">&#129504; CONJUGATE &middot; faire (pass&eacute; compos&eacute;)</div>
             <div class="widget-question">Write all six forms of <em>faire</em> in the past, then reveal.</div>
-            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">je</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="ai fait" aria-label="je" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">tu</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="as fait" aria-label="tu" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">il / elle / on</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="a fait" aria-label="il / elle / on" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">nous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="avons fait" aria-label="nous" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">vous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="avez fait" aria-label="vous" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">ils / elles</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="ont fait" aria-label="ils / elles" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">je</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="ai fait || j&#x27;ai fait" aria-label="je" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">tu</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="as fait || tu as fait" aria-label="tu" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">il / elle / on</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="a fait || il a fait || elle a fait || on a fait" aria-label="il / elle / on" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">nous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="avons fait || nous avons fait" aria-label="nous" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">vous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="avez fait || vous avez fait" aria-label="vous" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">ils / elles</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l4-03-r1" data-answer="ont fait || ils ont fait || elles ont fait" aria-label="ils / elles" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
             <button class="reveal-btn" data-mw-gate="l4-03-r1">Reveal the answer</button>
             <div class="reveal-body">
                 <table class="gtable" style="margin-top:0;">
@@ -611,7 +712,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -732,7 +837,24 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="naturemorte.js?v=7de1aceb"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>

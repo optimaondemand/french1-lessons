@@ -135,15 +135,16 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
   Game.prototype.ask = function () {
     var it = this.cur = this.order[this.ii], self = this; this.tries = 0; this.locked = false; this.shown = false;
     this.ring.style.display = 'none'; this.progress();
-    this.q.innerHTML = '<div>&Eacute;coute et trouve-le dans le tableau.</div><div style="font-size:14px;color:var(--muted)">Listen, then tap that food in the painting.</div>';
-    var sb = el('button', 'nm-show', 'Show me the word'); sb.type = 'button'; sb.addEventListener('click', function () { self.reveal(); }); this.q.appendChild(sb);
+    var T = this.cfg.text || {};   // optional wording per game (La nature morte = foods; Module 4 = who did what)
+    this.q.innerHTML = '<div>' + (T.ask || '&Eacute;coute et trouve-le dans le tableau.') + '</div><div style="font-size:14px;color:var(--muted)">' + (T.askEn || 'Listen, then tap that food in the painting.') + '</div>';
+    var sb = el('button', 'nm-show', T.show || 'Show me the word'); sb.type = 'button'; sb.addEventListener('click', function () { self.reveal(); }); this.q.appendChild(sb);
     this.fb.className = 'nm-fb'; this.fb.innerHTML = '';
     this.sayBtn.setAttribute('aria-label', 'Écouter le mot');
     setTimeout(function () { self.play(it.audio); }, 450);
   };
   Game.prototype.reveal = function () {
     if (this.shown) return; this.shown = true; var it = this.cur;
-    this.q.innerHTML = '<div>Trouve <b lang="fr">' + it.fr + '</b></div><div style="font-size:14px;color:var(--muted)">(' + it.en + ')</div>';
+    this.q.innerHTML = '<div>' + ((this.cfg.text || {}).find || 'Trouve') + ' <b lang="fr">' + it.fr + '</b></div><div style="font-size:14px;color:var(--muted)">(' + it.en + ')</div>';
   };
   Game.prototype.tap = function (e) {
     if (this.locked || this.card.hidden) return;
@@ -154,9 +155,9 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
     if (owner === it) { this.right(); return; }
     this.tries++; thud();
     var other = owner && this.doneRound.indexOf(owner) < 0 ? owner : (owner || null), msg;
-    if (other) { msg = '&Ccedil;a, c&rsquo;est <b lang="fr">' + other.fr + '</b> (' + other.en + '). Listen again: you are looking for something else.'; var cur = it, oa = other.audio; setTimeout(function () { if (self.cur === cur) self.play(oa); }, 600); setTimeout(function () { if (self.cur === cur) self.play(cur.audio); }, 2300); }
-    else msg = 'Not there. Press &#128266; to hear the word again, then look at the painting.';
-    if (this.tries >= 2) { this.reveal(); msg += ' The word is shown above.'; }
+    if (other) { var TT = this.cfg.text || {}; msg = (TT.other || '&Ccedil;a, c&rsquo;est <b lang="fr">{fr}</b> ({en}). Listen again: you are looking for something else.').replace('{fr}', other.fr).replace('{en}', other.en); var cur = it, oa = other.audio; setTimeout(function () { if (self.cur === cur) self.play(oa); }, 600); setTimeout(function () { if (self.cur === cur) self.play(cur.audio); }, 2300); }
+    else msg = (this.cfg.text || {}).notThere || 'Not there. Press &#128266; to hear the word again, then look at the painting.';
+    if (this.tries >= 2) { this.reveal(); msg += ' ' + ((this.cfg.text || {}).shown || 'The word is shown above.'); }
     if (this.tries >= 3) { var s = it.shapes[0]; this.ring.setAttribute('cx', s[0]); this.ring.setAttribute('cy', s[1]); this.ring.setAttribute('rx', s[2]); this.ring.setAttribute('ry', s[3]); this.ring.style.display = ''; msg = 'It is inside the gold ring. Tap it.'; }
     this.fb.className = 'nm-fb no'; this.fb.innerHTML = msg;
   };
@@ -166,7 +167,7 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
     chime(); this.revs[it.id].classList.add('on'); this.reveal();
     var tag = el('div', 'nm-tag', '<span lang="fr">' + it.fr + '</span><small>' + it.en + '</small>');
     tag.style.left = (it.tag[0] / R.w * 100) + '%'; tag.style.top = (it.tag[1] / R.h * 100) + '%'; this.stage.appendChild(tag);
-    this.fb.className = 'nm-fb ok'; this.fb.innerHTML = (this.tries === 0 ? 'Bravo&nbsp;! ' : 'Oui&nbsp;! ') + '<b lang="fr">' + it.fr + '</b>: ' + it.en + '.';
+    this.fb.className = 'nm-fb ok'; this.fb.innerHTML = (this.tries === 0 ? 'Bravo&nbsp;! ' : 'Oui&nbsp;! ') + ((this.cfg.text || {}).right || '<b lang="fr">{fr}</b>: {en}.').replace('{fr}', it.fr).replace('{en}', it.en);
     setTimeout(function () { self.play(it.audio); }, 850);   // after the accordion flourish, never on top of it
     this.doneRound.push(it); this.found.push(it); this.progress();
     setTimeout(function () { self.next(); }, 2000);
@@ -187,14 +188,15 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
   Game.prototype.finish = function () {
     var self = this, n = this.total; this.card.hidden = true;
     var seen = {}, words = this.found.filter(function (w) { if (seen[w.fr]) return false; seen[w.fr] = 1; return true; });
-    this.end.innerHTML = '<div class="nm-kick">' + this.cfg.rounds.length + ' tableaux &middot; ' + n + ' aliments</div><h3>Bon app&eacute;tit&nbsp;!</h3>' +
-      '<p><strong>' + this.first + ' of ' + n + '</strong> found on the first tap. Click a word to hear it again.</p><div class="nm-words"></div>' +
+    var T = this.cfg.text || {};
+    this.end.innerHTML = '<div class="nm-kick">' + this.cfg.rounds.length + ' tableaux &middot; ' + n + ' ' + (T.unit || 'aliments') + '</div><h3>' + (T.end || 'Bon app&eacute;tit&nbsp;!') + '</h3>' +
+      '<p><strong>' + this.first + ' of ' + n + '</strong> found on the first tap. ' + (T.again || 'Click a word to hear it again.') + '</p><div class="nm-words"></div>' +
       '<button class="nm-btn" type="button">Rejouer &middot; Play again</button>';
     var box = this.end.querySelector('.nm-words');
     words.forEach(function (w) { var b = el('button', 'nm-word', '&#128266; <span lang="fr">' + w.fr + '</span> <small>' + w.en + '</small>'); b.type = 'button'; b.addEventListener('click', function () { self.play(w.audio); }); box.appendChild(b); });
     this.end.querySelector('.nm-btn:last-child').addEventListener('click', function () { self.start(); self.top(); });
     this.end.hidden = false; finale();
-    try { window.dispatchEvent(new CustomEvent('mw-game', { detail: { name: this.cfg.title, done: true, summary: 'Found all ' + n + ' foods in ' + this.cfg.rounds.length + ' paintings; ' + this.first + ' of ' + n + ' on the first tap.' } })); } catch (e) {}
+    try { window.dispatchEvent(new CustomEvent('mw-game', { detail: { name: this.cfg.title, done: true, summary: 'Found all ' + n + ' ' + (T.unitEn || 'foods') + ' in ' + this.cfg.rounds.length + ' paintings; ' + this.first + ' of ' + n + ' on the first tap.' } })); } catch (e) {}
   };
   Game.prototype.play = function (src) { if (!src) return; try { this.player.pause(); this.player.src = this.base + src; this.player.play().catch(function () {}); } catch (e) {} };
 

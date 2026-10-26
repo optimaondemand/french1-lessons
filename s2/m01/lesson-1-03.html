@@ -142,6 +142,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -161,6 +164,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -544,7 +550,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }

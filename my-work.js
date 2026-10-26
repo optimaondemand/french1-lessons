@@ -120,11 +120,11 @@
       inp.insertAdjacentElement('afterend', fb); inp.insertAdjacentElement('afterend', chk);
       var show = function () {
         var it = state.items[id]; if (!it || !it.checks) { fb.textContent = ''; return; }
-        if (it.gotIt) { fb.style.color = '#2f6b3a'; fb.textContent = '✓ Correct!'; }
-        else { fb.style.color = '#b3382c'; fb.textContent = it.checks >= 2 ? '✗ Not yet — you can reveal the answer now.' : '✗ Not yet — check your spelling and accents, then try again (1 of 2).'; }
+        if (it.gotIt) { fb.style.color = '#1e8a3c'; fb.style.fontWeight = '800'; fb.style.fontSize = '16px'; fb.textContent = '✓ Correct!'; }   // green and bold (David 2026-10-26)
+        else { fb.style.fontWeight = '400'; fb.style.fontSize = '14px'; fb.style.color = '#b3382c'; fb.textContent = it.checks >= 2 ? '✗ Not yet — you can reveal the answer now.' : '✗ Not yet — check your spelling and accents, then try again (1 of 2).'; }
       };
       chk.addEventListener('click', function () {
-        if (!inp.value.trim()) { fb.style.color = '#5b6672'; fb.textContent = 'Type your answer first.'; return; }
+        if (!inp.value.trim()) { fb.style.fontWeight = '400'; fb.style.fontSize = '14px'; fb.style.color = '#5b6672'; fb.textContent = 'Type your answer first.'; return; }
         record();
         var it = state.items[id];
         if (!it.gotIt) { it.checks = (it.checks || 0) + 1; if (it.correct) it.gotIt = true; }
