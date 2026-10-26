@@ -114,10 +114,10 @@
     "passe_compose": [
      "suis allé(e)",
      "es allé(e)",
-     "est allé",
+     "est allé(e)",
      "sommes allé(e)s",
      "êtes allé(e)(s)",
-     "sont allé"
+     "sont allé(e)s"
     ]
    }
   },
@@ -137,10 +137,10 @@
     "passe_compose": [
      "suis arrivé(e)",
      "es arrivé(e)",
-     "est arrivé",
+     "est arrivé(e)",
      "sommes arrivé(e)s",
      "êtes arrivé(e)(s)",
-     "sont arrivé"
+     "sont arrivé(e)s"
     ]
    }
   },
@@ -167,10 +167,10 @@
     "passe_compose": [
      "suis descendu(e)",
      "es descendu(e)",
-     "est descendu",
+     "est descendu(e)",
      "sommes descendu(e)s",
      "êtes descendu(e)(s)",
-     "sont descendu"
+     "sont descendu(e)s"
     ]
    }
   },
@@ -190,10 +190,10 @@
     "passe_compose": [
      "suis entré(e)",
      "es entré(e)",
-     "est entré",
+     "est entré(e)",
      "sommes entré(e)s",
      "êtes entré(e)(s)",
-     "sont entré"
+     "sont entré(e)s"
     ]
    }
   },
@@ -251,10 +251,10 @@
     "passe_compose": [
      "suis monté(e)",
      "es monté(e)",
-     "est monté",
+     "est monté(e)",
      "sommes monté(e)s",
      "êtes monté(e)(s)",
-     "sont monté"
+     "sont monté(e)s"
     ]
    }
   },
@@ -266,10 +266,10 @@
     "passe_compose": [
      "suis parti(e)",
      "es parti(e)",
-     "est parti",
+     "est parti(e)",
      "sommes parti(e)s",
      "êtes parti(e)(s)",
-     "sont parti"
+     "sont parti(e)s"
     ]
    }
   },
@@ -304,10 +304,10 @@
     "passe_compose": [
      "suis rentré(e)",
      "es rentré(e)",
-     "est rentré",
+     "est rentré(e)",
      "sommes rentré(e)s",
      "êtes rentré(e)(s)",
-     "sont rentré"
+     "sont rentré(e)s"
     ]
    }
   },
@@ -319,10 +319,10 @@
     "passe_compose": [
      "suis resté(e)",
      "es resté(e)",
-     "est resté",
+     "est resté(e)",
      "sommes resté(e)s",
      "êtes resté(e)(s)",
-     "sont resté"
+     "sont resté(e)s"
     ]
    }
   },
@@ -334,10 +334,10 @@
     "passe_compose": [
      "suis sorti(e)",
      "es sorti(e)",
-     "est sorti",
+     "est sorti(e)",
      "sommes sorti(e)s",
      "êtes sorti(e)(s)",
-     "sont sorti"
+     "sont sorti(e)s"
     ]
    }
   },
@@ -357,10 +357,10 @@
     "passe_compose": [
      "suis tombé(e)",
      "es tombé(e)",
-     "est tombé",
+     "est tombé(e)",
      "sommes tombé(e)s",
      "êtes tombé(e)(s)",
-     "sont tombé"
+     "sont tombé(e)s"
     ]
    }
   }

@@ -145,10 +145,10 @@
     "passe_compose": [
      "suis allé(e)",
      "es allé(e)",
-     "est allé",
+     "est allé(e)",
      "sommes allé(e)s",
      "êtes allé(e)(s)",
-     "sont allé"
+     "sont allé(e)s"
     ],
     "imparfait": [
      "allais",
@@ -168,10 +168,10 @@
     "passe_compose": [
      "suis arrivé(e)",
      "es arrivé(e)",
-     "est arrivé",
+     "est arrivé(e)",
      "sommes arrivé(e)s",
      "êtes arrivé(e)(s)",
-     "sont arrivé"
+     "sont arrivé(e)s"
     ]
    }
   },
