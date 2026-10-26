@@ -81,6 +81,7 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
 .pt-guests.pt-sq button{width:252px;cursor:default}\
 .pt-guests.pt-sq img{width:224px;height:224px;border-radius:2px;border:6px solid #b8892e;box-shadow:0 0 0 8px #3b2a1a,0 6px 14px 8px rgba(40,25,10,.25);margin:8px auto 14px}\
 .pt-guests.pt-sq button:hover img{transform:none}\
+.pt-sqwrap{align-items:center}.pt-sqwrap .pt-fiche{flex:1 1 300px;margin:0}\
 .pt-guests.pt-sq button.on img{border-color:#b8892e;box-shadow:0 0 0 8px #3b2a1a,0 6px 14px 8px rgba(40,25,10,.25)}\
 .pt-guests button.on img{border-color:var(--gold);box-shadow:0 0 0 3px var(--ink)}.pt-guests button.on{color:var(--ink);font-weight:600}\
 .pt-gpick{font-size:16px;margin:0 0 8px}\
@@ -149,8 +150,10 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
       } else {
       main.insertBefore(gp, acc);
       if (cfg.map) { var gw = el('div', 'pt-gwrap'), mf = el('figure', 'pt-map', '<img src="' + cfg.map.img + '" alt="' + cfg.map.alt + '">' + (cfg.map.caption ? '<figcaption>' + cfg.map.caption + '</figcaption>' : ''));
-        gw.appendChild(gs); gw.appendChild(mf); main.insertBefore(gw, acc); } else main.insertBefore(gs, acc);
-      this.fiche = el('div', 'pt-fiche'); this.fiche.hidden = true; main.insertBefore(this.fiche, acc);
+        gw.appendChild(gs); gw.appendChild(mf); main.insertBefore(gw, acc); } else if (cfg.pickFrame !== 'square') main.insertBefore(gs, acc);
+      this.fiche = el('div', 'pt-fiche'); this.fiche.hidden = true;
+      if (!cfg.map && cfg.pickFrame === 'square') { var sw = el('div', 'pt-gwrap pt-sqwrap'); sw.appendChild(gs); sw.appendChild(this.fiche); main.insertBefore(sw, acc); }   // fiche beside the painting
+      else main.insertBefore(this.fiche, acc);
       }
       var saved = null; try { saved = localStorage.getItem(gk); } catch (e) {}
       this.pendingGuest = saved != null && cfg.guests[+saved] ? +saved : cfg.guests.length === 1 ? 0 : null;   // one painting = chosen already

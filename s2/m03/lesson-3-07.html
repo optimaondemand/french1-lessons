@@ -188,6 +188,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -327,8 +330,24 @@
         </div>
 
         <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min &middot; cumulative spiral</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 3 with earlier French: write four sentences that pair the menu with things you already know &mdash; a <strong>price</strong> in euros (<em>le menu co&ucirc;te vingt euros</em> (the menu costs twenty euros)), a <strong>family member</strong> ordering, a <strong>Semester 1 food word</strong>. Interleaving old and new is what makes review actually stick.</div>
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +5 min &middot; cumulative spiral</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 3 with earlier French: a <strong>price</strong> in euros (<em>co&ucirc;te</em> = costs), <strong>family members</strong> ordering, a <strong>Semester 1 food word</strong>. Type each line in French, then press <strong>Check</strong>. Interleaving old and new is what makes review actually stick.</div>
+            <div class="optima-widget">
+                <div class="widget-kicker">&#129504; MODULE 3 + EARLIER FRENCH</div>
+                <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">The menu costs twenty euros.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l3-07-r2" data-answer="Le menu coûte vingt euros" aria-label="The menu costs twenty euros." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">My mother is having some fish.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l3-07-r2" data-answer="Ma mère prend du poisson" aria-label="My mother is having some fish." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">My cousins are having some vegetables.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l3-07-r2" data-answer="Mes cousins prennent des légumes" aria-label="My cousins are having some vegetables." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">I would like a piece of cheese.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l3-07-r2" data-answer="Je voudrais un morceau de fromage" aria-label="I would like a piece of cheese." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <button class="reveal-btn" data-mw-gate="l3-07-r2">Reveal the answer</button>
+                <div class="reveal-body">
+                    <table class="gtable" style="margin-top:0;">
+                        <tbody>
+                        <tr><td>1. Le menu co&ucirc;te vingt euros.</td><td>The menu costs twenty euros.</td></tr>
+                        <tr><td>2. Ma m&egrave;re prend du poisson.</td><td>My mother is having some fish.</td></tr>
+                        <tr><td>3. Mes cousins prennent des l&eacute;gumes.</td><td>My cousins are having some vegetables.</td></tr>
+                        <tr><td>4. Je voudrais un morceau de fromage.</td><td>I would like a piece of cheese.</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:15px;color:#1a2340;margin:8px 0 0 0;">One person: <em>prend</em>; several: <em>prennent</em>. Some fish: <em>du poisson</em>; a piece of: plain <em>de</em>.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -339,7 +358,7 @@
     <!-- PART 3 · recap -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">IV</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 3, and it includes <em>listening</em> items. Tonight, run the <em>prendre</em> table once and listen to any three words on the Vocabulaire page. That's all the prep you need.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 3, and it includes <em>listening</em> items. Tonight, run the <em>prendre</em> table once and listen to any three words on the <a href="vocabulaire-m03.html" target="_blank" rel="noopener"><strong>Module 3 Vocabulaire</strong></a> page. That's all the prep you need.</p>
     </div>
 
     <div class="pl-card">

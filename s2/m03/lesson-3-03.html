@@ -157,6 +157,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -199,7 +202,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 3 &middot; &Agrave; table&nbsp;!</div>
     <div class="pl-where">Lesson 3.03 &middot; Day 3 of 8</div>
     <h1 class="pl-title">Les quantit&eacute;s</h1>
-    <div class="pl-sub">A Slice, a Glass, Enough &middot; about 50 minutes</div>
+    <div class="pl-sub">A Slice, a Glass, Enough &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Paul C&eacute;zanne, <em>Pommes et oranges</em> (<em>Still Life with Apples and Oranges</em>), c. 1899</div>
@@ -290,6 +293,62 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Je voudrais une bouteille ______ eau. &nbsp;<span style="color:#6b7a99;font-size:14px;">(a quantity word, and <em>eau</em> starts with a vowel)</span></div>
+            <div class="widget-options">
+                <button data-no="Close &mdash; after a quantity word the partitive collapses: plain de, and d&rsquo; before a vowel.">de l&rsquo;</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! Quantity word + vowel &rarr; une bouteille d&rsquo;eau.">d&rsquo;</button>
+                <button data-no="Not quite &mdash; after a quantity word: plain de (d&rsquo; before a vowel).">du</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 18px 0 6px 0;"><strong>Items 5&ndash;8: no hint this time.</strong> Ask yourself first: is there a quantity word?</p>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Nous prenons ______ fromage.</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; there is no quantity word, so the partitive: du fromage.">de</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! No quantity word, le fromage is masculine &rarr; du.">du</button>
+                <button data-no="Not quite &mdash; fromage is singular; des is for plurals.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Il y a assez ______ pain.</div>
+            <div class="widget-options">
+                <button data-no="Close &mdash; assez is a quantity word, so plain de.">du</button>
+                <button data-no="Not quite &mdash; assez is a quantity word, so plain de.">des</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! assez = a quantity word &rarr; assez de pain.">de</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Elle prend un morceau ______ g&acirc;teau.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui&nbsp;! un morceau = a quantity word &rarr; plain de.">de</button>
+                <button data-no="Close &mdash; un morceau is a quantity word, so plain de.">du</button>
+                <button data-no="Not quite &mdash; after a quantity word: plain de.">de la</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Tu prends ______ l&eacute;gumes&nbsp;?</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; no quantity word here, so the partitive: des l&eacute;gumes.">de</button>
+                <button data-no="Not quite &mdash; l&eacute;gumes is plural, so des.">du</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! No quantity word, plural &rarr; des.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 3 · Full prendre table -->
@@ -318,7 +377,7 @@
     <!-- PART 4 · commit-then-reveal -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">IV</span><span>&Agrave; TON TOUR</span><span class="pill-time">8 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">On paper or in your head, translate these four orders into French. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Type each one in French and press <strong>Check</strong>. <strong>Commit to an answer first</strong>, then reveal to check. Trying before you see the answer is what makes it stick.</p>
         <div class="optima-widget">
             <div class="widget-kicker">&#129504; TRANSLATE &middot; quantities + prendre</div>
             <div class="widget-question">Write these in French, then reveal: (1) a slice of cake &middot; (2) a glass of water &middot; (3) We'll have some soup &middot; (4) enough bread.</div>

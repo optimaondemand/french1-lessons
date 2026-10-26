@@ -4,6 +4,17 @@
 
 Details from Pierre-Auguste Renoir, *Le Déjeuner des canotiers* (Luncheon of the Boating Party), 1880–1881, The Phillips Collection: public domain, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg). Crops in `s2/m01/img/`.
 
+## Paintings (Semester 2, Module 3 · game *La nature morte*, Lesson 3.02)
+
+All public domain, via Wikimedia Commons. Files in `s2/m03/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Anne Vallayer-Coster, *Still Life with Mackerel*, 1787, Kimbell Art Museum | `nm-maquereaux.jpg` | https://commons.wikimedia.org/wiki/File:Anne_Vallayer-Coster_-_Still_Life_with_Mackerel,_1787.jpg |
+| Paul Cézanne, *Le Pain et les œufs* (Still Life with Bread and Eggs), 1865, Cincinnati Art Museum | `nm-pain-oeufs.jpg` | https://commons.wikimedia.org/wiki/File:Le_pain_et_les_%C5%93ufs,_par_Paul_C%C3%A9zanne.jpg |
+| Pierre-Auguste Renoir, *Fruits du Midi* (Fruits of the Midi), 1881, The Art Institute of Chicago | `nm-fruits-midi.jpg` | https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Fruits_of_the_Midi_-_1933.1176_-_Art_Institute_of_Chicago.jpg |
+| Paul Cézanne, *Pommes et oranges* (Still Life with Apples and Oranges), c. 1899, Musée d'Orsay | `nm-pommes-oranges.jpg` (also `m3-large.jpg`) | the Module 3 painting (see the module opener) |
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;

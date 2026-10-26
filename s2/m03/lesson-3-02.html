@@ -149,6 +149,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -192,7 +195,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 3 &middot; &Agrave; table&nbsp;!</div>
     <div class="pl-where">Lesson 3.02 &middot; Day 2 of 8</div>
     <h1 class="pl-title"><em>Prendre</em> &amp; le partitif</h1>
-    <div class="pl-sub">Ordering &amp; &ldquo;Some&rdquo; &middot; about 50 minutes</div>
+    <div class="pl-sub">Ordering &amp; &ldquo;Some&rdquo; &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Paul C&eacute;zanne, <em>Pommes et oranges</em> (<em>Still Life with Apples and Oranges</em>), c. 1899</div>
@@ -243,13 +246,13 @@
         </ul>
         <div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <strong>Module 3 Vocabulaire</strong> page and mix yesterday's restaurant words with today's quantities. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m03.html" target="_blank" rel="noopener"><strong>Module 3 Vocabulaire</strong> page</a> and mix yesterday's restaurant words with today's quantities. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
         </div>
     </div>
 
     <!-- ===== PART 2 · Grammar: prendre ===== -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>LE VERBE <em>PRENDRE</em></span><span class="pill-time">14 min</span></div>
+        <div class="pl-part"><span class="pl-num">II</span><span>LE VERBE <em>PRENDRE</em></span><span class="pill-time">12 min</span></div>
         <h3 class="pl-h3">The verb you order with</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Prendre</strong> means &ldquo;to take,&rdquo; but at the table it means &ldquo;to have&rdquo; a dish or drink: <em>Je prends une salade.</em> (I'll have a salad.) It's irregular &mdash; the singular forms are easy, but watch the <span style="border-bottom:2px solid #C7922C;">double <strong>n</strong></span> in <em>ils prennent</em>.</p>
 
@@ -327,11 +330,72 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 4</div>
+            <div class="widget-question">Je voudrais ______ eau. &nbsp;<span style="color:#6b7a99;font-size:14px;">(<em>l&rsquo;eau</em> starts with a vowel)</span></div>
+            <div class="widget-options">
+                <button data-no="Close &mdash; eau starts with a vowel, so de la becomes de l&rsquo;.">de la</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! Before a vowel: de l&rsquo;eau.">de l&rsquo;</button>
+                <button data-no="Not quite &mdash; before a vowel it is de l&rsquo;.">du</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 18px 0 6px 0;"><strong>Items 5&ndash;8: no hint this time.</strong> Think of the word&rsquo;s article (<em>le, la, les</em>): it tells you which partitive to use.</p>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Tu prends ______ pain&nbsp;?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! le pain is masculine &rarr; du.">du</button>
+                <button data-no="Not quite &mdash; it is le pain (masculine), so du.">de la</button>
+                <button data-no="Not quite &mdash; pain is singular here; des is for plurals.">des</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Ils prennent ______ viande.</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; it is la viande (feminine), so de la.">du</button>
+                <button data-no="Not quite &mdash; viande is singular; des is for plurals.">des</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! la viande is feminine &rarr; de la.">de la</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Nous prenons ______ fruits.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! fruits ends in -s: plural &rarr; des.">des</button>
+                <button data-no="Not quite &mdash; fruits is plural, so des.">du</button>
+                <button data-no="Not quite &mdash; de l&rsquo; is singular, before a vowel; fruits is plural.">de l&rsquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">Elle prend ______ poisson.</div>
+            <div class="widget-options">
+                <button data-no="Not quite &mdash; it is le poisson (masculine), so du.">de la</button>
+                <button data-correct="1" data-ok="Exact&nbsp;! le poisson is masculine &rarr; du.">du</button>
+                <button data-no="Not quite &mdash; poisson starts with a consonant, so du.">de l&rsquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 1 · by-ear self-quiz -->
+    <!-- GAME · La nature morte -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
+        <div data-naturemorte='{"title": "La nature morte", "kicker": "Joue &amp;middot; Practice game, not graded", "audioBase": "../../audio/", "intro": "Four French <em>natures mortes</em> (still lifes), in black and white. Press &amp;#128266;, listen to the word, then tap that food in the painting: each one you find comes back into colour. Listen for <em>du, de la, des</em>: they are part of the word.", "rounds": [{"img": "img/nm-maquereaux.jpg", "painter": "Anne Vallayer-Coster", "life": "1744–1818", "title": "Still Life with Mackerel", "title_en": "", "meta": "1787 · huile sur toile · Kimbell Art Museum, Fort Worth", "alt": "Anne Vallayer-Coster, Still Life with Mackerel: two mackerel on a white cloth, a bowl of upturned glasses, glass cruets and a round loaf", "items": [{"id": "bouteilles", "fr": "des bouteilles", "en": "some bottles", "audio": "grammar/s2m3-nm-des-bouteilles.mp3", "shapes": [[205, 505, 125, 215]], "tag": [205, 300]}, {"id": "verres", "fr": "des verres", "en": "some glasses", "audio": "grammar/s2m3-nm-des-verres.mp3", "shapes": [[650, 470, 330, 105]], "tag": [650, 345]}, {"id": "pain", "fr": "du pain", "en": "some bread", "audio": "grammar/s2m3-nm-du-pain.mp3", "shapes": [[1045, 640, 140, 120]], "tag": [1045, 495]}, {"id": "poisson", "fr": "du poisson", "en": "some fish", "audio": "grammar/s2m3-nm-du-poisson.mp3", "shapes": [[450, 745, 370, 62], [600, 815, 330, 60]], "tag": [470, 900]}], "w": 1280, "h": 1041}, {"img": "img/nm-pain-oeufs.jpg", "painter": "Paul Cézanne", "life": "1839–1906", "title": "Le Pain et les œufs", "title_en": "Still Life with Bread and Eggs", "meta": "1865 · huile sur toile · Cincinnati Art Museum", "alt": "Paul Cézanne, Le Pain et les œufs: a long loaf of bread on a dark table with a glass, eggs, onions, a knife and a white cloth", "items": [{"id": "verre", "fr": "un verre", "en": "a glass", "audio": "grammar/s2m3-nm-un-verre.mp3", "shapes": [[757, 530, 75, 140]], "tag": [757, 360]}, {"id": "pain2", "fr": "du pain", "en": "some bread", "audio": "grammar/s2m3-nm-du-pain.mp3", "shapes": [[740, 570, 515, 82]], "tag": [420, 470]}], "w": 1280, "h": 994}, {"img": "img/nm-fruits-midi.jpg", "painter": "Pierre-Auguste Renoir", "life": "1841–1919", "title": "Fruits du Midi", "title_en": "Fruits of the Midi", "meta": "1881 · huile sur toile · The Art Institute of Chicago", "alt": "Pierre-Auguste Renoir, Fruits du Midi: pomegranates and lemons in a blue and white dish, with an aubergine, peppers and tomatoes on a white cloth", "items": [{"id": "fruits", "fr": "des fruits", "en": "some fruit", "audio": "grammar/s2m3-nm-des-fruits.mp3", "shapes": [[320, 265, 85, 70], [810, 305, 90, 70], [540, 440, 90, 105], [270, 370, 60, 55], [1070, 555, 105, 90]], "tag": [560, 175]}, {"id": "legumes", "fr": "des légumes", "en": "some vegetables", "audio": "grammar/s2m3-nm-des-legumes.mp3", "shapes": [[235, 665, 145, 75], [415, 705, 130, 85], [550, 765, 65, 50], [680, 770, 70, 100], [850, 650, 80, 85], [805, 800, 60, 55], [1135, 705, 120, 85], [450, 305, 90, 62], [632, 292, 55, 60], [835, 468, 75, 68], [32, 610, 38, 50]], "tag": [330, 870]}, {"id": "assiette", "fr": "une assiette", "en": "a plate", "audio": "grammar/s2m3-nm-une-assiette.mp3", "shapes": [[95, 500, 65, 55], [965, 440, 60, 50], [560, 575, 260, 28]], "tag": [1000, 380]}], "w": 1280, "h": 970}, {"img": "img/nm-pommes-oranges.jpg", "painter": "Paul Cézanne", "life": "1839–1906", "title": "Pommes et oranges", "title_en": "Still Life with Apples and Oranges", "meta": "vers 1899 · huile sur toile · Musée d’Orsay, Paris", "alt": "Paul Cézanne, Pommes et oranges: apples and oranges on white cloths, with a fruit bowl, a plate of apples and a flowered jug", "items": [{"id": "pommes", "fr": "des pommes", "en": "some apples", "audio": "grammar/s2m3-nm-des-pommes.mp3", "shapes": [[395, 312, 68, 45], [405, 402, 72, 48], [325, 400, 45, 40], [545, 420, 52, 52], [775, 290, 45, 42], [945, 300, 40, 38], [232, 316, 42, 38], [325, 345, 38, 28]], "tag": [545, 495]}], "w": 1100, "h": 844}]}'></div>
+    </div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
 
         <div class="optima-widget ow-eval">
@@ -373,7 +437,47 @@
             </div>
             <div class="widget-feedback"></div>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <strong>Module 3 Vocabulaire</strong> page and drill all twenty by ear.</p>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m3-le-serveur.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; le serveur, the waiter.">the waiter</button>
+                <button data-no="That's le restaurant.">the restaurant</button>
+                <button data-no="That's le dessert.">the dessert</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m3-l-entree.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-no="That's le plat principal.">the main course</button>
+                <button data-no="That's le dessert.">the dessert</button>
+                <button data-correct="1" data-ok="Exact &mdash; l'entr&eacute;e, the starter (not the main course!).">the starter</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m3-la-boisson.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; la boisson, the drink.">the drink</button>
+                <button data-no="That's la bouteille.">the bottle</button>
+                <button data-no="That's l'assiette.">the plate</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m3-un-morceau-de.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this expression mean?</div>
+            <div class="widget-options">
+                <button data-no="That's un verre de.">a glass of</button>
+                <button data-correct="1" data-ok="Oui &mdash; un morceau de, a piece of.">a piece of</button>
+                <button data-no="That's assez de.">enough of</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <a href="vocabulaire-m03.html" target="_blank" rel="noopener"><strong>Module 3 Vocabulaire</strong> page</a> and drill all twenty by ear.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -491,7 +595,24 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="naturemorte.js?v=da02723f"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>
