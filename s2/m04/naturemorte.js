@@ -89,7 +89,11 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
   function inShape(s, x, y) { var dx = (x - s[0]) / s[2], dy = (y - s[1]) / s[3]; return dx * dx + dy * dy <= 1; }
   function hit(item, x, y) { return item.shapes.some(function (s) { return inShape(s, x, y); }); }
 
-  function Game(root, cfg) { this.root = root; this.cfg = cfg; this.base = cfg.audioBase || ''; this.player = new Audio(); this.build(); this.start(); }
+  // No sound until the student touches the game (David 2026-10-27: "when I tap to enter 6.03, the French auto-plays"):
+  // the first sentence waits for the 🔊 button or a tap; after that each new sentence plays by itself, as before.
+  function Game(root, cfg) { var self = this; this.root = root; this.cfg = cfg; this.base = cfg.audioBase || ''; this.player = new Audio(); this.armed = false;
+    root.addEventListener('pointerdown', function () { self.armed = true; }, true); root.addEventListener('keydown', function () { self.armed = true; }, true);
+    this.build(); this.start(); }
   Game.prototype.build = function () {
     var c = this.cfg, self = this, r = this.root; r.classList.add('nm');
     var head = el('div', 'nm-head');
@@ -140,7 +144,7 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
     var sb = el('button', 'nm-show', T.show || 'Show me the word'); sb.type = 'button'; sb.addEventListener('click', function () { self.reveal(); }); this.q.appendChild(sb);
     this.fb.className = 'nm-fb'; this.fb.innerHTML = '';
     this.sayBtn.setAttribute('aria-label', 'Écouter le mot');
-    setTimeout(function () { self.play(it.audio); }, 450);
+    if (this.armed) setTimeout(function () { self.play(it.audio); }, 450);
   };
   Game.prototype.reveal = function () {
     if (this.shown) return; this.shown = true; var it = this.cur;

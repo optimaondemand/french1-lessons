@@ -298,3 +298,26 @@
     setTimeout(function () { try { w.focus(); w.print(); } catch (e) {} }, 400);
   });
 })();
+
+/* Accent buttons in the answer boxes' accent rows (David 2026-10-28: "the buttons like we have in the conjugation widget"
+   instead of copy and paste). Click in a box, then a letter: it goes in where you were typing. If no box was clicked yet,
+   the letter goes into the first box of the same activity. */
+(function () {
+  var last = null;
+  function isBox(t) { return t && (t.tagName === 'TEXTAREA' || (t.tagName === 'INPUT' && /^(text|search|)$/.test(t.type || ''))); }
+  document.addEventListener('focusin', function (e) { if (isBox(e.target)) last = e.target; });
+  document.addEventListener('mousedown', function (e) { if (e.target.closest && e.target.closest('.mw-acc button')) e.preventDefault(); });   // keep the cursor in the box
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.mw-acc button'); if (!b) return;
+    var t = last;
+    if (!t || !document.body.contains(t)) {
+      var area = b.closest('.optima-widget, .activity-card, .pl-card, .opt-strip') || b.parentNode.parentNode;
+      t = area && area.querySelector('textarea, input[type="text"]');
+    }
+    if (!t) return;
+    var a = t.selectionStart == null ? t.value.length : t.selectionStart, z = t.selectionEnd == null ? a : t.selectionEnd, ch = b.textContent;
+    t.value = t.value.slice(0, a) + ch + t.value.slice(z);
+    t.focus(); try { t.setSelectionRange(a + ch.length, a + ch.length); } catch (err) {}
+    t.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+})();
