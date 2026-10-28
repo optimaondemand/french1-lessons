@@ -154,6 +154,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -173,6 +176,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -216,7 +222,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 6 &middot; L&rsquo;art et les mus&eacute;es</div>
     <div class="pl-where">Lesson 6.01 &middot; Day 1 of 8</div>
     <h1 class="pl-title">Au mus&eacute;e</h1>
-    <div class="pl-sub">The Language of Art &middot; about 50 minutes</div>
+    <div class="pl-sub">The Language of Art &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Hubert Robert, <em>La Grande Galerie du Louvre</em> (<em>The Grande Galerie of the Louvre</em>), c. 1795</div>
@@ -262,7 +268,7 @@
             <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Headphones or speakers &mdash; today is a listening day.</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your vocabulary notebook or flashcard app.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The <a href="vocabulaire-m06.html" target="_blank" rel="noopener"><strong>Module 6 Vocabulaire</strong> page</a>: flip cards with audio for every word in this module.</div>
         </div>
     </div>
 
@@ -314,11 +320,16 @@
     </div>
 
     <!-- ===== PART 3 · Flashcards ===== -->
+    <!-- PANEL · Dans le tableau -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
+        <div class="pl-tableau"><div class="pl-tlabel">Qu&rsquo;est-ce que c&rsquo;est&nbsp;?</div><p>Three close-ups from Hubert Robert&rsquo;s 1796 design for the Grande Galerie of the Louvre. What does each one show? Choose the word: when you are right, you hear it.</p><div class="pl-vigs big"><figure class="pl-vig" data-mode="choose" data-hint="It is painted on canvas, and an artist is copying it: <em>the painting</em>."><div class="pl-oval"><img src="img/vig-tableau.jpg" alt="Detail from the painting: a painting of a mother and her baby, hanging in the gallery"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button">la sculpture</button><button type="button" data-right>le tableau</button><button type="button">le film</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m6-le-tableau.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="White marble, carved, not painted: <em>the sculpture</em>."><div class="pl-oval"><img src="img/vig-sculpture.jpg" alt="Detail from the painting: a white marble statue of a woman, in a niche"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button" data-right>la sculpture</button><button type="button">le peintre</button><button type="button">le tableau</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m6-la-sculpture.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="He has a brush in his hand and a canvas in front of him: he is not acting in a film. <em>The artist</em>."><div class="pl-oval"><img src="img/vig-artiste.jpg" alt="Detail from the painting: an old man sitting at an easel, painting"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button">l&rsquo;acteur</button><button type="button">la sculpture</button><button type="button" data-right>l&rsquo;artiste</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m6-l-artiste.mp3" aria-label="&Eacute;couter">&#128266;</button></figure></div></div>
+    </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Drill the words with the Vocabulaire page</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <strong>Module 6 Vocabulaire</strong> study page (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own paper or digital cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <a href="vocabulaire-m06.html" target="_blank" rel="noopener"><strong>Module 6 Vocabulaire</strong> study page</a> (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own digital flash cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
     </div>
 
     <!-- PART 1 · Carte de France -->
@@ -331,7 +342,7 @@
         <ul class="fmt">
             <li><strong>Explorer mode:</strong> hover and click to learn the <strong>13 metropolitan regions</strong> &mdash; &Icirc;le-de-France (home to the Louvre and the Mus&eacute;e d&rsquo;Orsay), Auvergne-Rh&ocirc;ne-Alpes, Nouvelle-Aquitaine, and the rest.</li>
             <li><strong>Quiz mode:</strong> timed click-to-find. Your score, errors, and time are shown &mdash; restart as often as you like.</li>
-            <li>This is where you build the geography for the whole course. Mastering all 13 feeds the <strong>once-per-semester Carte extra-credit challenge</strong> in the capstone module.</li>
+            <li>This is where you build the geography for the whole course. Mastering all 13 prepares you for the <strong>Carte de France extra-credit challenge</strong> in Module 10, the final review.</li>
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
@@ -351,7 +362,7 @@
     <!-- Mark as Done (house completion-tracking standard) -->
     <div class="markdone">
         <div class="lbl">&#9989; BEFORE YOU LEAVE</div>
-        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page in Canvas so your progress is recorded. Then make sure you can hear all ten words in your head before Day 2.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Click <strong>&ldquo;Mark as Done&rdquo;</strong> on this page in Canvas so your progress is recorded. Then play the ten words once more on the Vocabulaire page and say each one aloud before Day 2.</div>
     </div>
 
     <!-- Wrap-up -->
@@ -411,7 +422,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -538,5 +553,21 @@
 </script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>

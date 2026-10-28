@@ -37,6 +37,17 @@ All public domain, via Wikimedia Commons. Files in `s2/m05/img/`.
 | Pierre-Auguste Renoir, *Pont-Neuf, Paris*, 1872, National Gallery of Art, Washington (details) | `ev-q-pont.jpg`, `ev-q-bus.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Pont_Neuf,_Paris_-_Google_Art_Project.jpg |
 | Gustave Caillebotte, *Rue de Paris, temps de pluie*, 1877, The Art Institute of Chicago (details; the Module 5 painting) | `ev-q-place.jpg`, `ev-q-pied.jpg`, `ev-m-couple.jpg` | https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg |
 
+## Paintings (Semester 2, Module 6 · picture words, Lesson 6.01; game *Dans la Grande Galerie*, Lesson 6.03; Monet, Lesson 6.05; model memory, Lesson 6.07; *Au revoir, Hubert Robert*, Lesson 6.08)
+
+All public domain, via Wikimedia Commons. Files in `s2/m06/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Hubert Robert, *Projet d’aménagement de la Grande Galerie du Louvre*, 1796, Musée du Louvre (RF 1975-10) (whole painting and close-ups) | `gg-overview.jpg`, `gg-detail1.jpg`, `gg-detail2.jpg`, `vig-tableau.jpg`, `vig-sculpture.jpg`, `vig-artiste.jpg`, `vig-dessinent.jpg` | https://commons.wikimedia.org/wiki/File:Projet_pour_la_Transformation_de_la_Grande_Galerie_-_Hubert_Robert_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1975_10.jpg |
+| Hubert Robert, *Vue imaginaire de la Grande Galerie du Louvre en ruines*, 1796, Musée du Louvre (close-up, cut from inside the frame of a gallery photograph) | `gg-detail3.jpg` | https://commons.wikimedia.org/wiki/File:Vue_de_la_Grande_Galerie_du_Louvre_en_ruine.jpg |
+| Claude Monet, *Impression, soleil levant*, 1872, Musée Marmottan Monet, Paris | `gg-monet-impression.jpg` | https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg |
+| Hubert Robert, *La Grande Galerie du Louvre*, c. 1795 (the Module 6 opener and lesson banners) | `m6-hero.jpg`, `m6-large.jpg` | https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_The_Grande_Galerie_-_WGA19594.jpg |
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;
