@@ -48,6 +48,19 @@ All public domain, via Wikimedia Commons. Files in `s2/m06/img/`.
 | Claude Monet, *Impression, soleil levant*, 1872, Musée Marmottan Monet, Paris | `gg-monet-impression.jpg` | https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg |
 | Hubert Robert, *La Grande Galerie du Louvre*, c. 1795 (the Module 6 opener and lesson banners) | `m6-hero.jpg`, `m6-large.jpg` | https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_The_Grande_Galerie_-_WGA19594.jpg |
 
+## Paintings (Semester 2, Module 7 · picture words, Lesson 7.01; game *Qu’est-ce qu’ils portent ?*, Lesson 7.02; shop questions, Lesson 7.05; model trip, Lesson 7.07; *Au revoir, Renoir*, Lesson 7.08)
+
+All public domain, via Wikimedia Commons. Files in `s2/m07/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Pierre-Auguste Renoir, *Les Parapluies*, c. 1881–86, The National Gallery, London (close-ups) | `cl-detail1.jpg`, `cl-detail2.jpg`, `vig-chapeau.jpg`, `vig-robe.jpg`, `vig-manteau.jpg`, `vig-modele.jpg` | https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir,_The_Umbrellas,_ca._1881-86.jpg |
+| James Tissot, *La Demoiselle de magasin* (The Shop Girl), 1883–85, Art Gallery of Ontario, Toronto (close-up) | `cl-detail3.jpg` | https://commons.wikimedia.org/wiki/File:James_Tissot_-_La_demoiselle_de_magasin_-_Google_Art_Project.jpg |
+| Renoir and Tissot, whole paintings side by side (overview) | `cl-overview.jpg` | the two files above |
+| Edgar Degas, *Chez la modiste* (At the Milliner’s), 1882, pastel, The Museum of Modern Art, New York | `cl-q-modiste.jpg` | https://commons.wikimedia.org/wiki/File:At_the_Milliner%27s-Degas.jpg |
+
+Picture cards for *Le, la ou les ?* (`s2/m07/img/art-*.png`): drawn for this course by Optima Academy Online.
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;

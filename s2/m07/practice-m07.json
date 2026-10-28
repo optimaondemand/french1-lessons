@@ -111,6 +111,14 @@
    "gloss": "to buy",
    "tag": "spelling change",
    "forms": {
+    "present": [
+     "achète",
+     "achètes",
+     "achète",
+     "achetons",
+     "achetez",
+     "achètent"
+    ],
     "passe_compose": [
      "ai acheté",
      "as acheté",
@@ -179,6 +187,14 @@
    "gloss": "to try on",
    "tag": "spelling change",
    "forms": {
+    "present": [
+     "essaie",
+     "essaies",
+     "essaie",
+     "essayons",
+     "essayez",
+     "essaient"
+    ],
     "passe_compose": [
      "ai essayé",
      "as essayé",

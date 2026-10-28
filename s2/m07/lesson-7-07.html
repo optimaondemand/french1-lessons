@@ -106,6 +106,9 @@
     .due-when { font-size: 14px; color: #6b4a4f; }
     .due-foot { font-size: 13.5px !important; color: #6b4a4f !important; font-style: italic; }
     .due-done { color: #2f6b4f !important; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,6 +172,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -188,6 +194,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -265,6 +274,11 @@
         <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 10px 0 0 0;"><strong>Shadow it:</strong> play each clip, pause, and copy the exact rhythm three times. Aim to match the glide of <em>l'</em>, not just the words.</p>
     </div>
 
+    <!-- PANEL · Dans le tableau -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">II</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">3 min</span></div>
+        <div class="pl-tableau"><div class="pl-tlabel">Un mod&egrave;le chez Renoir &middot; <em>A model shopping trip</em></div><p>Before you record, listen to a short shopping trip. It has everything the Speaking Task asks for: clothing and shopping words, pronouns before the verb (one in a negative), and a sentence in the past with agreement. The speaker is a woman. Your own trip is about <strong>your</strong> shopping.</p><div class="pl-model"><div class="pl-oval"><img src="img/vig-modele.jpg" alt="Detail from the painting: a woman in a dark blue fur hat, under an umbrella"></div><div class="pl-mtext"><button class="say" type="button" data-audio="passage/s2m7-modele-shopping.mp3" aria-label="&Eacute;couter le mod&egrave;le">&#128266;</button> Aujourd&rsquo;hui, je fais du shopping avec ma s&oelig;ur. Dans la <mark class="m-bangs">vitrine</mark>, je vois un <mark class="m-bangs">chapeau</mark> bleu. <mark class="m-irr">Je l&rsquo;essaie</mark>&nbsp;: la <mark class="m-bangs">taille</mark> est parfaite&nbsp;! Mais il est tr&egrave;s <mark class="m-bangs">cher</mark>, alors <mark class="m-irr">je ne l&rsquo;ach&egrave;te pas</mark>. Ma s&oelig;ur voit une <mark class="m-bangs">robe</mark> noire. <mark class="m-irr">Elle la trouve</mark> jolie, et <mark class="m-irr">elle l&rsquo;ach&egrave;te</mark>. Et les <mark class="m-bangs">chaussures</mark> rouges&nbsp;? <mark class="m-faire">Je les ai achet&eacute;es</mark> hier&nbsp;!<div class="pl-legend"><span class="m-irr">pronoun before the verb</span><span class="m-faire">the past, with agreement (-es)</span><span class="m-bangs">clothing and shopping words</span></div></div></div></div>
+    </div>
     <!-- PART 2 · Speaking Task -->
     <div class="assess-card">
         <div class="assess-head">
@@ -292,7 +306,7 @@
 
     <!-- PART 3 · Self-review before submit -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>AVANT D'ENVOYER</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>AVANT D'ENVOYER</span><span class="pill-time">12 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Record once, listen back, and check yourself against this list. You may re-record before you submit &mdash; use that buffer.</p>
         <div class="checklist">
             &#9633; I said <strong>6&ndash;8</strong> sentences.<br>
@@ -302,19 +316,16 @@
             &#9633; I used at least five clothing/shopping words.<br>
             &#9633; I can hear my own words clearly on playback.
         </div>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play Julie's paragraph 2 from Lesson 7.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitation of a native model is the fastest route to a French accent.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- PART 3 · table review -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>LE VERBE VOIR, ENCORE UNE FOIS</span><span class="pill-time">13 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">From memory, conjugate <strong>voir</strong> through all six persons. Commit first &mdash; then reveal.</p>
+        <div class="pl-part"><span class="pl-num">IV</span><span>LE VERBE VOIR, ENCORE UNE FOIS</span><span class="pill-time">13 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">From memory, conjugate <strong>voir</strong> through all six persons: type each form and press <strong>Check</strong>. Commit first &mdash; then reveal.</p>
         <div class="optima-widget">
             <div class="widget-kicker">&#129504; CONJUGATE &middot; voir</div>
-            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">je</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="vois" aria-label="je" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">tu</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="vois" aria-label="tu" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">il / elle / on</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voit" aria-label="il / elle / on" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">nous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voyons" aria-label="nous" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">vous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voyez" aria-label="vous" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">ils / elles</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voient" aria-label="ils / elles" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:4px 12px 6px;max-width:560px"><span style="font-size:12px;color:#41506b;font-style:italic">Accents are part of the word. If your keyboard cannot make them, select a character and copy it.</span><span style="display:block;font-size:24px;line-height:1.8;word-spacing:.8em;color:#0E1C42;user-select:text">&agrave; &acirc; &ccedil; &eacute; &egrave; &ecirc; &euml; &icirc; &iuml; &ocirc; &oelig; &ugrave; &ucirc; &uuml;<br>&Agrave; &Ccedil; &Eacute; &Egrave; &Ecirc; &Icirc; &Ocirc; &Ugrave;</span></div>
+            <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">je</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="vois || je vois" aria-label="je" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">tu</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="vois || tu vois" aria-label="tu" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">il / elle / on</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voit || il voit || elle voit || on voit" aria-label="il / elle / on" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">nous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voyons || nous voyons" aria-label="nous" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">vous</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voyez || vous voyez" aria-label="vous" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">ils / elles</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r1" data-answer="voient || ils voient || elles voient" aria-label="ils / elles" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-acc" data-ra-skip style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:5px 12px 8px;max-width:560px"><span style="display:block;font-size:12.5px;color:#41506b;font-style:italic">Accents are part of the word. Click in a box, then click a letter to add it.</span><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&agrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&acirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ccedil;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&eacute;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&egrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ecirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&euml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&icirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&iuml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ocirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&oelig;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ugrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ucirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&uuml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Agrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ccedil;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Eacute;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Egrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ecirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Icirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ocirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ugrave;</button></div>
             <button class="reveal-btn" data-mw-gate="l7-07-r1">Reveal the answer</button>
             <div class="reveal-body">
                 <table class="gtable" style="margin-top:0;">
@@ -328,20 +339,52 @@
             </div>
         </div>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min &middot; cumulative spiral</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 7 with earlier modules: write four sentences that each combine a clothing word with vocabulary you already know &mdash; a color (Lesson 7.02), a family member (Module 3), a leisure activity (Module 6), or the pass&eacute; compos&eacute; (Module 6). Interleaving old and new is what makes review actually stick.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
-
-
-    
-    
-
     <!-- PART 3 · recap -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
+        <div class="pl-part"><span class="pl-num">V</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 7, and it includes <em>past-tense listening</em> items. Tonight, run the <em>voir</em> table once and listen to the pronoun sentences on any lesson page. That's all the prep you need.</p>
+    </div>
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part III &middot; AVANT D'ENVOYER</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play Julie's paragraph 2 from Lesson 7.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitation of a native model is the fastest route to a French accent.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part IV &middot; LE VERBE VOIR, ENCORE UNE FOIS</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min &middot; cumulative spiral</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 7 with earlier modules: four sentences that each combine a clothing word with something you already know &mdash; a family member (Module 1), a colour (Lesson 7.02), the pass&eacute; compos&eacute; with <em>avoir</em> (Module 4) or with <em>&ecirc;tre</em> (Module 5). Type each line in French, then press <strong>Check</strong>. Interleaving old and new is what makes review actually stick.</div>
+            <div class="optima-widget">
+                <div class="widget-kicker">&#129504; LE MODULE 7 + LES AUTRES</div>
+                <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">My mother wears a blue dress.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r2" data-answer="Ma mère porte une robe bleue" aria-label="My mother wears a blue dress." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">My brother wears a black coat.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r2" data-answer="Mon frère porte un manteau noir" aria-label="My brother wears a black coat." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">Yesterday, I bought a red sweater.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r2" data-answer="Hier, j&#x27;ai acheté un pull rouge || Hier j&#x27;ai acheté un pull rouge" aria-label="Yesterday, I bought a red sweater." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">On Saturday, we went to the store. (nous: a mixed group)</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-07-r2" data-answer="Samedi, nous sommes allés au magasin || Samedi nous sommes allés au magasin" aria-label="On Saturday, we went to the store. (nous: a mixed group)" placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-acc" data-ra-skip style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:5px 12px 8px;max-width:560px"><span style="display:block;font-size:12.5px;color:#41506b;font-style:italic">Accents are part of the word. Click in a box, then click a letter to add it.</span><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&agrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&acirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ccedil;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&eacute;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&egrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ecirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&euml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&icirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&iuml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ocirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&oelig;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ugrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ucirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&uuml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Agrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ccedil;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Eacute;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Egrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ecirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Icirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ocirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ugrave;</button></div>
+            <button class="reveal-btn" data-mw-gate="l7-07-r2">Reveal the answer</button>
+                <div class="reveal-body">
+                    <table class="gtable" style="margin-top:0;">
+                        <tbody>
+                        <tr><td>1. Ma m&egrave;re porte une robe bleue.</td><td>My mother wears a blue dress.</td></tr>
+                        <tr><td>2. Mon fr&egrave;re porte un manteau noir.</td><td>My brother wears a black coat.</td></tr>
+                        <tr><td>3. Hier, j&rsquo;ai achet&eacute; un pull rouge.</td><td>Yesterday, I bought a red sweater.</td></tr>
+                        <tr><td>4. Samedi, nous sommes all&eacute;s au magasin.</td><td>On Saturday, we went to the store. (nous: a mixed group)</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:15px;color:#1a2340;margin:8px 0 0 0;">The colour comes after the noun and agrees (<em>une robe bleue, un manteau noir</em>); <em>aller</em> takes &ecirc;tre (<em>nous sommes all&eacute;s</em>).</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part IV &middot; LE VERBE VOIR, ENCORE UNE FOIS</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded</div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">One more run of <em>voir</em> before the quiz, then <em>acheter</em> or <em>essayer</em> from the menu. Change the tense too: present or pass&eacute; compos&eacute;?</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm07%2Fpractice-m07.json&amp;verb=voir&amp;tense=present&amp;embed=1" title="Conjugation practice: voir" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    
+        </div>
     </div>
 
     <div class="pl-card">
@@ -434,7 +477,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -546,5 +593,35 @@
 </script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
+</script>
 </body>
 </html>

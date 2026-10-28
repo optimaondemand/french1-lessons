@@ -88,6 +88,9 @@
     .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
     .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
     .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,6 +154,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -170,6 +176,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -213,7 +222,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 7 &middot; La mode et le shopping</div>
     <div class="pl-where">Lesson 7.02 &middot; Day 2 of 8</div>
     <h1 class="pl-title">Le shopping &amp; le pronom COD</h1>
-    <div class="pl-sub">Say It Without Repeating &middot; about 50 minutes</div>
+    <div class="pl-sub">Say It Without Repeating &middot; about 60 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Pierre-Auguste Renoir, <em>Les Parapluies</em> (<em>The Umbrellas</em>), c. 1881&ndash;86</div>
@@ -263,15 +272,17 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m7-la-vitrine.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">la vitrine</span><span class="v-en">the shop window</span></li>
         </ul>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 12px 0 0 0;"><strong>Words to know:</strong> four colors for talking about <em>la couleur</em> &mdash; <em>rouge</em> (red) &middot; <em>bleu / bleue</em> (blue, m. / f.) &middot; <em>noir / noire</em> (black, m. / f.) &middot; <em>blanc / blanche</em> (white, m. / f.). Like most adjectives, a color goes <strong>after</strong> the noun and agrees with it: <em>le pull rouge</em>, <em>la robe bleue</em>, <em>la robe rouge</em> (<em>rouge</em> already ends in -e, so it does not change).</p>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <strong>Module 7 Vocabulaire</strong> page and mix yesterday's clothing words with today's shopping words. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 2 · Grammar Rule 1 ===== -->
+    <!-- GAME · Qu’est-ce qu’ils portent ? -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>LA GRAMMAIRE &mdash; LE PRONOM COD</span><span class="pill-time">17 min</span></div>
+        <div class="pl-part"><span class="pl-num">II</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
+<figure style="margin:0 auto 14px;max-width:760px"><img src="img/cl-overview.jpg" alt="Renoir, The Umbrellas, and Tissot, The Shop Girl, side by side, with close-ups 1, 2 and 3 outlined in gold" style="display:block;width:100%;height:auto;border:6px solid #b8892e;outline:1px solid #e9d39a;outline-offset:-10px"><figcaption style="text-align:center;font-size:14px;color:#5e5a52;margin-top:6px">Left: Pierre-Auguste Renoir, <em lang="fr">Les Parapluies</em>, c. 1881&ndash;86 &middot; The National Gallery, London. Right: James Tissot, <em lang="fr">La Demoiselle de magasin</em>, 1883&ndash;85 &middot; Art Gallery of Ontario, Toronto. The game zooms in on the three areas outlined in gold.</figcaption></figure>        <div data-naturemorte='{"title": "Qu’est-ce qu’ils portent&amp;nbsp;?", "kicker": "Joue &amp;middot; Practice game, not graded", "audioBase": "../../audio/", "intro": "Three close-ups from two Paris paintings: Renoir&amp;rsquo;s <em>Les Parapluies</em> and Tissot&amp;rsquo;s <em>La Demoiselle de magasin</em>. Press &amp;#128266;, listen to a piece of clothing, then tap it: each one you find comes back into colour. Listen to the end: the colour comes <strong>after</strong> the noun (<em>le chapeau noir</em> or <em>le chapeau bleu</em>?).", "text": {"ask": "&amp;Eacute;coute et trouve-le dans le tableau.", "askEn": "Press &amp;#128266;, listen, then tap it in the painting. The colour comes after the noun.", "unit": "mots", "unitEn": "words", "end": "Bravo&amp;nbsp;!", "again": "Click a word to hear it again.", "notThere": "Not there. Press &amp;#128266; to hear it again: which piece of clothing, and which colour?", "other": "That one is <b lang=\"fr\">{fr}</b> ({en}). Listen again: you are looking for something else.", "right": "<b lang=\"fr\">{fr}</b>: {en}."}, "rounds": [{"painter": "Pierre-Auguste Renoir", "life": "1841–1919", "title": "Les Parapluies · Détail 1", "title_en": "The Umbrellas", "meta": "vers 1881–1886 · huile sur toile · The National Gallery, Londres", "img": "img/cl-detail1.jpg", "alt": "Close-up of Renoir, The Umbrellas: Parisians under blue umbrellas, two men in black bowler hats, a woman in a dark blue fur hat and blue coat, a girl in a big cream hat", "items": [{"id": "noir", "fr": "le chapeau noir", "en": "the black hat", "audio": "vocab/s2m7-cl-chapeau-noir.mp3", "shapes": [[100, 372, 92, 55], [432, 372, 56, 30]], "tag": [120, 300]}, {"id": "bleu", "fr": "le chapeau bleu", "en": "the blue hat", "audio": "vocab/s2m7-cl-chapeau-bleu.mp3", "shapes": [[780, 468, 88, 66]], "tag": [780, 380]}, {"id": "grand", "fr": "le grand chapeau", "en": "the big hat", "audio": "vocab/s2m7-cl-grand-chapeau.mp3", "shapes": [[1120, 680, 108, 88]], "tag": [1100, 570]}, {"id": "manteau", "fr": "le manteau bleu", "en": "the blue coat", "audio": "vocab/s2m7-cl-manteau-bleu.mp3", "shapes": [[820, 790, 150, 185]], "tag": [820, 960]}], "w": 1280, "h": 1000}, {"painter": "Pierre-Auguste Renoir", "life": "1841–1919", "title": "Les Parapluies · Détail 2", "title_en": "The Umbrellas", "meta": "vers 1881–1886 · huile sur toile · The National Gallery, Londres", "img": "img/cl-detail2.jpg", "alt": "Close-up of Renoir, The Umbrellas: the long dark dress of a young woman carrying a basket, and a little girl with a hoop in black boots", "items": [{"id": "chaussures", "fr": "les chaussures", "en": "the shoes", "audio": "vocab/s2m7-les-chaussures.mp3", "shapes": [[905, 842, 72, 62], [1010, 890, 62, 62], [1145, 872, 92, 105]], "tag": [1000, 760]}, {"id": "robe", "fr": "la robe", "en": "the dress", "audio": "vocab/s2m7-la-robe.mp3", "shapes": [[285, 600, 265, 390]], "tag": [285, 120]}], "w": 1280, "h": 1013}, {"img": "img/cl-detail3.jpg", "painter": "James Tissot", "life": "1836–1902", "title": "La Demoiselle de magasin · Détail", "title_en": "The Shop Girl", "meta": "1883–1885 · huile sur toile · Art Gallery of Ontario, Toronto", "alt": "Close-up of Tissot, The Shop Girl: a shop girl in a black dress holds the door of a Paris shop; through the shop window, a man in a black top hat and a woman in a red hat; outside, a man in a long pale coat", "items": [{"id": "rouge", "fr": "le chapeau rouge", "en": "the red hat", "audio": "vocab/s2m7-cl-chapeau-rouge.mp3", "shapes": [[652, 356, 46, 40]], "tag": [652, 290]}, {"id": "noir3", "fr": "le chapeau noir", "en": "the black hat", "audio": "vocab/s2m7-cl-chapeau-noir.mp3", "shapes": [[330, 292, 56, 46], [866, 322, 30, 32]], "tag": [330, 225]}, {"id": "blanc", "fr": "le manteau blanc", "en": "the white coat", "audio": "vocab/s2m7-cl-manteau-blanc.mp3", "shapes": [[1125, 645, 52, 235]], "tag": [1090, 420]}, {"id": "robe3", "fr": "la robe noire", "en": "the black dress", "audio": "vocab/s2m7-cl-robe-noire.mp3", "shapes": [[770, 625, 135, 330]], "tag": [770, 520]}, {"id": "vitrine", "fr": "la vitrine", "en": "the shop window", "audio": "vocab/s2m7-la-vitrine.mp3", "shapes": [[420, 320, 190, 125], [1045, 420, 40, 230]], "tag": [470, 210]}], "w": 1280, "h": 956}]}'></div>
+    </div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">III</span><span>LA GRAMMAIRE &mdash; LE PRONOM COD</span><span class="pill-time">17 min</span></div>
         <h3 class="pl-h3">A word that replaces the thing</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>direct object pronoun</strong> (in French, <em>le pronom COD</em>) stands in for a noun you've already named, so you don't repeat it. English does this too: &ldquo;I see the dress &mdash; I love <u>it</u>.&rdquo; The French pronoun you choose must <strong>match the gender and number</strong> of the noun it replaces, and &mdash; here is Rule 1 &mdash; <span style="border-bottom:2px solid #C7922C;">it goes <em>before</em> the verb</span>, not after. In a negative, the pronoun stays glued to the verb, inside <em>ne&hellip;pas</em>: <em>Je ne l'ach&egrave;te pas.</em></p>
 
@@ -295,11 +306,10 @@
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m7-dop-les.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Ces chaussures ? Je <strong>les</strong> ach&egrave;te.</span><span class="v-en">These shoes? I'm buying them.</span></li>
         </ul>
     </div>
-
     <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the pronoun that matches the noun. You get instant feedback &mdash; this is practice, not a grade.</p>
+        <div class="pl-part"><span class="pl-num">IV</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">12 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Eight sentences. Pick the pronoun that matches the noun. You get instant feedback &mdash; this is practice, not a grade.</p>
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
@@ -348,10 +358,55 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">La chemise&nbsp;? Je ______ porte.</div>
+            <div class="widget-options">
+                <button data-no="la chemise is feminine: la.">le</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! la chemise &rarr; je la porte.">la</button>
+                <button data-no="One shirt: singular, not les.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Les v&ecirc;tements&nbsp;? Je ______ ach&egrave;te.</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! plural &rarr; les. Hear the liaison: je les_ach&egrave;te.">les</button>
+                <button data-no="les v&ecirc;tements is plural: les.">le</button>
+                <button data-no="l&rsquo; is singular; les v&ecirc;tements is plural.">l&rsquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Le pull&nbsp;? Je ne ______ porte pas.</div>
+            <div class="widget-options">
+                <button data-no="le pull is masculine: le.">la</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! ne + le + porte + pas: je ne le porte pas.">le</button>
+                <button data-no="One sweater: le.">les</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">La robe&nbsp;? Je ______ essaie.</div>
+            <div class="widget-options">
+                <button data-no="Before a vowel, la becomes l&rsquo;.">la</button>
+                <button data-no="la robe is feminine, and essaie starts with a vowel: l&rsquo;.">le</button>
+                <button data-correct="1" data-ok="Parfait&nbsp;! la &rarr; l&rsquo; before a vowel: je l&rsquo;essaie.">l&rsquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
     <!-- PART 2 · Vocabulaire — rappel -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">Vocabulaire &mdash; rappel</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -459,6 +514,7 @@
     <!-- PART 3s &middot; &Eacute;cris-le &mdash; orthographe -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">VI</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">&Eacute;cris-le &mdash; orthographe</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -588,6 +644,25 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part I &middot; AU MAGASIN</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m07.html" target="_blank" rel="noopener"><strong>Module 7 Vocabulaire</strong> page</a> and mix yesterday's clothing words with today's shopping words. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part III &middot; LA GRAMMAIRE &mdash; LE PRONOM COD</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded</div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">The spelling change in the present: <em>j&rsquo;ach&egrave;te</em> but <em>nous achetons</em>. Type each form of <em>acheter</em> and press <strong>Enter</strong>, then try <em>essayer</em> (<em>j&rsquo;essaie, nous essayons</em>) from the <strong>Verb</strong> menu.</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm07%2Fpractice-m07.json&amp;verb=acheter&amp;tense=present&amp;embed=1" title="Conjugation practice: acheter" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
@@ -662,7 +737,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -783,7 +862,38 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="naturemorte.js?v=5a8deb05"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
+</script>
 </body>
 </html>

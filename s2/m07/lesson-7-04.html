@@ -93,6 +93,9 @@
     .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
     .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
     .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,6 +159,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -175,6 +181,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -217,7 +226,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 7 &middot; La mode et le shopping</div>
     <div class="pl-where">Lesson 7.04 &middot; Day 4 of 8</div>
     <h1 class="pl-title">Voir &amp; mise en pratique</h1>
-    <div class="pl-sub">See It, Say It &middot; about 50 minutes</div>
+    <div class="pl-sub">See It, Say It &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Pierre-Auguste Renoir, <em>Les Parapluies</em> (<em>The Umbrellas</em>), c. 1881&ndash;86</div>
@@ -268,11 +277,10 @@
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m7-voyons.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Nous voyons beaucoup de v&ecirc;tements dans ce magasin.</span><span class="v-en">We see a lot of clothes in this store. (nous form)</span></li>
         </ul>
     </div>
-
     <!-- PART 2 · Evaluative widget -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>AU MAGASIN &mdash; CHOISIS BIEN</span><span class="pill-time">10 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">You're in the shop. Pick the correct form. Instant feedback &mdash; practice, not a grade.</p>
+        <div class="pl-part"><span class="pl-num">II</span><span>AU MAGASIN &mdash; CHOISIS BIEN</span><span class="pill-time">12 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">You're in the shop. Eight sentences: pick the correct form. Instant feedback &mdash; practice, not a grade.</p>
 
         <div class="optima-widget ow-eval">
             <div class="widget-kicker">&#9998; ITEM 1</div>
@@ -321,17 +329,63 @@
             <div class="widget-feedback"></div>
             <button class="widget-reset">Reset</button>
         </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 5</div>
+            <div class="widget-question">Vous ______ la vitrine&nbsp;? <em>(voir)</em></div>
+            <div class="widget-options">
+                <button data-no="voyons goes with nous; for vous: voyez.">voyons</button>
+                <button data-correct="1" data-ok="Oui&nbsp;! vous voyez, with -oy-.">voyez</button>
+                <button data-no="voit goes with il / elle.">voit</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 6</div>
+            <div class="widget-question">Elle ______ une belle robe. <em>(voir)</em></div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact&nbsp;! elle voit.">voit</button>
+                <button data-no="vois goes with je / tu.">vois</button>
+                <button data-no="voient goes with ils / elles.">voient</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 7</div>
+            <div class="widget-question">Le manteau&nbsp;? Je ne ______ ach&egrave;te pas.</div>
+            <div class="widget-options">
+                <button data-no="Before a vowel, le becomes l&rsquo;.">le</button>
+                <button data-correct="1" data-ok="Voil&agrave;&nbsp;! je ne l&rsquo;ach&egrave;te pas: the pronoun stays inside ne&hellip;pas.">l&rsquo;</button>
+                <button data-no="le manteau is masculine.">la</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div class="optima-widget ow-eval">
+            <div class="widget-kicker">&#9998; ITEM 8</div>
+            <div class="widget-question">La jupe&nbsp;? Je l&rsquo;ai ______. <em>(voir, pass&eacute;)</em></div>
+            <div class="widget-options">
+                <button data-no="la jupe is feminine, and the pronoun comes first: add -e.">vu</button>
+                <button data-no="One skirt: singular, -e only.">vues</button>
+                <button data-correct="1" data-ok="Parfait&nbsp;! la jupe &rarr; je l&rsquo;ai vue.">vue</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
     </div>
 
     <!-- PART 3 · Self-produce -->
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>&Agrave; TOI D'&Eacute;CRIRE</span><span class="pill-time">8 min</span></div>
         <h3 class="pl-h3">Write three sentences about a shopping trip</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In your notebook, write <strong>three</strong> sentences about clothes you like or bought. Use a <strong>direct object pronoun</strong> in each (<em>le, la, l', les</em>), and make at least one in the <strong>past</strong> (<em>je l'ai achet&eacute;e</em>).</p>
-        <div style="background:#F4F9FC;border:1px solid #D0D9E8;border-radius:6px;padding:12px 16px;font-size:16px;color:#1a2340;line-height:1.7;">
-            <strong>Model:</strong> <em>Je vois une belle robe dans la vitrine. Je la trouve jolie, alors je l'essaie. La taille est parfaite &mdash; je l'ai achet&eacute;e&nbsp;!</em><br><strong>Words to know:</strong> <em>alors</em> (so) &middot; <em>parfaite</em> (perfect, f.)
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Write <strong>three</strong> sentences about clothes you like or bought, one in each box: what you see, then a <strong>direct object pronoun</strong> (<em>le, la, l', les</em>) before the verb, and one sentence in the <strong>past</strong> (<em>je l'ai achet&eacute;e</em>). Click a word in the word bank to add it. <strong>Words to know:</strong> <em>alors</em> (so) &middot; <em>parfaite</em> (perfect, f.)</p>
+        <div class="portrait" data-config='{"model": "Je vois une belle robe dans la vitrine. Je la trouve jolie, alors je l’essaie. La taille est parfaite : je l’ai achetée !", "cardTitle": "Mon shopping", "emptyText": "Your shopping trip appears here as you write.", "readyText": "Bravo&nbsp;! Your three sentences are saved in All Your Work: you will reuse them for your Speaking Task on Day 7.", "features": {"pro": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(je|j&#39;|tu|il|elle|on|nous|vous|ils|elles) (ne |n&#39;)?(le |la |les |l&#39;)\\s?[a-zàâçéèêëîïôûùü]+", "label": "a pronoun before the verb", "hint": "Replace the noun with <em>le, la, l&rsquo;</em> or <em>les</em>, right before the verb: <em>je la trouve jolie</em>.", "check": "a pronoun before the verb"}, "pros": {"lemmas": [["porter", "(le |la |les |l&#39;)\\s?port(e|es|ent|ons|ez)"], ["acheter", "(le |la |les |l&#39;)\\s?ach(è|e)t(e|es|ent|ons|ez)"], ["essayer", "(le |la |les |l&#39;)\\s?essa(i|y)(e|es|ent|ons|ez)"], ["voir", "(le |la |les |l&#39;)\\s?vo(is|it|yons|yez|ient)"], ["trouver", "(le |la |les |l&#39;)\\s?trouv(e|es|ent|ons|ez)"], ["aimer", "(le |la |les |l&#39;)\\s?aim(e|es|ent|ons|ez)"], ["adorer", "(le |la |les |l&#39;)\\s?ador(e|es|ent|ons|ez)"], ["regarder", "(le |la |les |l&#39;)\\s?regard(e|es|ent|ons|ez)"], ["acheter (passé)", "(le |la |les |l&#39;)(ai|as|a|avons|avez|ont) achet(é|ée|és|ées)"], ["essayer (passé)", "(le |la |les |l&#39;)(ai|as|a|avons|avez|ont) essay(é|ée|és|ées)"], ["voir (passé)", "(le |la |les |l&#39;)(ai|as|a|avons|avez|ont) vu(e|s|es)?"], ["porter (passé)", "(le |la |les |l&#39;)(ai|as|a|avons|avez|ont) port(é|ée|és|ées)"]], "count": 3, "label": "pronouns with three different verbs", "hint": "Use a pronoun with another verb: <em>je le porte, je l&rsquo;essaie, je les ach&egrave;te, je la vois&hellip;</em>", "check": "pronouns with three different verbs"}, "neg": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(ne|n&#39;) (le |la |les |l&#39;)\\s?[a-zàâçéèêëîïôûùü]+ pas(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "a negative: je ne l’achète pas", "hint": "Make one sentence negative: <em>ne</em> + pronoun + verb + <em>pas</em> (<em>je ne l&rsquo;ach&egrave;te pas</em>).", "check": "a negative with a pronoun"}, "past": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(le |la |les |l&#39;)(ai|as|a|avons|avez|ont) (acheté|achetée|achetés|achetées|essayé|essayée|essayés|essayées|porté|portée|portés|portées|trouvé|trouvée|trouvés|trouvées|aimé|aimée|aimés|aimées|adoré|adorée|adorés|adorées|regardé|regardée|regardés|regardées|vu|vue|vus|vues)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "the past: je l’ai achetée", "hint": "One sentence in the past: the pronoun before <em>ai</em>, and the participle agrees (<em>je l&rsquo;ai achet&eacute;e</em>).", "check": "a past sentence with a pronoun"}, "words": {"lemmas": [["vêtements", "vêtements"], ["chemise", "chemises?"], ["pantalon", "pantalon"], ["robe", "robes?"], ["jupe", "jupes?"], ["manteau", "manteau"], ["chaussures", "chaussures"], ["chapeau", "chapeau"], ["pull", "pull"], ["jean", "jean"], ["magasin", "magasin"], ["taille", "tailles?"], ["couleur", "couleurs?"], ["vitrine", "vitrines?"], ["cher", "cher"], ["chère", "chère"], ["bon marché", "bon marché"]], "count": 5, "label": "clothing and shopping words", "hint": "Use another Module 7 word: <em>la robe, le manteau, la vitrine, la taille, cher&hellip;</em>", "check": "five clothing or shopping words"}, "price": {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(cher|chère|chers|chères|bon marché)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "label": "a price word", "hint": "Say if it was expensive: <em>cher</em>, or cheap: <em>bon march&eacute;</em>.", "check": "a price word (cher / bon marché)"}}, "rules": [{"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(je|j&#39;|tu|il|elle|on|nous|vous|ils|elles) (ne )?(le|la) [aeéèêiouh]", "hint": "Before a vowel, <em>le</em> and <em>la</em> become <em>l&rsquo;</em>: <em>je l&rsquo;essaie, je l&rsquo;ach&egrave;te</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(le|la|les|l&#39;)\\s?ne(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>ne</em> comes first, then the pronoun: <em>je <strong>ne les</strong> ach&egrave;te pas</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))ne [aeéèêiou][a-zàâçéèêëîïôûùü]+ (le|la|les)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "The pronoun goes before the verb, inside <em>ne&hellip;pas</em>: <em>je ne l&rsquo;ach&egrave;te pas</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(ai|as|a|avons|avez|ont) (le|la|les|l&#39;)", "hint": "In the past, the pronoun goes before <em>ai / as / a</em>: <em>je <strong>l&rsquo;ai</strong> achet&eacute;e</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))les (ai|as|a|avons|avez|ont) (acheté|essayé|porté|trouvé|aimé|adoré|regardé|vu)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>les</em> before <em>avoir</em>: the participle agrees, add <em>-s</em> (or <em>-es</em>): <em>je les ai achet&eacute;s</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(nous voions|vous voiez|ils voyent|elles voyent|je voit|tu voit|il vois|elle vois)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>voir</em>: <em>je vois, il voit, nous voyons, vous voyez, ils voient</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(j&#39;|je |tu |il |elle |on |ils |elles )achet(e|es|ent)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "In the present, <em>acheter</em> takes a grave accent: <em>j&rsquo;ach&egrave;te, ils ach&egrave;tent</em> (but <em>nous achetons</em>)."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(nous achètons|vous achètez)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "With <em>nous</em> and <em>vous</em>, no accent: <em>nous achetons, vous achetez</em>."}, {"re": "(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))(j&#39;|je |tu |il |elle |on |ils |elles )essay(e|es|ent)(?:(?<![a-zà-öø-ÿœ])(?=[a-zà-öø-ÿœ])|(?<=[a-zà-öø-ÿœ])(?![a-zà-öø-ÿœ]))", "hint": "<em>essayer</em> in the present: <em>j&rsquo;essaie, il essaie, ils essaient</em> (but <em>nous essayons</em>)."}], "steps": [{"prompt": "What do you <strong>see</strong>? A piece of clothing (and where).", "starters": ["Je vois", "Dans la vitrine, je vois"], "needs": []}, {"prompt": "Now replace it with a <strong>pronoun</strong>, before the verb.", "starters": ["Je la trouve", "Je l’essaie", "Je le porte"], "needs": ["pro"]}, {"prompt": "What happened? One sentence in the <strong>past</strong>, with a pronoun.", "starters": ["Je l’ai", "Je les ai"], "needs": ["past"]}], "checks": ["f:pro", "f:past", "clean"], "bankTitle": "Mots du module · word bank", "bank": [{"title": "Les vêtements &middot; clothes", "items": [["la robe", "", "the dress"], ["la jupe", "", "the skirt"], ["la chemise", "", "the shirt"], ["le pantalon", "", "the pants"], ["le manteau", "", "the coat"], ["le pull", "", "the sweater"], ["le jean", "", "the jeans"], ["le chapeau", "", "the hat"], ["les chaussures", "", "the shoes"]]}, {"title": "Au magasin &middot; shopping", "items": [["le magasin", "", "the store"], ["la vitrine", "", "the shop window"], ["la taille", "", "the size"], ["la couleur", "", "the colour"], ["cher", "chère", "expensive"], ["bon marché", "", "cheap"]]}, {"title": "Couleurs", "note": "after the noun; they agree", "items": [["rouge", "", "red"], ["bleu", "bleue", "blue"], ["noir", "noire", "black"], ["blanc", "blanche", "white"]]}, {"title": "Le pronom &middot; before the verb", "items": [["je le porte", "", "I wear it (m.)"], ["je la trouve jolie", "", "I find it pretty (f.)"], ["je l’essaie", "", "I try it on"], ["je les achète", "", "I buy them"], ["je ne l’achète pas", "", "I don’t buy it"]]}, {"title": "Au passé &middot; the participle agrees", "items": [["je l’ai acheté", "je l’ai achetée", "I bought it (m. / f.)"], ["je les ai achetés", "je les ai achetées", "I bought them"], ["je l’ai vu", "je l’ai vue", "I saw it"], ["je l’ai essayé", "je l’ai essayée", "I tried it on"]]}], "words": {"family": ["père", "mère", "frère", "sœur", "frères", "sœurs", "parents", "grand-père", "grand-mère", "grands-parents", "oncle", "tante", "oncles", "tantes", "cousin", "cousine", "cousins", "cousines", "fils", "fille", "filles", "enfant", "enfants", "aîné", "aînée", "benjamin", "benjamine", "demi-frère", "demi-sœur", "beau-père", "belle-mère", "papa", "maman", "bébé"], "adjectives": [{"forms": ["gentil", "gentille", "gentils", "gentilles"], "masc": ["gentil", "gentils"], "fem": ["gentille", "gentilles"]}, {"forms": ["méchant", "méchante", "méchants", "méchantes"], "masc": ["méchant", "méchants"], "fem": ["méchante", "méchantes"]}, {"forms": ["timide", "timides"]}, {"forms": ["sympathique", "sympathiques", "sympa", "sympas"]}, {"forms": ["drôle", "drôles"]}, {"forms": ["égoïste", "égoïstes"]}, {"forms": ["sérieux", "sérieuse", "sérieuses"], "masc": ["sérieux"], "fem": ["sérieuse", "sérieuses"]}, {"forms": ["paresseux", "paresseuse", "paresseuses"], "masc": ["paresseux"], "fem": ["paresseuse", "paresseuses"]}, {"forms": ["travailleur", "travailleuse", "travailleurs", "travailleuses"], "masc": ["travailleur", "travailleurs"], "fem": ["travailleuse", "travailleuses"]}, {"forms": ["intelligent", "intelligente", "intelligents", "intelligentes"], "masc": ["intelligent", "intelligents"], "fem": ["intelligente", "intelligentes"]}, {"forms": ["généreux", "généreuse", "généreuses"], "masc": ["généreux"], "fem": ["généreuse", "généreuses"]}, {"forms": ["curieux", "curieuse", "curieuses"], "masc": ["curieux"], "fem": ["curieuse", "curieuses"]}, {"forms": ["beau", "bel", "belle", "beaux", "belles"], "masc": ["beau", "bel", "beaux"], "fem": ["belle", "belles"], "irregular": 1, "bangs": 1}, {"forms": ["nouveau", "nouvel", "nouvelle", "nouveaux", "nouvelles"], "masc": ["nouveau", "nouvel", "nouveaux"], "fem": ["nouvelle", "nouvelles"], "irregular": 1, "bangs": 1}, {"forms": ["vieux", "vieil", "vieille", "vieilles"], "masc": ["vieux", "vieil"], "fem": ["vieille", "vieilles"], "irregular": 1, "bangs": 1}, {"forms": ["jeune", "jeunes"], "bangs": 1}, {"forms": ["grand", "grande", "grands", "grandes"], "masc": ["grand", "grands"], "fem": ["grande", "grandes"], "bangs": 1}, {"forms": ["petit", "petite", "petits", "petites"], "masc": ["petit", "petits"], "fem": ["petite", "petites"], "bangs": 1}, {"forms": ["gros", "grosse", "grosses"], "masc": ["gros"], "fem": ["grosse", "grosses"], "bangs": 1}, {"forms": ["bon", "bonne", "bons", "bonnes"], "masc": ["bon", "bons"], "fem": ["bonne", "bonnes"], "bangs": 1}, {"forms": ["mauvais", "mauvaise", "mauvaises"], "masc": ["mauvais"], "fem": ["mauvaise", "mauvaises"], "bangs": 1}, {"forms": ["joli", "jolie", "jolis", "jolies"], "masc": ["joli", "jolis"], "fem": ["jolie", "jolies"], "bangs": 1}, {"forms": ["ensoleillé", "ensoleillée", "ensoleillés", "ensoleillées"]}], "faire": ["fais", "fait", "faisons", "faites", "font", "faire"], "determiners": ["un", "une", "le", "la", "les", "des", "mon", "ma", "mes", "ton", "ta", "tes", "son", "sa", "ses", "notre", "nos", "votre", "vos", "leur", "leurs", "ce", "cet", "cette", "ces"]}, "accents": ["à", "â", "ç", "é", "è", "ê", "ë", "î", "ï", "ô", "œ", "ù", "û", "ü", "À", "Ç", "É", "È", "Ê", "Î", "Ô", "Ù"]}'>
+            <textarea class="journal-box" rows="2" data-section="Mon shopping" data-label="Mon shopping 1 · what I see" data-model="Je vois une belle robe dans la vitrine." aria-label="Mon shopping 1 · what I see"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Mon shopping" data-label="Mon shopping 2 · the pronoun before the verb" data-model="Je la trouve jolie, alors je l’essaie." aria-label="Mon shopping 2 · the pronoun before the verb"></textarea>
+            <textarea class="journal-box" rows="2" data-section="Mon shopping" data-label="Mon shopping 3 · one sentence in the past" data-model="La taille est parfaite : je l’ai achetée !" aria-label="Mon shopping 3 · one sentence in the past"></textarea>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;">Keep these &mdash; you'll reuse them for your Speaking Task on Day 7. Check each sentence: right pronoun, right place, participle agreement in the past.</p>
+        <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;">The coach ticks each rule as you write and suggests a fix when a pronoun, its place or the agreement looks wrong. Keep these sentences: you will reuse them for your Speaking Task on Day 7.</p>
     </div>
 
     <!-- PART 4 · Audio dictation -->
@@ -373,15 +427,13 @@
             <div class="reveal-body"><span class="answer-fr">Nous voyons beaucoup de v&ecirc;tements dans ce magasin.</span></div>
         </div>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Spiral to Module 6 (the pass&eacute; compos&eacute;): write four past sentences about a shopping trip, each with a direct object pronoun. Getting the participle agreement right in the past is the single most common slip &mdash; practice it now, while it's fresh.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- PART 3t &middot; &Eacute;cris la forme &mdash; les pronoms et voir -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">&Eacute;cris la forme &mdash; les pronoms <em>le, la, les</em> et <em>voir</em></div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -498,6 +550,40 @@
         </div>
     </div>
 
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part I &middot; LE VERBE VOIR</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded</div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Practise <em>voir</em>, all six persons: type each form and press <strong>Enter</strong>. Watch the <em>-oy-</em> in <em>nous voyons, vous voyez</em>.</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm07%2Fpractice-m07.json&amp;verb=voir&amp;tense=present&amp;embed=1" title="Conjugation practice: voir" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part IV &middot; LA DICT&Eacute;E</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Spiral to Module 4 (the pass&eacute; compos&eacute; with <em>avoir</em>): four past sentences about a shopping trip, each with a direct object pronoun. Type each line in French, then press <strong>Check</strong>. Getting the participle agreement right in the past is the single most common slip &mdash; practise it now, while it's fresh.</div>
+            <div class="optima-widget">
+                <div class="widget-kicker">&#129504; LE PRONOM AU PASS&Eacute;</div>
+                <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">The coat? I tried it on.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-04-r6" data-answer="Le manteau ? Je l&#x27;ai essayé || Le manteau? Je l&#x27;ai essayé || Je l&#x27;ai essayé" aria-label="The coat? I tried it on." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">The skirt? I bought it.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-04-r6" data-answer="La jupe ? Je l&#x27;ai achetée || La jupe? Je l&#x27;ai achetée || Je l&#x27;ai achetée" aria-label="The skirt? I bought it." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">The shop windows? I saw them.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-04-r6" data-answer="Les vitrines ? Je les ai vues || Les vitrines? Je les ai vues || Je les ai vues" aria-label="The shop windows? I saw them." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">The shoes? I bought them.</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l7-04-r6" data-answer="Les chaussures ? Je les ai achetées || Les chaussures? Je les ai achetées || Je les ai achetées" aria-label="The shoes? I bought them." placeholder="Type it, then press Check" style="width:100%;max-width:520px;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div><div data-mw-added class="mw-acc" data-ra-skip style="margin:6px 0 4px;background:#FFFFFF;border:1px dashed #9FB3CC;border-radius:8px;padding:5px 12px 8px;max-width:560px"><span style="display:block;font-size:12.5px;color:#41506b;font-style:italic">Accents are part of the word. Click in a box, then click a letter to add it.</span><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&agrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&acirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ccedil;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&eacute;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&egrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ecirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&euml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&icirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&iuml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ocirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&oelig;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ugrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&ucirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&uuml;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Agrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ccedil;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Eacute;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Egrave;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ecirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Icirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ocirc;</button><button type="button" style="min-width:34px;font-size:18px;padding:3px 8px;margin:3px 4px 0 0;border:1px solid #b9c4d8;background:#fff;border-radius:5px;cursor:pointer;color:#0E1C42">&Ugrave;</button></div>
+            <button class="reveal-btn" data-mw-gate="l7-04-r6">Reveal the answer</button>
+                <div class="reveal-body">
+                    <table class="gtable" style="margin-top:0;">
+                        <tbody>
+                        <tr><td>1. Le manteau&nbsp;? Je l&rsquo;ai essay&eacute;.</td><td>The coat? I tried it on.</td></tr>
+                        <tr><td>2. La jupe&nbsp;? Je l&rsquo;ai achet&eacute;e.</td><td>The skirt? I bought it.</td></tr>
+                        <tr><td>3. Les vitrines&nbsp;? Je les ai vues.</td><td>The shop windows? I saw them.</td></tr>
+                        <tr><td>4. Les chaussures&nbsp;? Je les ai achet&eacute;es.</td><td>The shoes? I bought them.</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:15px;color:#1a2340;margin:8px 0 0 0;">The pronoun before <em>ai</em>; the participle agrees with it: <em>essay&eacute;</em> (m.), <em>achet&eacute;e</em> (f.), <em>vues</em> and <em>achet&eacute;es</em> (f. pl.).</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
@@ -564,7 +650,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -729,11 +819,26 @@
 })();
 </script>
 <script defer src="https://optimaondemand.github.io/french1-lessons/shared/read-aloud/read-aloud.js?target=fr"></script>
+<script src="../../portrait.js"></script>
 <script>/* reminder strip: show which of the four the student has ticked on the assessment days (same device) */
 (function () { var st = {}; try { st = JSON.parse(localStorage.getItem('optima-fr1-s2-m7-due')) || {}; } catch (e) {}
   [].forEach.call(document.querySelectorAll('.due-chip'), function (c) { c.classList.toggle('on', !!st[c.dataset.key]); }); })();
 </script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Conjugue ! cards: size each drill frame to its page (same site); a different site keeps 900px and scrolls */
+(function () {
+  function fit(f) { try { var b = f.contentDocument && f.contentDocument.querySelector('.shell'); var h = b ? b.getBoundingClientRect().height + 24 : 0; if (h > 300) f.style.height = Math.ceil(h) + 'px'; } catch (e) {} }
+  function watch(f) {
+    if (f._cjw) return; f._cjw = 1; fit(f);
+    try { new ResizeObserver(function () { fit(f); }).observe(f.contentDocument.querySelector('.shell')); } catch (e) {}
+    setTimeout(function () { fit(f); }, 800);
+  }
+  document.querySelectorAll('iframe.conj-frame').forEach(function (f) {
+    f.addEventListener('load', function () { f._cjw = 0; watch(f); });
+    try { if (f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('.shell')) watch(f); } catch (e) {}   // loaded before this script ran
+  });
+})();
+</script>
 </body>
 </html>
