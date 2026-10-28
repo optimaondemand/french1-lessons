@@ -72,6 +72,9 @@
     .due-when { font-size: 14px; color: #6b4a4f; }
     .due-foot { font-size: 13.5px !important; color: #6b4a4f !important; font-style: italic; }
     .due-done { color: #2f6b4f !important; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -235,7 +238,7 @@
 
     <!-- CONJUGUE · aller -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">5 min</span></div>
+        <div class="pl-part"><span class="pl-num">II</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">5 min</span></div>
         <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Warm up before the Grammar Quiz: run two or three verbs from the menu. When every form turns green on the first try, you are ready.</p>
         <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm02%2Fpractice-m02.json&amp;verb=aller&amp;tense=present&amp;embed=1" title="Conjugation practice: aller" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
     </div>
@@ -256,13 +259,13 @@
 
     <!-- PART 3 · review errors -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>R&Eacute;VISE TES ERREURS</span><span class="pill-time">5 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TES ERREURS</span><span class="pill-time">5 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">After your first attempt, look at what you missed. Most Module 2 errors fall into three buckets: <strong>wrong demonstrative</strong> for the noun's gender/number, <strong>en vs au</strong> confusion, or a <strong>misplaced compass phrase</strong> (<em>dans le sud de</em> vs <em>&agrave; l&rsquo;ouest de</em>). Name which one caught you, fix that one thing, and take your second attempt.</p>
     </div>
 
     <!-- Module close: Au revoir, Monet (practice writing) + can-do. Kept inside this block so the audit's block positions don't shift. -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>AU REVOIR, MONET <span class="pill-time">5 min</span></span><span class="pill-time">practice &middot; not graded</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>AU REVOIR, MONET <span class="pill-time">5 min</span></span><span class="pill-time">practice &middot; not graded</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px;">Before you close Module 2, go back to Monet&rsquo;s painting one last time. Write <strong>three sentences</strong> about it with what you learned in this module: the region and where it is, what you can see, and a demonstrative with an adjective. The map and the <em>fiche</em> (fact card) help you; use any word from the word bank. Your sentences are saved in All Your Work.</p>
         <figure style="margin: 0 auto 16px; max-width: 760px;">
             <div style="background:#3b2a1a;padding:10px;border-radius:4px;box-shadow:0 6px 18px rgba(40,25,10,.35)"><div style="border:6px solid #b8892e;outline:1px solid #e9d39a;outline-offset:-10px"><img src="img/m2-large.jpg" alt="Claude Monet, Promenade sur la falaise, Pourville: two girls on a grassy clifftop above a bright blue sea with sailing boats" style="display:block;width:100%;height:auto"></div></div>
@@ -285,8 +288,7 @@
             </ul>
         </div>
     </div>
-
-    <div class="pl-card">
+<div class="pl-card">
         <div class="pl-kicker">WHAT'S NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>

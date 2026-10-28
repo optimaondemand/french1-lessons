@@ -91,6 +91,9 @@
     .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
     .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
     .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,20 +310,17 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m1-intelligent.mp3" aria-label="&Eacute;couter intelligent">&#128266;</button><span class="v-fr">intelligent</span><span class="v-en">intelligent</span></li>
         </ul>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Then say each one in a mini-sentence: <em>Mon fr&egrave;re est&hellip;</em> Shadowing is the single fastest way to make new sounds feel natural.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 3 · Flashcards ===== -->
     <!-- PANEL · Dans le tableau -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
         <div class="pl-tableau"><div class="pl-tlabel">Qui est comment&nbsp;?</div><p>Look at four of Renoir&rsquo;s guests. What do you think each one is like? Choose a word for each: there is no wrong answer, it&rsquo;s your opinion. Each word plays when you press it.</p><div class="pl-vigs"><figure class="pl-vig" data-mode="opinion"><div class="pl-oval"><img src="img/vig-fournaise.jpg" alt="Detail from the painting: the tall man in the straw hat"></div><div class="pl-phrase">Il est <span class="pl-blank">&hellip;</span></div><div class="pl-opts"><button type="button" data-audio="vocab/s2m1-serieux.mp3">s&eacute;rieux</button><button type="button" data-audio="vocab/s2m1-drole.mp3">dr&ocirc;le</button><button type="button" data-audio="vocab/s2m1-paresseux.mp3">paresseux</button></div></figure><figure class="pl-vig" data-mode="opinion"><div class="pl-oval"><img src="img/vig-alphonsine.jpg" alt="Detail from the painting: the girl leaning on the railing"></div><div class="pl-phrase">Elle est <span class="pl-blank">&hellip;</span></div><div class="pl-opts"><button type="button" data-audio="vocab/s2m1-timide.mp3">timide</button><button type="button" data-audio="vocab/s2m1-drole.mp3">dr&ocirc;le</button><button type="button" data-audio="vocab/s2m1-sympa.mp3">sympathique</button></div></figure><figure class="pl-vig" data-mode="opinion"><div class="pl-oval"><img src="img/vig-canotier.jpg" alt="Detail from the painting: a young rower in a straw hat"></div><div class="pl-phrase">Il est <span class="pl-blank">&hellip;</span></div><div class="pl-opts"><button type="button" data-audio="vocab/s2m1-serieux.mp3">s&eacute;rieux</button><button type="button" data-audio="vocab/s2m1-timide.mp3">timide</button><button type="button" data-audio="vocab/s2m1-travailleur.mp3">travailleur</button></div></figure><figure class="pl-vig" data-mode="opinion"><div class="pl-oval"><img src="img/vig-angele.jpg" alt="Detail from the painting: the girl at the table, listening"></div><div class="pl-phrase">Elle est <span class="pl-blank">&hellip;</span></div><div class="pl-opts"><button type="button" data-audio="vocab/s2m1-drole.mp3">dr&ocirc;le</button><button type="button" data-audio="vocab/s2m1-sympa.mp3">sympathique</button><button type="button" data-audio="vocab/s2m1-timide.mp3">timide</button></div></figure></div></div>
     </div>
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Drill the words with the Vocabulaire page</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <strong>Module 1 Vocabulaire</strong> study page (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
         <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own digital flash cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
@@ -328,6 +328,7 @@
 
     <!-- PART 1 · Carte de France -->
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">La Carte de France</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -342,6 +343,19 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; LE VOCABULAIRE DU CARACT&Egrave;RE</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Then say each one in a mini-sentence: <em>Mon fr&egrave;re est&hellip;</em> Shadowing is the single fastest way to make new sounds feel natural.</div>
+        </div>
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

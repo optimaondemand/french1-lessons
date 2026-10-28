@@ -85,6 +85,9 @@
     .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
     .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
     .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -265,10 +268,7 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m6-le-billet.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">le billet</span><span class="v-en">the ticket</span></li>
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m6-la-salle.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">la salle</span><span class="v-en">the room / gallery</span></li>
         </ul>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m06.html" target="_blank" rel="noopener"><strong>Module 6 Vocabulaire</strong> page</a> and mix yesterday&rsquo;s art nouns with today&rsquo;s describing words. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 2 · Grammar: imparfait formation ===== -->
@@ -299,13 +299,6 @@
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m6-habitude.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Quand j&rsquo;&eacute;tais petit, je dessinais souvent.</span><span class="v-en">was / used to draw</span></li>
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m6-allions.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Nous allions au mus&eacute;e chaque dimanche.</span><span class="v-en">we used to go &mdash; nous -ions &middot; <em>chaque</em> (every)</span></li>
         </ul>
-    </div>
-
-    <!-- CONJUGUE · regarder -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
-        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Build it yourself: the <em>nous</em> stem (<em>regard-</em>) plus the six endings. Type each imparfait form of <em>regarder</em> and press <strong>Enter</strong>; the drill names any slip (a wrong ending, the wrong person&hellip;).</p>
-        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm06%2Fpractice-m06.json&amp;verb=regarder&amp;tense=imparfait&amp;embed=1" title="Conjugation practice: regarder" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
     </div>
     <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
     <div class="pl-card">
@@ -406,6 +399,7 @@
     <!-- PART 2 · Vocabulaire — rappel -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">Vocabulaire &mdash; rappel</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -513,6 +507,7 @@
     <!-- PART 3s &middot; &Eacute;cris-le &mdash; orthographe -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">&Eacute;cris-le &mdash; orthographe</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -642,6 +637,25 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part I &middot; D&Eacute;CRIRE L'ART &amp; LE PASS&Eacute;</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m06.html" target="_blank" rel="noopener"><strong>Module 6 Vocabulaire</strong> page</a> and mix yesterday&rsquo;s art nouns with today&rsquo;s describing words. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; LA GRAMMAIRE &mdash; FORMER L'IMPARFAIT</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded <span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Build it yourself: the <em>nous</em> stem (<em>regard-</em>) plus the six endings. Type each imparfait form of <em>regarder</em> and press <strong>Enter</strong>; the drill names any slip (a wrong ending, the wrong person&hellip;).</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm06%2Fpractice-m06.json&amp;verb=regarder&amp;tense=imparfait&amp;embed=1" title="Conjugation practice: regarder" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

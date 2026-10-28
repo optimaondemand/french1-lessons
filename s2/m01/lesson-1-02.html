@@ -68,6 +68,9 @@
     .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
     .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
     .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,10 +251,7 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m1-benjamin.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">le benjamin</span><span class="v-en">the youngest child</span></li>
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m1-faire.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">faire</span><span class="v-en">to do / to make</span></li>
         </ul>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <strong>Module 1 Vocabulaire</strong> page and mix yesterday's character words with today's. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 2 · Grammar Rule 1 ===== -->
@@ -311,11 +311,11 @@
     <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
     <!-- GAME · La Tour scintille -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>&Eacute;coute &middot; Listening game, not graded</span><span class="pill-time">5 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>&Eacute;coute &middot; Listening game, not graded</span><span class="pill-time">5 min</span></div>
         <div data-tour='{"id": "fr1-m01-genre", "title": "La Tour scintille", "intro": "Listen to each word and choose the form you hear: <strong>masculine</strong> or <strong>feminine</strong>. Every right answer lights the Eiffel Tower a little higher. Get them all and watch it sparkle.", "audioBase": "../../audio/", "rounds": 10, "pairs": [{"m": "beau", "f": "belle", "mAudio": "vocab/s2m1-ll-beau.mp3", "fAudio": "vocab/s2m1-ll-belle.mp3", "tip": "<em>beau</em> ends in an &amp;ldquo;oh&amp;rdquo; vowel; <em>belle</em> ends with an <strong>l</strong> sound."}, {"m": "vieux", "f": "vieille", "mAudio": "vocab/s2m1-ll-vieux.mp3", "fAudio": "vocab/s2m1-ll-vieille.mp3", "tip": "<em>vieux</em> ends in a vowel; <em>vieille</em> ends with a <strong>y</strong> sound (it rhymes with &amp;ldquo;say&amp;rdquo;)."}, {"m": "nouveau", "f": "nouvelle", "mAudio": "vocab/s2m1-ll-nouveau.mp3", "fAudio": "vocab/s2m1-ll-nouvelle.mp3", "tip": "<em>nouveau</em> ends in an &amp;ldquo;oh&amp;rdquo; vowel; <em>nouvelle</em> ends with an <strong>l</strong> sound."}, {"m": "gentil", "f": "gentille", "mAudio": "vocab/s2m1-ll-gentil.mp3", "fAudio": "vocab/s2m1-ll-gentille.mp3", "tip": "In <em>gentil</em> the l is silent (it ends in &amp;ldquo;ee&amp;rdquo;); <em>gentille</em> ends with a <strong>y</strong> sound."}, {"m": "sérieux", "f": "sérieuse", "mAudio": "vocab/s2m1-ll-serieux.mp3", "fAudio": "vocab/s2m1-ll-serieuse.mp3", "tip": "<em>-eux</em> ends in a vowel; <em>-euse</em> ends with a <strong>z</strong> sound."}, {"m": "généreux", "f": "généreuse", "mAudio": "vocab/s2m1-ll-genereux.mp3", "fAudio": "vocab/s2m1-ll-genereuse.mp3", "tip": "<em>-eux</em> ends in a vowel; <em>-euse</em> ends with a <strong>z</strong> sound."}, {"m": "curieux", "f": "curieuse", "mAudio": "vocab/s2m1-ll-curieux.mp3", "fAudio": "vocab/s2m1-ll-curieuse.mp3", "tip": "<em>-eux</em> ends in a vowel; <em>-euse</em> ends with a <strong>z</strong> sound."}, {"m": "paresseux", "f": "paresseuse", "mAudio": "vocab/s2m1-ll-paresseux.mp3", "fAudio": "vocab/s2m1-ll-paresseuse.mp3", "tip": "<em>-eux</em> ends in a vowel; <em>-euse</em> ends with a <strong>z</strong> sound."}, {"m": "travailleur", "f": "travailleuse", "mAudio": "vocab/s2m1-ll-travailleur.mp3", "fAudio": "vocab/s2m1-ll-travailleuse.mp3", "tip": "<em>travailleur</em> ends with an <strong>r</strong>; <em>travailleuse</em> ends with a <strong>z</strong> sound."}, {"m": "intelligent", "f": "intelligente", "mAudio": "vocab/s2m1-ll-intelligent.mp3", "fAudio": "vocab/s2m1-ll-intelligente.mp3", "tip": "In <em>intelligent</em> the t is silent; <em>intelligente</em> ends with a <strong>t</strong> sound."}], "culture": "<h4><small>Le saviez-vous&amp;nbsp;? &amp;middot; Did you know?</small>La tour Eiffel la nuit</h4><p>Every evening at nightfall, the Eiffel Tower lights up in warm gold. Then, <strong>at the start of every hour, it sparkles for five minutes</strong>: 20,000 small bulbs flash on and off at random all over the tower, like a shower of stars. The French call it <em>le scintillement</em> (the sparkle): <em>la tour scintille</em>, &amp;ldquo;the tower sparkles.&amp;rdquo;</p><p>At the very top, a beacon of four searchlights sweeps across the Paris sky. The lights go out at 11:45&amp;nbsp;p.m., when the tower closes (a little later in summer).</p><p>So if you are ever in Paris after dark, look up just before the hour&amp;hellip; and wait for the sparkle.</p>", "credit": "Recordings: native speakers from <a href=\"https://lingualibre.org\" target=\"_blank\" rel=\"noopener\">Lingua Libre</a> via Wikimedia Commons, trimmed and converted: DSwissK, Guilhelma, Julien Baley, LoquaxFR, Sartus85, WikiLucas00 (CC BY-SA 4.0); Adjoumani512, Poslovitch (CC0)."}'></div>
     </div>
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Pick the correct form for each noun. You get instant feedback &mdash; this is practice, not a grade. The feedback cheers you on in French: <em>Exact&nbsp;!</em> (Right!) &middot; <em>Voil&agrave;&nbsp;!</em> (There you go!) &middot; <em>Parfait&nbsp;!</em> (Perfect!)</p>
 
         <div class="optima-widget ow-eval">
@@ -357,7 +357,7 @@
 
     <!-- PART 1 · by-ear self-quiz -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num">V</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">12 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
 
         <div class="optima-widget ow-eval">
@@ -393,6 +393,19 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part I &middot; ENCORE DU VOCABULAIRE</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <strong>Module 1 Vocabulaire</strong> page and mix yesterday's character words with today's. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+        </div>
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

@@ -82,6 +82,9 @@
     .accent-strip { margin-top: 10px; background: #FFFFFF; border: 1px dashed #9FB3CC; border-radius: 8px; padding: 6px 12px 8px; }
     .accent-strip .as-label { font-size: 12px; color: #41506b; font-style: italic; }
     .accent-strip .as-glyphs { display: block; font-size: 26px; line-height: 1.9; letter-spacing: 0.05em; word-spacing: 0.9em; color: #0E1C42; user-select: text; -webkit-user-select: text; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -270,40 +273,7 @@
             <p style="font-size: 16px; color: #6b5d2e; line-height: 1.65; margin: 0; font-style: italic;">A great city belongs to everyone who moves through it. Public transit works only when each rider does their small part &mdash; buying a ticket, giving up a seat, keeping the shared space clean. A boulevard is a lesson in living well together.</p>
         </div>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min &middot; comprehension check</div>
-            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
-
-            <div class="optima-widget ow-eval" style="margin-top:10px;">
-                <div class="widget-question"><em>Avec qui</em> (With whom) est-ce que Julie est all&eacute;e en ville&nbsp;?</div>
-                <div class="widget-options">
-                    <button data-no="Reread paragraph 1.">Avec son fr&egrave;re</button>
-                    <button data-correct="1" data-ok="Oui &mdash; avec sa s&oelig;ur.">Avec sa s&oelig;ur</button>
-                    <button data-no="Her friends arrive later, in the afternoon.">Avec ses amies</button>
-                </div>
-                <div class="widget-feedback"></div>
-            </div>
-
-            <div class="optima-widget ow-eval">
-                <div class="widget-question"><em>Comment</em> (How) est-ce qu'elles sont all&eacute;es au centre-ville&nbsp;?</div>
-                <div class="widget-options">
-                    <button data-no="They did not go on foot.">&Agrave; pied</button>
-                    <button data-correct="1" data-ok="Voil&agrave; (That&rsquo;s it!) &mdash; elles sont mont&eacute;es dans le bus.">En bus</button>
-                    <button data-no="The train is not mentioned.">En train</button>
-                </div>
-                <div class="widget-feedback"></div>
-            </div>
-
-            <div class="optima-widget ow-eval">
-                <div class="widget-question">&Agrave; quelle heure est-ce que Julie est rentr&eacute;e&nbsp;?</div>
-                <div class="widget-options">
-                    <button data-correct="1" data-ok="Exact (Right!) &mdash; elle est rentr&eacute;e tr&egrave;s tard.">Tr&egrave;s tard</button>
-                    <button data-no="That is when they left, not when Julie came home.">&Agrave; dix heures</button>
-                    <button data-no="Reread the end of paragraph 3.">T&ocirc;t le matin</button>
-                </div>
-                <div class="widget-feedback"></div>
-            </div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- PART 2 · production -->
@@ -322,6 +292,7 @@
     <!-- PART 2 · Vocabulaire — rappel -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">Vocabulaire &mdash; rappel</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -425,6 +396,48 @@
             <button class="widget-reset">Reset</button>
         </div>
         <p style="font-size:13.5px;color:#6b7a99;margin:8px 0 0;">Details: Gustave Caillebotte, <em>Rue de Paris, temps de pluie</em>, 1877 (The Art Institute of Chicago); Pierre-Auguste Renoir, <em>Pont-Neuf, Paris</em>, 1872 (National Gallery of Art, Washington).</p>
+    </div>
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part III &middot; SPOTLIGHT CULTUREL &mdash; PARIS, LA VILLE RECONSTRUITE</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min &middot; comprehension check</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom:6px;">Answer from the passage. Instant feedback.</div>
+
+            <div class="optima-widget ow-eval" style="margin-top:10px;">
+                <div class="widget-question"><em>Avec qui</em> (With whom) est-ce que Julie est all&eacute;e en ville&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-no="Reread paragraph 1.">Avec son fr&egrave;re</button>
+                    <button data-correct="1" data-ok="Oui &mdash; avec sa s&oelig;ur.">Avec sa s&oelig;ur</button>
+                    <button data-no="Her friends arrive later, in the afternoon.">Avec ses amies</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+
+            <div class="optima-widget ow-eval">
+                <div class="widget-question"><em>Comment</em> (How) est-ce qu'elles sont all&eacute;es au centre-ville&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-no="They did not go on foot.">&Agrave; pied</button>
+                    <button data-correct="1" data-ok="Voil&agrave; (That&rsquo;s it!) &mdash; elles sont mont&eacute;es dans le bus.">En bus</button>
+                    <button data-no="The train is not mentioned.">En train</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+
+            <div class="optima-widget ow-eval">
+                <div class="widget-question">&Agrave; quelle heure est-ce que Julie est rentr&eacute;e&nbsp;?</div>
+                <div class="widget-options">
+                    <button data-correct="1" data-ok="Exact (Right!) &mdash; elle est rentr&eacute;e tr&egrave;s tard.">Tr&egrave;s tard</button>
+                    <button data-no="That is when they left, not when Julie came home.">&Agrave; dix heures</button>
+                    <button data-no="Reread the end of paragraph 3.">T&ocirc;t le matin</button>
+                </div>
+                <div class="widget-feedback"></div>
+            </div>
+        </div>
+        </div>
     </div>
 
     <div class="pl-card">

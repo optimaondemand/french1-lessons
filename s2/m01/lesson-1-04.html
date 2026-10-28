@@ -89,6 +89,9 @@
     .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
     .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
     .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -334,13 +337,13 @@
     <!-- PART 2 · Self-produce -->
     <!-- GAME · Construis la phrase -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Construis &middot; Practice game, not graded</span><span class="pill-time">5 min</span></div>
+        <div class="pl-part"><span class="pl-num">II</span><span>Construis &middot; Practice game, not graded</span><span class="pill-time">5 min</span></div>
         <div class="pl-tlabel" style="text-align:center;font-size:30px;margin:0 0 4px">Construis la phrase</div>
         <p style="text-align:center;font-size:16.5px;color:#1a2340;margin:0 0 12px">Lunch is over. Build each sentence about Renoir&rsquo;s guests with the right form of <em>faire</em>. Each sentence you build hangs that guest&rsquo;s portrait on the wall.</p>
         <div class="puzzle-game" data-lang="French" data-theme="galerie" data-galerie-bg="img/renoir-dejeuner.jpg" data-title="Construis la phrase" data-help="Build it in French. Watch out: some verb blocks don&rsquo;t belong. Who is doing it?" data-galerie-caption="&lt;strong&gt;Les invit&eacute;s de Renoir&lt;/strong&gt; &middot; Renoir&rsquo;s guests, from &lt;em&gt;Le D&eacute;jeuner des canotiers&lt;/em&gt;" data-galerie-credit="Pierre-Auguste Renoir, 1880&ndash;81. Public domain." data-sentences='[{"en": "Alphonse does the cooking.", "enParts": [["Alphonse", "who"], ["does", "verb"], ["the cooking.", "rest"]], "pieces": [["Alphonse", "who", "../../audio/grammar/s2m1-pz-alphonse.mp3"], ["fait", "verb", "../../audio/grammar/s2m1-pz-fait.mp3"], ["la cuisine.", "rest", "../../audio/grammar/s2m1-pz-la-cuisine.mp3"]], "traps": [["font", "verb", "../../audio/grammar/s2m1-pz-font.mp3"], ["fais", "verb", "../../audio/grammar/s2m1-pz-fais.mp3"]], "audio": "../../audio/grammar/s2m1-faire-alphonse.mp3", "img": "img/gal-fournaise.jpg", "alt": "Alphonse Fournaise, the tall man in the straw hat"}, {"en": "The two boys go for a walk.", "enParts": [["The two boys", "who"], ["go for", "verb"], ["a walk.", "rest"]], "pieces": [["Les deux garçons", "who", "../../audio/grammar/s2m1-pz-deux-garcons.mp3"], ["font", "verb", "../../audio/grammar/s2m1-pz-font.mp3"], ["une promenade.", "rest", "../../audio/grammar/s2m1-pz-une-promenade.mp3"]], "traps": [["fait", "verb", "../../audio/grammar/s2m1-pz-fait.mp3"], ["faisons", "verb", "../../audio/grammar/s2m1-pz-faisons.mp3"]], "audio": "../../audio/grammar/s2m1-faire-garcons.mp3", "img": "img/gal-maggiolo.jpg", "alt": "a young man leaning over the table"}, {"en": "We are going for a walk with the dog!", "enParts": [["We", "who"], ["are going for", "verb"], ["a walk", "rest"], ["with the dog!", "rest"]], "pieces": [["Nous", "who", "../../audio/grammar/s2m1-pz-nous.mp3"], ["faisons", "verb", "../../audio/grammar/s2m1-pz-faisons.mp3"], ["une promenade", "rest", "../../audio/grammar/s2m1-pz-une-promenade.mp3"], ["avec le chien !", "rest", "../../audio/grammar/s2m1-pz-avec-le-chien.mp3"]], "traps": [["font", "verb", "../../audio/grammar/s2m1-pz-font.mp3"], ["faites", "verb", "../../audio/grammar/s2m1-pz-faites.mp3"]], "audio": "../../audio/grammar/s2m1-faire-nous.mp3", "img": "img/gal-aline.jpg", "alt": "Aline Charigot with the little dog"}, {"en": "I am making a cake for the family.", "enParts": [["I", "who"], ["am making", "verb"], ["a cake", "rest"], ["for the family.", "rest"]], "pieces": [["Je", "who", "../../audio/grammar/s2m1-pz-je.mp3"], ["fais", "verb", "../../audio/grammar/s2m1-pz-fais.mp3"], ["un gâteau", "rest", "../../audio/grammar/s2m1-pz-un-gateau.mp3"], ["pour la famille.", "rest", "../../audio/grammar/s2m1-pz-pour-la-famille.mp3"]], "traps": [["fait", "verb", "../../audio/grammar/s2m1-pz-fait.mp3"], ["faisons", "verb", "../../audio/grammar/s2m1-pz-faisons.mp3"]], "audio": "../../audio/grammar/s2m1-faire-je.mp3", "img": "img/gal-alphonsine.jpg", "alt": "Alphonsine Fournaise, leaning on the railing"}, {"en": "Are you going for a walk? (polite)", "enParts": [["Are you", "who"], ["going for", "verb"], ["a walk?", "rest"]], "pieces": [["Vous", "who", "../../audio/grammar/s2m1-pz-vous.mp3"], ["faites", "verb", "../../audio/grammar/s2m1-pz-faites.mp3"], ["une promenade ?", "rest", "../../audio/grammar/s2m1-pz-une-promenade.mp3"]], "traps": [["font", "verb", "../../audio/grammar/s2m1-pz-font.mp3"], ["fais", "verb", "../../audio/grammar/s2m1-pz-fais.mp3"]], "audio": "../../audio/grammar/s2m1-faire-vous.mp3", "img": "img/gal-ephrussi.jpg", "alt": "the gentleman in the top hat"}]'></div>
     </div>
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>&Agrave; TOI D'&Eacute;CRIRE</span><span class="pill-time">13 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>&Agrave; TOI D'&Eacute;CRIRE</span><span class="pill-time">13 min</span></div>
         <h3 class="pl-h3">Write three sentences about your own family's character</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Write <strong>three</strong> true sentences describing members of your family, one in each box. Use at least one <strong>irregular adjective</strong> (<em>beau, nouveau, vieux</em>), place a <strong>BANGS</strong> adjective correctly, and use the verb <strong>faire</strong> once.</p>
         <p style="font-size: 15px; color: #6b7a99; line-height: 1.6; margin: 10px 0 0 0;"><strong>Glossaire :</strong> <em>la benjamine</em> (the youngest child, f.) &middot; <em>un peu</em> (a little)</p>
@@ -354,7 +357,7 @@
 
     <!-- PART 3 · Audio dictation -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>LA DICT&Eacute;E</span><span class="pill-time">15 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>LA DICT&Eacute;E</span><span class="pill-time">15 min</span></div>
         <h3 class="pl-h3">Hear it, type it, check it</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Play each clip (as many times as you need). Type exactly what you hear &mdash; accents and all &mdash; <em>then</em> press <strong>Check</strong>. Use <strong>Reveal</strong> only after you have tried. Don't reveal early; the struggle is the learning.</p>
 
@@ -391,15 +394,13 @@
             <div class="reveal-body"><span class="answer-fr">Nous avons un nouvel appartement.</span></div>
         </div>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Spiral back to Semester 1: write four sentences about your family that each pair a <em>family word</em> (le p&egrave;re, la cousine&hellip;) with a new <em>character adjective</em> &mdash; and get the agreement right. Matching a feminine noun with a feminine adjective is the most common slip; practice it now.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- PART 3 · Accord & conjugaison -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">Accord &amp; conjugaison &mdash; entra&icirc;nement</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -488,6 +489,7 @@
     <!-- PART 4 · Défi éclair -->
 
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">VI</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">D&eacute;fi &eacute;clair</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -515,6 +517,18 @@
             <div data-mw-added class="mw-box" style="margin:6px 0"><span class="mw-prompt" style="display:inline-block;min-width:150px;margin-right:8px;font-size:16px;color:#1a2340">(beau) … une maison</span><textarea class="mw-answer" rows="1" lang="fr" spellcheck="false" autocapitalize="off" data-mw-gate="l1-04-r8" data-answer="une belle maison" aria-label="(beau) … une maison" placeholder="Type it, then press Check" style="width:220px;max-width:100%;font-size:16px;padding:6px 8px;border:1px solid #9aa6b2;border-radius:4px;font-family:inherit;vertical-align:middle;resize:vertical"></textarea></div>
             <button class="reveal-btn" data-mw-gate="l1-04-r8">Reveal the answer</button>
             <div class="reveal-body"><strong>une belle maison</strong><br><span style="font-size:15px;color:#41506b;">beau is a BANGS adjective (Beauty), so it goes before the noun &mdash; and agrees: belle.</span></div>
+        </div>
+    </div>
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part IV &middot; LA DICT&Eacute;E</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +10 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Spiral back to Semester 1: write four sentences about your family that each pair a <em>family word</em> (le p&egrave;re, la cousine&hellip;) with a new <em>character adjective</em> &mdash; and get the agreement right. Matching a feminine noun with a feminine adjective is the most common slip; practice it now.</div>
+        </div>
         </div>
     </div>
 

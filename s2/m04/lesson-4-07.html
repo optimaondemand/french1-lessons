@@ -106,6 +106,9 @@
     .due-when { font-size: 14px; color: #6b4a4f; }
     .due-foot { font-size: 13.5px !important; color: #6b4a4f !important; font-style: italic; }
     .due-done { color: #2f6b4f !important; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,10 +310,7 @@
             &#9633; I used an <strong>irregular participle</strong> and a <strong>time expression</strong>.<br>
             &#9633; I can hear my own words clearly on playback.
         </div>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play Paul's paragraph 1 from Lesson 4.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitation of a native model is the fastest route to a French accent.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- PART 3 · table review -->
@@ -334,7 +334,26 @@
             </div>
         </div>
 
-        <div class="opt-strip">
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
+    </div>
+    <!-- PART 3 · recap -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 4, and it includes <em>listening</em> items in the past tense. Tonight, run the pass&eacute; compos&eacute; table once and listen to any three grammar clips. That's all the prep you need.</p>
+    </div>
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; AVANT D'ENVOYER</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play Paul's paragraph 1 from Lesson 4.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitation of a native model is the fastest route to a French accent.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part III &middot; LE TABLEAU, ENCORE UNE FOIS</div>
+<div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +5 min &middot; cumulative spiral</div>
             <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 4 with earlier work: a place you visited, a food you ate, family members. Type each line in French, then press <strong>Check</strong>. Interleaving old and new is what makes review actually stick.</div>
             <div class="optima-widget">
@@ -354,22 +373,13 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    
-    
-
-    <!-- CONJUGUE · regarder -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part III &middot; LE TABLEAU, ENCORE UNE FOIS</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded <span class="pill-time">optional &middot; +5 min</span></div>
         <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">One more run before the quiz: <em>regarder</em>, then any verb from the menu. Change the tense too: present or pass&eacute; compos&eacute;?</p>
         <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm04%2Fpractice-m04.json&amp;verb=regarder&amp;tense=passe_compose&amp;embed=1" title="Conjugation practice: regarder" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
-    </div>
-    <!-- PART 3 · recap -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 4, and it includes <em>listening</em> items in the past tense. Tonight, run the pass&eacute; compos&eacute; table once and listen to any three grammar clips. That's all the prep you need.</p>
+    
+        </div>
     </div>
 
     <div class="pl-card">

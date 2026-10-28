@@ -67,6 +67,9 @@
     .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
     .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
     .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -247,10 +250,7 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m3-gouter.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">go&ucirc;ter</span><span class="v-en">to taste</span></li>
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m3-avoir-faim.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">avoir faim</span><span class="v-en">to be hungry</span></li>
         </ul>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m03.html" target="_blank" rel="noopener"><strong>Module 3 Vocabulaire</strong> page</a> and mix yesterday's restaurant words with today's quantities. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 2 · Grammar: prendre ===== -->
@@ -277,14 +277,6 @@
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-prend.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Elle prend de la soupe.</span><span class="v-en">She's having some soup.</span></li>
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m3-prenons.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Nous prenons le menu &agrave; vingt euros.</span><span class="v-en">We'll take the twenty-euro set menu.</span></li>
         </ul>
-    </div>
-
-    <!-- ===== PART 3 · Partitive review + evaluative ===== -->
-    <!-- CONJUGUE · prendre -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
-        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Practise <em>prendre</em>, all six persons: type each form and press <strong>Enter</strong>. Watch the plural: <em>nous prenons</em>, <em>ils prennent</em> (two n&rsquo;s).</p>
-        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm03%2Fpractice-m03.json&amp;verb=prendre&amp;tense=present&amp;embed=1" title="Conjugation practice: prendre" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
     </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>LE PARTITIF &mdash; SAYING &ldquo;SOME&rdquo;</span><span class="pill-time">13 min</span></div>
@@ -400,11 +392,11 @@
     <!-- PART 1 · by-ear self-quiz -->
     <!-- GAME · La nature morte -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
         <div data-naturemorte='{"title": "La nature morte", "kicker": "Joue &amp;middot; Practice game, not graded", "audioBase": "../../audio/", "intro": "Four French <em>natures mortes</em> (still lifes), in black and white. Press &amp;#128266;, listen to the word, then tap that food in the painting: each one you find comes back into colour. Listen for <em>du, de la, des</em>: they are part of the word.", "rounds": [{"img": "img/nm-maquereaux.jpg", "painter": "Anne Vallayer-Coster", "life": "1744–1818", "title": "Still Life with Mackerel", "title_en": "", "meta": "1787 · huile sur toile · Kimbell Art Museum, Fort Worth", "alt": "Anne Vallayer-Coster, Still Life with Mackerel: two mackerel on a white cloth, a bowl of upturned glasses, glass cruets and a round loaf", "items": [{"id": "bouteilles", "fr": "des bouteilles", "en": "some bottles", "audio": "grammar/s2m3-nm-des-bouteilles.mp3", "shapes": [[205, 505, 125, 215]], "tag": [205, 300]}, {"id": "verres", "fr": "des verres", "en": "some glasses", "audio": "grammar/s2m3-nm-des-verres.mp3", "shapes": [[650, 470, 330, 105]], "tag": [650, 345]}, {"id": "pain", "fr": "du pain", "en": "some bread", "audio": "grammar/s2m3-nm-du-pain.mp3", "shapes": [[1045, 640, 140, 120]], "tag": [1045, 495]}, {"id": "poisson", "fr": "du poisson", "en": "some fish", "audio": "grammar/s2m3-nm-du-poisson.mp3", "shapes": [[450, 745, 370, 62], [600, 815, 330, 60]], "tag": [470, 900]}], "w": 1280, "h": 1041}, {"img": "img/nm-pain-oeufs.jpg", "painter": "Paul Cézanne", "life": "1839–1906", "title": "Le Pain et les œufs", "title_en": "Still Life with Bread and Eggs", "meta": "1865 · huile sur toile · Cincinnati Art Museum", "alt": "Paul Cézanne, Le Pain et les œufs: a long loaf of bread on a dark table with a glass, eggs, onions, a knife and a white cloth", "items": [{"id": "verre", "fr": "un verre", "en": "a glass", "audio": "grammar/s2m3-nm-un-verre.mp3", "shapes": [[757, 530, 75, 140]], "tag": [757, 360]}, {"id": "pain2", "fr": "du pain", "en": "some bread", "audio": "grammar/s2m3-nm-du-pain.mp3", "shapes": [[740, 570, 515, 82]], "tag": [420, 470]}], "w": 1280, "h": 994}, {"img": "img/nm-fruits-midi.jpg", "painter": "Pierre-Auguste Renoir", "life": "1841–1919", "title": "Fruits du Midi", "title_en": "Fruits of the Midi", "meta": "1881 · huile sur toile · The Art Institute of Chicago", "alt": "Pierre-Auguste Renoir, Fruits du Midi: pomegranates and lemons in a blue and white dish, with an aubergine, peppers and tomatoes on a white cloth", "items": [{"id": "fruits", "fr": "des fruits", "en": "some fruit", "audio": "grammar/s2m3-nm-des-fruits.mp3", "shapes": [[320, 265, 85, 70], [810, 305, 90, 70], [540, 440, 90, 105], [270, 370, 60, 55], [1070, 555, 105, 90]], "tag": [560, 175]}, {"id": "legumes", "fr": "des légumes", "en": "some vegetables", "audio": "grammar/s2m3-nm-des-legumes.mp3", "shapes": [[235, 665, 145, 75], [415, 705, 130, 85], [550, 765, 65, 50], [680, 770, 70, 100], [850, 650, 80, 85], [805, 800, 60, 55], [1135, 705, 120, 85], [450, 305, 90, 62], [632, 292, 55, 60], [835, 468, 75, 68], [32, 610, 38, 50]], "tag": [330, 870]}, {"id": "assiette", "fr": "une assiette", "en": "a plate", "audio": "grammar/s2m3-nm-une-assiette.mp3", "shapes": [[95, 500, 65, 55], [965, 440, 60, 50], [560, 575, 260, 28]], "tag": [1000, 380]}], "w": 1280, "h": 970}, {"img": "img/nm-pommes-oranges.jpg", "painter": "Paul Cézanne", "life": "1839–1906", "title": "Pommes et oranges", "title_en": "Still Life with Apples and Oranges", "meta": "vers 1899 · huile sur toile · Musée d’Orsay, Paris", "alt": "Paul Cézanne, Pommes et oranges: apples and oranges on white cloths, with a fruit bowl, a plate of apples and a flowered jug", "items": [{"id": "pommes", "fr": "des pommes", "en": "some apples", "audio": "grammar/s2m3-nm-des-pommes.mp3", "shapes": [[395, 312, 68, 45], [405, 402, 72, 48], [325, 400, 45, 40], [545, 420, 52, 52], [775, 290, 45, 42], [945, 300, 40, 38], [232, 316, 42, 38], [325, 345, 38, 28]], "tag": [545, 495]}], "w": 1100, "h": 844}]}'></div>
     </div>
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">V</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
 
         <div class="optima-widget ow-eval">
@@ -490,6 +482,25 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part I &middot; LES QUANTIT&Eacute;S &amp; LA TABLE</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m03.html" target="_blank" rel="noopener"><strong>Module 3 Vocabulaire</strong> page</a> and mix yesterday's restaurant words with today's quantities. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; LE VERBE <em>PRENDRE</em></div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded <span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Practise <em>prendre</em>, all six persons: type each form and press <strong>Enter</strong>. Watch the plural: <em>nous prenons</em>, <em>ils prennent</em> (two n&rsquo;s).</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm03%2Fpractice-m03.json&amp;verb=prendre&amp;tense=present&amp;embed=1" title="Conjugation practice: prendre" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

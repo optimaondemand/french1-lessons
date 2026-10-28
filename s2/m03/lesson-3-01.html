@@ -91,6 +91,9 @@
     .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
     .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
     .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,10 +310,7 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m3-commander.mp3" aria-label="&Eacute;couter commander">&#128266;</button><span class="v-fr">commander</span><span class="v-en">to order</span></li>
         </ul>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Shadowing is the single fastest way to make new sounds feel natural.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 3 · Flashcards ===== -->
@@ -323,6 +323,7 @@
 
     <!-- PART 1 · Carte de France -->
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">La Carte de France</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -338,6 +339,19 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; LE VOCABULAIRE DU RESTAURANT</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Shadowing is the single fastest way to make new sounds feel natural.</div>
+        </div>
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

@@ -91,6 +91,9 @@
     .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
     .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
     .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -313,20 +316,17 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m6-l-actrice.mp3" aria-label="&Eacute;couter l'actrice">&#128266;</button><span class="v-fr">l&rsquo;actrice</span><span class="v-en">the actress</span></li>
         </ul>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Notice the pair <em>le peintre</em> (the painter) vs <em>la peinture</em> (painting) &mdash; one letter of difference, two meanings.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 3 · Flashcards ===== -->
     <!-- PANEL · Dans le tableau -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
         <div class="pl-tableau"><div class="pl-tlabel">Qu&rsquo;est-ce que c&rsquo;est&nbsp;?</div><p>Three close-ups from Hubert Robert&rsquo;s 1796 design for the Grande Galerie of the Louvre. What does each one show? Choose the word: when you are right, you hear it.</p><div class="pl-vigs big"><figure class="pl-vig" data-mode="choose" data-hint="It is painted on canvas, and an artist is copying it: <em>the painting</em>."><div class="pl-oval"><img src="img/vig-tableau.jpg" alt="Detail from the painting: a painting of a mother and her baby, hanging in the gallery"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button">la sculpture</button><button type="button" data-right>le tableau</button><button type="button">le film</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m6-le-tableau.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="White marble, carved, not painted: <em>the sculpture</em>."><div class="pl-oval"><img src="img/vig-sculpture.jpg" alt="Detail from the painting: a white marble statue of a woman, in a niche"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button" data-right>la sculpture</button><button type="button">le peintre</button><button type="button">le tableau</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m6-la-sculpture.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="He has a brush in his hand and a canvas in front of him: he is not acting in a film. <em>The artist</em>."><div class="pl-oval"><img src="img/vig-artiste.jpg" alt="Detail from the painting: an old man sitting at an easel, painting"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button">l&rsquo;acteur</button><button type="button">la sculpture</button><button type="button" data-right>l&rsquo;artiste</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m6-l-artiste.mp3" aria-label="&Eacute;couter">&#128266;</button></figure></div></div>
     </div>
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Drill the words with the Vocabulaire page</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You don&rsquo;t have to build your word bank from scratch. Open the <a href="vocabulaire-m06.html" target="_blank" rel="noopener"><strong>Module 6 Vocabulaire</strong> study page</a> (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
         <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own digital flash cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
@@ -334,6 +334,7 @@
 
     <!-- PART 1 · Carte de France -->
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">La Carte de France</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -348,6 +349,19 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; LE VOCABULAIRE DE L'ART</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Go down the list a second time, but this time <strong>shadow</strong> each word: play it, pause, and repeat it out loud three times before moving on. Notice the pair <em>le peintre</em> (the painter) vs <em>la peinture</em> (painting) &mdash; one letter of difference, two meanings.</div>
+        </div>
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

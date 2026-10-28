@@ -70,6 +70,9 @@
     .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
     .weekbadge { display:inline-block; background:#7A1C28; color:#fff; font-size:12px; border-radius:12px; padding:3px 12px; letter-spacing:0.4px; }
     .tricolore { display: flex; height: 6px; width: 100%; border-bottom: 1px solid #D0D9E8; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -251,10 +254,7 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m5-loin-de.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">loin de</span><span class="v-en">far from</span></li>
         </ul>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;">One phrase to go with <em>descendre</em>: <em>descendre du bus</em> (to get off the bus).</p>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m05.html" target="_blank" rel="noopener"><strong>Module 5 Vocabulaire</strong> page</a> and mix yesterday's transport words with today's verbs and landmarks. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 2 · Grammar Rule 1 ===== -->
@@ -305,14 +305,6 @@
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m5-est-arrive.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Le train est arriv&eacute; &agrave; l'heure.</span><span class="v-en">The train arrived on time.</span></li>
             <li class="vocab-item"><button class="say" data-audio="grammar/s2m5-est-reste.mp3" aria-label="&Eacute;couter">&#128266;</button><span class="v-fr">Il est rest&eacute; &agrave; la maison.</span><span class="v-en">He stayed home.</span></li>
         </ul>
-    </div>
-
-    <!-- ===== PART 3 · Mini self-check (evaluative) ===== -->
-    <!-- CONJUGUE · aller -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
-        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Your first &ecirc;tre verb, all six persons: <em>aller</em> in the pass&eacute; compos&eacute;. Type each form and press <strong>Enter</strong>; the drill tells you what went wrong (the helper, the ending&hellip;). The <strong>(e)</strong> and <strong>(s)</strong> endings are tomorrow&rsquo;s lesson: for now, just use the form of &ecirc;tre.</p>
-        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm05%2Fpractice-m05.json&amp;verb=aller&amp;tense=passe_compose&amp;embed=1" title="Conjugation practice: aller" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
     </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">III</span><span>V&Eacute;RIFIE TA COMPR&Eacute;HENSION</span><span class="pill-time">10 min</span></div>
@@ -413,11 +405,11 @@
     <!-- PART 1 · by-ear self-quiz -->
     <!-- GAME · Dans les rues de Paris -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>Joue &middot; Practice game, not graded</span><span class="pill-time">6 min</span></div>
         <div data-naturemorte='{"title": "Dans les rues de Paris", "kicker": "Joue &amp;middot; Practice game, not graded", "audioBase": "../../audio/", "intro": "Three paintings of Paris in black and white. Press &amp;#128266;, listen to a word from this module, then tap it in the painting: each one you find comes back into colour. Look closely: in the 1870s and 1890s, the buses and cars of Paris were pulled by horses!", "text": {"ask": "&amp;Eacute;coute et trouve-le dans le tableau.", "askEn": "Listen, then tap it in the painting.", "unit": "mots", "unitEn": "words", "end": "Bravo&amp;nbsp;!", "again": "Click a word to hear it again.", "notThere": "Not there. Press &amp;#128266; to hear the word again, then look at the painting.", "other": "That one is <b lang=\"fr\">{fr}</b> ({en}). Listen again: you are looking for something else.", "right": "<b lang=\"fr\">{fr}</b>: {en}."}, "rounds": [{"img": "img/ev-place.jpg", "painter": "Camille Pissarro", "life": "1830–1903", "title": "La Place du Théâtre-Français", "title_en": "The Place du Théâtre-Français", "meta": "1898 · huile sur toile · Los Angeles County Museum of Art", "alt": "Camille Pissarro, La Place du Théâtre-Français: a Paris square seen from above in winter, horse-drawn buses and cabs, people walking, a fountain at the top", "items": [{"id": "voiture", "fr": "la voiture", "en": "the car (in 1898, pulled by a horse)", "audio": "vocab/s2m5-la-voiture.mp3", "shapes": [[430, 493, 32, 42], [67, 573, 42, 48], [515, 248, 32, 28]], "tag": [430, 430]}, {"id": "pied", "fr": "à pied", "en": "on foot", "audio": "vocab/s2m5-a-pied.mp3", "shapes": [[121, 923, 28, 52], [315, 955, 27, 75], [883, 763, 40, 62], [285, 815, 24, 48]], "tag": [315, 860]}, {"id": "bus", "fr": "le bus", "en": "the bus (in 1898, pulled by horses)", "audio": "vocab/s2m5-le-bus.mp3", "shapes": [[710, 897, 125, 105], [650, 567, 105, 75], [147, 373, 38, 48]], "tag": [710, 770]}, {"id": "place", "fr": "la place", "en": "the square", "audio": "vocab/s2m5-la-place.mp3", "shapes": [[513, 127, 165, 85], [390, 255, 60, 40]], "tag": [513, 60]}], "w": 1280, "h": 1013}, {"img": "img/ev-pont.jpg", "painter": "Gustave Caillebotte", "life": "1848–1894", "title": "Le Pont de l’Europe", "title_en": "The Europe Bridge", "meta": "vers 1876 · huile sur toile", "alt": "Gustave Caillebotte, Le Pont de l’Europe: an iron bridge over the railway in Paris, a couple walking, a man leaning on the railing, buildings behind", "items": [{"id": "pied2", "fr": "à pied", "en": "on foot", "audio": "vocab/s2m5-a-pied.mp3", "shapes": [[275, 480, 110, 206], [834, 571, 78, 212]], "tag": [275, 250]}, {"id": "ville", "fr": "la ville", "en": "the city", "audio": "vocab/s2m5-la-ville.mp3", "shapes": [[101, 300, 101, 85]], "tag": [101, 215]}, {"id": "pont", "fr": "le pont", "en": "the bridge", "audio": "vocab/s2m5-le-pont.mp3", "shapes": [[961, 360, 330, 330], [1110, 760, 175, 165], [530, 300, 150, 190]], "tag": [961, 120]}], "w": 1280, "h": 943}, {"img": "img/ev-gare.jpg", "painter": "Claude Monet", "life": "1840–1926", "title": "La Gare Saint-Lazare", "title_en": "The Saint-Lazare Station", "meta": "1877 · huile sur toile · Musée d’Orsay, Paris", "alt": "Claude Monet, La Gare Saint-Lazare: inside a Paris railway station under a glass roof, a steam train in clouds of smoke, a few people on the platform", "items": [{"id": "pied3", "fr": "à pied", "en": "on foot", "audio": "vocab/s2m5-a-pied.mp3", "shapes": [[937, 823, 28, 85], [1055, 800, 62, 45]], "tag": [1000, 700]}, {"id": "train", "fr": "le train", "en": "the train", "audio": "vocab/s2m5-le-train.mp3", "shapes": [[620, 657, 55, 85], [330, 690, 92, 118], [750, 750, 42, 30]], "tag": [620, 545]}], "w": 1280, "h": 952}]}'></div>
     </div>
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">V</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
 
         <div class="optima-widget ow-eval">
@@ -502,6 +494,25 @@
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part I &middot; LES VERBES &amp; LES LIEUX</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the <a href="vocabulaire-m05.html" target="_blank" rel="noopener"><strong>Module 5 Vocabulaire</strong> page</a> and mix yesterday's transport words with today's verbs and landmarks. Flip a card, say the French, then check &mdash; but do it out of order, so your ear (not the list position) is doing the work.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; LA GRAMMAIRE &mdash; LE PASS&Eacute; COMPOS&Eacute; AVEC &Ecirc;TRE</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded <span class="pill-time">optional &middot; +5 min</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">Your first &ecirc;tre verb, all six persons: <em>aller</em> in the pass&eacute; compos&eacute;. Type each form and press <strong>Enter</strong>; the drill tells you what went wrong (the helper, the ending&hellip;). The <strong>(e)</strong> and <strong>(s)</strong> endings are tomorrow&rsquo;s lesson: for now, just use the form of &ecirc;tre.</p>
+        <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm05%2Fpractice-m05.json&amp;verb=aller&amp;tense=passe_compose&amp;embed=1" title="Conjugation practice: aller" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
+    
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">

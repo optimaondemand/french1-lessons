@@ -106,6 +106,9 @@
     .due-when { font-size: 14px; color: #6b4a4f; }
     .due-foot { font-size: 13.5px !important; color: #6b4a4f !important; font-style: italic; }
     .due-done { color: #2f6b4f !important; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -271,7 +274,7 @@
 
     <!-- PANEL · Dans le tableau -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">3 min</span></div>
+        <div class="pl-part"><span class="pl-num">II</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">3 min</span></div>
         <div class="pl-tableau"><div class="pl-tlabel">Un mod&egrave;le chez Monet &middot; <em>A model description</em></div><p>Before you record, listen to a short description of Normandy, the region of Monet&rsquo;s painting. It uses everything the Speaking Task asks for. Your own description is about <strong>the region you chose</strong>.</p><div class="pl-model"><div class="pl-oval"><img src="img/vig-pourville.jpg" alt="Detail from the painting: two girls on the clifftop at Pourville, Normandy"></div><div class="pl-mtext"><button class="say" type="button" data-audio="passage/s2m2-modele-normandie.mp3" aria-label="&Eacute;couter le mod&egrave;le">&#128266;</button> Voici la Normandie. <mark class="m-bangs">Cette</mark> r&eacute;gion se trouve <mark class="m-irr">dans le nord de</mark> la France. <mark class="m-faire">En</mark> Normandie, il y a <mark class="m-agr">la mer</mark>, <mark class="m-agr">des plages</mark> et <mark class="m-agr">la campagne</mark>. Il y a aussi de jolis <mark class="m-agr">villages</mark>. Le climat n&rsquo;est pas tr&egrave;s ensoleill&eacute;, mais la c&ocirc;te est tr&egrave;s belle. Monet adore <mark class="m-bangs">cette</mark> r&eacute;gion&nbsp;!<div class="pl-legend"><span class="m-irr">where it is (a compass phrase)</span><span class="m-agr">landscape words</span><span class="m-bangs">demonstratives</span><span class="m-faire">the preposition <em>en</em></span></div></div></div></div>
     </div>
     <!-- PART 2 · Speaking Task -->
@@ -301,7 +304,7 @@
 
     <!-- PART 3 · Self-review before submit -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">II</span><span>AVANT D'ENVOYER</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>AVANT D'ENVOYER</span><span class="pill-time">12 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Record once, listen back, and check yourself against this list. You may re-record before you submit &mdash; use that buffer.</p>
         <div class="checklist">
             &#9633; I said <strong>6&ndash;8</strong> sentences.<br>
@@ -311,15 +314,12 @@
             &#9633; My <strong>nasal vowels</strong> and the <strong>gn</strong> sound are smooth.<br>
             &#9633; I can hear my own words clearly on playback.
         </div>
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play paragraph 2 of <em>Un tour des r&eacute;gions</em> from Lesson 2.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitating a native model is the fastest route to a French accent.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- PART 3 · table review -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>LE TABLEAU, ENCORE UNE FOIS</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">IV</span><span>LE TABLEAU, ENCORE UNE FOIS</span><span class="pill-time">10 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">From memory, fill in the right preposition for each place. Commit first &mdash; then reveal.</p>
         <div class="optima-widget">
             <div class="widget-kicker">&#129504; COMPLETE &middot; en / au / dans le&hellip;de / &agrave; l&rsquo;&hellip;de</div>
@@ -338,7 +338,26 @@
             </div>
         </div>
 
-        <div class="opt-strip">
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
+    </div>
+    <!-- PART 3 · recap -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 2, and it includes <em>listening</em> items. Tonight, run the Day 3 preposition table once and listen to any three example sentences on the earlier lessons. That's all the prep you need.</p>
+    </div>
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part III &middot; AVANT D'ENVOYER</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +8 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Record-and-compare: play paragraph 2 of <em>Un tour des r&eacute;gions</em> from Lesson 2.05, then record yourself saying the same lines. Listen back-to-back and note one sound to fix. Imitating a native model is the fastest route to a French accent.</div>
+        </div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part IV &middot; LE TABLEAU, ENCORE UNE FOIS</div>
+<div class="opt-strip">
             <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +5 min &middot; cumulative spiral</div>
             <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mix Module 2 with Module 1: put a <strong>demonstrative</strong> and an <strong>irregular adjective from Module 1</strong> (<em>beau, nouveau, vieux</em>) in front of a Module 2 place-word. Both must match the noun. Type each phrase in French, then press Check. Interleaving old and new is what makes review actually stick.</div>
             <div class="optima-widget">
@@ -358,22 +377,13 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    
-    
-
-    <!-- CONJUGUE · aller -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>Conjugue&nbsp;! &middot; Verb practice, not graded</span><span class="pill-time">optional &middot; +5 min</span></div>
+        </div>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part IV &middot; LE TABLEAU, ENCORE UNE FOIS</div>
+        <div class="pl-h3" style="font-size:22px !important;margin:0 0 6px !important">Conjugue&nbsp;! &middot; Verb practice, not graded <span class="pill-time">optional &middot; +5 min</span></div>
         <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 12px">One more run of <em>aller</em> before the quiz, then <em>visiter</em> and <em>faire</em> from the menu.</p>
         <iframe class="conj-frame" src="https://optimaondemand.github.io/wl-widgets/conjugation-drill.html?data=%2Ffrench1-lessons%2Fs2%2Fm02%2Fpractice-m02.json&amp;verb=aller&amp;tense=present&amp;embed=1" title="Conjugation practice: aller" style="display:block;width:100%;height:900px;border:1px solid #E5DCC5;border-radius:4px;background:#fff"></iframe>
-    </div>
-    <!-- PART 3 · recap -->
-    <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">IV</span><span>NOTE RAPIDE</span><span class="pill-time">2 min</span></div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tomorrow is the <strong>Grammar Quiz</strong> &mdash; the last graded piece of Module 2, and it includes <em>listening</em> items. Tonight, run the Day 3 preposition table once and listen to any three example sentences on the earlier lessons. That's all the prep you need.</p>
+    
+        </div>
     </div>
 
     <div class="pl-card">
