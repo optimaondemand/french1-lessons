@@ -77,6 +77,24 @@ All public domain, via Wikimedia Commons. Files in `s2/m08/img/`.
 
 Picture cards for *Le, la ou l’ ?* (`s2/m08/img/art-*.png`) and the module title lettering (`m8-title.png`): drawn for this course by Optima Academy Online.
 
+## Paintings and photos (Semester 2, Module 9 · picture words, Lesson 9.01; game *Le plus grand drapeau !*, Lesson 9.02; Liberty and Marianne, Lesson 9.05; sorter *Liberté, Égalité, Fraternité*, Lesson 9.06; model reflection, Lesson 9.07; *Au revoir, Monet*, Lesson 9.08)
+
+Via Wikimedia Commons. Files in `s2/m09/img/`. Eugène Delacroix’s painting is shown only as close-ups cropped above the chest.
+The crops of the CC BY and CC BY-SA files are changes made for this course; the CC BY-SA crops stay under CC BY-SA.
+
+| Work | Licence | Course file | Source |
+|---|---|---|---|
+| Claude Monet, *La Rue Montorgueil, fête du 30 juin 1878*, Musée d’Orsay, Paris (close-ups) | Public domain | `m9-hero.jpg`, `vig-modele.jpg`, `cl-montorgueil.jpg`, `cl-montorgueil2.jpg` | https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Rue_Montorgueil_in_Paris._Celebration_of_June_30,_1878_-_Google_Art_Project.jpg |
+| Claude Monet, *La Rue Saint-Denis, fête du 30 juin 1878*, Musée des Beaux-Arts de Rouen (close-up); photo by Derbrauni | CC BY 4.0 | `vig-fete.jpg` | https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Rue_Saint-Denis,_Nationalfeiertag_30._Juni_1878.jpg |
+| Édouard Manet, *La Rue Mosnier aux drapeaux* (The Rue Mosnier with Flags), 1878, The J. Paul Getty Museum, Los Angeles (close-up) | Public domain | `cl-mosnier.jpg` | https://commons.wikimedia.org/wiki/File:%C3%89douard_Manet,_The_Rue_Mosnier_with_Flags,_1878.jpg |
+| Raoul Dufy, *La Rue pavoisée* (Street Decked with Flags), 1906, Centre Pompidou, Musée national d’art moderne, Paris (close-ups) | Public domain | `cl-dufy.jpg`, `vig-drapeau.jpg` | https://commons.wikimedia.org/wiki/File:Street_Decked_with_Flags_by_Raoul_Dufy_(1906).jpg |
+| Eugène Delacroix, *La Liberté guidant le peuple* (Liberty Leading the People), 1830, Musée du Louvre, Paris (close-ups only) | Public domain | `vig-liberte.jpg`, `cl-liberte.jpg`, `cl-liberte-citoyen.jpg`, `cl-liberte-garcon.jpg` | https://commons.wikimedia.org/wiki/File:La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg |
+| The Manet and Dufy paintings side by side (overview) | Public domain | `cl-overview.jpg` | the two files above |
+| Léopold Morice, *Monument à la République* (1883), Place de la République, Paris: *La Liberté*; photo by Coyau | CC BY-SA 3.0 | `art-mon-liberte.jpg` | https://commons.wikimedia.org/wiki/File:Place_de_la_R%C3%A9publique_-_Libert%C3%A9.jpg |
+| The same monument: *L’Égalité*; photo by Coyau | CC BY-SA 3.0 | `art-mon-egalite.jpg` | https://commons.wikimedia.org/wiki/File:Place_de_la_R%C3%A9publique_-_%C3%89galit%C3%A9.jpg |
+| The same monument: *La Fraternité*; photo by Thomon | CC BY-SA 4.0 | `art-mon-fraternite.jpg` | https://commons.wikimedia.org/wiki/File:La_Fraternit%C3%A9.jpg |
+| The whole monument; photo by Romainbehar | CC0 | `art-mon-republique.jpg` | https://commons.wikimedia.org/wiki/File:Paris_3e_-_Place_de_la_R%C3%A9publique_-_Monument_%C3%A0_la_R%C3%A9publique_01.jpg |
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;

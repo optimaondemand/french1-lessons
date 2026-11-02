@@ -143,6 +143,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -207,7 +210,7 @@
     <div class="pl-kick">French 1 &nbsp;&#9670;&nbsp; Module 9 &middot; &Ecirc;tre fran&ccedil;ais</div>
     <div class="pl-where">Lesson 9.06 &middot; Day 6 of 8</div>
     <h1 class="pl-title">&Eacute;valuations</h1>
-    <div class="pl-sub">Vocabulary Check + Langue en action &middot; Assessment day &middot; about 50 minutes</div>
+    <div class="pl-sub">Vocabulary Check + Langue en action &middot; Assessment day &middot; about 55 minutes</div>
     <svg class="pl-flourish" viewBox="0 0 340 30" fill="none" stroke="#b8892e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M160 15 C 130 15, 100 5, 72 12 C 56 17, 50 25, 40 23 C 31 21, 35 11, 44 13 C 51 15, 48 22, 41 21"/><path d="M180 15 C 210 15, 240 5, 268 12 C 284 17, 290 25, 300 23 C 309 21, 305 11, 296 13 C 289 15, 292 22, 299 21"/><path d="M170 7 L176 15 L170 23 L164 15 Z" fill="#b8892e" stroke="none"/></svg>
   </div>
   <div class="pl-caption">Le tableau du module&nbsp;: Claude Monet, <em>La Rue Montorgueil, f&ecirc;te du 30 juin 1878</em> (<em>The Rue Montorgueil in Paris: Celebration of June 30, 1878</em>)</div>
@@ -237,6 +240,11 @@
     </div>
 
     <!-- PART 1 · by-ear self-quiz -->
+    <!-- ARTICLES · Les valeurs de la R&eacute;publique -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:17px">&#9830;</span><span>&Eacute;chauffement &middot; Les valeurs de la R&eacute;publique, not graded</span><span class="pill-time">6 min</span></div>
+        <div data-articles='{"title": "Libert&amp;eacute;, &amp;Eacute;galit&amp;eacute;, Fraternit&amp;eacute;", "free": true, "audioBase": "../../audio/", "bins": ["Liberté", "Égalité", "Fraternité"], "intro": "A warm-up before today&amp;rsquo;s assessments. Each card is a small scene of French life. Which word of the motto does it show? Click a card, then the right basket: <strong>Libert&amp;eacute;</strong> (being free), <strong>&amp;Eacute;galit&amp;eacute;</strong> (being equal) or <strong>Fraternit&amp;eacute;</strong> (helping each other). When you are right, you hear the sentence, and a piece of a Paris monument appears in the basket: the three statues of the <em lang=\"fr\">Monument &amp;agrave; la R&amp;eacute;publique</em>.", "ask": "Click a card, then <strong>Libert&amp;eacute;</strong>, <strong>&amp;Eacute;galit&amp;eacute;</strong> or <strong>Fraternit&amp;eacute;</strong>.", "end": "All nine scenes are sorted and the three statues are complete. Read each basket aloud: these are the three promises of the Republic, in French.", "tip": "Photos, Wikimedia Commons: Libert&amp;eacute; and &amp;Eacute;galit&amp;eacute; by Coyau (CC BY-SA 3.0); Fraternit&amp;eacute; by Thomon (CC BY-SA 4.0); the monument by Romainbehar (CC0).", "reveal": {"Liberté": {"img": "img/art-mon-liberte.jpg", "alt": "The statue of Liberty on the Monument to the Republic, Paris, under the word LIBERTÉ", "caption": "<strong lang=\"fr\">La Libert&amp;eacute;</strong> holds a torch and a broken chain."}, "Égalité": {"img": "img/art-mon-egalite.jpg", "alt": "The statue of Equality on the Monument to the Republic, Paris, under the word ÉGALITÉ", "caption": "<strong lang=\"fr\">L&amp;rsquo;&amp;Eacute;galit&amp;eacute;</strong> holds the flag of the Republic and a carpenter&amp;rsquo;s level: everyone at the same level."}, "Fraternité": {"img": "img/art-mon-fraternite.jpg", "alt": "The statue of Fraternity on the Monument to the Republic, Paris: a seated woman looking down kindly", "caption": "<strong lang=\"fr\">La Fraternit&amp;eacute;</strong> watches kindly over the people."}}, "finale": {"img": "img/art-mon-republique.jpg", "alt": "The Monument to the Republic, Place de la République, Paris: Marianne on top, with the statues of Liberty, Equality and Fraternity at her feet", "caption": "<em lang=\"fr\">Le Monument &amp;agrave; la R&amp;eacute;publique</em>, place de la R&amp;eacute;publique, Paris (L&amp;eacute;opold Morice, 1883). Marianne stands on top; Libert&amp;eacute;, &amp;Eacute;galit&amp;eacute; and Fraternit&amp;eacute; sit around her. The motto is also carved on French town halls."}, "items": [{"noun": "Je dis ce que je pense.", "en": "I say what I think.", "art": "Liberté", "audio": "vocab/s2m9-v-l-pense.mp3", "after": "free to speak", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "La Liberté guide le peuple.", "en": "Liberty leads the people (Delacroix).", "art": "Liberté", "audio": "vocab/s2m9-v-l-peuple.mp3", "after": "Delacroix’s Liberty, Lesson 9.05", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "Je choisis mes amis.", "en": "I choose my friends.", "art": "Liberté", "audio": "vocab/s2m9-v-l-amis.mp3", "after": "free to choose", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "Tous les citoyens votent.", "en": "All citizens vote.", "art": "Égalité", "audio": "vocab/s2m9-v-e-votent.mp3", "after": "every citizen has the same vote", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "La loi est la même pour tout le monde.", "en": "The law is the same for everyone.", "art": "Égalité", "audio": "vocab/s2m9-v-e-loi.mp3", "after": "the same rules for all", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "Les filles et les garçons vont à la même école.", "en": "Girls and boys go to the same school.", "art": "Égalité", "audio": "vocab/s2m9-v-e-ecole.mp3", "after": "the same chances", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "J’aide mes amis et ma famille.", "en": "I help my friends and my family.", "art": "Fraternité", "audio": "vocab/s2m9-v-f-aide.mp3", "after": "helping each other", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "Le 14 juillet, tout le pays fait la fête ensemble.", "en": "On 14 July, the whole country celebrates together.", "art": "Fraternité", "audio": "vocab/s2m9-v-f-fete.mp3", "after": "a whole people together", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}, {"noun": "Édith Piaf aide les jeunes chanteurs.", "en": "Édith Piaf helps young singers.", "art": "Fraternité", "audio": "vocab/s2m9-v-f-piaf.mp3", "after": "service: Lesson 8.05", "hint": "Ask yourself: is it about being <strong>free</strong> (libert&amp;eacute;), being <strong>equal</strong> (&amp;eacute;galit&amp;eacute;) or <strong>helping each other</strong> (fraternit&amp;eacute;)?"}]}'></div>
+    </div>
     <div class="pl-card">
         <div class="pl-part"><span class="pl-num">I</span><span>QUIZ &Agrave; L'OREILLE</span><span class="pill-time">12 min</span></div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Press <strong>&#128266;</strong>, listen <em>without reading</em>, and choose the meaning. This is exactly the skill your Vocabulary Check rewards &mdash; recognizing the word by sound alone.</p>
@@ -270,7 +278,56 @@
             </div>
             <div class="widget-feedback"></div>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <strong>Module 9 Vocabulaire</strong> page and drill all twenty by ear.</p>
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m9-la-tradition.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; la tradition, tradition.">tradition</button>
+                <button data-no="That's la culture.">culture</button>
+                <button data-no="That's la devise.">the motto</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m9-l-egalite.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-no="That's la libert&eacute;.">liberty</button>
+                <button data-no="That's la fraternit&eacute;.">fraternity</button>
+                <button data-correct="1" data-ok="Exact &mdash; l'&eacute;galit&eacute;, equality.">equality</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m9-le-drapeau.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; le drapeau, the flag.">the flag</button>
+                <button data-no="That's le pays.">the country</button>
+                <button data-no="That's le citoyen.">the citizen</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m9-la-langue.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-no="That's l'identit&eacute;.">identity</button>
+                <button data-correct="1" data-ok="Oui &mdash; la langue, language.">language</button>
+                <button data-no="That's la tradition.">tradition</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m9-fier.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Exact &mdash; fier (fi&egrave;re), proud.">proud</button>
+                <button data-no="That's fran&ccedil;ais.">French</button>
+                <button data-no="Free is libre; liberty is la libert&eacute;.">free</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <a href="vocabulaire-m09.html" target="_blank" rel="noopener"><strong>Module 9 Vocabulaire</strong> page</a> and drill all twenty by ear.</p>
     </div>
 
     <!-- Assessment 1 -->
@@ -367,7 +424,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -420,6 +481,7 @@
   document.addEventListener('change', function (e) { if (!e.target.classList || !e.target.classList.contains('due-tick')) return; st[e.target.dataset.key] = e.target.checked; try { localStorage.setItem(K, JSON.stringify(st)); } catch (x) {} paint(); });
   paint(); })();
 </script>
+<script src="articles.js?v=b09417ff"></script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
 </body>

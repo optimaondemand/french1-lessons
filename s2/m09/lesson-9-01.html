@@ -92,6 +92,9 @@
     .due-chip.on { border-color: #2f6b4f; color: #2f6b4f; background: #f1f7f3; }
     .due-chip.on::before { content: '✓  '; color: #2f6b4f; font-weight: 700; }
     .due-sub { display: block; font-size: 13.5px; color: #6b5f50; font-style: italic; }
+  .pl-goes { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+  .pl-extra + .pl-extra { border-top: 1px solid var(--rule); }
+  .pl-optnote { font-size: 15px; color: var(--muted); font-style: italic; margin: 14px 0 0; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -155,6 +158,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -174,6 +180,9 @@
   .pl-gloss { font-size: 14px; color: var(--muted); }
   .pl-say { margin-top: 10px; }
   .pl-vigs .pl-vig { flex-basis: 190px; }
+  .pl-vigs.big .pl-vig { flex-basis: 270px; } .pl-vigs.big .pl-oval { width: 250px; height: 295px; }   /* 2.01: David wanted the paintings bigger */
+  .pl-map { max-width: 560px; margin: 22px auto 0; text-align: center; } .pl-map img { display: block; width: 100%; border: 1px solid var(--gold-lt); border-radius: 6px; }
+  .pl-map figcaption { font-size: 15px; color: #1a2340; margin-top: 6px; }
   .pl-blank { display: inline-block; min-width: 70px; border-bottom: 2px dashed var(--gold); color: var(--muted); }
   .pl-blank.filled { border-bottom-color: transparent; color: var(--wine); font-weight: 600; }
   .pl-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
@@ -257,13 +266,13 @@
             <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Headphones or speakers &mdash; today is a listening day.</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your vocabulary notebook or flashcard app.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The <a href="vocabulaire-m09.html" target="_blank" rel="noopener"><strong>Module 9 Vocabulaire</strong> page</a>: flip cards with audio for every word in this module.</div>
         </div>
     </div>
 
     <!-- ===== PART 1 · Warm-up + check-in ===== -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">I</span><span>SE METTRE EN ROUTE</span><span class="pill-time">12 min</span></div>
+        <div class="pl-part"><span class="pl-num">I</span><span>SE METTRE EN ROUTE</span><span class="pill-time">10 min</span></div>
 
         <h3 class="pl-h3">A year, in one question</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Over two semesters you introduced yourself, described your family, told time, talked about food and leisure, visited Paris and the regions. Now you meet the country as an <em>idea</em>: a language, a culture, a set of shared values. Before the vocabulary, a moment of honesty about your own journey.</p>
@@ -302,22 +311,25 @@
             <li class="vocab-item"><button class="say" data-audio="vocab/s2m9-le-drapeau.mp3" aria-label="&Eacute;couter le drapeau">&#128266;</button><span class="v-fr">le drapeau</span><span class="v-en">the flag</span></li>
         </ul>
 
-        <div class="opt-strip">
-            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
-            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Notice the family of words ending in <strong>-t&eacute;</strong>: <em>identit&eacute;, libert&eacute;, &eacute;galit&eacute;, fraternit&eacute;</em>. In English these become <em>-ty</em> (identi<u>ty</u>, liber<u>ty</u>). Say each French word three times, keeping the stress light and even &mdash; French doesn't hammer the last syllable the way English does.</div>
-        </div>
+        <p class="pl-optnote">&#11088; Extra practice for this part is in <strong>Pour aller plus loin</strong>, at the end of the lesson.</p>
     </div>
 
     <!-- ===== PART 3 · Flashcards ===== -->
+    <!-- PANEL · Dans le tableau -->
     <div class="pl-card">
-        <div class="pl-part"><span class="pl-num">III</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
+        <div class="pl-part"><span class="pl-num">III</span><span>Dans le tableau &middot; In the painting</span><span class="pill-time">2 min</span></div>
+        <div class="pl-tableau"><div class="pl-tlabel">Qu&rsquo;est-ce que c&rsquo;est&nbsp;?</div><p>Three close-ups: a flag painted by Raoul Dufy in 1906; the woman who stands for Liberty in Eug&egrave;ne Delacroix&rsquo;s <em>La Libert&eacute; guidant le peuple</em> (1830); and a crowded Paris street on a day of celebration in 1878, by Claude Monet, the module&rsquo;s painter. What does each one show? Choose the word: when you are right, you hear it.</p><div class="pl-vigs big"><figure class="pl-vig" data-mode="choose" data-hint="Blue, white and red: <em>le drapeau</em>, the French flag."><div class="pl-oval"><img src="img/vig-drapeau.jpg" alt="Detail from the painting: a huge blue, white and red flag over a street (Dufy)"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button">la devise</button><button type="button" data-right>le drapeau</button><button type="button">le pays</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m9-le-drapeau.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="Delacroix painted Liberty as a woman leading the people: <em>la libert&eacute;</em>, the first word of the motto."><div class="pl-oval"><img src="img/vig-liberte.jpg" alt="Detail from the painting: a woman in a red cap holds up the French flag (Delacroix)"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> .</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button">la langue</button><button type="button">la culture</button><button type="button" data-right>la libert&eacute;</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m9-la-liberte.mp3" aria-label="&Eacute;couter">&#128266;</button></figure><figure class="pl-vig" data-mode="choose" data-hint="Flags everywhere and a crowd in the street: <em>la f&ecirc;te</em>, a word from Module 8."><div class="pl-oval"><img src="img/vig-fete.jpg" alt="Detail from the painting: a street full of people and flags on a day of celebration (Monet)"></div><div class="pl-phrase">C&rsquo;est <span class="pl-blank">___</span> &nbsp;!</div><div class="pl-gloss">(This is &hellip;)</div><div class="pl-opts"><button type="button" data-right>la f&ecirc;te</button><button type="button">la devise</button><button type="button">la langue</button></div><div class="pl-fb"></div><button class="say pl-say" type="button" hidden data-audio="vocab/s2m8-la-fete.mp3" aria-label="&Eacute;couter">&#128266;</button></figure></div></div>
+    </div>
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num">IV</span><span>R&Eacute;VISE TON VOCABULAIRE</span><span class="pill-time">10 min</span></div>
         <h3 class="pl-h3">Drill the words with the Vocabulaire page</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open the <strong>Module 9 Vocabulaire</strong> study page (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own paper or digital cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open the <a href="vocabulaire-m09.html" target="_blank" rel="noopener"><strong>Module 9 Vocabulaire</strong> study page</a> (in this module) &mdash; every word, its meaning, and its <strong>audio</strong> in one place, as flip cards you can drill by ear. Because your Vocabulary Check is <strong>listening-based</strong>, practice by <em>hearing</em> the word and recalling its meaning.</p>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Making your own digital flash cards on top of that is a great memory booster &mdash; but it&rsquo;s optional, not required.</p>
     </div>
 
     <!-- PART 1 · Carte de France -->
     <div class="activity-card">
+        <div class="pl-part"><span class="pl-num">V</span><span>Entra&icirc;nement &middot; practice, not graded</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div class="pl-h3" style="margin:0 !important">La Carte de France</div>
             <span class="practice-badge">PRACTICE &middot; UNGRADED</span>
@@ -326,12 +338,25 @@
         <ul class="fmt">
             <li><strong>Explorer mode:</strong> hover and click to review the <strong>13 metropolitan regions</strong> &mdash; &Icirc;le-de-France, Auvergne-Rh&ocirc;ne-Alpes, Nouvelle-Aquitaine, and the rest.</li>
             <li><strong>Quiz mode:</strong> timed click-to-find. Your score, errors, and time are shown &mdash; restart as often as you like, and try to find the largest region and the smallest.</li>
-            <li>This is the geography you've built all year. Mastering all 13 feeds the <strong>once-per-semester Carte extra-credit challenge</strong> &mdash; worth up to <strong>+1% on your semester grade</strong> &mdash; which is part of this module's assessments.</li>
+            <li>This is the geography you've built all year. Mastering all 13 prepares you for the <strong>Carte de France extra-credit challenge</strong> in Module 10, the final review.</li>
         </ul>
         <a class="go-btn" href="../../carte-de-france-M05.html" target="_blank" rel="noopener">&#9654; Open the Carte de France</a>
     </div>
 
     <!-- What You'll Do Next -->
+
+    <!-- PLUS LOIN · optional extras, collected at the end (restructure.py, 2026-10-28) -->
+    <div class="pl-card">
+        <div class="pl-part"><span class="pl-num" style="font-size:19px">&#11088;</span><span>Pour aller plus loin &middot; If you have time</span><span class="pill-time">optional</span></div>
+        <p style="font-size:16.5px;color:#1a2340;line-height:1.6;margin:0 0 4px">That is the end of today&rsquo;s lesson. If you have time, these extras give you more practice. Each one goes with a part of the lesson above.</p>
+        <div class="pl-extra"><div class="pl-goes">Goes with Part II &middot; L'IDENTIT&Eacute; ET LA R&Eacute;PUBLIQUE</div>
+<div class="opt-strip">
+            <div class="lbl">&#11088; POUR ALLER PLUS LOIN &middot; optional &middot; +7 min</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Notice the family of words ending in <strong>-t&eacute;</strong>: <em>identit&eacute;, libert&eacute;, &eacute;galit&eacute;, fraternit&eacute;</em>. In English these become <em>-ty</em> (identi<u>ty</u>, liber<u>ty</u>). Say each French word three times, keeping the stress light and even &mdash; French doesn't hammer the last syllable the way English does.</div>
+        </div>
+        </div>
+    </div>
+
     <div class="pl-card">
         <div class="pl-kicker">WHAT YOU'LL DO NEXT</div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
@@ -406,7 +431,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
@@ -533,5 +562,21 @@
 </script>
 <!-- mywork -->
 <script src="../../my-work.js"></script>
+<script>/* Dans le tableau panels: opinion = pick any word; choose = one right form, then hear the phrase */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.pl-opts button'); if (!b) return;
+  var fig = b.closest('.pl-vig'), blank = fig.querySelector('.pl-blank'), fb = fig.querySelector('.pl-fb');
+  if (fig.dataset.mode === 'opinion') {
+    [].forEach.call(fig.querySelectorAll('.pl-opts button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on'); blank.textContent = b.textContent; blank.classList.add('filled'); return;
+  }
+  if (fig.dataset.done) return;
+  if (b.hasAttribute('data-right')) {
+    fig.dataset.done = '1'; b.classList.add('right'); blank.textContent = b.textContent; blank.classList.add('filled');
+    fb.className = 'pl-fb ok'; fb.textContent = 'Oui\u00a0!';
+    var say = fig.querySelector('.pl-say'); if (say) { say.hidden = false; say.click(); }
+  } else { b.classList.add('wrong'); fb.className = 'pl-fb no'; fb.innerHTML = fig.dataset.hint; }
+});
+</script>
 </body>
 </html>
