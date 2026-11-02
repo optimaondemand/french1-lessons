@@ -119,6 +119,7 @@
     if (this.k >= this.cfg.steps.length) return this.end();
     setTimeout(function () { self.svg.style.transition = 'opacity .8s'; self.svg.style.opacity = '0'; self.page.classList.add('mq-wiping'); }, 1600);
     setTimeout(function () {
+      if (self.k >= self.cfg.steps.length) return;   // the last step was finished during the pause (2026-10-28)
       self.words.forEach(function (w) { w.className = 'mq-w'; w.linked = false; w.removeAttribute('data-lab'); });
       [].slice.call(self.svg.querySelectorAll('.mq-arrow')).forEach(function (p) { p.remove(); });
       self.svg.style.transition = ''; self.svg.style.opacity = ''; self.page.classList.remove('mq-wiping');

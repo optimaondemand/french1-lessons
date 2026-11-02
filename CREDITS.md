@@ -61,6 +61,22 @@ All public domain, via Wikimedia Commons. Files in `s2/m07/img/`.
 
 Picture cards for *Le, la ou les ?* (`s2/m07/img/art-*.png`): drawn for this course by Optima Academy Online.
 
+## Paintings (Semester 2, Module 8 · picture words, Lesson 8.01; game *Qui chante ? Qui danse ?*, Lesson 8.02; dance questions, Lesson 8.03; model comparison, Lesson 8.07; *Au revoir, Renoir*, Lesson 8.08)
+
+All public domain, via Wikimedia Commons. Files in `s2/m08/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Edgar Degas, *Le Café-concert aux Ambassadeurs* (The Café-Concert at Les Ambassadeurs), 1876–77, pastel, Musée des Beaux-Arts de Lyon (close-up) | `cl-degas.jpg`, `vig-chanteuse.jpg` | https://commons.wikimedia.org/wiki/File:Degas_-_Caf%C3%A9_Concert_-_at_Les_Ambassadeurs_1876-77.jpg |
+| Édouard Manet, *Le Chanteur espagnol* (The Spanish Singer), 1860, The Metropolitan Museum of Art, New York (close-up) | `cl-manet.jpg`, `vig-chanteur.jpg` | https://commons.wikimedia.org/wiki/File:The_Spanish_Singer_MET_dp130799.jpg |
+| Pierre-Auguste Renoir, *Jeunes filles au piano* (Young Girls at the Piano), 1892, Musée d’Orsay, Paris (close-up) | `cl-piano.jpg`, `vig-modele.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg |
+| Pierre-Auguste Renoir, *Bal du moulin de la Galette* (Dance at Le Moulin de la Galette), 1876, Musée d’Orsay, Paris (close-ups) | `cl-moulin.jpg`, `cl-moulin2.jpg`, `vig-fete.jpg`, `m8-hero.jpg`, `m8-large.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_ProjectFXD.jpg |
+| Pierre-Auguste Renoir, *Danse à la ville* (Dance in the City), 1883, Musée d’Orsay, Paris | `cl-danses.jpg` (left) | https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_019.jpg |
+| Pierre-Auguste Renoir, *Danse à la campagne* (Dance in the Country), 1883, Musée d’Orsay, Paris | `cl-danses.jpg` (right) | https://commons.wikimedia.org/wiki/File:Pierre_Auguste_Renoir_-_Country_Dance_-_Google_Art_Project.jpg |
+| The four game paintings side by side (overview) | `cl-overview.jpg` | the first four files above |
+
+Picture cards for *Le, la ou l’ ?* (`s2/m08/img/art-*.png`) and the module title lettering (`m8-title.png`): drawn for this course by Optima Academy Online.
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;

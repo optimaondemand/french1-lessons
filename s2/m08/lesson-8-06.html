@@ -143,6 +143,9 @@
   .widget-options button { border-color: var(--rule); border-radius: 999px; }
   .widget-options button:hover { background: var(--cream); border-color: var(--gold); }
   .widget-feedback { border-left-color: var(--gold); background: var(--cream); }
+  /* "Parfait !" on Écris-le and dictée: bold green with a check, to match "✓ Correct!" in my-work.js (David 2026-10-26) */
+  .widget-feedback.fb-ok > strong:first-child, .dict-fb.ok > strong:first-child { color: #1e8a3c; font-weight: 800; font-size: 16px; }
+  .widget-feedback.fb-ok > strong:first-child::before, .dict-fb.ok > strong:first-child::before { content: "✓ "; }
   .opt-strip { background: var(--cream); border: 1px dashed var(--gold); }
   .practice-badge { background: #2f6b4f; letter-spacing: .06em; }
   .markdone { background: #f1f7f3; border-color: #2f6b4f; border-radius: 4px; }
@@ -270,7 +273,56 @@
             </div>
             <div class="widget-feedback"></div>
         </div>
-        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <strong>Module 8 Vocabulaire</strong> page and drill all twenty by ear.</p>
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m8-le-concert.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; le concert, the concert.">the concert</button>
+                <button data-no="That's la chanson.">the song</button>
+                <button data-no="That's la f&ecirc;te.">the party</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m8-la-chanson.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-no="That's la chanteuse.">the singer (f.)</button>
+                <button data-correct="1" data-ok="Exact &mdash; la chanson, the song.">the song</button>
+                <button data-no="That's le cadeau.">the gift</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m8-inviter.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this verb mean?</div>
+            <div class="widget-options">
+                <button data-no="That's danser.">to dance</button>
+                <button data-no="That's chanter.">to sing</button>
+                <button data-correct="1" data-ok="Voil&agrave; &mdash; inviter, to invite.">to invite</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m8-la-guitare.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-correct="1" data-ok="Oui &mdash; la guitare, the guitar.">the guitar</button>
+                <button data-no="That's le piano.">the piano</button>
+                <button data-no="That's la batterie.">the drums</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+
+        <div class="optima-widget ow-eval">
+            <div class="widget-question"><button class="say" data-audio="vocab/s2m8-mieux.mp3" aria-label="&Eacute;couter">&#128266;</button> What does this word mean?</div>
+            <div class="widget-options">
+                <button data-no="That's plus&hellip; que.">more&hellip; than</button>
+                <button data-no="That's aussi&hellip; que.">as&hellip; as</button>
+                <button data-correct="1" data-ok="Exact &mdash; mieux: il chante mieux.">better (with a verb)</button>
+            </div>
+            <div class="widget-feedback"></div>
+        </div>
+        <p style="font-size: 15px; color: #6b7a99; margin: 10px 0 0 0;">Want the full set? Open the <a href="vocabulaire-m08.html" target="_blank" rel="noopener"><strong>Module 8 Vocabulaire</strong> page</a> and drill all twenty by ear.</p>
     </div>
 
     <!-- Assessment 1 -->
@@ -367,7 +419,11 @@
         ew.querySelectorAll('.widget-options button').forEach(function (b) { if (b.dataset.correct === '1') b.classList.add('correct'); });
       }
       var efb = ew.querySelector('.widget-feedback');
-      efb.textContent = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      var etx = ok ? (eBtn.dataset.ok || 'Correct !') : (eBtn.dataset.no || 'Not quite — the correct answer is highlighted.');
+      efb.classList.toggle('fb-ok', ok); efb.textContent = '';
+      var elead = ok ? (etx.match(/^[^!—]{1,20}(?:!|(?= —))/) || [''])[0] : '';
+      if (elead) { var est = document.createElement('strong'); est.textContent = elead; efb.appendChild(est); }
+      efb.appendChild(document.createTextNode(etx.slice(elead.length)));
       efb.classList.add('show');
       return;
     }
