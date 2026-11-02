@@ -26,6 +26,7 @@
   function load() { try { return JSON.parse(store.getItem(KEY)) || { items: {}, name: '' }; } catch (e) { return { items: {}, name: '' }; } }
   function save() { try { store.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
   function txt(el) { return el ? el.textContent.replace(/\s+/g, ' ').trim() : ''; }
+  function bare(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/œ/g, 'oe'); }
   function norm(s) { return (s || '').toLowerCase().replace(/[’']/g, "'").replace(/[.!?¿¡,;:«»"]/g, '').replace(/\s+/g, ' ').trim(); }
   function partOf(el) {
     var p = el;
@@ -86,7 +87,8 @@
       var prev = state.items[id] || {};
       var it = { kind: journal ? 'journal' : 'typed', q: prompt, part: inp.getAttribute('data-section') || partOf(inp), value: inp.value,
                  checks: prev.checks || 0, gotIt: prev.gotIt || false, model: inp.getAttribute('data-model') || undefined };
-      if (key) { var alts = key.split(' || '); it.answer = alts[0]; it.correct = alts.some(function (k) { return norm(inp.value) === norm(k); }); }   // A || B = either is right
+      if (key) { var alts = key.split(' || '); it.answer = alts[0]; it.correct = alts.some(function (k) { return norm(inp.value) === norm(k); });   // A || B = either is right
+        it.accentOnly = !it.correct && alts.some(function (k) { return bare(norm(inp.value)) === bare(norm(k)); }); }   // right but for the accents (still wrong: David 2026-11-02)
       state.items[id] = it; save(); gather(); if (typeof updateLocks === 'function') updateLocks();
     }
     if (state.items[id] && state.items[id].value && !inp.value) inp.value = state.items[id].value;   // restore
@@ -121,7 +123,9 @@
       var show = function () {
         var it = state.items[id]; if (!it || !it.checks) { fb.textContent = ''; return; }
         if (it.gotIt) { fb.style.color = '#1e8a3c'; fb.style.fontWeight = '800'; fb.style.fontSize = '16px'; fb.textContent = '✓ Correct!'; }   // green and bold (David 2026-10-26)
-        else { fb.style.fontWeight = '400'; fb.style.fontSize = '14px'; fb.style.color = '#b3382c'; fb.textContent = it.checks >= 2 ? '✗ Not yet — you can reveal the answer now.' : '✗ Not yet — check your spelling and accents, then try again (1 of 2).'; }
+        else { fb.style.fontWeight = '400'; fb.style.fontSize = '14px'; fb.style.color = '#b3382c'; fb.textContent = it.accentOnly
+            ? (it.checks >= 2 ? '✗ So close — only the accents were off. Don’t forget them! You can reveal the answer now.' : '✗ So close — the words are right, but check your accents! Accents are part of the word (1 of 2).')
+            : (it.checks >= 2 ? '✗ Not yet — you can reveal the answer now.' : '✗ Not yet — check your spelling and accents, then try again (1 of 2).'); }
       };
       chk.addEventListener('click', function () {
         if (!inp.value.trim()) { fb.style.fontWeight = '400'; fb.style.fontSize = '14px'; fb.style.color = '#5b6672'; fb.textContent = 'Type your answer first.'; return; }

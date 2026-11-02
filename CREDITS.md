@@ -95,6 +95,14 @@ The crops of the CC BY and CC BY-SA files are changes made for this course; the 
 | The same monument: *La Fraternité*; photo by Thomon | CC BY-SA 4.0 | `art-mon-fraternite.jpg` | https://commons.wikimedia.org/wiki/File:La_Fraternit%C3%A9.jpg |
 | The whole monument; photo by Romainbehar | CC0 | `art-mon-republique.jpg` | https://commons.wikimedia.org/wiki/File:Paris_3e_-_Place_de_la_R%C3%A9publique_-_Monument_%C3%A0_la_R%C3%A9publique_01.jpg |
 
+## Banner (Semester 2, Module 10 · Lesson 10.01)
+
+`s2/m10/img/m10-hero.jpg`: nine strips, one from each Module 1–9 banner painting, all public domain, via Wikimedia Commons:
+Renoir, *Le Déjeuner des canotiers* (The Phillips Collection, Washington); Monet, *Promenade sur la falaise, Pourville* (Art Institute of Chicago);
+Cézanne, *Pommes et oranges* (Musée d’Orsay); Seurat, *Un dimanche après-midi à l’île de la Grande Jatte* (Art Institute of Chicago);
+Caillebotte, *Rue de Paris, temps de pluie* (Art Institute of Chicago); Hubert Robert, *La Grande Galerie du Louvre* (Musée du Louvre);
+Renoir, *Les Parapluies* (The National Gallery, London); Renoir, *Bal du moulin de la Galette* (Musée d’Orsay); Monet, *La Rue Montorgueil, fête du 30 juin 1878* (Musée d’Orsay).
+
 ## Recordings
 
 Human recordings from Lingua Libre (Wikimedia France), downloaded 2026-10-21 from Wikimedia Commons;
