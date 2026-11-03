@@ -6,7 +6,7 @@
                      "Julie",
                      "Paul"
                  ],
-    "count":  650,
+    "count":  674,
     "clips":  [
                   {
                       "id":  "alphabet/a",
@@ -5207,6 +5207,198 @@
                       "type":  "passage",
                       "voice":  "Hortense",
                       "file":  "audio/passage/s2m9-identite-03.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-content",
+                      "text":  "content",
+                      "gloss":  "pleased / glad (m.) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-content.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-contente",
+                      "text":  "contente",
+                      "gloss":  "pleased / glad (f.) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-contente.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-heureux",
+                      "text":  "heureux",
+                      "gloss":  "happy (m.) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-heureux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-heureuse",
+                      "text":  "heureuse",
+                      "gloss":  "happy (f.) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-heureuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-triste",
+                      "text":  "triste",
+                      "gloss":  "sad · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-triste.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-fatigue",
+                      "text":  "fatigué",
+                      "gloss":  "tired (m.; fatiguée f. sounds the same) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-fatigue.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-malade",
+                      "text":  "malade",
+                      "gloss":  "sick / ill · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-malade.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-nerveux",
+                      "text":  "nerveux",
+                      "gloss":  "nervous (m.) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-nerveux.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-nerveuse",
+                      "text":  "nerveuse",
+                      "gloss":  "nervous (f.) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-nerveuse.mp3"
+                  },
+                  {
+                      "id":  "vocab/s2m1-avoir-peur",
+                      "text":  "avoir peur",
+                      "gloss":  "to be afraid · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "vocab",
+                      "voice":  "Hortense",
+                      "file":  "audio/vocab/s2m1-avoir-peur.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-f-je-suis-content",
+                      "text":  "Je suis content.",
+                      "gloss":  "I am pleased (boy) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-f-je-suis-content.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-f-je-suis-contente",
+                      "text":  "Je suis contente.",
+                      "gloss":  "I am pleased (girl) · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-f-je-suis-contente.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-f-elle-est-heureuse",
+                      "text":  "Elle est heureuse.",
+                      "gloss":  "She is happy. · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-f-elle-est-heureuse.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-f-il-est-fatigue",
+                      "text":  "Il est fatigué.",
+                      "gloss":  "He is tired. · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-f-il-est-fatigue.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-f-j-ai-peur",
+                      "text":  "J'ai peur.",
+                      "gloss":  "I am afraid. · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-f-j-ai-peur.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m1-f-tu-es-malade",
+                      "text":  "Tu es malade ?",
+                      "gloss":  "Are you sick? · feelings, Lesson 1.03 + vocabulaire-m01 + M1 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m1-f-tu-es-malade.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-j-etais-content",
+                      "text":  "J'étais content.",
+                      "gloss":  "I was pleased (boy) · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-j-etais-content.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-j-etais-contente",
+                      "text":  "J'étais contente.",
+                      "gloss":  "I was pleased (girl) · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-j-etais-contente.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-j-etais-fatigue",
+                      "text":  "J'étais fatigué.",
+                      "gloss":  "I was tired. · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-j-etais-fatigue.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-elle-etait-triste",
+                      "text":  "Elle était triste.",
+                      "gloss":  "She was sad. · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-elle-etait-triste.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-nous-etions-heureux",
+                      "text":  "Nous étions heureux.",
+                      "gloss":  "We were happy. · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-nous-etions-heureux.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-il-etait-malade",
+                      "text":  "Il était malade.",
+                      "gloss":  "He was sick. · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-il-etait-malade.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-j-avais-peur",
+                      "text":  "J'avais peur.",
+                      "gloss":  "I was afraid. · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-j-avais-peur.mp3"
+                  },
+                  {
+                      "id":  "grammar/s2m6-f-j-etais-nerveuse",
+                      "text":  "J'étais nerveuse.",
+                      "gloss":  "I was nervous (girl) · feelings in the imparfait, Lesson 6.03 + vocabulaire-m06 + M6 Vocabulary Check",
+                      "type":  "grammar",
+                      "voice":  "Hortense",
+                      "file":  "audio/grammar/s2m6-f-j-etais-nerveuse.mp3"
                   }
               ]
 }
