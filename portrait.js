@@ -14,7 +14,8 @@
    (the checklist shows which were found); checks key adj1 = an adjective from Module 1.
    guests[].geo {rel: {ref: [directions]}, facts: {ref: html}, rules}: compass phrases checked against the chosen region
    ("à l'est de la Normandie"); pickRequired = hint until a region is chosen; checks key pick.
-   guests[].gender 'f' | 'm' (+ who, e.g. 'a girl'): "Check the painting" when il / elle or homme / fille does not match. */
+   guests[].gender 'f' | 'm' (+ who, e.g. 'a girl'): "Check the painting" when il / elle or homme / fille does not match.
+   Optional (2026-11-03, Lesson 10.01): repeat [{re, hint}] = soft tip (not a hint, never blocks) when a later box repeats a phrase; {n} = earlier step. */
 (function () {
   'use strict';
   var CSS = '\
@@ -41,7 +42,7 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
 .pt textarea.journal-box:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(43,76,140,.15)}\
 .pt-ticks{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:6px;font-size:13.5px;color:var(--muted)}\
 .pt-ticks span::before{content:"\\25CB  ";color:#c8bfae}.pt-ticks span.on{color:var(--ok)}.pt-ticks span.on::before{content:"\\2713  ";color:var(--ok);font-weight:700}\
-.pt-hint{margin-top:6px;font-size:14.5px;line-height:1.45;color:var(--wine)}.pt-hint:empty{display:none}\
+.pt-hint{margin-top:6px;font-size:14.5px;line-height:1.45;color:var(--wine)}.pt-hint:empty{display:none}\n.pt-tip{margin-top:6px;font-size:14px;line-height:1.45;color:var(--blue);font-style:italic}.pt-tip:empty{display:none}\
 .pt-hint div::before{content:"\\270E  "}\
 .pt-acc{position:sticky;top:6px;z-index:3;display:flex;flex-wrap:wrap;gap:4px;align-items:center;background:#fffdf7;border:1px dashed #b8c4d6;border-radius:8px;padding:6px 10px;margin:0 0 12px}\
 .pt-acc small{font-size:12.5px;color:var(--muted);margin-right:6px}\
@@ -172,10 +173,10 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
         card.appendChild(xb);
       }
       box.lang = 'fr'; box.spellcheck = false; box.setAttribute('autocapitalize', 'sentences'); box.placeholder = 'Écris ta phrase…'; card.appendChild(box);
-      var ticks = el('div', 'pt-ticks'), hint = el('div', 'pt-hint'); card.appendChild(ticks); card.appendChild(hint); main.appendChild(card);
+      var ticks = el('div', 'pt-ticks'), hint = el('div', 'pt-hint'), tip = el('div', 'pt-tip'); card.appendChild(ticks); card.appendChild(hint); card.appendChild(tip); main.appendChild(card);
       box.addEventListener('focus', function () { self.last = box; });
       box.addEventListener('input', function () { self.run(); });
-      return { st: st, box: box, card: card, ticks: ticks, hint: hint };
+      return { st: st, box: box, card: card, ticks: ticks, hint: hint, tip: tip };
     });
     this.last = boxes[0];
     var c = el('div', 'pt-card');
@@ -269,8 +270,8 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
     return out;
   };
   Portrait.prototype.run = function () {
-    var self = this, all = { fam: [], adj: [], irr: false, bangs: false, faire: false }, texts = [];
-    this.steps.forEach(function (S) {
+    var self = this, all = { fam: [], adj: [], irr: false, bangs: false, faire: false }, texts = [], seen = {};
+    this.steps.forEach(function (S, si) {
       var t = S.box.value.trim(), r = self.analyse(t), need = S.st.needs || [], marks = [];
       if (t && self.cfg.pickRequired && self.cur == null && !texts.length) r.hints.unshift(self.cfg.pickRequired);   // first sentence written
       var hints = r.hints.slice();
@@ -293,6 +294,9 @@ border:1.5px solid var(--rule);border-radius:6px;padding:8px 12px;background:#ff
       }
       S.ticks.innerHTML = marks.join('');
       S.hint.innerHTML = hints.map(function (h) { return '<div>' + h + '</div>'; }).join('');
+      // optional cfg.repeat [{re, hint}] (2026-11-03, 10.01): a soft tip, never a block, when the same phrase is used again in a later box ({n} = the earlier step)
+      var tips = []; (self.cfg.repeat || []).forEach(function (R, ri) { if (t && new RegExp(R.re, 'i').test(t.replace(/’/g, "'"))) { if (seen[ri] != null) tips.push(R.hint.replace('{n}', seen[ri] + 1)); else seen[ri] = si; } });
+      S.tip.innerHTML = tips.map(function (h) { return '<div>' + h + '</div>'; }).join('');
       S.card.classList.toggle('good', !!t && need.every(function (n) { return label[n][1]; }) && !r.hints.length && /[.!?]$/.test(t) && /^[A-ZÀ-ÖØ-Þ«]/.test(t));
     });
     this.text.innerHTML = texts.join(' ');
