@@ -25,6 +25,24 @@ All public domain, via Wikimedia Commons. Files in `s2/m04/img/`.
 | Pierre-Auguste Renoir, *Bal du moulin de la Galette* (Dance at Le Moulin de la Galette), 1876, Musée d’Orsay | `tl-moulin.jpg` | https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg |
 | Georges Seurat, *Un dimanche après-midi à l’île de la Grande Jatte* (A Sunday on La Grande Jatte), 1884–1886, The Art Institute of Chicago | `tl-grande-jatte.jpg` | https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg |
 
+## Paintings (Semester 2, Module 5 · pictures beside the words, Lesson 5.01; *Dans le tableau* and *Écoute et choisis*, Lesson 5.01)
+
+All public domain (Houbron: CC0), via Wikimedia Commons. Files in `s2/m05/img/`.
+
+| Painting | Course file | Source |
+|---|---|---|
+| Camille Pissarro, *L’Avenue de l’Opéra*, 1898, Musée des Beaux-Arts, Reims (and a detail) | `vocab/la-ville.jpg`, `ev-opera.jpg` | https://commons.wikimedia.org/wiki/File:PISSARRO_Camille_L'Avenue_de_l'Op%C3%A9ra_Huile_sur_toile.jpg |
+| Jean Béraud, *Le Théâtre du Vaudeville*, 1889, Paris Musées | `vocab/le-centre-ville.jpg` | https://commons.wikimedia.org/wiki/File:B%C3%A9raud_-_Le_th%C3%A9%C3%A2tre_du_Vaudeville,_1889.jpg |
+| Henry Bacon, *Égalité*, c. 1889, Brooklyn Museum | `vocab/le-bus.jpg` | https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_%C3%89galit%C3%A9_-_Henry_Bacon_-_overall.jpg |
+| Frédéric Houbron, *Tramways à impériale dans une avenue de Paris*, 1901, Musée Carnavalet (CC0) | `vocab/le-tramway.jpg` | https://commons.wikimedia.org/wiki/File:Tramways_%C3%A0_imp%C3%A9riale_dans_une_avenue_de_Paris,_en_1901,_D.3303.jpg |
+| Claude Monet, *Le Train dans la neige*, 1875, Musée Marmottan Monet | `vocab/le-train.jpg` | https://commons.wikimedia.org/wiki/File:Claude_Monet,_1875,_Train_in_the_Snow,_oil_on_canvas,_59_%C3%97_78_cm,_Mus%C3%A9e_Marmottan_Monet.jpg |
+| Georges Picard, *Femme dans une automobile survolant le Grand Palais*, poster, 1900, Bibliothèques spécialisées de la Ville de Paris (detail) | `vocab/la-voiture.jpg` | https://commons.wikimedia.org/wiki/File:Femme_dans_une_automobile_survolant_le_Grand_Palais_affiche.jpg |
+| Gustave Caillebotte, *Rue de Paris, temps de pluie*, 1877, The Art Institute of Chicago (detail) | `vocab/a-pied.jpg` | https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg |
+| Louis-Léopold Boilly, *L’Arrivée d’une diligence dans la cour des Messageries*, 1803, Musée du Louvre (detail) | `vocab/arriver.jpg` | https://commons.wikimedia.org/wiki/File:Louis-L%C3%A9opold_Boilly_002.jpg |
+| James Tissot, *Goodbye – On the Mersey*, c. 1880 (detail) | `vocab/partir.jpg` | https://commons.wikimedia.org/wiki/File:Tissot_Mersey.jpg |
+| Jean Béraud, *La Sortie du lycée Condorcet*, c. 1903, Paris Musées (detail) | `vocab/sortir.jpg` | https://commons.wikimedia.org/wiki/File:B%C3%A9raud_-_La_sortie_du_lyc%C3%A9e_Condorcet,_Vers_1903.jpg |
+| Jean Béraud, *On the Main Boulevards, Paris* (date unknown) (detail) | `ev-blvd.jpg` | https://commons.wikimedia.org/wiki/File:On_the_main_boulevards,_Paris_(unknown_date),_by_Jean_B%C3%A9raud.jpg |
+
 ## Paintings (Semester 2, Module 5 · game *Dans les rues de Paris*, Lesson 5.02; picture questions, Lesson 5.05; model trip, Lesson 5.07)
 
 All public domain, via Wikimedia Commons. Files in `s2/m05/img/`.
