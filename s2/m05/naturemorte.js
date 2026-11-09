@@ -26,8 +26,8 @@ font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);max-wi
 @keyframes nmdash{to{stroke-dashoffset:-56}}\
 .nm-tap{fill:none;stroke:#fff;stroke-width:3;opacity:.9;animation:nmtap .6s ease-out forwards}\
 @keyframes nmtap{from{r:6;opacity:.95}to{r:34;opacity:0}}\
-.nm-tag{position:absolute;transform:translate(-50%,-50%);background:var(--cream);border:1px solid var(--gold);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;\
-font-size:20px;font-weight:600;line-height:1.15;padding:3px 10px 4px;border-radius:2px;box-shadow:0 2px 6px rgba(0,0,0,.35);white-space:nowrap;pointer-events:none;text-align:center}\
+.nm-tag{position:absolute;background:var(--cream);border:1px solid var(--gold);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;\
+font-size:20px;font-weight:600;line-height:1.15;padding:3px 10px 4px;border-radius:2px;box-shadow:0 2px 6px rgba(0,0,0,.35);white-space:normal;width:max-content;max-width:42%;pointer-events:none;text-align:center;z-index:2}\
 .nm-tag small{display:block;font:12px "Segoe UI",Arial,sans-serif;color:var(--muted)}\
 .nm-label{max-width:560px;margin:12px auto 0;background:#fffdf7;border:1px solid var(--rule);border-radius:3px;padding:9px 16px;font-size:14px;line-height:1.5;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}\
 .nm-label b{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px}.nm-label i{font-family:"Cormorant Garamond",Georgia,serif;font-size:18px}.nm-label span{color:var(--muted)}\
@@ -99,7 +99,9 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
     var head = el('div', 'nm-head');
     head.appendChild(el('div', 'nm-kick', c.kicker || 'Jeu &middot; Game'));
     head.appendChild(el('div', 'nm-title', c.title)); head.appendChild(el('div', 'nm-intro', c.intro)); r.appendChild(head);
-    var frame = el('div', 'nm-frame'); this.stage = el('div', 'nm-stage'); frame.appendChild(this.stage); r.appendChild(frame);
+    var frame = el('div', 'nm-frame'); this.stage = el('div', 'nm-stage'); frame.appendChild(this.stage); r.appendChild(frame); this.tags = [];
+    if (window.ResizeObserver) new ResizeObserver(function () { self.layoutTags(); }).observe(this.stage);
+    else window.addEventListener('resize', function () { self.layoutTags(); });
     this.stage.addEventListener('click', function (e) { self.tap(e); });
     this.labelEl = el('div', 'nm-label'); r.appendChild(this.labelEl);
     this.prog = el('div', 'nm-prog'); r.appendChild(this.prog);
@@ -116,7 +118,7 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
   };
   Game.prototype.round = function () {
     var R = this.R = this.cfg.rounds[this.ri], self = this, st = this.stage;
-    st.innerHTML = ''; this.labelEl.hidden = true;
+    st.innerHTML = ''; this.tags = []; this.labelEl.hidden = true;
     this.baseImg = el('img', 'nm-base'); this.baseImg.src = R.img; this.baseImg.alt = R.alt; this.baseImg.draggable = false; st.appendChild(this.baseImg);
     this.revs = {};
     R.items.forEach(function (it) {
@@ -169,12 +171,33 @@ padding:16px 22px 14px;text-align:center;box-shadow:0 10px 22px rgba(60,40,10,.1
     var it = this.cur, R = this.R, self = this; this.locked = true; this.ring.style.display = 'none';
     if (this.tries === 0) this.first++; this.total++;
     chime(); this.revs[it.id].classList.add('on'); this.reveal();
-    var tag = el('div', 'nm-tag', '<span lang="fr">' + it.fr + '</span><small>' + it.en + '</small>');
-    tag.style.left = (it.tag[0] / R.w * 100) + '%'; tag.style.top = (it.tag[1] / R.h * 100) + '%'; this.stage.appendChild(tag);
+    var gloss = it.tagEn || String(it.en).replace(/<[^>]+>/g, '').split(/[.:;](?:\s|$)/)[0];
+    var tag = el('div', 'nm-tag', '<span lang="fr">' + it.fr + '</span><small>' + gloss + '</small>');
+    tag._fx = it.tag[0] / R.w; tag._fy = it.tag[1] / R.h; this.stage.appendChild(tag); this.tags.push(tag); this.layoutTags();
     this.fb.className = 'nm-fb ok'; this.fb.innerHTML = (this.tries === 0 ? 'Bravo&nbsp;! ' : 'Oui&nbsp;! ') + ((this.cfg.text || {}).right || '<b lang="fr">{fr}</b>: {en}.').replace('{fr}', it.fr).replace('{en}', it.en);
     setTimeout(function () { self.play(it.audio); }, 850);   // after the accordion flourish, never on top of it
     this.doneRound.push(it); this.found.push(it); this.progress();
     setTimeout(function () { self.next(); }, 2000);
+  };
+  // Word tags: centred on the item's tag point, kept inside the frame, and moved below (or above)
+  // any earlier tag they would cover. Re-run on resize. (David 2026-11-09: 5.01 tags spilled out and overlapped.)
+  Game.prototype.layoutTags = function () {
+    var W = this.stage.clientWidth, H = this.stage.clientHeight, PAD = 6, GAP = 4, placed = [];
+    if (!W || !H) return;
+    (this.tags || []).forEach(function (tag) {
+      var w = tag.offsetWidth, h = tag.offsetHeight;
+      var x = Math.min(Math.max(tag._fx * W - w / 2, PAD), Math.max(PAD, W - w - PAD));
+      var y = Math.min(Math.max(tag._fy * H - h / 2, PAD), Math.max(PAD, H - h - PAD));
+      for (var k = 0; k < 12; k++) {
+        var hit = null;
+        placed.forEach(function (r) { if (!hit && x < r.x + r.w + GAP && x + w + GAP > r.x && y < r.y + r.h + GAP && y + h + GAP > r.y) hit = r; });
+        if (!hit) break;
+        var below = hit.y + hit.h + GAP, above = hit.y - h - GAP;
+        if (below + h <= H - PAD) y = below; else if (above >= PAD) y = above;
+        else x = (hit.x + hit.w / 2 < W / 2) ? Math.min(hit.x + hit.w + GAP, W - w - PAD) : Math.max(hit.x - w - GAP, PAD);
+      }
+      tag.style.left = x + 'px'; tag.style.top = y + 'px'; placed.push({ x: x, y: y, w: w, h: h });
+    });
   };
   Game.prototype.next = function () {
     var self = this, R = this.R; this.ii++;
